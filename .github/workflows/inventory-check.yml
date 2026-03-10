@@ -1,0 +1,36 @@
+name: Daily Inventory Check
+
+on:
+  schedule:
+    # UTC 22:00 = KST 07:00 (매일 아침 7시)
+    - cron: '0 22 * * *'
+  workflow_dispatch: # 수동 실행
+
+jobs:
+  check-inventory:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run inventory check
+        working-directory: src
+        env:
+          GODO_PARTNER_KEY: ${{ secrets.GODO_PARTNER_KEY }}
+          GODO_USER_KEY: ${{ secrets.GODO_USER_KEY }}
+          GODO_SHOP_URL: ${{ secrets.GODO_SHOP_URL }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          TARGET_GOODS_NOS: ${{ secrets.TARGET_GOODS_NOS }}
+          LOW_STOCK_THRESHOLD: ${{ secrets.LOW_STOCK_THRESHOLD }}
+        run: python main.py
