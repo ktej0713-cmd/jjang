@@ -165,3 +165,30 @@ def send_inventory_email(
         server.sendmail(gmail_address, recipients, msg.as_string())
 
     logger.info("이메일 발송 완료")
+
+
+def save_html_preview(
+    stock_items: list[dict],
+    threshold: int,
+    output_dir: str = "output",
+) -> str:
+    """이메일 HTML을 파일로 저장 (dry-run 미리보기용)
+
+    Returns:
+        저장된 파일 경로
+    """
+    import os
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    now = datetime.now(KST).strftime("%Y-%m-%d")
+    filename = f"inventory_report_{now}.html"
+    filepath = os.path.join(output_dir, filename)
+
+    html = build_html_body(stock_items, threshold)
+
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(html)
+
+    logger.info("HTML 미리보기 저장: %s", filepath)
+    return filepath

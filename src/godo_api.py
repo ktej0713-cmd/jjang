@@ -1,9 +1,71 @@
 import logging
+import random
 import time
 
 import requests
 
 logger = logging.getLogger(__name__)
+
+# Mock 상품 데이터 (dry-run 모드용)
+MOCK_PRODUCTS = {
+    "1000": {
+        "goods_name": "[테스트] 기본 티셔츠 - 재고 정상",
+        "stock_qty": 150,
+        "options": [],
+    },
+    "1001": {
+        "goods_name": "[테스트] 여름 반바지 - 재고 부족",
+        "stock_qty": 7,
+        "options": [
+            {"option_name": "S", "stock_qty": 0},
+            {"option_name": "M", "stock_qty": 3},
+            {"option_name": "L", "stock_qty": 4},
+        ],
+    },
+    "1002": {
+        "goods_name": "[테스트] 한정판 스니커즈 - 품절",
+        "stock_qty": 0,
+        "options": [
+            {"option_name": "260mm", "stock_qty": 0},
+            {"option_name": "270mm", "stock_qty": 0},
+        ],
+    },
+    "1003": {
+        "goods_name": "[테스트] 겨울 패딩 - 옵션별 다양",
+        "stock_qty": 45,
+        "options": [
+            {"option_name": "블랙/M", "stock_qty": 20},
+            {"option_name": "블랙/L", "stock_qty": 15},
+            {"option_name": "네이비/M", "stock_qty": 8},
+            {"option_name": "네이비/L", "stock_qty": 2},
+        ],
+    },
+}
+
+
+class MockGodoApiClient:
+    """고도몰 API mock 클라이언트 (dry-run 테스트용)"""
+
+    def get_stock_info(self, goods_nos: list[str]) -> list[dict]:
+        results = []
+        for goods_no in goods_nos:
+            if goods_no in MOCK_PRODUCTS:
+                mock = MOCK_PRODUCTS[goods_no]
+            else:
+                # 등록되지 않은 상품번호는 랜덤 재고 생성
+                mock = {
+                    "goods_name": f"테스트 상품 #{goods_no}",
+                    "stock_qty": random.randint(0, 200),
+                    "options": [],
+                }
+            results.append({
+                "goods_no": goods_no,
+                "goods_name": mock["goods_name"],
+                "stock_qty": mock["stock_qty"],
+                "options": mock["options"],
+                "error": False,
+            })
+        return results
 
 
 class GodoApiClient:
