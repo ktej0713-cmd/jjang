@@ -1,0 +1,14 @@
+[
+  {
+    "from": "team-lead",
+    "text": "{\"type\":\"shutdown_request\",\"requestId\":\"shutdown-1772294528770@구조MD\",\"from\":\"team-lead\",\"reason\":\"보고서 작성 완료. 작업 종료합니다.\",\"timestamp\":\"2026-02-28T16:02:08.770Z\"}",
+    "timestamp": "2026-02-28T16:02:08.770Z",
+    "read": true
+  },
+  {
+    "from": "team-lead",
+    "text": "{\"type\":\"shutdown_request\",\"requestId\":\"shutdown-1772294531936@소싱MD\",\"from\":\"team-lead\",\"reason\":\"보고서 작성 완료. 작업 종료합니다.\",\"timestamp\":\"2026-02-28T16:02:11.936Z\"}",
+    "timestamp": "2026-02-28T16:02:11.936Z",
+    "read": false
+  }
+]

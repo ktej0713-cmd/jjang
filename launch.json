@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "jjang-skin-dev",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "cd /d C:\\Users\\NO\\jjangbaseball-skin && npm run dev"],
+      "port": 3000
+    },
+    {
+      "name": "jjang-php-only",
+      "runtimeExecutable": "C:\\php\\php.exe",
+      "runtimeArgs": ["-S", "localhost:8080", "-t", "C:\\Users\\NO\\jjangbaseball-skin\\skin\\moment_jjang_C3_backup", "C:\\Users\\NO\\jjangbaseball-skin\\router.php"],
+      "port": 8080
+    },
+    {
+      "name": "telegram-bot",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "cd /d C:\\Users\\NO\\telegram-bot && python bot.py"],
+      "port": 0
+    }
+  ]
+}
