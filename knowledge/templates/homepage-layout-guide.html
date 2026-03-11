@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>짱베이스볼 홈페이지 레이아웃 가이드</title>
+<style>
+/* ============================================================
+   CSS 변수 정의 — 디자인 시스템 기준값
+   ============================================================ */
+:root {
+  --color-primary:       #1B2A4A;  /* 메인 네이비 */
+  --color-primary-dark:  #111C33;  /* 네이비 다크 */
+  --color-primary-light: #2E4170;  /* 네이비 라이트 */
+  --color-accent:        #D4A843;  /* 골드 */
+  --color-accent-light:  #E8C97A;  /* 골드 라이트 */
+  --color-accent-tint:   #FDF6E3;  /* 골드 틴트 (배경용) */
+  --color-white:         #FFFFFF;
+  --color-bg-light:      #F5F5F5;  /* 섹션 교차 배경 */
+  --color-bg-dark:       #1B2A4A;
+  --color-text-main:     #1A1A1A;
+  --color-text-sub:      #555555;
+  --color-text-muted:    #999999;
+  --color-border:        #E0E0E0;
+  --color-badge-1:       #D4A843;  /* 1위 골드 */
+  --color-badge-2:       #A0A0A0;  /* 2위 실버 */
+  --color-badge-3:       #CD7F32;  /* 3위 브론즈 */
+  --color-badge-etc:     #1B2A4A;  /* 4위 이하 */
+
+  --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --max-width:     1200px;
+  --content-width: 860px;
+  --gap-section:   80px;
+  --gap-card:      20px;
+  --radius-card:   8px;
+  --radius-btn:    4px;
+
+  --bp-mobile:  768px;
+  --bp-tablet:  1024px;
+  --bp-desktop: 1200px;
+}
+
+/* ============================================================
+   가이드 문서 공통 스타일
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text-main);
+  background: #F0F2F5;
+  line-height: 1.6;
+}
+
+/* 가이드 헤더 */
+.guide-header {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 40px 0;
+  text-align: center;
+}
+.guide-header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+.guide-header p  { font-size: 14px; color: var(--color-accent-light); }
+
+/* 목차 */
+.guide-toc {
+  max-width: var(--max-width);
+  margin: 32px auto;
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 28px 36px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+.guide-toc h2 { font-size: 16px; color: var(--color-primary); margin-bottom: 16px; border-bottom: 2px solid var(--color-accent); padding-bottom: 8px; display: inline-block; }
+.guide-toc ol { padding-left: 20px; }
+.guide-toc li { margin-bottom: 6px; font-size: 14px; }
+.guide-toc a  { color: var(--color-primary-light); text-decoration: none; }
+.guide-toc a:hover { color: var(--color-accent); }
+
+/* 섹션 래퍼 */
+.section-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto 48px;
+  background: var(--color-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
+
+/* 섹션 헤더 레이블 */
+.section-label {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-label .sec-num {
+  background: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+.section-label h2 { font-size: 16px; font-weight: 600; }
+.section-label .sec-tag { margin-left: auto; font-size: 12px; color: var(--color-accent-light); background: rgba(255,255,255,.1); padding: 3px 10px; border-radius: 20px; }
+
+/* 와이어프레임 영역 */
+.wireframe { padding: 28px; background: #F8F9FB; border-bottom: 1px solid var(--color-border); }
+.wireframe-label { font-size: 12px; color: var(--color-text-muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: .08em; }
+
+/* 가이드 텍스트 영역 */
+.guide-body { padding: 28px; }
+.guide-body h3 { font-size: 14px; color: var(--color-primary); font-weight: 700; margin-bottom: 10px; margin-top: 20px; }
+.guide-body h3:first-child { margin-top: 0; }
+.guide-body ul, .guide-body ol { padding-left: 20px; margin-bottom: 12px; }
+.guide-body li { font-size: 13px; color: var(--color-text-sub); margin-bottom: 4px; line-height: 1.7; }
+.guide-body .code { font-family: monospace; background: #EEF0F4; color: var(--color-primary); padding: 2px 6px; border-radius: 3px; font-size: 12px; }
+.guide-body table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 10px; }
+.guide-body th { background: var(--color-primary); color: var(--color-white); padding: 8px 12px; text-align: left; }
+.guide-body td { padding: 8px 12px; border-bottom: 1px solid var(--color-border); color: var(--color-text-sub); }
+.guide-body tr:nth-child(even) td { background: #F9F9F9; }
+.tip-box { background: var(--color-accent-tint); border-left: 3px solid var(--color-accent); padding: 12px 16px; border-radius: 0 6px 6px 0; margin-top: 16px; font-size: 13px; color: var(--color-text-sub); }
+.warn-box { background: #FFF3F3; border-left: 3px solid #E05050; padding: 12px 16px; border-radius: 0 6px 6px 0; margin-top: 16px; font-size: 13px; color: #C03030; }
+
+/* 공통 와이어프레임 요소 */
+.wf-box { background: #DDE1E9; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #6B7A99; font-size: 12px; font-weight: 600; }
+.wf-img { background: linear-gradient(135deg, #C8CDD8 0%, #E4E7EE 100%); }
+.wf-line { height: 1px; background: var(--color-border); margin: 12px 0; }
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     가이드 헤더
+     ============================================================ -->
+<div class="guide-header">
+  <h1>짱베이스볼 홈페이지 레이아웃 가이드</h1>
+  <p>섹션별 와이어프레임 + 고도몰 적용 가이드 | 최종 수정: 2026-03-05</p>
+</div>
+
+<!-- ============================================================
+     목차
+     ============================================================ -->
+<div class="guide-toc">
+  <h2>목차</h2>
+  <ol>
+    <li><a href="#sec1">메인 배너 슬라이더</a> — 전체 폭 1920px, 높이 500px (PC)</li>
+    <li><a href="#sec2">빠른 카테고리 네비게이션</a> — 아이콘 8개, 모바일 가로 스크롤</li>
+    <li><a href="#sec3">시즌 기획전 배너</a> — 1200px 배너 1~2개</li>
+    <li><a href="#sec4">신상품 (NEW ARRIVAL)</a> — 4열 슬라이더, 8~12개</li>
+    <li><a href="#sec5">베스트셀러</a> — 4×2 그리드, 순위 배지, 카테고리 탭</li>
+    <li><a href="#sec6">MD 추천 (큐레이션)</a> — 큰 카드 2~3개, accent-tint 배경</li>
+    <li><a href="#sec7">브랜드관</a> — 브랜드 로고 6~8개, 호버 컬러</li>
+    <li><a href="#sec8">구매 후기</a> — 별점 카드 3~4개</li>
+    <li><a href="#sec9">하단 안내 띠 배너</a> — 4칸 가로 배치</li>
+    <li><a href="#cat">카테고리 페이지 표준 레이아웃</a></li>
+    <li><a href="#tokens">디자인 토큰 참조표</a></li>
+  </ol>
+</div>
+
+<!-- ============================================================
+     섹션 1: 메인 배너 슬라이더
+     ============================================================ -->
+<div class="section-wrap" id="sec1">
+  <div class="section-label">
+    <span class="sec-num">01</span>
+    <h2>메인 배너 슬라이더</h2>
+    <span class="sec-tag">전체 폭 섹션</span>
+  </div>
+
+  <!-- 와이어프레임 -->
+  <div class="wireframe">
+    <div class="wireframe-label">PC 와이어프레임 (1920px 기준)</div>
+    <style>
+      /* 섹션1 전용 스타일 */
+      .s1-banner-wrap {
+        position: relative;
+        width: 100%;
+        height: 280px; /* 가이드 문서 내 표시용: 실제 500px */
+        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+      }
+      .s1-safe-zone {
+        position: absolute;
+        left: 20%; right: 20%;
+        top: 0; bottom: 0;
+        border-left: 2px dashed rgba(212,168,67,.6);
+        border-right: 2px dashed rgba(212,168,67,.6);
+        display: flex;
+        align-items: center;
+        padding: 0 24px;
+      }
+      .s1-safe-label {
+        background: rgba(212,168,67,.15);
+        border: 1px solid rgba(212,168,67,.4);
+        color: var(--color-accent-light);
+        font-size: 11px;
+        padding: 4px 10px;
+        border-radius: 4px;
+        white-space: nowrap;
+      }
+      .s1-text-block { color: white; padding: 0 48px; }
+      .s1-text-block .badge { display: inline-block; background: var(--color-accent); color: var(--color-primary); font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 20px; margin-bottom: 10px; }
+      .s1-text-block h3 { font-size: 28px; font-weight: 800; line-height: 1.3; margin-bottom: 8px; }
+      .s1-text-block p { font-size: 14px; color: rgba(255,255,255,.75); margin-bottom: 16px; }
+      .s1-text-block .btn { display: inline-block; background: var(--color-accent); color: var(--color-primary); font-size: 13px; font-weight: 700; padding: 8px 20px; border-radius: var(--radius-btn); }
+      .s1-right-img { margin-left: auto; width: 300px; height: 280px; background: rgba(255,255,255,.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.4); font-size: 12px; flex-shrink: 0; }
+      .s1-dots { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
+      .s1-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.4); }
+      .s1-dot.active { background: var(--color-accent); width: 24px; border-radius: 4px; }
+      .s1-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; background: rgba(255,255,255,.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; cursor: pointer; }
+      .s1-arrow.prev { left: 16px; }
+      .s1-arrow.next { right: 16px; }
+      /* 영역 표시 오버레이 */
+      .s1-zone-overlay { position: absolute; top: 8px; right: 8px; display: flex; flex-direction: column; gap: 4px; }
+      .s1-zone-tag { font-size: 10px; background: rgba(0,0,0,.5); color: white; padding: 2px 6px; border-radius: 3px; }
+    </style>
+
+    <div class="s1-banner-wrap">
+      <div class="s1-arrow prev">&#8249;</div>
+      <div class="s1-text-block">
+        <div class="badge">2026 스프링 시즌</div>
+        <h3>봄 시즌 야구를<br>제대로 준비하세요</h3>
+        <p>신상 글러브 · 배트 입고 완료</p>
+        <div class="btn">지금 확인하기 &rsaquo;</div>
+      </div>
+      <div class="s1-safe-zone">
+        <div class="s1-safe-label">텍스트 안전 영역 (중앙 60%)</div>
+      </div>
+      <div class="s1-right-img">상품 이미지 영역<br>(우측 배치 가능)</div>
+      <div class="s1-arrow next">&#8250;</div>
+      <div class="s1-dots">
+        <div class="s1-dot active"></div>
+        <div class="s1-dot"></div>
+        <div class="s1-dot"></div>
+        <div class="s1-dot"></div>
+      </div>
+      <div class="s1-zone-overlay">
+        <div class="s1-zone-tag">실제 높이: 500px (PC)</div>
+        <div class="s1-zone-tag">전체 폭: 1920px</div>
+      </div>
+    </div>
+
+    <!-- 모바일 와이어프레임 -->
+    <div class="wireframe-label" style="margin-top:20px;">모바일 와이어프레임 (375px 기준, 실제 높이 400px)</div>
+    <div style="max-width:280px;">
+      <div class="s1-banner-wrap" style="height:160px;border-radius:8px;">
+        <div class="s1-text-block" style="padding:0 16px;">
+          <div class="badge" style="font-size:9px;padding:1px 7px;">2026 스프링</div>
+          <h3 style="font-size:16px;margin-bottom:4px;">봄 시즌 야구를<br>준비하세요</h3>
+          <div class="btn" style="font-size:11px;padding:5px 12px;">확인하기</div>
+        </div>
+        <div class="s1-dots" style="bottom:8px;">
+          <div class="s1-dot active" style="width:16px;height:6px;border-radius:3px;"></div>
+          <div class="s1-dot" style="width:6px;height:6px;"></div>
+          <div class="s1-dot" style="width:6px;height:6px;"></div>
+        </div>
+        <div class="s1-zone-overlay">
+          <div class="s1-zone-tag">720×400 (모바일)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 적용 가이드 -->
+  <div class="guide-body">
+    <h3>사이즈 기준</h3>
+    <table>
+      <tr><th>구분</th><th>PC</th><th>태블릿</th><th>모바일</th></tr>
+      <tr><td>이미지 사이즈</td><td>1920 × 500px</td><td>1024 × 450px</td><td>720 × 400px</td></tr>
+      <tr><td>텍스트 안전 영역</td><td>중앙 60% (576~1344px)</td><td>중앙 70%</td><td>전체 폭 (패딩 16px)</td></tr>
+      <tr><td>슬라이드 수</td><td colspan="3">3~5장 (홀수 권장: 3 또는 5)</td></tr>
+      <tr><td>자동재생 간격</td><td colspan="3">4,000ms (4초)</td></tr>
+    </table>
+
+    <h3>고도몰 적용 위치</h3>
+    <ul>
+      <li>관리자 > 디자인 관리 > 메인 레이아웃 > <span class="code">main/index.html</span></li>
+      <li>슬라이더 라이브러리: Swiper.js (이미 스킨에 포함된 경우 활용)</li>
+      <li>이미지 등록: 관리자 > 쇼핑몰 설정 > 배너 관리 > 메인 배너</li>
+      <li>고도몰 치환코드: <span class="code">{module_banner}</span> 또는 직접 HTML 구현</li>
+    </ul>
+
+    <h3>시즌별 교체 가이드</h3>
+    <table>
+      <tr><th>시즌</th><th>교체 시점</th><th>주요 메시지</th><th>배경 컬러 제안</th></tr>
+      <tr><td>스프링 (3~4월)</td><td>2월 말</td><td>새 시즌 장비 준비</td><td>Primary → 봄 하늘색</td></tr>
+      <tr><td>여름 (5~8월)</td><td>4월 말</td><td>여름 훈련, 땀 관리</td><td>Primary 유지</td></tr>
+      <tr><td>가을 (9~10월)</td><td>8월 말</td><td>마무리 시즌, 오프시즌 준비</td><td>Accent 계열</td></tr>
+      <tr><td>동계 (11~2월)</td><td>10월 말</td><td>동계 훈련, 내년 준비</td><td>Primary Dark</td></tr>
+    </table>
+
+    <div class="tip-box">
+      텍스트 안전 영역(중앙 60%) 바깥에는 텍스트를 배치하지 않습니다. 와이드 모니터(2560px)에서 배너 양 끝이 잘려도 핵심 메시지는 보존됩니다.
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     섹션 2: 빠른 카테고리 네비게이션
+     ============================================================ -->
+<div class="section-wrap" id="sec2">
+  <div class="section-label">
+    <span class="sec-num">02</span>
+    <h2>빠른 카테고리 네비게이션</h2>
+    <span class="sec-tag">1200px 컨테이너</span>
+  </div>
+
+  <div class="wireframe">
+    <div class="wireframe-label">PC 와이어프레임</div>
+    <style>
+      .s2-wrap { max-width: 100%; padding: 24px 0; background: var(--color-white); border-radius: 8px; }
+      .s2-grid { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; }
+      .s2-item { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 16px; cursor: pointer; border-radius: 8px; transition: background .15s; min-width: 88px; }
+      .s2-item:hover { background: var(--color-accent-tint); }
+      .s2-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 22px; color: white; transition: background .15s; }
+      .s2-item:hover .s2-icon { background: var(--color-accent); }
+      .s2-name { font-size: 12px; font-weight: 600; color: var(--color-text-main); text-align: center; }
+    </style>
+    <div class="s2-wrap">
+      <div class="s2-grid">
+        <div class="s2-item"><div class="s2-icon">🧤</div><div class="s2-name">글러브</div></div>
+        <div class="s2-item"><div class="s2-icon">⚾</div><div class="s2-name">배트</div></div>
+        <div class="s2-item"><div class="s2-icon">🦺</div><div class="s2-name">보호장비</div></div>
+        <div class="s2-item"><div class="s2-icon">👟</div><div class="s2-name">야구화</div></div>
+        <div class="s2-item"><div class="s2-icon">👕</div><div class="s2-name">의류</div></div>
+        <div class="s2-item"><div class="s2-icon">🎒</div><div class="s2-name">가방</div></div>
+        <div class="s2-item"><div class="s2-icon">🏋️</div><div class="s2-name">훈련용품</div></div>
+        <div class="s2-item" style="position:relative;">
+          <div class="s2-icon" style="background:var(--color-accent);">🔥</div>
+          <div class="s2-name">기획전</div>
+          <span style="position:absolute;top:8px;right:8px;background:#E05050;color:white;font-size:9px;font-weight:700;padding:1px 5px;border-radius:10px;">HOT</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wireframe-label" style="margin-top:20px;">모바일 와이어프레임 (가로 스크롤)</div>
+    <div style="overflow-x:auto;padding-bottom:8px;">
+      <div style="display:flex;gap:8px;width:max-content;padding:12px 0;">
+        <div class="s2-item" style="min-width:72px;padding:8px 10px;"><div class="s2-icon" style="width:44px;height:44px;font-size:18px;">🧤</div><div class="s2-name" style="font-size:11px;">글러브</div></div>
+        <div class="s2-item" style="min-width:72px;padding:8px 10px;"><div class="s2-icon" style="width:44px;height:44px;font-size:18px;">⚾</div><div class="s2-name" style="font-size:11px;">배트</div></div>
+        <div class="s2-item" style="min-width:72px;padding:8px 10px;"><div class="s2-icon" style="width:44px;height:44px;font-size:18px;">🦺</div><div class="s2-name" style="font-size:11px;">보호장비</div></div>
+        <div class="s2-item" style="min-width:72px;padding:8px 10px;"><div class="s2-icon" style="width:44px;height:44px;font-size:18px;">👟</div><div class="s2-name" style="font-size:11px;">야구화</div></div>
+        <div class="s2-item" style="min-width:72px;padding:8px 10px;"><div class="s2-icon" style="width:44px;height:44px;font-size:18px;">👕</div><div class="s2-name" style="font-size:11px;">의류</div></div>
+        <div class="s2-item" style="min-width:72px;padding:8px 10px;"><div class="s2-icon" style="width:44px;height:44px;font-size:18px;">🎒</div><div class="s2-name" style="font-size:11px;">가방</div></div>
+        <div class="s2-item" style="min-width:72px;padding:8px 10px;"><div class="s2-icon" style="width:44px;height:44px;font-size:18px;">🏋️</div><div class="s2-name" style="font-size:11px;">훈련용품</div></div>
+        <div class="s2-item" style="min-width:72px;padding:8px 10px;position:relative;"><div class="s2-icon" style="width:44px;height:44px;font-size:18px;background:var(--color-accent);">🔥</div><div class="s2-name" style="font-size:11px;">기획전</div></div>
+      </div>
+    </div>
+    <p style="font-size:11px;color:var(--color-text-muted);text-align:center;">← 모바일: 가로 스크롤 (스크롤바 숨김, -webkit-scrollbar 처리) →</p>
+  </div>
+
+  <div class="guide-body">
+    <h3>카테고리 목록 및 연결 URL</h3>
+    <table>
+      <tr><th>순서</th><th>카테고리명</th><th>아이콘 (SVG 대체 권장)</th><th>고도몰 카테고리 번호</th></tr>
+      <tr><td>1</td><td>글러브</td><td>glove.svg</td><td>cat_no 설정 필요</td></tr>
+      <tr><td>2</td><td>배트</td><td>bat.svg</td><td>cat_no 설정 필요</td></tr>
+      <tr><td>3</td><td>보호장비</td><td>protect.svg</td><td>cat_no 설정 필요</td></tr>
+      <tr><td>4</td><td>야구화</td><td>shoes.svg</td><td>cat_no 설정 필요</td></tr>
+      <tr><td>5</td><td>의류</td><td>uniform.svg</td><td>cat_no 설정 필요</td></tr>
+      <tr><td>6</td><td>가방</td><td>bag.svg</td><td>cat_no 설정 필요</td></tr>
+      <tr><td>7</td><td>훈련용품</td><td>training.svg</td><td>cat_no 설정 필요</td></tr>
+      <tr><td>8</td><td>기획전</td><td>event.svg</td><td>기획전 페이지 별도</td></tr>
+    </table>
+
+    <h3>고도몰 적용 방법</h3>
+    <ul>
+      <li><span class="code">main/index.html</span> 내 하드코딩 또는 고도몰 카테고리 모듈 활용</li>
+      <li>아이콘은 이모지 대신 SVG 파일 사용 권장 (<span class="code">images/icon/</span> 디렉토리)</li>
+      <li>모바일 가로 스크롤: <span class="code">overflow-x: auto; white-space: nowrap;</span></li>
+      <li>스크롤바 숨김: <span class="code">::-webkit-scrollbar { display: none; }</span></li>
+    </ul>
+
+    <div class="tip-box">
+      이모지 아이콘은 OS/브라우저마다 렌더링이 달라집니다. SVG 아이콘으로 교체하면 크로스 브라우저 일관성을 확보할 수 있습니다.
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     섹션 3: 시즌 기획전 배너
+     ============================================================ -->
+<div class="section-wrap" id="sec3">
+  <div class="section-label">
+    <span class="sec-num">03</span>
+    <h2>시즌 기획전 배너</h2>
+    <span class="sec-tag">1200px 컨테이너 | 배경: #F5F5F5</span>
+  </div>
+
+  <div class="wireframe" style="background:#F5F5F5;">
+    <div class="wireframe-label">PC 와이어프레임 (1200px 기준, 배너 2개 배치)</div>
+    <style>
+      .s3-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .s3-banner { border-radius: 10px; overflow: hidden; position: relative; height: 180px; display: flex; align-items: flex-end; padding: 20px; }
+      .s3-banner.type-a { background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 60%, #3A5A9A 100%); }
+      .s3-banner.type-b { background: linear-gradient(135deg, #2C3E50 0%, #4A6741 100%); }
+      .s3-banner-text {}
+      .s3-banner-text .label { font-size: 10px; color: var(--color-accent-light); font-weight: 600; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 4px; }
+      .s3-banner-text h3 { font-size: 18px; font-weight: 800; color: white; line-height: 1.3; margin-bottom: 8px; }
+      .s3-banner-text a { font-size: 12px; color: var(--color-accent); font-weight: 600; }
+      .s3-badge { position: absolute; top: 16px; right: 16px; background: var(--color-accent); color: var(--color-primary); font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+      .s3-deco { position: absolute; right: 80px; top: 20px; width: 80px; height: 80px; background: rgba(255,255,255,.08); border-radius: 50%; }
+      /* 배너 1개일 때 */
+      .s3-single { border-radius: 10px; overflow: hidden; height: 200px; display: flex; align-items: center; padding: 0 48px; background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 50%, transparent 100%); position: relative; }
+    </style>
+
+    <div class="s3-grid">
+      <div class="s3-banner type-a">
+        <div class="s3-deco"></div>
+        <div class="s3-banner-text">
+          <div class="label">Spring 2026</div>
+          <h3>스프링 글러브<br>기획전</h3>
+          <a href="#">자세히 보기 &rsaquo;</a>
+        </div>
+        <div class="s3-badge">최대 15% 할인</div>
+      </div>
+      <div class="s3-banner type-b">
+        <div class="s3-banner-text">
+          <div class="label">신입 사회인 특가</div>
+          <h3>입문 세트<br>한번에 준비</h3>
+          <a href="#" style="color:var(--color-accent);">세트 보기 &rsaquo;</a>
+        </div>
+        <div class="s3-badge" style="background:white;color:var(--color-primary);">세트 구성</div>
+      </div>
+    </div>
+
+    <div class="wireframe-label" style="margin-top:20px;">배너 1개 전체폭 레이아웃</div>
+    <div class="s3-single">
+      <div>
+        <div style="font-size:11px;color:var(--color-accent);font-weight:700;margin-bottom:6px;">LIMITED</div>
+        <h3 style="font-size:22px;font-weight:800;color:white;margin-bottom:12px;">2026 한정판 미즈노 글러브<br>선예약 진행 중</h3>
+        <a style="background:var(--color-accent);color:var(--color-primary);font-size:13px;font-weight:700;padding:10px 24px;border-radius:4px;text-decoration:none;">예약하기 &rsaquo;</a>
+      </div>
+      <div style="position:absolute;right:0;top:0;bottom:0;width:40%;background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.3);font-size:12px;">상품 이미지</div>
+    </div>
+  </div>
+
+  <div class="guide-body">
+    <h3>배너 레이아웃 선택 기준</h3>
+    <table>
+      <tr><th>레이아웃</th><th>사용 상황</th><th>사이즈</th></tr>
+      <tr><td>2단 분할</td><td>동시 진행 기획전 2개</td><td>각 580 × 240px</td></tr>
+      <tr><td>1개 전체폭</td><td>메인 시즌 기획전 단독</td><td>1200 × 240px</td></tr>
+      <tr><td>3단 분할</td><td>소규모 이벤트 3개 동시</td><td>각 380 × 200px</td></tr>
+    </table>
+
+    <h3>고도몰 적용 방법</h3>
+    <ul>
+      <li>관리자 > 디자인 관리 > 팝업/배너 관리에서 이미지 등록 후 <span class="code">{module_banner}</span> 치환코드 활용</li>
+      <li>또는 <span class="code">main/index.html</span>에 직접 HTML로 구현 (시즌 교체 시 이미지만 교체)</li>
+      <li>배경을 이미지로 쓸 경우: <span class="code">background-image: url()</span> + <span class="code">background-size: cover</span></li>
+    </ul>
+
+    <div class="warn-box">
+      "최저가 보장", "파격 할인" 등 과한 할인 어조는 브랜드 가이드라인에 따라 사용 금지입니다. "최대 15% 할인", "시즌 기획전" 등 사실 기반 표현을 사용하세요.
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     섹션 4: 신상품 (NEW ARRIVAL)
+     ============================================================ -->
+<div class="section-wrap" id="sec4">
+  <div class="section-label">
+    <span class="sec-num">04</span>
+    <h2>신상품 (NEW ARRIVAL)</h2>
+    <span class="sec-tag">1200px 컨테이너 | 배경: #FFFFFF</span>
+  </div>
+
+  <div class="wireframe">
+    <div class="wireframe-label">PC 와이어프레임 (4열 슬라이더)</div>
+    <style>
+      /* 섹션 공통 헤더 */
+      .sec-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+      .sec-title { display: flex; align-items: center; gap: 12px; }
+      .sec-title-bar { width: 4px; height: 22px; background: var(--color-accent); border-radius: 2px; }
+      .sec-title h2 { font-size: 20px; font-weight: 800; color: var(--color-primary); }
+      .sec-title .sub { font-size: 13px; color: var(--color-text-muted); margin-left: 8px; }
+      .sec-more { font-size: 13px; color: var(--color-text-sub); text-decoration: none; }
+      .sec-more:hover { color: var(--color-accent); }
+
+      /* 상품 카드 */
+      .product-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap-card); position: relative; }
+      .product-card { border: 1px solid var(--color-border); border-radius: var(--radius-card); overflow: hidden; background: white; cursor: pointer; transition: box-shadow .15s; }
+      .product-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.1); }
+      .card-img { width: 100%; padding-top: 100%; position: relative; background: var(--color-bg-light); }
+      .card-img-inner { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--color-text-muted); }
+      .card-badge { position: absolute; top: 10px; left: 10px; background: var(--color-primary); color: white; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 3px; }
+      .card-badge.new { background: var(--color-accent); color: var(--color-primary); }
+      .card-body { padding: 12px; }
+      .card-brand { font-size: 11px; color: var(--color-text-muted); margin-bottom: 4px; }
+      .card-name { font-size: 13px; font-weight: 600; color: var(--color-text-main); margin-bottom: 8px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+      .card-price { font-size: 16px; font-weight: 800; color: var(--color-primary); }
+      .card-price .original { font-size: 12px; color: var(--color-text-muted); text-decoration: line-through; margin-right: 4px; font-weight: 400; }
+      .card-price .discount { color: #E05050; font-size: 13px; margin-right: 4px; }
+      .card-rate { display: flex; align-items: center; gap: 4px; margin-top: 6px; font-size: 11px; color: var(--color-text-muted); }
+
+      /* 슬라이더 화살표 */
+      .slider-wrap { position: relative; }
+      .slider-arrow { position: absolute; top: 30%; transform: translateY(-50%); width: 32px; height: 32px; background: white; border: 1px solid var(--color-border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--color-primary); cursor: pointer; z-index: 2; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+      .slider-arrow.prev { left: -16px; }
+      .slider-arrow.next { right: -16px; }
+    </style>
+
+    <div>
+      <div class="sec-header">
+        <div class="sec-title">
+          <div class="sec-title-bar"></div>
+          <h2>신상품 <span class="sub">NEW ARRIVAL</span></h2>
+        </div>
+        <a class="sec-more" href="#">전체보기 &rsaquo;</a>
+      </div>
+      <div class="slider-wrap">
+        <div class="slider-arrow prev">&#8249;</div>
+        <div class="product-grid-4">
+          <!-- 카드 4개 예시 -->
+          <div class="product-card">
+            <div class="card-img"><div class="card-img-inner">상품 이미지<br>1:1 비율</div><span class="card-badge new">NEW</span></div>
+            <div class="card-body">
+              <div class="card-brand">MIZUNO</div>
+              <div class="card-name">미즈노 프로 포지션 글러브 내야수용 2026 모델</div>
+              <div class="card-price"><span class="discount">10%</span><span class="original">450,000</span>405,000원</div>
+              <div class="card-rate">★★★★★ <span>4.9 (23)</span></div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="card-img"><div class="card-img-inner">상품 이미지<br>1:1 비율</div><span class="card-badge new">NEW</span></div>
+            <div class="card-body">
+              <div class="card-brand">WILSON</div>
+              <div class="card-name">윌슨 A2000 외야수 글러브 12.5인치</div>
+              <div class="card-price">520,000원</div>
+              <div class="card-rate">★★★★☆ <span>4.7 (8)</span></div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="card-img"><div class="card-img-inner">상품 이미지<br>1:1 비율</div><span class="card-badge">SALE</span></div>
+            <div class="card-body">
+              <div class="card-brand">RAWLINGS</div>
+              <div class="card-name">롤링스 HEART OF THE HIDE 투수용 글러브</div>
+              <div class="card-price"><span class="discount">15%</span><span class="original">580,000</span>493,000원</div>
+              <div class="card-rate">★★★★★ <span>5.0 (4)</span></div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="card-img"><div class="card-img-inner">상품 이미지<br>1:1 비율</div><span class="card-badge new">NEW</span></div>
+            <div class="card-body">
+              <div class="card-brand">SSK</div>
+              <div class="card-name">SSK 프로엣지 배트 84cm 900g</div>
+              <div class="card-price">280,000원</div>
+              <div class="card-rate">★★★★☆ <span>4.5 (12)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-arrow next">&#8250;</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-body">
+    <h3>섹션 제목 스타일 규칙</h3>
+    <ul>
+      <li>좌측 세로 바: <span class="code">width: 4px; background: var(--color-accent);</span></li>
+      <li>한글 제목 + 영문 서브 조합 필수 (예: 신상품 NEW ARRIVAL)</li>
+      <li>"전체보기 &gt;" 링크는 우측 정렬, 해당 카테고리 목록 페이지로 연결</li>
+    </ul>
+
+    <h3>고도몰 치환코드</h3>
+    <ul>
+      <li>신상품 목록: <span class="code">{module_goodsNew}</span> 또는 <span class="code">{goodsList}</span></li>
+      <li>상품명: <span class="code">{goodsNm}</span>, 가격: <span class="code">{goodsPrice}</span></li>
+      <li>브랜드: <span class="code">{brandNm}</span>, 이미지: <span class="code">{goodsImageUrl}</span></li>
+      <li>할인율: <span class="code">{discountRate}</span>, 별점: <span class="code">{goodsReviewScore}</span></li>
+      <li>상품 URL: <span class="code">{goodsDetailUrl}</span></li>
+    </ul>
+
+    <h3>상품 수 및 슬라이더 설정</h3>
+    <table>
+      <tr><th>구분</th><th>PC</th><th>태블릿</th><th>모바일</th></tr>
+      <tr><td>한 화면 표시</td><td>4개</td><td>3개</td><td>2개</td></tr>
+      <tr><td>총 상품 수</td><td colspan="3">8~12개</td></tr>
+      <tr><td>슬라이더</td><td>좌우 화살표</td><td>좌우 화살표</td><td>스와이프</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ============================================================
+     섹션 5: 베스트셀러
+     ============================================================ -->
+<div class="section-wrap" id="sec5">
+  <div class="section-label">
+    <span class="sec-num">05</span>
+    <h2>베스트셀러</h2>
+    <span class="sec-tag">1200px 컨테이너 | 배경: #F5F5F5</span>
+  </div>
+
+  <div class="wireframe" style="background:#F5F5F5;">
+    <div class="wireframe-label">PC 와이어프레임 (카테고리 탭 + 4×2 그리드)</div>
+    <style>
+      .s5-tabs { display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 2px solid var(--color-border); }
+      .s5-tab { padding: 10px 20px; font-size: 14px; font-weight: 600; color: var(--color-text-muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all .15s; }
+      .s5-tab.active { color: var(--color-primary); border-bottom-color: var(--color-primary); }
+      .rank-badge { position: absolute; top: 10px; left: 10px; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; color: white; }
+      .rank-1 { background: var(--color-badge-1); color: var(--color-primary); }
+      .rank-2 { background: var(--color-badge-2); }
+      .rank-3 { background: var(--color-badge-3); }
+      .rank-etc { background: var(--color-badge-etc); }
+    </style>
+
+    <div>
+      <div class="sec-header">
+        <div class="sec-title">
+          <div class="sec-title-bar"></div>
+          <h2>베스트셀러 <span class="sub">BEST SELLER</span></h2>
+        </div>
+        <a class="sec-more" href="#">전체보기 &rsaquo;</a>
+      </div>
+      <div class="s5-tabs">
+        <div class="s5-tab active">전체</div>
+        <div class="s5-tab">글러브</div>
+        <div class="s5-tab">배트</div>
+        <div class="s5-tab">보호장비</div>
+        <div class="s5-tab">야구화</div>
+      </div>
+      <div class="product-grid-4">
+        <!-- 1~8위 상품 카드 -->
+        <div class="product-card"><div class="card-img"><div class="card-img-inner">상품 이미지</div><span class="rank-badge rank-1">1</span></div><div class="card-body"><div class="card-brand">MIZUNO</div><div class="card-name">미즈노 프로 내야수용 글러브</div><div class="card-price">405,000원</div><div class="card-rate">★★★★★ 4.9 (42)</div></div></div>
+        <div class="product-card"><div class="card-img"><div class="card-img-inner">상품 이미지</div><span class="rank-badge rank-2">2</span></div><div class="card-body"><div class="card-brand">SSK</div><div class="card-name">SSK 알루미늄 배트 84cm</div><div class="card-price">280,000원</div><div class="card-rate">★★★★☆ 4.7 (31)</div></div></div>
+        <div class="product-card"><div class="card-img"><div class="card-img-inner">상품 이미지</div><span class="rank-badge rank-3">3</span></div><div class="card-body"><div class="card-brand">RAWLINGS</div><div class="card-name">롤링스 HOH 외야수 글러브</div><div class="card-price"><span class="original" style="font-size:11px;color:#999;text-decoration:line-through;margin-right:4px;">580,000</span>493,000원</div><div class="card-rate">★★★★★ 5.0 (19)</div></div></div>
+        <div class="product-card"><div class="card-img"><div class="card-img-inner">상품 이미지</div><span class="rank-badge rank-etc">4</span></div><div class="card-body"><div class="card-brand">ZETT</div><div class="card-name">제트 배터스 헬멧 싱글플랩</div><div class="card-price">65,000원</div><div class="card-rate">★★★★☆ 4.5 (28)</div></div></div>
+        <div class="product-card"><div class="card-img"><div class="card-img-inner">상품 이미지</div><span class="rank-badge rank-etc">5</span></div><div class="card-body"><div class="card-brand">MIZUNO</div><div class="card-name">미즈노 야구화 스파이크 9선</div><div class="card-price">138,000원</div><div class="card-rate">★★★★★ 4.8 (15)</div></div></div>
+        <div class="product-card"><div class="card-img"><div class="card-img-inner">상품 이미지</div><span class="rank-badge rank-etc">6</span></div><div class="card-body"><div class="card-brand">WILSON</div><div class="card-name">윌슨 포수 미트 A2000 CM33</div><div class="card-price">680,000원</div><div class="card-rate">★★★★☆ 4.6 (9)</div></div></div>
+        <div class="product-card"><div class="card-img"><div class="card-img-inner">상품 이미지</div><span class="rank-badge rank-etc">7</span></div><div class="card-body"><div class="card-brand">HATAKEYAMA</div><div class="card-name">하타케야마 타격 장갑 PRO</div><div class="card-price">48,000원</div><div class="card-rate">★★★★★ 4.9 (67)</div></div></div>
+        <div class="product-card"><div class="card-img"><div class="card-img-inner">상품 이미지</div><span class="rank-badge rank-etc">8</span></div><div class="card-body"><div class="card-brand">SSK</div><div class="card-name">SSK 타격 헬멧 더블플랩</div><div class="card-price">72,000원</div><div class="card-rate">★★★★☆ 4.4 (22)</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-body">
+    <h3>순위 배지 색상 규칙</h3>
+    <table>
+      <tr><th>순위</th><th>배지 색상</th><th>CSS 변수</th></tr>
+      <tr><td>1위</td><td>골드 (#D4A843)</td><td><span class="code">var(--color-badge-1)</span></td></tr>
+      <tr><td>2위</td><td>실버 (#A0A0A0)</td><td><span class="code">var(--color-badge-2)</span></td></tr>
+      <tr><td>3위</td><td>브론즈 (#CD7F32)</td><td><span class="code">var(--color-badge-3)</span></td></tr>
+      <tr><td>4~8위</td><td>Primary (#1B2A4A)</td><td><span class="code">var(--color-badge-etc)</span></td></tr>
+    </table>
+
+    <h3>카테고리 탭 필터 동작</h3>
+    <ul>
+      <li>탭 클릭 시 해당 카테고리 베스트 상품으로 교체 (AJAX 또는 고도몰 필터 활용)</li>
+      <li>활성 탭: <span class="code">border-bottom: 2px solid var(--color-primary)</span></li>
+      <li>고도몰 치환코드: <span class="code">{module_goodsBest}</span> + cat_no 파라미터</li>
+    </ul>
+
+    <h3>고도몰 베스트 상품 모듈</h3>
+    <ul>
+      <li>관리자 > 상품 관리 > 베스트 상품 설정에서 노출 기준 지정</li>
+      <li>기준: 판매량 7일/30일/전체 중 선택 (권장: 30일)</li>
+      <li>카테고리별 베스트: <span class="code">{goodsList cat_no="xxx" sort="bestSeller"}</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================
+     섹션 6: MD 추천 (큐레이션)
+     ============================================================ -->
+<div class="section-wrap" id="sec6">
+  <div class="section-label">
+    <span class="sec-num">06</span>
+    <h2>MD 추천 (큐레이션)</h2>
+    <span class="sec-tag">1200px 컨테이너 | 배경: accent-tint</span>
+  </div>
+
+  <div class="wireframe" style="background:var(--color-accent-tint);">
+    <div class="wireframe-label">PC 와이어프레임 (큰 카드 3개)</div>
+    <style>
+      .s6-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .s6-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+      .s6-card-img { width: 100%; padding-top: 65%; position: relative; background: var(--color-bg-light); }
+      .s6-card-img-inner { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--color-text-muted); font-size: 11px; }
+      .s6-card-body { padding: 16px; }
+      .s6-card-tag { display: inline-block; background: var(--color-accent-tint); color: var(--color-accent); border: 1px solid var(--color-accent-light); font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 20px; margin-bottom: 8px; }
+      .s6-card-title { font-size: 15px; font-weight: 700; color: var(--color-primary); margin-bottom: 6px; }
+      .s6-card-desc { font-size: 12px; color: var(--color-text-sub); line-height: 1.6; margin-bottom: 12px; }
+      .s6-card-link { font-size: 12px; color: var(--color-primary); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--color-primary); }
+      .s6-md-sig { display: flex; align-items: center; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--color-border); }
+      .s6-md-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 11px; color: white; font-weight: 700; }
+      .s6-md-name { font-size: 11px; color: var(--color-text-muted); }
+    </style>
+
+    <div>
+      <div class="sec-header" style="margin-bottom:20px;">
+        <div class="sec-title">
+          <div class="sec-title-bar"></div>
+          <h2>MD가 추천하는 <span class="sub">CURATOR'S PICK</span></h2>
+        </div>
+      </div>
+      <div class="s6-grid">
+        <div class="s6-card">
+          <div class="s6-card-img"><div class="s6-card-img-inner">상품 이미지 (와이드)</div></div>
+          <div class="s6-card-body">
+            <div class="s6-card-tag">사회인 추천</div>
+            <div class="s6-card-title">처음 사는 글러브, 이것부터</div>
+            <div class="s6-card-desc">포지션 정하기 전이라면 내야/외야 겸용 올라운드 타입이 맞습니다. 미즈노 셀렉트9 시리즈는 가격 대비 형태 유지력이 검증됐습니다.</div>
+            <a class="s6-card-link" href="#">상품 보기 &rsaquo;</a>
+            <div class="s6-md-sig"><div class="s6-md-avatar">MD</div><div class="s6-md-name">짱베이스볼 MD 추천</div></div>
+          </div>
+        </div>
+        <div class="s6-card">
+          <div class="s6-card-img"><div class="s6-card-img-inner">상품 이미지 (와이드)</div></div>
+          <div class="s6-card-body">
+            <div class="s6-card-tag">스프링 시즌</div>
+            <div class="s6-card-title">봄 개막 전 점검할 장비</div>
+            <div class="s6-card-desc">동계 보관 후 배트 그립, 스파이크 밑창 마모를 확인하세요. 시즌 초반에 교체하면 훈련 효율이 달라집니다.</div>
+            <a class="s6-card-link" href="#">기획전 보기 &rsaquo;</a>
+            <div class="s6-md-sig"><div class="s6-md-avatar">MD</div><div class="s6-md-name">짱베이스볼 MD 추천</div></div>
+          </div>
+        </div>
+        <div class="s6-card">
+          <div class="s6-card-img"><div class="s6-card-img-inner">상품 이미지 (와이드)</div></div>
+          <div class="s6-card-body">
+            <div class="s6-card-tag">유소년 학부모</div>
+            <div class="s6-card-title">아이 첫 글러브 고르는 법</div>
+            <div class="s6-card-desc">초등 저학년은 10.5인치 이하, 고학년은 11~11.5인치가 적당합니다. 너무 크면 포구 타점이 흐트러집니다.</div>
+            <a class="s6-card-link" href="#">사이즈 가이드 &rsaquo;</a>
+            <div class="s6-md-sig"><div class="s6-md-avatar">MD</div><div class="s6-md-name">짱베이스볼 MD 추천</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-body">
+    <h3>큐레이션 카드 작성 기준</h3>
+    <ul>
+      <li>제목: 상황/타겟 중심 (상품명 나열 금지)</li>
+      <li>설명: 실사용자 관점에서 "왜 이 상품인지" 서술 (2~3문장)</li>
+      <li>태그: 사회인 추천 / 유소년 학부모 / 스프링 시즌 / 엘리트 선수 등 타겟 명시</li>
+      <li>MD 서명: 신뢰 요소로 활용 — "짱베이스볼 MD 추천" 고정</li>
+    </ul>
+
+    <h3>시즌/상황별 큐레이션 주제 예시</h3>
+    <table>
+      <tr><th>시즌</th><th>카드 1</th><th>카드 2</th><th>카드 3</th></tr>
+      <tr><td>스프링(3~4월)</td><td>시즌 준비 필수 장비</td><td>봄 개막 글러브 추천</td><td>신입 사회인 입문 세트</td></tr>
+      <tr><td>여름(5~8월)</td><td>땀 관리 의류 추천</td><td>더위에 강한 야구화</td><td>훈련 강도 높이는 용품</td></tr>
+      <tr><td>가을(9~10월)</td><td>마무리 시즌 점검</td><td>오프시즌 대비 장비</td><td>내년을 위한 글러브 길들이기</td></tr>
+      <tr><td>동계(11~2월)</td><td>실내 훈련 용품</td><td>장비 보관/관리 방법</td><td>내년 시즌 미리 준비</td></tr>
+    </table>
+
+    <div class="tip-box">
+      MD 추천 텍스트는 "야구를 아는 사람이 쓴 글"이어야 합니다. "좋은 제품입니다" 같은 일반론 대신 포지션, 인치, 소재 등 구체적인 야구 용어를 활용하세요.
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     섹션 7: 브랜드관
+     ============================================================ -->
+<div class="section-wrap" id="sec7">
+  <div class="section-label">
+    <span class="sec-num">07</span>
+    <h2>브랜드관</h2>
+    <span class="sec-tag">1200px 컨테이너 | 배경: #FFFFFF</span>
+  </div>
+
+  <div class="wireframe">
+    <div class="wireframe-label">PC 와이어프레임 (브랜드 로고 7개)</div>
+    <style>
+      .s7-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
+      .s7-brand { border: 1px solid var(--color-border); border-radius: 8px; padding: 16px 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; cursor: pointer; transition: all .15s; min-height: 80px; }
+      .s7-brand:hover { border-color: var(--color-accent); background: var(--color-accent-tint); }
+      .s7-brand-logo { width: 60px; height: 32px; background: var(--color-bg-light); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: var(--color-text-muted); filter: grayscale(100%); transition: filter .2s; }
+      .s7-brand:hover .s7-brand-logo { filter: grayscale(0%); }
+      .s7-brand-name { font-size: 10px; color: var(--color-text-muted); font-weight: 600; text-align: center; }
+    </style>
+
+    <div>
+      <div class="sec-header">
+        <div class="sec-title">
+          <div class="sec-title-bar"></div>
+          <h2>브랜드관 <span class="sub">BRANDS</span></h2>
+        </div>
+      </div>
+      <div class="s7-grid">
+        <div class="s7-brand"><div class="s7-brand-logo">MIZUNO</div><div class="s7-brand-name">미즈노</div></div>
+        <div class="s7-brand"><div class="s7-brand-logo">WILSON</div><div class="s7-brand-name">윌슨</div></div>
+        <div class="s7-brand"><div class="s7-brand-logo">RAWLINGS</div><div class="s7-brand-name">롤링스</div></div>
+        <div class="s7-brand"><div class="s7-brand-logo">SSK</div><div class="s7-brand-name">SSK</div></div>
+        <div class="s7-brand"><div class="s7-brand-logo">ZETT</div><div class="s7-brand-name">제트</div></div>
+        <div class="s7-brand"><div class="s7-brand-logo">HATAKEYAMA</div><div class="s7-brand-name">하타케야마</div></div>
+        <div class="s7-brand"><div class="s7-brand-logo">KUBOTA</div><div class="s7-brand-name">구보타슬러거</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-body">
+    <h3>브랜드 로고 처리 규칙</h3>
+    <ul>
+      <li>기본 상태: <span class="code">filter: grayscale(100%)</span> (그레이스케일)</li>
+      <li>호버 상태: <span class="code">filter: grayscale(0%)</span> (컬러 전환, transition 0.2s)</li>
+      <li>로고 이미지 형식: SVG 또는 PNG (투명 배경)</li>
+      <li>로고 영역 크기: 120 × 60px 권장 (여백 포함)</li>
+    </ul>
+
+    <h3>반응형 열 수</h3>
+    <table>
+      <tr><th>브레이크포인트</th><th>열 수</th><th>CSS</th></tr>
+      <tr><td>PC (1200px+)</td><td>7열</td><td><span class="code">grid-template-columns: repeat(7, 1fr)</span></td></tr>
+      <tr><td>태블릿 (768~1024px)</td><td>4열</td><td><span class="code">repeat(4, 1fr)</span></td></tr>
+      <tr><td>모바일 (~768px)</td><td>3열 + 가로 스크롤</td><td><span class="code">repeat(3, 1fr)</span></td></tr>
+    </table>
+
+    <h3>고도몰 브랜드 모듈</h3>
+    <ul>
+      <li>관리자 > 상품 관리 > 브랜드 관리에서 브랜드 등록 및 로고 업로드</li>
+      <li>브랜드 클릭 시 이동 URL: <span class="code">/goods/goods_list.php?brandCd=XXX</span></li>
+      <li>고도몰 치환코드: <span class="code">{brandList}</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================
+     섹션 8: 구매 후기
+     ============================================================ -->
+<div class="section-wrap" id="sec8">
+  <div class="section-label">
+    <span class="sec-num">08</span>
+    <h2>구매 후기</h2>
+    <span class="sec-tag">1200px 컨테이너 | 배경: #F5F5F5</span>
+  </div>
+
+  <div class="wireframe" style="background:#F5F5F5;">
+    <div class="wireframe-label">PC 와이어프레임 (4개 카드)</div>
+    <style>
+      .s8-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+      .s8-card { background: white; border-radius: 10px; padding: 16px; box-shadow: 0 1px 6px rgba(0,0,0,.06); }
+      .s8-stars { color: var(--color-accent); font-size: 14px; margin-bottom: 8px; }
+      .s8-review-text { font-size: 13px; color: var(--color-text-sub); line-height: 1.6; margin-bottom: 12px; min-height: 56px; }
+      .s8-product { display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--color-border); }
+      .s8-product-img { width: 40px; height: 40px; border-radius: 4px; background: var(--color-bg-light); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 9px; color: var(--color-text-muted); }
+      .s8-product-info { flex: 1; min-width: 0; }
+      .s8-product-name { font-size: 11px; color: var(--color-text-sub); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .s8-product-price { font-size: 12px; color: var(--color-primary); font-weight: 700; }
+      .s8-reviewer { font-size: 11px; color: var(--color-text-muted); margin-bottom: 4px; }
+    </style>
+
+    <div>
+      <div class="sec-header">
+        <div class="sec-title">
+          <div class="sec-title-bar"></div>
+          <h2>구매 후기 <span class="sub">REVIEWS</span></h2>
+        </div>
+        <a class="sec-more" href="#">후기 더보기 &rsaquo;</a>
+      </div>
+      <div class="s8-grid">
+        <div class="s8-card">
+          <div class="s8-reviewer">사회인야구 10년차 **김</div>
+          <div class="s8-stars">★★★★★</div>
+          <div class="s8-review-text">처음에 뻑뻑할 줄 알았는데 길들이기가 생각보다 빨리 됐습니다. 가죽 질감이 가격 대비 훨씬 좋아요.</div>
+          <div class="s8-product">
+            <div class="s8-product-img">이미지</div>
+            <div class="s8-product-info">
+              <div class="s8-product-name">미즈노 프로 내야수 글러브</div>
+              <div class="s8-product-price">405,000원</div>
+            </div>
+          </div>
+        </div>
+        <div class="s8-card">
+          <div class="s8-reviewer">유소년 학부모 **이</div>
+          <div class="s8-stars">★★★★★</div>
+          <div class="s8-review-text">아이 포지션에 맞게 추천해줘서 선택이 편했습니다. 11인치로 구매했는데 딱 맞네요.</div>
+          <div class="s8-product">
+            <div class="s8-product-img">이미지</div>
+            <div class="s8-product-info">
+              <div class="s8-product-name">SSK 주니어 내야수 글러브 11인치</div>
+              <div class="s8-product-price">128,000원</div>
+            </div>
+          </div>
+        </div>
+        <div class="s8-card">
+          <div class="s8-reviewer">사회인야구 **박</div>
+          <div class="s8-stars">★★★★☆</div>
+          <div class="s8-review-text">배트 무게감이 실제로 사용해보니 카탈로그 수치와 거의 동일합니다. 그립감 좋고 반발력도 만족스럽습니다.</div>
+          <div class="s8-product">
+            <div class="s8-product-img">이미지</div>
+            <div class="s8-product-info">
+              <div class="s8-product-name">SSK 프로엣지 배트 84cm</div>
+              <div class="s8-product-price">280,000원</div>
+            </div>
+          </div>
+        </div>
+        <div class="s8-card">
+          <div class="s8-reviewer">동호회 주장 **최</div>
+          <div class="s8-stars">★★★★★</div>
+          <div class="s8-review-text">팀원들 단체 주문했는데 배송 빠르고 포장도 안전했습니다. 사이즈 문의에도 친절하게 답변해줬어요.</div>
+          <div class="s8-product">
+            <div class="s8-product-img">이미지</div>
+            <div class="s8-product-info">
+              <div class="s8-product-name">제트 배터스 헬멧 싱글플랩</div>
+              <div class="s8-product-price">65,000원</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-body">
+    <h3>후기 카드 표시 기준</h3>
+    <ul>
+      <li>별점 4점 이상만 메인 노출 (3점 이하는 후기 전체 페이지에서만 표시)</li>
+      <li>후기 텍스트: 최대 100자 (말줄임 처리: <span class="code">overflow: hidden; text-overflow: ellipsis;</span>)</li>
+      <li>작성자: 이름 마스킹 처리 (예: **김) — 개인정보 보호</li>
+      <li>최신 후기 우선 정렬 (작성일 기준 내림차순)</li>
+    </ul>
+
+    <h3>고도몰 후기 모듈</h3>
+    <ul>
+      <li>치환코드: <span class="code">{module_goodsReview}</span> 또는 커스텀 쿼리</li>
+      <li>별점 표시: 고도몰 내장 별점 시스템 활용</li>
+      <li>"후기 더보기" 링크: <span class="code">/board/board.html?brd_no=XXX</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================
+     섹션 9: 하단 안내 띠 배너
+     ============================================================ -->
+<div class="section-wrap" id="sec9">
+  <div class="section-label">
+    <span class="sec-num">09</span>
+    <h2>하단 안내 띠 배너</h2>
+    <span class="sec-tag">전체 폭 | 배경: Primary</span>
+  </div>
+
+  <div class="wireframe">
+    <div class="wireframe-label">PC 와이어프레임 (4칸 가로 배치)</div>
+    <style>
+      .s9-strip { background: var(--color-primary); padding: 28px 0; border-radius: 8px; }
+      .s9-inner { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+      .s9-item { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 12px 16px; text-align: center; border-right: 1px solid rgba(255,255,255,.15); }
+      .s9-item:last-child { border-right: none; }
+      .s9-icon { font-size: 28px; margin-bottom: 8px; }
+      .s9-title { font-size: 13px; font-weight: 700; color: var(--color-white); margin-bottom: 4px; }
+      .s9-desc { font-size: 11px; color: rgba(255,255,255,.65); line-height: 1.5; }
+    </style>
+
+    <div class="s9-strip">
+      <div class="s9-inner">
+        <div class="s9-item">
+          <div class="s9-icon">🚚</div>
+          <div class="s9-title">50,000원 이상 무료배송</div>
+          <div class="s9-desc">일반 택배 기준<br>도서산간 추가 운임</div>
+        </div>
+        <div class="s9-item">
+          <div class="s9-icon">🔒</div>
+          <div class="s9-title">안전결제</div>
+          <div class="s9-desc">카드 / 계좌이체<br>무통장입금 가능</div>
+        </div>
+        <div class="s9-item">
+          <div class="s9-icon">🔄</div>
+          <div class="s9-title">교환 / 반품</div>
+          <div class="s9-desc">수령 후 7일 이내<br>미개봉 · 미사용 조건</div>
+        </div>
+        <div class="s9-item">
+          <div class="s9-icon">💬</div>
+          <div class="s9-title">야구인 전문 상담</div>
+          <div class="s9-desc">평일 10:00~18:00<br>카카오 채널 운영</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-body">
+    <h3>안내 항목 내용 기준</h3>
+    <table>
+      <tr><th>항목</th><th>제목</th><th>설명</th><th>아이콘 (SVG 권장)</th></tr>
+      <tr><td>배송</td><td>50,000원 이상 무료배송</td><td>도서산간 추가 운임 명시</td><td>truck.svg</td></tr>
+      <tr><td>결제</td><td>안전결제</td><td>결제 수단 열거</td><td>lock.svg</td></tr>
+      <tr><td>반품</td><td>교환 / 반품</td><td>7일 이내 조건 명시</td><td>refresh.svg</td></tr>
+      <tr><td>상담</td><td>야구인 전문 상담</td><td>운영시간 + 채널 명시</td><td>chat.svg</td></tr>
+    </table>
+
+    <h3>고도몰 적용 위치</h3>
+    <ul>
+      <li><span class="code">_layout/tail.html</span> 상단, 푸터 위에 배치</li>
+      <li>또는 <span class="code">main/index.html</span> 하단 고정</li>
+      <li>전체 폭 적용 시 <span class="code">width: 100vw; margin-left: calc(-50vw + 50%)</span> 기법 활용</li>
+    </ul>
+
+    <div class="tip-box">
+      "전문 상담" 문구는 짱베이스볼 브랜드 아이덴티티와 직결됩니다. "야구인 전문 상담"처럼 야구 전문성을 강조한 문구를 사용하세요.
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     카테고리 페이지 표준 레이아웃
+     ============================================================ -->
+<div class="section-wrap" id="cat">
+  <div class="section-label" style="background: var(--color-primary-dark);">
+    <span class="sec-num" style="background:white;color:var(--color-primary);">CAT</span>
+    <h2>카테고리 페이지 표준 레이아웃</h2>
+    <span class="sec-tag">goods/goods_list.html</span>
+  </div>
+
+  <div class="wireframe">
+    <div class="wireframe-label">PC 와이어프레임 전체 구조</div>
+    <style>
+      /* 카테고리 배너 */
+      .cat-banner { height: 120px; background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%); border-radius: 8px; display: flex; align-items: center; padding: 0 32px; margin-bottom: 20px; }
+      .cat-banner h2 { font-size: 24px; font-weight: 800; color: white; }
+      .cat-banner p { font-size: 13px; color: rgba(255,255,255,.7); margin-left: 16px; }
+      /* 서브 카테고리 탭 */
+      .cat-sub-tabs { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+      .cat-sub-tab { padding: 6px 16px; border: 1px solid var(--color-border); border-radius: 20px; font-size: 13px; color: var(--color-text-sub); cursor: pointer; }
+      .cat-sub-tab.active { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+      /* 필터/정렬 바 */
+      .cat-filter-bar { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--color-bg-light); border-radius: 6px; margin-bottom: 20px; }
+      .cat-filter-left { display: flex; gap: 8px; }
+      .cat-filter-chip { padding: 4px 12px; border: 1px solid var(--color-border); border-radius: 4px; font-size: 12px; color: var(--color-text-sub); background: white; cursor: pointer; }
+      .cat-filter-chip.active { border-color: var(--color-accent); color: var(--color-primary); background: var(--color-accent-tint); }
+      .cat-filter-right { display: flex; align-items: center; gap: 12px; }
+      .cat-sort { font-size: 12px; color: var(--color-text-sub); cursor: pointer; }
+      .cat-sort.active { color: var(--color-primary); font-weight: 700; }
+      .cat-count { font-size: 12px; color: var(--color-text-muted); }
+      /* 상품 그리드 */
+      .cat-product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+      /* 페이지네이션 */
+      .cat-pagination { display: flex; justify-content: center; gap: 4px; }
+      .cat-page { width: 32px; height: 32px; border: 1px solid var(--color-border); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--color-text-sub); cursor: pointer; }
+      .cat-page.active { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+    </style>
+
+    <!-- 1. 카테고리 배너 -->
+    <div class="cat-banner">
+      <h2>글러브</h2>
+      <p>내야수 · 외야수 · 포수 · 투수 포지션별 전문 글러브</p>
+    </div>
+
+    <!-- 2. 서브 카테고리 탭 -->
+    <div class="cat-sub-tabs">
+      <div class="cat-sub-tab active">전체</div>
+      <div class="cat-sub-tab">내야수용</div>
+      <div class="cat-sub-tab">외야수용</div>
+      <div class="cat-sub-tab">포수 미트</div>
+      <div class="cat-sub-tab">투수용</div>
+      <div class="cat-sub-tab">1루수 미트</div>
+    </div>
+
+    <!-- 3. 필터/정렬 바 -->
+    <div class="cat-filter-bar">
+      <div class="cat-filter-left">
+        <span style="font-size:12px;color:var(--color-text-muted);margin-right:4px;">브랜드</span>
+        <div class="cat-filter-chip active">미즈노</div>
+        <div class="cat-filter-chip">윌슨</div>
+        <div class="cat-filter-chip">롤링스</div>
+        <div class="cat-filter-chip">SSK</div>
+        <div class="cat-filter-chip">+ 더보기</div>
+        <span style="font-size:12px;color:var(--color-text-muted);margin:0 4px 0 12px;">가격</span>
+        <div class="cat-filter-chip">10만원 이하</div>
+        <div class="cat-filter-chip">10~30만원</div>
+        <div class="cat-filter-chip active">30만원 이상</div>
+      </div>
+      <div class="cat-filter-right">
+        <div class="cat-sort active">인기순</div>
+        <div class="cat-sort">낮은가격순</div>
+        <div class="cat-sort">높은가격순</div>
+        <div class="cat-sort">신상품순</div>
+        <div class="cat-count">총 87개</div>
+      </div>
+    </div>
+
+    <!-- 4. 상품 그리드 (4열) -->
+    <div class="cat-product-grid">
+      <div class="product-card"><div class="card-img" style="padding-top:100%;position:relative;"><div class="card-img-inner" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;color:#999;">상품 이미지</div></div><div class="card-body"><div class="card-brand">MIZUNO</div><div class="card-name">미즈노 프로 내야수 글러브 11.5인치</div><div class="card-price">405,000원</div></div></div>
+      <div class="product-card"><div class="card-img" style="padding-top:100%;position:relative;"><div class="card-img-inner" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;color:#999;">상품 이미지</div></div><div class="card-body"><div class="card-brand">WILSON</div><div class="card-name">윌슨 A2000 외야수 글러브 12.5인치</div><div class="card-price">520,000원</div></div></div>
+      <div class="product-card"><div class="card-img" style="padding-top:100%;position:relative;"><div class="card-img-inner" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;color:#999;">상품 이미지</div></div><div class="card-body"><div class="card-brand">RAWLINGS</div><div class="card-name">롤링스 HOH 포수 미트 33인치</div><div class="card-price">680,000원</div></div></div>
+      <div class="product-card"><div class="card-img" style="padding-top:100%;position:relative;"><div class="card-img-inner" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;color:#999;">상품 이미지</div></div><div class="card-body"><div class="card-brand">SSK</div><div class="card-name">SSK 프로에디션 내야수 글러브 11인치</div><div class="card-price">320,000원</div></div></div>
+    </div>
+
+    <!-- 5. 페이지네이션 -->
+    <div class="cat-pagination">
+      <div class="cat-page">&#8249;</div>
+      <div class="cat-page active">1</div>
+      <div class="cat-page">2</div>
+      <div class="cat-page">3</div>
+      <div class="cat-page">4</div>
+      <div class="cat-page">5</div>
+      <div class="cat-page">&#8250;</div>
+    </div>
+  </div>
+
+  <div class="guide-body">
+    <h3>카테고리 페이지 구조 요약</h3>
+    <table>
+      <tr><th>구성 요소</th><th>사이즈 / 규격</th><th>고도몰 파일</th></tr>
+      <tr><td>카테고리 배너</td><td>1200 × 300px (이미지) / 120px (HTML)</td><td>goods/goods_list.html</td></tr>
+      <tr><td>서브 카테고리 탭</td><td>가로 나열, 모바일 가로 스크롤</td><td>같은 파일 내</td></tr>
+      <tr><td>필터/정렬 바</td><td>전체 폭, 좌(필터) 우(정렬)</td><td>같은 파일 내</td></tr>
+      <tr><td>상품 그리드</td><td>PC 4열 / 태블릿 3열 / 모바일 2열</td><td>같은 파일 내</td></tr>
+      <tr><td>페이지네이션</td><td>중앙 정렬, 고도몰 기본 모듈 활용</td><td>같은 파일 내</td></tr>
+    </table>
+
+    <h3>반응형 그리드</h3>
+    <ul>
+      <li>PC (1200px+): <span class="code">grid-template-columns: repeat(4, 1fr)</span></li>
+      <li>태블릿 (768~1024px): <span class="code">repeat(3, 1fr)</span></li>
+      <li>모바일 (-768px): <span class="code">repeat(2, 1fr)</span></li>
+    </ul>
+
+    <h3>고도몰 카테고리 페이지 치환코드</h3>
+    <ul>
+      <li>카테고리명: <span class="code">{catNm}</span></li>
+      <li>상품 목록: <span class="code">{foreach name=goodsList item=goods}</span></li>
+      <li>정렬: <span class="code">{goodsListSort}</span></li>
+      <li>페이지네이션: <span class="code">{goodsListPage}</span></li>
+      <li>상품 수: <span class="code">{goodsTotalCnt}</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================
+     디자인 토큰 참조표
+     ============================================================ -->
+<div class="section-wrap" id="tokens">
+  <div class="section-label" style="background:#2C3E50;">
+    <span class="sec-num" style="background:var(--color-accent);color:var(--color-primary);">CSS</span>
+    <h2>디자인 토큰 참조표</h2>
+    <span class="sec-tag">CSS 변수 전체 목록</span>
+  </div>
+
+  <div class="guide-body">
+    <h3>색상 토큰</h3>
+    <table>
+      <tr><th>변수명</th><th>값</th><th>용도</th><th>미리보기</th></tr>
+      <tr><td><span class="code">--color-primary</span></td><td>#1B2A4A</td><td>메인 네이비 (헤더, 버튼, 텍스트)</td><td><span style="display:inline-block;width:20px;height:20px;background:#1B2A4A;border-radius:3px;vertical-align:middle;"></span></td></tr>
+      <tr><td><span class="code">--color-primary-dark</span></td><td>#111C33</td><td>호버 상태, 강조</td><td><span style="display:inline-block;width:20px;height:20px;background:#111C33;border-radius:3px;vertical-align:middle;"></span></td></tr>
+      <tr><td><span class="code">--color-primary-light</span></td><td>#2E4170</td><td>그라디언트 끝, 배너 보조</td><td><span style="display:inline-block;width:20px;height:20px;background:#2E4170;border-radius:3px;vertical-align:middle;"></span></td></tr>
+      <tr><td><span class="code">--color-accent</span></td><td>#D4A843</td><td>CTA 버튼, 배지, 섹션 바</td><td><span style="display:inline-block;width:20px;height:20px;background:#D4A843;border-radius:3px;vertical-align:middle;"></span></td></tr>
+      <tr><td><span class="code">--color-accent-light</span></td><td>#E8C97A</td><td>Accent 보조, 텍스트 위 사용</td><td><span style="display:inline-block;width:20px;height:20px;background:#E8C97A;border-radius:3px;vertical-align:middle;"></span></td></tr>
+      <tr><td><span class="code">--color-accent-tint</span></td><td>#FDF6E3</td><td>MD 추천 섹션 배경</td><td><span style="display:inline-block;width:20px;height:20px;background:#FDF6E3;border:1px solid #eee;border-radius:3px;vertical-align:middle;"></span></td></tr>
+      <tr><td><span class="code">--color-bg-light</span></td><td>#F5F5F5</td><td>교차 섹션 배경, 카드 이미지 배경</td><td><span style="display:inline-block;width:20px;height:20px;background:#F5F5F5;border:1px solid #eee;border-radius:3px;vertical-align:middle;"></span></td></tr>
+      <tr><td><span class="code">--color-text-main</span></td><td>#1A1A1A</td><td>본문 텍스트</td><td><span style="display:inline-block;width:20px;height:20px;background:#1A1A1A;border-radius:3px;vertical-align:middle;"></span></td></tr>
+      <tr><td><span class="code">--color-text-sub</span></td><td>#555555</td><td>보조 텍스트, 설명</td><td><span style="display:inline-block;width:20px;height:20px;background:#555555;border-radius:3px;vertical-align:middle;"></span></td></tr>
+      <tr><td><span class="code">--color-text-muted</span></td><td>#999999</td><td>힌트, 날짜, 비활성</td><td><span style="display:inline-block;width:20px;height:20px;background:#999999;border-radius:3px;vertical-align:middle;"></span></td></tr>
+      <tr><td><span class="code">--color-border</span></td><td>#E0E0E0</td><td>카드 테두리, 구분선</td><td><span style="display:inline-block;width:20px;height:20px;background:#E0E0E0;border-radius:3px;vertical-align:middle;"></span></td></tr>
+    </table>
+
+    <h3>레이아웃 토큰</h3>
+    <table>
+      <tr><th>변수명</th><th>값</th><th>용도</th></tr>
+      <tr><td><span class="code">--max-width</span></td><td>1200px</td><td>전체 컨테이너 최대 너비</td></tr>
+      <tr><td><span class="code">--content-width</span></td><td>860px</td><td>텍스트/콘텐츠 최대 너비</td></tr>
+      <tr><td><span class="code">--gap-section</span></td><td>80px</td><td>섹션 간 상하 여백</td></tr>
+      <tr><td><span class="code">--gap-card</span></td><td>20px</td><td>카드 간 간격</td></tr>
+      <tr><td><span class="code">--radius-card</span></td><td>8px</td><td>카드 모서리 반경</td></tr>
+      <tr><td><span class="code">--radius-btn</span></td><td>4px</td><td>버튼 모서리 반경</td></tr>
+    </table>
+
+    <h3>반응형 브레이크포인트</h3>
+    <table>
+      <tr><th>이름</th><th>값</th><th>적용 범위</th></tr>
+      <tr><td>모바일</td><td>768px 이하</td><td>2열 그리드, 가로 스크롤 네비</td></tr>
+      <tr><td>태블릿</td><td>768~1024px</td><td>3열 그리드, 슬라이더 3개</td></tr>
+      <tr><td>데스크톱</td><td>1024~1200px</td><td>4열 그리드, 전체 레이아웃</td></tr>
+      <tr><td>와이드</td><td>1200px+</td><td>최대 너비 고정, 좌우 여백 auto</td></tr>
+    </table>
+
+    <h3>미디어 쿼리 템플릿</h3>
+    <div style="background:#1A1A1A;color:#E0E0E0;padding:16px;border-radius:6px;font-family:monospace;font-size:12px;line-height:1.7;margin-top:8px;">
+      /* 모바일 (-768px) */<br>
+      @media (max-width: 768px) { }<br><br>
+      /* 태블릿 (769px-1024px) */<br>
+      @media (min-width: 769px) and (max-width: 1024px) { }<br><br>
+      /* 데스크톱 (1025px+) */<br>
+      @media (min-width: 1025px) { }<br><br>
+      /* 와이드 (1201px+) */<br>
+      @media (min-width: 1201px) { }
+    </div>
+
+    <div class="tip-box" style="margin-top:20px;">
+      모든 색상은 CSS 변수(<span class="code">var(--color-*)</span>)로 사용합니다. 색상 직접 입력(하드코딩) 금지. 향후 다크모드 또는 시즌별 테마 변경 시 변수 값만 수정하면 전체 반영됩니다.
+    </div>
+  </div>
+</div>
+
+<!-- 푸터 -->
+<div style="text-align:center;padding:32px;color:var(--color-text-muted);font-size:12px;">
+  짱베이스볼 홈페이지 레이아웃 가이드 v1.0 | 스킨 디자이너 에이전트 생성 | 2026-03-05<br>
+  파일 경로: C:\Users\NO\.claude\knowledge\templates\homepage-layout-guide.html
+</div>
+
+</body>
+</html>

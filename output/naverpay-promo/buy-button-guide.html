@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>네이버페이 카드사 즉시할인 - 구매버튼 근처 안내 문구</title>
+<style>
+/* ============================================
+   네이버페이 카드사 즉시할인 - 구매버튼 근처 안내
+   용도: 상품 상세 구매 영역에 삽입
+   경로: /goods/goods_view.html 구매버튼 위 또는 가격 아래
+   기간: 2026.3.10 ~ 3.31
+   ============================================ */
+
+body {
+  background: #f5f5f5;
+  padding: 40px 20px;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.demo-container {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.demo-label {
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #eee;
+}
+
+/* 상품 가격 영역 시뮬레이션 */
+.demo-price {
+  margin-bottom: 16px;
+}
+.demo-price__original {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+.demo-price__sale {
+  font-size: 28px;
+  font-weight: 800;
+  color: #222;
+  letter-spacing: -0.5px;
+}
+.demo-price__sale small {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* ============================================
+   버전 1: 인라인 안내 (가격 아래)
+   ============================================ */
+.npay-inline * { margin: 0; padding: 0; box-sizing: border-box; }
+
+.npay-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #F0FAF4;
+  border: 1px solid #B8E6C8;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.npay-inline__icon {
+  background: #03C75A;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.npay-inline__text {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.npay-inline__text strong {
+  color: #E53935;
+  font-weight: 700;
+}
+
+.npay-inline__text .npay-inline__discount {
+  color: #03C75A;
+  font-weight: 600;
+}
+
+/* ============================================
+   버전 2: 툴팁형 (구매버튼 위)
+   ============================================ */
+.npay-tooltip-wrap {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.npay-tooltip * { margin: 0; padding: 0; box-sizing: border-box; }
+
+.npay-tooltip {
+  background: #1B2A4A;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.2px;
+}
+
+/* 말풍선 화살표 */
+.npay-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #1B2A4A;
+}
+
+.npay-tooltip__npay {
+  background: #03C75A;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.npay-tooltip em {
+  font-style: normal;
+  color: #FFF176;
+  font-weight: 700;
+}
+
+/* ============================================
+   버전 3: 뱃지형 (가격 옆)
+   ============================================ */
+.npay-badge-inline * { margin: 0; padding: 0; box-sizing: border-box; }
+
+.npay-badge-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #03C75A;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* 데모용 구매 버튼 */
+.demo-buy-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #1B2A4A 0%, #2C3E6B 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 6px;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.demo-divider {
+  border: none;
+  border-top: 2px dashed #eee;
+  margin: 32px 0;
+}
+
+.version-label {
+  font-size: 11px;
+  color: #03C75A;
+  font-weight: 600;
+  background: #F0FAF4;
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+</style>
+</head>
+<body>
+
+<div class="demo-container">
+  <div class="demo-label">아래 3가지 버전 중 원하는 것을 선택하여 적용</div>
+
+  <!-- ===== 버전 1: 인라인 안내 (가격 아래) ===== -->
+  <span class="version-label">버전 1 · 가격 아래 안내박스</span>
+
+  <div class="demo-price">
+    <div class="demo-price__original">89,000원</div>
+    <div class="demo-price__sale">79,000<small>원</small></div>
+  </div>
+
+  <!-- 이 부분만 복사하여 사용 -->
+  <div class="npay-inline">
+    <span class="npay-inline__icon">N Pay</span>
+    <span class="npay-inline__text">
+      카드 간편결제 시 <strong>6% 추가할인</strong>
+      <span class="npay-inline__discount">(-4,740원)</span>
+    </span>
+  </div>
+
+  <button class="demo-buy-btn">구매하기</button>
+
+  <hr class="demo-divider">
+
+  <!-- ===== 버전 2: 말풍선 툴팁 (구매버튼 위) ===== -->
+  <span class="version-label">버전 2 · 구매버튼 위 말풍선</span>
+
+  <div class="demo-price">
+    <div class="demo-price__original">89,000원</div>
+    <div class="demo-price__sale">79,000<small>원</small></div>
+  </div>
+
+  <div class="npay-tooltip-wrap">
+    <!-- 이 부분만 복사하여 사용 -->
+    <div class="npay-tooltip">
+      <span class="npay-tooltip__npay">N Pay</span>
+      지금 결제하면 <em>6% 즉시할인</em> · 최대 8,000원
+    </div>
+  </div>
+
+  <button class="demo-buy-btn">구매하기</button>
+
+  <hr class="demo-divider">
+
+  <!-- ===== 버전 3: 뱃지형 (가격 옆) ===== -->
+  <span class="version-label">버전 3 · 가격 옆 뱃지</span>
+
+  <div class="demo-price">
+    <div class="demo-price__original">89,000원</div>
+    <div class="demo-price__sale">
+      79,000<small>원</small>
+      <!-- 이 부분만 복사하여 사용 -->
+      <span class="npay-badge-inline">N Pay 6%↓</span>
+    </div>
+  </div>
+
+  <button class="demo-buy-btn" style="margin-top:20px;">구매하기</button>
+</div>
+
+<!-- =============================================
+     [고도몰 적용 가이드]
+
+     1. 가격 아래 안내박스 (버전 1 권장)
+        경로: /goods/goods_view.html
+        위치: {goodsPrice} 아래, 구매버튼 위
+
+        동적 할인금액 계산 (선택사항):
+        고도몰 치환코드로 계산 불가 시, 고정 문구 사용
+        "카드 간편결제 시 6% 추가할인 (최대 8,000원)"
+
+     2. 구매버튼 위 말풍선 (버전 2)
+        위치: .buy_btn 또는 구매하기 버튼 직전
+
+     3. 가격 옆 뱃지 (버전 3)
+        위치: {goodsPrice} span 옆에 inline으로 삽입
+
+     CSS는 <style> 태그로 상단에 삽입하거나
+     jjang-components.css에 추가
+     ============================================= -->
+
+</body>
+</html>

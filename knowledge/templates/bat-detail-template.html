@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{product_name}} - 배트 | 짱베이스볼</title>
+    <meta name="description" content="{{meta_description}}">
+    <style>
+        /* ===== 짱베이스볼 배트 상세페이지 스타일 ===== */
+        :root {
+            --primary: #1B2A4A;
+            --primary-light: #2C3E6B;
+            --accent: #D4A843;
+            --bg: #FFFFFF;
+            --bg-light: #F7F8FA;
+            --text: #222222;
+            --text-sub: #666666;
+            --border: #E0E0E0;
+            --success: #2E7D32;
+            --warning: #E65100;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        /* 섹션 공통 */
+        .section {
+            padding: 40px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-bottom: 24px;
+        }
+
+        /* ===== 1. 히어로 섹션 ===== */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+
+        .hero-product-name {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .hero-copy {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .hero-image-area {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 60px 20px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .hero-certification {
+            margin-top: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cert-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+        }
+
+        /* ===== 2. 공감 유도: 소재 선택 가이드 ===== */
+        .guide {
+            background: var(--bg-light);
+        }
+
+        .guide-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .guide-card {
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            padding: 20px;
+            position: relative;
+        }
+
+        .guide-card.highlight {
+            border-color: var(--accent);
+            border-width: 2px;
+        }
+
+        .guide-card-highlight-badge {
+            position: absolute;
+            top: -10px;
+            right: 16px;
+            background: var(--accent);
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 10px;
+        }
+
+        .guide-card-type {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .guide-card-desc {
+            font-size: 13px;
+            color: var(--text-sub);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .guide-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .guide-tag {
+            display: inline-block;
+            background: var(--bg-light);
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .guide-tag.pro {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+
+        .guide-tag.beginner {
+            background: #E8F5E9;
+            color: var(--success);
+            border-color: #C8E6C9;
+        }
+
+        /* ===== 3. 핵심 스펙 표 ===== */
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .spec-table tr:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .spec-table th {
+            background: var(--primary);
+            color: #fff;
+            font-weight: 600;
+            text-align: left;
+            padding: 12px 16px;
+            width: 30%;
+            font-size: 13px;
+        }
+
+        .spec-table td {
+            padding: 12px 16px;
+            color: var(--text);
+        }
+
+        .spec-badge {
+            display: inline-block;
+            background: #E8F5E9;
+            color: var(--success);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 8px;
+            margin-left: 6px;
+        }
+
+        .spec-badge.warning {
+            background: #FFF3E0;
+            color: var(--warning);
+        }
+
+        /* ===== 4. 체감 설명 ===== */
+        .feel-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .feel-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 24px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .feel-card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .feel-card-body {
+            font-size: 14px;
+            color: var(--text-sub);
+            line-height: 1.8;
+        }
+
+        /* 체감 미터 */
+        .feel-meter {
+            margin-top: 12px;
+        }
+
+        .feel-meter-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-sub);
+            margin-bottom: 6px;
+        }
+
+        .feel-meter-bar {
+            height: 8px;
+            background: var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .feel-meter-fill {
+            height: 100%;
+            background: var(--accent);
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        .feel-quote {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .feel-quote::before {
+            content: '\201C';
+            font-size: 48px;
+            color: var(--accent);
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            line-height: 1;
+        }
+
+        .feel-quote p {
+            padding-left: 36px;
+            font-size: 14px;
+            color: var(--text);
+            font-style: italic;
+        }
+
+        .feel-quote .quote-author {
+            padding-left: 36px;
+            margin-top: 8px;
+            font-size: 12px;
+            color: var(--text-sub);
+            font-style: normal;
+        }
+
+        /* ===== 5. 사이즈 가이드 ===== */
+        .size-guide-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            text-align: center;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .size-guide-table thead th {
+            background: var(--primary);
+            color: #fff;
+            padding: 10px 8px;
+            font-weight: 600;
+        }
+
+        .size-guide-table tbody td {
+            padding: 10px 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .size-guide-table tbody tr:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .size-highlight {
+            background: #FFF8E1 !important;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .size-note {
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--text-sub);
+            padding: 12px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        /* ===== 6. 비교 섹션 ===== */
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .compare-table thead th {
+            background: var(--primary);
+            color: #fff;
+            padding: 12px 10px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .compare-table thead th.current-col {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .compare-table tbody td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            font-size: 13px;
+        }
+
+        .compare-table tbody tr:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .compare-table tbody td:first-child {
+            font-weight: 600;
+            text-align: left;
+            color: var(--primary);
+            background: var(--bg-light);
+        }
+
+        .compare-table tbody td.current-col {
+            background: #FFFDE7;
+            font-weight: 600;
+        }
+
+        /* ===== 7. 추천 포인트 ===== */
+        .recommend-list {
+            list-style: none;
+        }
+
+        .recommend-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .recommend-item:last-child {
+            border-bottom: none;
+        }
+
+        .recommend-num {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .recommend-content strong {
+            display: block;
+            font-size: 15px;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .recommend-content p {
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        /* ===== 8. 배송/교환/반품 ===== */
+        .info-accordion {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .info-accordion-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .info-accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            cursor: pointer;
+            background: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .info-accordion-header:hover {
+            background: var(--bg-light);
+        }
+
+        .info-accordion-header .arrow {
+            transition: transform 0.3s;
+            font-size: 12px;
+        }
+
+        .info-accordion-body {
+            display: none;
+            padding: 0 16px 16px;
+            font-size: 13px;
+            color: var(--text-sub);
+            line-height: 1.8;
+        }
+
+        .info-accordion-body.active {
+            display: block;
+        }
+
+        .info-accordion-header.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* ===== 반응형 ===== */
+        @media (max-width: 480px) {
+            .hero-product-name {
+                font-size: 22px;
+            }
+
+            .compare-table {
+                font-size: 11px;
+            }
+
+            .compare-table thead th,
+            .compare-table tbody td {
+                padding: 8px 6px;
+            }
+
+            .spec-table th {
+                width: 35%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 구조화 데이터 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "{{product_name}}",
+        "brand": {
+            "@type": "Brand",
+            "name": "{{brand}}"
+        },
+        "description": "{{meta_description}}",
+        "offers": {
+            "@type": "Offer",
+            "price": "{{price}}",
+            "priceCurrency": "KRW",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "짱베이스볼"
+            }
+        }
+    }
+    </script>
+
+    <!-- ===== 1. 히어로 섹션 ===== -->
+    <section class="hero">
+        <span class="hero-badge">{{badge_text}}</span>
+        <h1 class="hero-product-name">{{product_name}}</h1>
+        <p class="hero-copy">{{hero_copy}}</p>
+        <div class="hero-image-area">
+            {{hero_image}} <!-- 상품 대표 이미지 영역 (780 x 780 권장) -->
+        </div>
+        <div class="hero-certification">
+            <span class="cert-dot"></span>
+            {{certification}} <!-- 예: KBO 공인 / KBSA 공인 / 비공인 -->
+        </div>
+    </section>
+
+    <!-- ===== 2. 공감 유도: 소재별 선택 가이드 ===== -->
+    <section class="section guide">
+        <h2 class="section-title">배트 소재, 뭘 골라야 할까?</h2>
+        <p class="section-subtitle">소재에 따라 타격감, 내구성, 가격이 다릅니다. 본인의 레벨과 용도에 맞게 선택하세요.</p>
+
+        <div class="guide-cards">
+            <div class="guide-card {{aluminum_highlight}}">
+                <!-- highlight 클래스를 현재 상품 소재에 추가 -->
+                <!-- {{aluminum_highlight}} 를 "highlight"로 교체하면 강조 -->
+                <div class="guide-card-type">알루미늄 (합금) 배트</div>
+                <div class="guide-card-desc">
+                    가성비가 좋고 내구성이 뛰어납니다. 길들이기 없이 바로 사용 가능합니다. 사회인야구 입문자부터 중급자까지 가장 많이 선택하는 소재입니다.
+                </div>
+                <div class="guide-card-tags">
+                    <span class="guide-tag beginner">입문 추천</span>
+                    <span class="guide-tag">내구성 우수</span>
+                    <span class="guide-tag">가성비</span>
+                </div>
+            </div>
+
+            <div class="guide-card {{composite_highlight}}">
+                <div class="guide-card-type">카본 (복합소재) 배트</div>
+                <div class="guide-card-desc">
+                    반발력이 높고 스윗스팟이 넓습니다. 진동 흡수가 좋아 손에 전해지는 충격이 적습니다. 다만, 가격대가 높고 저온에서 크랙 위험이 있습니다.
+                </div>
+                <div class="guide-card-tags">
+                    <span class="guide-tag pro">상급자용</span>
+                    <span class="guide-tag">높은 반발력</span>
+                    <span class="guide-tag">넓은 스윗스팟</span>
+                </div>
+            </div>
+
+            <div class="guide-card {{wood_highlight}}">
+                <div class="guide-card-type">나무 배트</div>
+                <div class="guide-card-desc">
+                    정확한 타격 기술이 필요합니다. 스윗스팟을 못 맞추면 부러질 수 있습니다. 엘리트 선수 훈련용이나 나무배트 리그 참가자에게 적합합니다.
+                </div>
+                <div class="guide-card-tags">
+                    <span class="guide-tag pro">엘리트용</span>
+                    <span class="guide-tag">기술 향상</span>
+                    <span class="guide-tag">리그 필수</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 3. 핵심 스펙 표 ===== -->
+    <section class="section">
+        <h2 class="section-title">제품 스펙</h2>
+        <table class="spec-table">
+            <tr>
+                <th>브랜드</th>
+                <td>{{brand}}</td>
+            </tr>
+            <tr>
+                <th>소재</th>
+                <td>{{material}}</td>
+            </tr>
+            <tr>
+                <th>길이</th>
+                <td>{{bat_length}}</td>
+            </tr>
+            <tr>
+                <th>무게</th>
+                <td>{{weight}}</td>
+            </tr>
+            <tr>
+                <th>밸런스</th>
+                <td>{{balance}} <!-- 예: 탑밸런스 / 미들밸런스 / 엔드밸런스 --></td>
+            </tr>
+            <tr>
+                <th>드롭</th>
+                <td>{{drop}} <!-- 예: -3, -5 (길이 - 무게 oz) --></td>
+            </tr>
+            <tr>
+                <th>그립 둘레</th>
+                <td>{{grip_circumference}}</td>
+            </tr>
+            <tr>
+                <th>공인 여부</th>
+                <td>{{certification_detail}} <span class="spec-badge">{{cert_badge}}</span></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- ===== 4. 체감 설명 ===== -->
+    <section class="section">
+        <h2 class="section-title">실제로 쳐보면 이렇습니다</h2>
+        <p class="section-subtitle">숫자만으로는 모르는 것들. 실제 타격 기준으로 설명합니다.</p>
+
+        <div class="feel-grid">
+            <div class="feel-card">
+                <div class="feel-card-title">타격감</div>
+                <div class="feel-card-body">{{feel_hitting}}</div>
+                <div class="feel-meter">
+                    <div class="feel-meter-label">
+                        <span>부드러움</span>
+                        <span>단단함</span>
+                    </div>
+                    <div class="feel-meter-bar">
+                        <div class="feel-meter-fill" style="width: {{hitting_feel_percent}}%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feel-card">
+                <div class="feel-card-title">반발력</div>
+                <div class="feel-card-body">{{feel_pop}}</div>
+                <div class="feel-meter">
+                    <div class="feel-meter-label">
+                        <span>약함</span>
+                        <span>강함</span>
+                    </div>
+                    <div class="feel-meter-bar">
+                        <div class="feel-meter-fill" style="width: {{pop_percent}}%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feel-card">
+                <div class="feel-card-title">스윙 밸런스</div>
+                <div class="feel-card-body">{{feel_balance}}</div>
+                <div class="feel-meter">
+                    <div class="feel-meter-label">
+                        <span>가벼움 (핸들)</span>
+                        <span>무거움 (엔드)</span>
+                    </div>
+                    <div class="feel-meter-bar">
+                        <div class="feel-meter-fill" style="width: {{balance_percent}}%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feel-quote">
+            <p>{{user_review_quote}}</p>
+            <div class="quote-author">- {{reviewer_info}}</div>
+        </div>
+    </section>
+
+    <!-- ===== 5. 사이즈 가이드: 키/체중별 추천 ===== -->
+    <section class="section">
+        <h2 class="section-title">키/체중별 추천 배트 길이-무게</h2>
+        <table class="size-guide-table">
+            <thead>
+                <tr>
+                    <th>키 (cm)</th>
+                    <th>체중 (kg)</th>
+                    <th>추천 길이 (인치)</th>
+                    <th>추천 무게 (g)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>150~160</td>
+                    <td>45~55</td>
+                    <td>30~31</td>
+                    <td>700~750</td>
+                </tr>
+                <tr>
+                    <td>160~170</td>
+                    <td>55~65</td>
+                    <td>32~33</td>
+                    <td>750~820</td>
+                </tr>
+                <tr>
+                    <td>170~175</td>
+                    <td>65~75</td>
+                    <td>33~34</td>
+                    <td>820~880</td>
+                </tr>
+                <tr class="size-highlight">
+                    <td>175~180</td>
+                    <td>75~85</td>
+                    <td>34</td>
+                    <td>880~910</td>
+                </tr>
+                <tr>
+                    <td>180~185</td>
+                    <td>80~90</td>
+                    <td>34~35</td>
+                    <td>900~940</td>
+                </tr>
+                <tr>
+                    <td>185+</td>
+                    <td>90+</td>
+                    <td>35</td>
+                    <td>920~960</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="size-note">
+            * 위 수치는 일반적인 가이드입니다. 컨택 위주 타자는 가벼운 쪽, 장타 위주 타자는 무거운 쪽을 추천합니다.<br>
+            * 유소년(초등): 26~29인치 / 중학생: 30~32인치 기준으로 선택하세요.<br>
+            * 탑밸런스는 같은 무게라도 헤드가 무겁게 느껴집니다. 미들밸런스가 스윙이 편합니다.
+        </div>
+    </section>
+
+    <!-- ===== 6. 비교 섹션 ===== -->
+    <section class="section">
+        <h2 class="section-title">같은 가격대 배트 비교</h2>
+        <div style="overflow-x: auto;">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>항목</th>
+                        <th class="current-col">{{product_name_short}}</th>
+                        <th>{{compare_name_2}}</th>
+                        <th>{{compare_name_3}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>소재</td>
+                        <td class="current-col">{{material}}</td>
+                        <td>{{compare_material_2}}</td>
+                        <td>{{compare_material_3}}</td>
+                    </tr>
+                    <tr>
+                        <td>무게</td>
+                        <td class="current-col">{{weight}}</td>
+                        <td>{{compare_weight_2}}</td>
+                        <td>{{compare_weight_3}}</td>
+                    </tr>
+                    <tr>
+                        <td>밸런스</td>
+                        <td class="current-col">{{balance}}</td>
+                        <td>{{compare_balance_2}}</td>
+                        <td>{{compare_balance_3}}</td>
+                    </tr>
+                    <tr>
+                        <td>공인</td>
+                        <td class="current-col">{{cert_badge}}</td>
+                        <td>{{compare_cert_2}}</td>
+                        <td>{{compare_cert_3}}</td>
+                    </tr>
+                    <tr>
+                        <td>가격</td>
+                        <td class="current-col">{{price}}원</td>
+                        <td>{{compare_price_2}}원</td>
+                        <td>{{compare_price_3}}원</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ===== 7. 추천 포인트 ===== -->
+    <section class="section">
+        <h2 class="section-title">짱베이스볼이 이 배트를 추천하는 이유</h2>
+        <ul class="recommend-list">
+            <li class="recommend-item">
+                <span class="recommend-num">1</span>
+                <div class="recommend-content">
+                    <strong>{{recommend_title_1}}</strong>
+                    <p>{{recommend_desc_1}}</p>
+                </div>
+            </li>
+            <li class="recommend-item">
+                <span class="recommend-num">2</span>
+                <div class="recommend-content">
+                    <strong>{{recommend_title_2}}</strong>
+                    <p>{{recommend_desc_2}}</p>
+                </div>
+            </li>
+            <li class="recommend-item">
+                <span class="recommend-num">3</span>
+                <div class="recommend-content">
+                    <strong>{{recommend_title_3}}</strong>
+                    <p>{{recommend_desc_3}}</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ===== 8. 배송/교환/반품 안내 ===== -->
+    <section class="section">
+        <h2 class="section-title">배송/교환/반품 안내</h2>
+        <div class="info-accordion">
+            <div class="info-accordion-item">
+                <div class="info-accordion-header" onclick="toggleAccordion(this)">
+                    <span>배송 안내</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="info-accordion-body">
+                    - 배송비: {{shipping_fee}} ({{free_shipping_condition}} 이상 무료배송)<br>
+                    - 배송 기간: 결제 완료 후 1~3 영업일<br>
+                    - 배트는 파손 방지를 위해 전용 포장으로 발송됩니다.<br>
+                    - 도서산간 지역은 추가 배송비가 발생할 수 있습니다.
+                </div>
+            </div>
+            <div class="info-accordion-item">
+                <div class="info-accordion-header" onclick="toggleAccordion(this)">
+                    <span>교환/반품 안내</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="info-accordion-body">
+                    - 수령 후 7일 이내 교환/반품 가능<br>
+                    - 타격 흔적(볼마크)이 있는 경우 교환/반품이 어렵습니다.<br>
+                    - 나무배트는 소재 특성상 크랙/파손 교환 불가 (제조 불량 제외)<br>
+                    - 단순 변심: 왕복 배송비 고객 부담<br>
+                    - 제품 불량: 배송비 짱베이스볼 부담
+                </div>
+            </div>
+            <div class="info-accordion-item">
+                <div class="info-accordion-header" onclick="toggleAccordion(this)">
+                    <span>배트 관리 팁</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="info-accordion-body">
+                    - 금속배트: 타구 시 배트를 회전하며 사용하면 수명이 늘어납니다.<br>
+                    - 나무배트: 로고(마크)를 위로 향하게 잡고 타격하세요 (결 방향).<br>
+                    - 저온(5도 이하)에서는 카본/복합소재 배트 사용을 자제하세요.<br>
+                    - 보관 시 직사광선을 피하고, 세워서 보관하세요.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        /* 아코디언 토글 */
+        function toggleAccordion(header) {
+            const body = header.nextElementSibling;
+            const isActive = body.classList.contains('active');
+
+            document.querySelectorAll('.info-accordion-body.active').forEach(function(el) {
+                el.classList.remove('active');
+                el.previousElementSibling.classList.remove('active');
+            });
+
+            if (!isActive) {
+                body.classList.add('active');
+                header.classList.add('active');
+            }
+        }
+    </script>
+
+    <!--
+    ============================================================
+    짱베이스볼 배트 상세페이지 템플릿 사용법
+    ============================================================
+
+    1. 플레이스홀더 교체 목록
+    ─────────────────────────────────────────
+    {{product_name}}        : 상품명 (예: 이스턴 ADV Hype -3 BBCOR 배트)
+    {{product_name_short}}  : 짧은 상품명 (비교표 헤더용, 예: ADV Hype)
+    {{hero_copy}}           : 히어로 핵심 카피 1줄
+    {{badge_text}}          : 히어로 뱃지 (예: 2025 신상, 사회인 인기)
+    {{hero_image}}          : 히어로 이미지 <img> 태그
+    {{meta_description}}    : SEO 메타 설명 (120~155자)
+    {{certification}}       : 공인 여부 표시 (예: KBO 공인)
+
+    스펙:
+    {{brand}}               : 브랜드명
+    {{material}}            : 소재 (예: 알루미늄 합금, 복합소재, 단풍나무)
+    {{bat_length}}          : 길이 (예: 34인치 / 86cm)
+    {{weight}}              : 무게 (예: 880g / 31oz)
+    {{balance}}             : 밸런스 (탑밸런스 / 미들밸런스 / 엔드밸런스)
+    {{drop}}                : 드롭 (예: -3)
+    {{grip_circumference}}  : 그립 둘레 (예: 23.5mm)
+    {{certification_detail}}: 공인 상세 (예: KBSA 공인, KBO 공인)
+    {{cert_badge}}          : 공인 뱃지 텍스트 (예: KBSA 공인)
+    {{price}}               : 판매가
+
+    소재 가이드 (공감 섹션):
+    {{aluminum_highlight}}  : 알루미늄 카드 강조 ("highlight" 또는 빈값)
+    {{composite_highlight}} : 카본 카드 강조
+    {{wood_highlight}}      : 나무 카드 강조
+    → 현재 상품의 소재에 해당하는 것만 "highlight"로 교체
+
+    체감 섹션:
+    {{feel_hitting}}         : 타격감 설명
+    {{feel_pop}}             : 반발력 설명
+    {{feel_balance}}         : 스윙 밸런스 설명
+    {{hitting_feel_percent}} : 타격감 미터 (0~100, 0=부드러움, 100=단단함)
+    {{pop_percent}}          : 반발력 미터 (0~100)
+    {{balance_percent}}      : 밸런스 미터 (0~100, 0=핸들, 100=엔드)
+    {{user_review_quote}}    : 실사용자 후기
+    {{reviewer_info}}        : 후기 작성자 정보
+
+    비교 섹션:
+    {{compare_name_2~3}}     : 비교 상품명
+    {{compare_material_2~3}} : 비교 상품 소재
+    {{compare_weight_2~3}}   : 비교 상품 무게
+    {{compare_balance_2~3}}  : 비교 상품 밸런스
+    {{compare_cert_2~3}}     : 비교 상품 공인여부
+    {{compare_price_2~3}}    : 비교 상품 가격
+
+    추천 포인트:
+    {{recommend_title_1~3}}  : 추천 포인트 제목
+    {{recommend_desc_1~3}}   : 추천 포인트 설명
+
+    배송:
+    {{shipping_fee}}            : 배송비
+    {{free_shipping_condition}} : 무료배송 조건
+
+    2. 고도몰5 적용 방법
+    ─────────────────────────────────────────
+    - 고도몰 관리자 > 상품관리 > 상품 상세설명에 HTML 소스 붙여넣기
+    - <style> 태그는 상세설명 내 유지 또는 별도 CSS 파일로 분리
+    - <script> 태그는 "HTML 소스" 모드에서 입력
+    - 체감 미터의 % 값은 상품 특성에 맞게 조정 (0~100)
+
+    3. 소재 가이드 커스터마이징
+    ─────────────────────────────────────────
+    - 현재 상품 소재의 guide-card에 "highlight" 클래스 추가
+    - 예: 카본 배트라면 {{composite_highlight}} → "highlight"
+    - 강조 카드에 guide-card-highlight-badge 추가:
+      <div class="guide-card-highlight-badge">현재 상품</div>
+    - 불필요한 소재 카드는 삭제 가능
+
+    4. 주의사항
+    ─────────────────────────────────────────
+    - 사이즈 가이드 표의 하이라이트(.size-highlight)는 현재 상품에 맞게 이동
+    - 공인 여부는 반드시 정확하게 표기 (KBO/KBSA/비공인)
+    - 과장 표현 금지: "최강 반발력", "역대급 타격감" 등 사용 불가
+    ============================================================
+    -->
+
+</body>
+</html>

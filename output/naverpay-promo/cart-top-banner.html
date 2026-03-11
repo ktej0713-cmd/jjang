@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>네이버페이 카드사 즉시할인 - 장바구니 상단 배너</title>
+<style>
+/* ============================================
+   네이버페이 카드사 즉시할인 - 장바구니 상단 배너
+   용도: 고도몰 장바구니 페이지 상단 삽입
+   규격: 전체 폭 (max-width: 1200px)
+   경로: /order/cart.html 상단 영역
+   기간: 2026.3.10 ~ 3.31
+   ============================================ */
+
+.npay-cart-banner * { margin: 0; padding: 0; box-sizing: border-box; }
+
+.npay-cart-banner {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  background: linear-gradient(90deg, #03C75A 0%, #02A94D 100%);
+  border-radius: 10px;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 배경 장식 */
+.npay-cart-banner::before {
+  content: '';
+  position: absolute;
+  right: 80px;
+  top: -15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+}
+
+.npay-cart-banner__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1;
+}
+
+.npay-cart-banner__badge {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 16px;
+  white-space: nowrap;
+}
+
+.npay-cart-banner__text {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.npay-cart-banner__text em {
+  font-style: normal;
+  color: #FFF176;
+  font-weight: 800;
+}
+
+.npay-cart-banner__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 1;
+}
+
+.npay-cart-banner__condition {
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.npay-cart-banner__cta {
+  background: #fff;
+  color: #03C75A;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.npay-cart-banner__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* 닫기 버튼 */
+.npay-cart-banner__close {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  z-index: 1;
+}
+
+.npay-cart-banner__close:hover {
+  color: #fff;
+}
+
+/* 장바구니 금액 미달 알림 변형 */
+.npay-cart-banner--remind {
+  background: linear-gradient(90deg, #FFF8E1 0%, #FFF3C4 100%);
+  border: 1px solid #FFE082;
+}
+
+.npay-cart-banner--remind .npay-cart-banner__badge {
+  background: #FF6B35;
+  color: #fff;
+}
+
+.npay-cart-banner--remind .npay-cart-banner__text {
+  color: #333;
+}
+
+.npay-cart-banner--remind .npay-cart-banner__text em {
+  color: #E53935;
+}
+
+.npay-cart-banner--remind .npay-cart-banner__condition {
+  color: #666;
+}
+
+.npay-cart-banner--remind .npay-cart-banner__cta {
+  background: #03C75A;
+  color: #fff;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .npay-cart-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 18px;
+    gap: 10px;
+  }
+  .npay-cart-banner__right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .npay-cart-banner__text { font-size: 14px; }
+}
+</style>
+</head>
+<body style="background: #f5f5f5; padding: 40px 20px;">
+
+<!-- =============================================
+     [사용법]
+     고도몰 장바구니 페이지 상단에 삽입
+     경로: 디자인 > 디자인 스킨 편집 > /order/cart.html
+     장바구니 테이블 위에 삽입
+     ============================================= -->
+
+<!-- 버전 1: 기본형 (항상 노출) -->
+<div class="npay-cart-banner">
+  <div class="npay-cart-banner__left">
+    <span class="npay-cart-banner__badge">N Pay</span>
+    <span class="npay-cart-banner__text">카드 간편결제 시 <em>6% 즉시할인</em> 진행 중!</span>
+  </div>
+  <div class="npay-cart-banner__right">
+    <span class="npay-cart-banner__condition">6만원 이상 · 최대 8,000원</span>
+    <span class="npay-cart-banner__cta">혜택 확인 →</span>
+  </div>
+  <button class="npay-cart-banner__close" onclick="this.parentElement.style.display='none'" aria-label="닫기">✕</button>
+</div>
+
+<div style="height: 24px;"></div>
+
+<!-- 버전 2: 금액 미달 알림형 (장바구니 합계가 6만원 미만일 때) -->
+<div class="npay-cart-banner npay-cart-banner--remind">
+  <div class="npay-cart-banner__left">
+    <span class="npay-cart-banner__badge">혜택 안내</span>
+    <span class="npay-cart-banner__text"><em>12,000원</em>만 더 담으면 <em>6% 즉시할인</em> 받을 수 있어요!</span>
+  </div>
+  <div class="npay-cart-banner__right">
+    <span class="npay-cart-banner__condition">네이버페이 카드 간편결제 대상</span>
+    <span class="npay-cart-banner__cta">상품 더보기 →</span>
+  </div>
+  <button class="npay-cart-banner__close" onclick="this.parentElement.style.display='none'" aria-label="닫기">✕</button>
+</div>
+
+<!-- 미리보기 맥락 -->
+<div style="max-width:1200px; margin:24px auto 0; background:#fff; padding:40px 28px; border-radius:12px; text-align:center; color:#888; font-family:'Pretendard',sans-serif;">
+  <p style="font-size:14px;">↑ 위 배너가 장바구니 상품 목록 위에 표시됩니다</p>
+  <p style="font-size:13px; margin-top:8px; color:#bbb;">버전 1: 항상 노출 / 버전 2: 6만원 미달 시 노출 (선택 사용)</p>
+</div>
+
+</body>
+</html>

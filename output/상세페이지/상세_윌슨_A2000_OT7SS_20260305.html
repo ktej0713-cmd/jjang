@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윌슨 A2000 OT7SS 12.75인치 외야수 글러브 - 글러브 | 짱베이스볼</title>
+    <meta name="description" content="윌슨 A2000 OT7SS 12.75인치 외야수 글러브. 6-Finger 웹으로 깊은 포켓, Cloud SuperSnakeSkin 등판으로 가볍고 방습성 우수. 프로스탁 가죽 손바닥의 내구성까지 갖춘 2026 스프링 신모델.">
+    <style>
+        /* ===== 짱베이스볼 글러브 상세페이지 스타일 ===== */
+        :root {
+            --primary: #1B2A4A;
+            --primary-light: #2C3E6B;
+            --accent: #D4A843;
+            --bg: #FFFFFF;
+            --bg-light: #F7F8FA;
+            --text: #222222;
+            --text-sub: #666666;
+            --border: #E0E0E0;
+            --success: #2E7D32;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.7;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        /* 섹션 공통 */
+        .section {
+            padding: 40px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-bottom: 24px;
+        }
+
+        /* ===== 1. 히어로 섹션 ===== */
+        .hero {
+            position: relative;
+            background: var(--primary);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-product-name {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .hero-copy {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+        }
+
+        .hero-image-area {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 60px 20px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ===== 2. 공감 유도 섹션 ===== */
+        .empathy {
+            background: var(--bg-light);
+        }
+
+        .empathy-list {
+            list-style: none;
+        }
+
+        .empathy-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            background: #fff;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            font-size: 15px;
+        }
+
+        .empathy-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .empathy-text strong {
+            display: block;
+            font-size: 14px;
+            color: var(--primary);
+            margin-bottom: 2px;
+        }
+
+        .empathy-text span {
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        /* ===== 3. 핵심 스펙 표 ===== */
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .spec-table tr:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .spec-table th {
+            background: var(--primary);
+            color: #fff;
+            font-weight: 600;
+            text-align: left;
+            padding: 12px 16px;
+            width: 30%;
+            font-size: 13px;
+        }
+
+        .spec-table td {
+            padding: 12px 16px;
+            color: var(--text);
+        }
+
+        /* ===== 4. 체감 설명 ===== */
+        .feel-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .feel-card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .feel-card-body {
+            font-size: 14px;
+            color: var(--text-sub);
+            line-height: 1.8;
+        }
+
+        .feel-quote {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .feel-quote::before {
+            content: '\201C';
+            font-size: 48px;
+            color: var(--accent);
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            line-height: 1;
+        }
+
+        .feel-quote p {
+            padding-left: 36px;
+            font-size: 14px;
+            color: var(--text);
+            font-style: italic;
+        }
+
+        .feel-quote .quote-author {
+            padding-left: 36px;
+            margin-top: 8px;
+            font-size: 12px;
+            color: var(--text-sub);
+            font-style: normal;
+        }
+
+        /* ===== 5. 사이즈 가이드 ===== */
+        .size-guide-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            text-align: center;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .size-guide-table thead th {
+            background: var(--primary);
+            color: #fff;
+            padding: 10px 8px;
+            font-weight: 600;
+        }
+
+        .size-guide-table tbody td {
+            padding: 10px 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .size-guide-table tbody tr:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .size-highlight {
+            background: #FFF8E1 !important;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .size-note {
+            margin-top: 12px;
+            font-size: 12px;
+            color: var(--text-sub);
+            padding: 12px;
+            background: var(--bg-light);
+            border-radius: 8px;
+        }
+
+        /* ===== 6. 비교 섹션 ===== */
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .compare-table thead th {
+            background: var(--primary);
+            color: #fff;
+            padding: 10px 12px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .compare-table thead th:first-child {
+            text-align: left;
+        }
+
+        .compare-table tbody td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .compare-table tbody td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: var(--primary);
+            background: var(--bg-light);
+        }
+
+        .compare-table tbody tr:nth-child(even) td:not(:first-child) {
+            background: var(--bg-light);
+        }
+
+        .compare-current {
+            background: #FFF8E1 !important;
+            font-weight: 600;
+        }
+
+        /* ===== 7. 추천 포인트 ===== */
+        .recommend-list {
+            list-style: none;
+        }
+
+        .recommend-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .recommend-item:last-child {
+            border-bottom: none;
+        }
+
+        .recommend-num {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .recommend-content strong {
+            display: block;
+            font-size: 15px;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .recommend-content p {
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        /* ===== 8. 배송/교환/반품 ===== */
+        .info-accordion {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .info-accordion-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .info-accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            cursor: pointer;
+            background: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .info-accordion-header:hover {
+            background: var(--bg-light);
+        }
+
+        .info-accordion-header .arrow {
+            transition: transform 0.3s;
+            font-size: 12px;
+        }
+
+        .info-accordion-body {
+            display: none;
+            padding: 0 16px 16px;
+            font-size: 13px;
+            color: var(--text-sub);
+            line-height: 1.8;
+        }
+
+        .info-accordion-body.active {
+            display: block;
+        }
+
+        .info-accordion-header.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* ===== 기술 하이라이트 ===== */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .tech-item {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+        }
+
+        .tech-item-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .tech-item-desc {
+            font-size: 12px;
+            color: var(--text-sub);
+            line-height: 1.6;
+        }
+
+        /* ===== 반응형 ===== */
+        @media (max-width: 480px) {
+            .hero-product-name {
+                font-size: 22px;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .spec-table th {
+                width: 35%;
+            }
+        }
+
+        .structured-data {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 구조화 데이터 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "윌슨 A2000 OT7SS 12.75인치 외야수 글러브 (2026 스프링)",
+        "brand": {
+            "@type": "Brand",
+            "name": "Wilson"
+        },
+        "description": "윌슨 A2000 OT7SS 12.75인치 외야수 글러브. 6-Finger 웹으로 깊은 포켓, Cloud SuperSnakeSkin 등판으로 가볍고 방습성 우수. 2026 스프링 신모델.",
+        "sku": "WBW102660",
+        "offers": {
+            "@type": "Offer",
+            "price": "389000",
+            "priceCurrency": "KRW",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "짱베이스볼"
+            }
+        }
+    }
+    </script>
+
+    <!-- ===== 1. 히어로 섹션 ===== -->
+    <section class="hero">
+        <span class="hero-badge">2026 SPRING NEW</span>
+        <h1 class="hero-product-name">윌슨 A2000 OT7SS<br>12.75인치 외야수 글러브</h1>
+        <p class="hero-copy">6-Finger 웹의 깊은 포켓, SuperSnakeSkin의 가벼움까지</p>
+        <div class="hero-image-area">
+            상품 대표 이미지 (780 x 780 권장)
+        </div>
+    </section>
+
+    <!-- ===== 2. 공감 유도: 이런 분에게 추천합니다 ===== -->
+    <section class="section empathy">
+        <h2 class="section-title">이런 분에게 추천합니다</h2>
+        <ul class="empathy-list">
+            <li class="empathy-item">
+                <div class="empathy-icon">1</div>
+                <div class="empathy-text">
+                    <strong>외야 수비 범위를 넓히고 싶은 분</strong>
+                    <span>12.75인치 + 6-Finger 웹 조합으로 깊고 안정적인 포켓이 형성됩니다. 갭 사이 라인드라이브나 담장 근처 플라이볼 처리에 유리합니다.</span>
+                </div>
+            </li>
+            <li class="empathy-item">
+                <div class="empathy-icon">2</div>
+                <div class="empathy-text">
+                    <strong>글러브 무게가 부담스러웠던 분</strong>
+                    <span>등판에 Cloud SuperSnakeSkin을 사용해 일반 가죽 대비 절반 무게입니다. 장시간 수비에도 팔이 덜 무겁습니다.</span>
+                </div>
+            </li>
+            <li class="empathy-item">
+                <div class="empathy-icon">3</div>
+                <div class="empathy-text">
+                    <strong>남들과 다른 컬러 글러브를 찾는 분</strong>
+                    <span>핑크, 퍼플, 블루가 조합된 독특한 컬러웨이입니다. A2000 성능은 그대로 가져가면서 필드에서 확실히 눈에 띕니다.</span>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ===== 3. 핵심 스펙 표 ===== -->
+    <section class="section">
+        <h2 class="section-title">제품 스펙</h2>
+        <table class="spec-table">
+            <tr>
+                <th>브랜드</th>
+                <td>Wilson (윌슨)</td>
+            </tr>
+            <tr>
+                <th>모델명</th>
+                <td>A2000 OT7SS (2026 Spring)</td>
+            </tr>
+            <tr>
+                <th>모델번호</th>
+                <td>WBW102660</td>
+            </tr>
+            <tr>
+                <th>포지션</th>
+                <td>외야수</td>
+            </tr>
+            <tr>
+                <th>사이즈</th>
+                <td>12.75인치</td>
+            </tr>
+            <tr>
+                <th>웹</th>
+                <td>6-Finger Web</td>
+            </tr>
+            <tr>
+                <th>패턴</th>
+                <td>OT7</td>
+            </tr>
+            <tr>
+                <th>손바닥 소재</th>
+                <td>Flamingo Pink Pro Stock Leather</td>
+            </tr>
+            <tr>
+                <th>등판 소재</th>
+                <td>Cloud SuperSnakeSkin (핑크/퍼플/블루)</td>
+            </tr>
+            <tr>
+                <th>라이너</th>
+                <td>ProLux Leather (Comfort Pro Fit)</td>
+            </tr>
+            <tr>
+                <th>손목 라이닝</th>
+                <td>DriLex Wrist Lining</td>
+            </tr>
+            <tr>
+                <th>좌투/우투</th>
+                <td>우투용(좌착) / 좌투용(우착) 선택 가능</td>
+            </tr>
+            <tr>
+                <th>원산지</th>
+                <td>베트남</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- ===== 기술 하이라이트 ===== -->
+    <section class="section">
+        <h2 class="section-title">A2000 OT7SS 핵심 기술</h2>
+        <p class="section-subtitle">A2000 시리즈가 프로 선수들에게 선택받는 이유입니다.</p>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <div class="tech-item-title">Pro Stock Leather</div>
+                <div class="tech-item-desc">내구성과 필링이 뛰어난 프로스탁 가죽. 사용할수록 손에 맞게 길들여지며 오래 사용해도 형태가 유지됩니다.</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-item-title">Cloud SuperSnakeSkin</div>
+                <div class="tech-item-desc">프로스탁 가죽의 절반 무게, 2배 내구성의 마이크로파이버 소재. 방습 기능으로 비 오는 날에도 글러브가 무거워지지 않습니다.</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-item-title">Comfort Pro Fit</div>
+                <div class="tech-item-desc">ProLux 가죽 라이너가 손에 부드럽게 밀착됩니다. Comfort Sleeve가 손목 바인딩을 감싸 착용감이 한층 편안합니다.</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-item-title">Rolled Dual Welting</div>
+                <div class="tech-item-desc">라이너에 통합된 듀얼 웰팅이 글러브 형태를 오랫동안 유지시켜 줍니다. 외야 글러브에서 포켓 모양 유지가 중요한 이유입니다.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 4. 체감 설명 ===== -->
+    <section class="section">
+        <h2 class="section-title">써보니까 이렇습니다</h2>
+        <p class="section-subtitle">스펙만으로 모르는 것들, 실제 착용감 중심으로 설명합니다.</p>
+
+        <div class="feel-card">
+            <div class="feel-card-title">착용감</div>
+            <div class="feel-card-body">
+                2026년부터 적용된 Comfort Pro Fit은 이전 A2000과 확실히 차이가 납니다. ProLux 가죽 라이너 덕분에 손을 넣자마자 부드러운 감촉이 느껴지고, Comfort Sleeve가 손목 부분 바인딩을 감싸서 착용 시 불편함이 줄었습니다. DriLex 손목 라이닝은 여름철 땀이 많은 선수에게 특히 유용합니다.
+            </div>
+        </div>
+
+        <div class="feel-card">
+            <div class="feel-card-title">길들이기</div>
+            <div class="feel-card-body">
+                A2000은 처음에 단단한 편입니다. Pro Stock Leather 특성상 초기에는 뻣뻣하지만, 캐치볼 2~3주 정도면 포켓이 잡히기 시작합니다. 등판이 SuperSnakeSkin이라 가죽 등판 모델보다 개폐가 조금 더 수월한 편입니다. 글러브 오일을 포켓 위주로 얇게 발라주면 길들이기가 빨라집니다.
+            </div>
+        </div>
+
+        <div class="feel-card">
+            <div class="feel-card-title">캐칭감</div>
+            <div class="feel-card-body">
+                6-Finger 웹 구조 특성상 포켓이 깊고 안정적으로 형성됩니다. 12.75인치라 수비 범위가 넓으면서도, 볼을 잡았을 때 포켓 안에서 공이 놀지 않고 안착되는 느낌입니다. 외야 플라이볼이나 라인드라이브 처리할 때 깊은 포켓이 확실한 장점입니다.
+            </div>
+        </div>
+
+        <div class="feel-quote">
+            <p>A2000 외야 글러브 3개째 쓰는데, SuperSnakeSkin 등판 모델은 확실히 가볍습니다. 9회까지 뛰어도 팔이 안 무거워요. 색상도 필드에서 진짜 예쁩니다.</p>
+            <div class="quote-author">- 사회인야구 외야수 10년차</div>
+        </div>
+    </section>
+
+    <!-- ===== 5. 사이즈 가이드: 외야수 글러브 사이즈 ===== -->
+    <section class="section">
+        <h2 class="section-title">외야수 글러브 사이즈 가이드</h2>
+        <table class="size-guide-table">
+            <thead>
+                <tr>
+                    <th>대상</th>
+                    <th>추천 사이즈</th>
+                    <th>특징</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>초등(저학년)</td>
+                    <td>10.75~11.5인치</td>
+                    <td>올라운드 겸용, 가벼운 모델</td>
+                </tr>
+                <tr>
+                    <td>초등(고학년)</td>
+                    <td>11.5~12인치</td>
+                    <td>외야 전용 시작 가능</td>
+                </tr>
+                <tr>
+                    <td>중학생</td>
+                    <td>12~12.5인치</td>
+                    <td>성인 사이즈 진입</td>
+                </tr>
+                <tr>
+                    <td>고등~성인</td>
+                    <td>12.5~12.75인치</td>
+                    <td>표준 외야 사이즈</td>
+                </tr>
+                <tr class="size-highlight">
+                    <td>본 상품</td>
+                    <td>12.75인치</td>
+                    <td>성인 외야수 표준 / 넓은 수비 범위</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="size-note">
+            * 12.75인치는 성인 외야수 표준 사이즈입니다. 손이 작은 편이라면 12.5인치도 고려해 보세요.<br>
+            * 우투용(좌착)이 기본이며, 좌투용(우착)도 선택 가능합니다. 주문 시 확인해 주세요.
+        </div>
+    </section>
+
+    <!-- ===== 6. 비교 섹션 ===== -->
+    <section class="section">
+        <h2 class="section-title">같은 가격대, 어떤 차이가 있을까?</h2>
+        <p class="section-subtitle">프리미엄 외야수 글러브 비교입니다. 본인 플레이 스타일에 맞는 모델을 고르세요.</p>
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>항목</th>
+                    <th>A2000 OT7SS<br>(본 상품)</th>
+                    <th>A2000 1799SS</th>
+                    <th>미즈노 프로<br>외야용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>사이즈</td>
+                    <td class="compare-current">12.75인치</td>
+                    <td>12.75인치</td>
+                    <td>13인치</td>
+                </tr>
+                <tr>
+                    <td>웹</td>
+                    <td class="compare-current">6-Finger</td>
+                    <td>Dual Post</td>
+                    <td>크로스</td>
+                </tr>
+                <tr>
+                    <td>등판</td>
+                    <td class="compare-current">SuperSnakeSkin</td>
+                    <td>SuperSnakeSkin</td>
+                    <td>스티어하이드</td>
+                </tr>
+                <tr>
+                    <td>손바닥</td>
+                    <td class="compare-current">Pro Stock Leather</td>
+                    <td>Pro Stock Leather</td>
+                    <td>스티어하이드</td>
+                </tr>
+                <tr>
+                    <td>포켓 깊이</td>
+                    <td class="compare-current">깊음</td>
+                    <td>보통</td>
+                    <td>깊음</td>
+                </tr>
+                <tr>
+                    <td>무게감</td>
+                    <td class="compare-current">가벼움</td>
+                    <td>가벼움</td>
+                    <td>보통</td>
+                </tr>
+                <tr>
+                    <td>가격대</td>
+                    <td class="compare-current">38~39만원대</td>
+                    <td>38~39만원대</td>
+                    <td>45~49만원대</td>
+                </tr>
+                <tr>
+                    <td>추천 포인트</td>
+                    <td class="compare-current">깊은 포켓 + 경량<br>+ 독특한 컬러</td>
+                    <td>범용 외야 패턴<br>빠른 송구</td>
+                    <td>올가죽 내구성<br>일본 장인 품질</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ===== 7. 추천 포인트 ===== -->
+    <section class="section">
+        <h2 class="section-title">짱베이스볼이 이 글러브를 추천하는 이유</h2>
+        <ul class="recommend-list">
+            <li class="recommend-item">
+                <span class="recommend-num">1</span>
+                <div class="recommend-content">
+                    <strong>A2000 검증된 성능 + 2026 업그레이드</strong>
+                    <p>A2000은 MLB 선수들이 실제 경기에서 사용하는 라인입니다. 2026년 모델은 Comfort Pro Fit이 적용되어 착용감이 이전 세대보다 확실히 좋아졌습니다.</p>
+                </div>
+            </li>
+            <li class="recommend-item">
+                <span class="recommend-num">2</span>
+                <div class="recommend-content">
+                    <strong>외야수 최적화된 OT7 패턴</strong>
+                    <p>6-Finger 웹이 만들어내는 깊고 안정적인 포켓은 외야 플라이볼 처리에 유리합니다. 12.75인치 사이즈로 수비 범위도 충분히 확보됩니다.</p>
+                </div>
+            </li>
+            <li class="recommend-item">
+                <span class="recommend-num">3</span>
+                <div class="recommend-content">
+                    <strong>SuperSnakeSkin 등판의 실용성</strong>
+                    <p>가죽 절반 무게에 방습 기능까지 있어서, 비 오는 날이나 땀이 많은 여름에도 글러브가 무거워지지 않습니다. 관리도 일반 가죽보다 쉽습니다.</p>
+                </div>
+            </li>
+            <li class="recommend-item">
+                <span class="recommend-num">4</span>
+                <div class="recommend-content">
+                    <strong>필드에서 존재감 있는 컬러웨이</strong>
+                    <p>핑크/퍼플/블루 조합은 기존 A2000 라인에서 볼 수 없었던 컬러입니다. 성능을 유지하면서 개성 있는 글러브를 원하는 분에게 맞습니다.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- ===== 8. 배송/교환/반품 안내 ===== -->
+    <section class="section">
+        <h2 class="section-title">배송/교환/반품 안내</h2>
+        <div class="info-accordion">
+            <div class="info-accordion-item">
+                <div class="info-accordion-header" onclick="toggleAccordion(this)">
+                    <span>배송 안내</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="info-accordion-body">
+                    - 배송비: 3,000원 (50,000원 이상 무료배송)<br>
+                    - 배송 기간: 결제 완료 후 1~3 영업일<br>
+                    - 해외 직수입 상품의 경우 7~14 영업일 소요될 수 있습니다.<br>
+                    - 도서산간 지역은 추가 배송비가 발생할 수 있습니다.
+                </div>
+            </div>
+            <div class="info-accordion-item">
+                <div class="info-accordion-header" onclick="toggleAccordion(this)">
+                    <span>교환/반품 안내</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="info-accordion-body">
+                    - 수령 후 7일 이내 교환/반품 가능<br>
+                    - 글러브 특성상 길들이기(사용 흔적) 후에는 교환/반품이 어렵습니다.<br>
+                    - 단순 변심: 왕복 배송비 고객 부담<br>
+                    - 제품 불량: 배송비 짱베이스볼 부담<br>
+                    - 좌투/우투 선택 오류는 단순 변심에 해당하오니 주문 시 꼭 확인해 주세요.
+                </div>
+            </div>
+            <div class="info-accordion-item">
+                <div class="info-accordion-header" onclick="toggleAccordion(this)">
+                    <span>글러브 관리 팁</span>
+                    <span class="arrow">&#9660;</span>
+                </div>
+                <div class="info-accordion-body">
+                    - 사용 후 그늘에서 자연 건조 (직사광선, 드라이기 금지)<br>
+                    - 손바닥(Pro Stock Leather) 부분은 가죽 전용 오일로 월 1~2회 관리<br>
+                    - 등판(SuperSnakeSkin) 부분은 젖은 천으로 가볍게 닦아주면 됩니다.<br>
+                    - 보관 시 공을 넣고 밴드로 감아두면 포켓 유지에 좋습니다.<br>
+                    - 습기 찬 곳에 보관하지 마세요. 곰팡이 원인이 됩니다.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        /* 아코디언 토글 */
+        function toggleAccordion(header) {
+            var body = header.nextElementSibling;
+            var isActive = body.classList.contains('active');
+
+            /* 다른 열린 항목 닫기 */
+            document.querySelectorAll('.info-accordion-body.active').forEach(function(el) {
+                el.classList.remove('active');
+                el.previousElementSibling.classList.remove('active');
+            });
+
+            /* 현재 항목 토글 */
+            if (!isActive) {
+                body.classList.add('active');
+                header.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
