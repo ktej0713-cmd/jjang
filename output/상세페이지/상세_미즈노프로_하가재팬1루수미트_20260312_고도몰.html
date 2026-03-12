@@ -432,6 +432,62 @@
   line-height: 1.7;
 }
 
+/* --- 패턴 비교표 --- */
+#jjang-detail .jjang-cmp-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+#jjang-detail .jjang-cmp-tbl th {
+  background: var(--primary);
+  color: #FFF;
+  padding: 11px 14px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+#jjang-detail .jjang-cmp-tbl td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--gray-100);
+  text-align: center;
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+#jjang-detail .jjang-cmp-tbl td:first-child {
+  text-align: left;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+#jjang-detail .jjang-cmp-tbl tr.this-pattern td {
+  background: var(--bg-accent-tint);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+#jjang-detail .jjang-cmp-tbl tr.this-pattern td:first-child::after {
+  content: ' ◀ 이 제품';
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+#jjang-detail .jjang-cmp-tbl tr:not(.this-pattern):nth-child(odd) td { background: var(--bg-card); }
+#jjang-detail .jjang-cmp-tbl tr:not(.this-pattern):nth-child(even) td { background: var(--gray-100); }
+
+#jjang-detail .jjang-cmp-chip {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  margin-top: 4px;
+}
+#jjang-detail .jjang-cmp-chip.c-ok { background: #E8F5E9; color: #2E7D32; }
+#jjang-detail .jjang-cmp-chip.c-no { background: var(--gray-100); color: var(--gray-500); }
+
 /* --- 반응형 --- */
 @media (max-width: 768px) {
   #jjang-detail .jjang-sec { padding: 36px 16px; }
@@ -654,6 +710,70 @@
   </div>
 </section>
 <!-- [/SEC:사이즈] -->
+
+<!-- [SEC:비교표] -->
+<section class="jjang-sec jjang-sec-alt">
+  <div class="jjang-sec-title">BSS 오더 1루수 미트 패턴 비교</div>
+  <div class="jjang-sec-sub">미즈노 프로 BSS 오더 1루수 미트 5종 패턴 전체 비교 — 이 제품은 TK형</div>
+  <table class="jjang-cmp-tbl">
+    <thead>
+      <tr>
+        <th style="text-align:left;width:20%">패턴</th>
+        <th>실사용 선수 모델</th>
+        <th>포켓 구조</th>
+        <th>심(芯) 타입</th>
+        <th>특징</th>
+        <th>사이즈 조정</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>대산유스케형</td>
+        <td>한신 대산유스케</td>
+        <td>깊은 포켓</td>
+        <td>요코도지 더블</td>
+        <td>확실한 포구력. 포켓이 깊어 스트레치 시 볼이 빠지지 않음</td>
+        <td><span class="jjang-cmp-chip c-ok">가능</span></td>
+      </tr>
+      <tr>
+        <td>타탄웹형</td>
+        <td>나카타쇼 기반</td>
+        <td>격자형 웹</td>
+        <td>5D 벨로 내장</td>
+        <td>강한 타구 대응. 격자 웹으로 포켓 안정성 높음</td>
+        <td><span class="jjang-cmp-chip c-ok">가능</span></td>
+      </tr>
+      <tr>
+        <td>야마카와형</td>
+        <td>소프트뱅크 야마카와</td>
+        <td>균형 포켓</td>
+        <td>표준</td>
+        <td>포구→송구 전환 스무스. 손가락 5mm 짧게 설계. 균형 중시형</td>
+        <td><span class="jjang-cmp-chip c-ok">가능</span></td>
+      </tr>
+      <tr>
+        <td>크로스웹형</td>
+        <td>—</td>
+        <td>X자 웹</td>
+        <td>표준</td>
+        <td>가볍고 잡기 쉬움. 경량 설계로 핸들링 우수</td>
+        <td><span class="jjang-cmp-chip c-no">불가</span></td>
+      </tr>
+      <tr class="this-pattern">
+        <td>TK형</td>
+        <td>—</td>
+        <td>박스형 포켓</td>
+        <td>표준</td>
+        <td>정통 오서독스 스타일. 넓은 캐칭 에리어, 포켓 안정성 우수</td>
+        <td><span class="jjang-cmp-chip c-no">불가</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="jjang-size-note" style="margin-top:16px;">
+    &#8251; 사이즈 조정(&#177;5mm/&#177;10mm)은 대산유스케&#183;타탄웹&#183;야마카와형 3종만 가능합니다. TK형&#183;크로스웹형은 기본 사이즈 고정입니다. 직접 BSS 오더를 넣는 경우 참고하세요.
+  </div>
+</section>
+<!-- [/SEC:비교표] -->
 
 <!-- [SEC:FAQ] -->
 <section class="jjang-sec jjang-sec-alt">
