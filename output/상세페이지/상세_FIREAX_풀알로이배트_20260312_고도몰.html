@@ -1,0 +1,646 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "FIREAX 풀알로이 야구배트",
+  "alternateName": "FIREAX Full Alloy Baseball Bat",
+  "description": "FIREAX 풀알로이 야구배트. Longest Barrel 설계로 스위트스팟이 넓고, Super Standard Balanced로 빠른 스윙이 가능합니다. 2 3/4 배럴, 극세 핸들, 헥사곤 쿠션 그립 적용.",
+  "brand": { "@type": "Brand", "name": "FIREAX" },
+  "material": "Full Alloy (알루미늄 합금)",
+  "color": "Black Fade / Metallics Brown",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://jjangbaseball.com",
+    "priceCurrency": "KRW",
+    "availability": "https://schema.org/InStock",
+    "seller": { "@type": "Organization", "name": "짱베이스볼" }
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "사이즈는 어떻게 선택하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "33인치 28온스는 장타력과 비거리를 원하는 타자에게, 32인치 27온스는 컨택과 빠른 스윙을 원하는 타자에게 적합합니다. 사회인야구 기준 대부분 33인치를 선택합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "사회인야구 공인배트인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "배럴 지름 2 3/4인치 규격으로, 사회인야구 리그 대부분에서 사용 가능합니다. 소속 리그의 배트 규정(KBSA 등)을 확인하시기 바랍니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "알로이 배트인데 진동은 어떤가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FIREAX는 No Vibration 설계를 적용해 미스히트 시에도 진동이 적습니다. 극세 핸들이지만 핸들~배럴 연결부 구조가 진동을 흡수합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "목재 배트와 비교하면 어떤 차이가 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "풀알로이 소재는 목재 대비 내구성이 높고, 스위트스팟이 넓어 미스히트 확률이 줄어듭니다. 반발력도 목재보다 높아 같은 스윙 스피드에서 더 먼 비거리를 기대할 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  /* ===== 짱베이스볼 상세페이지 — FIREAX ===== */
+  #jjang-detail {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #222222;
+    max-width: 860px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+  #jjang-detail * {
+    box-sizing: border-box;
+  }
+
+  /* 히어로 */
+  #jjang-detail .jd-hero {
+    background: #111;
+    text-align: center;
+    color: #fff;
+  }
+  #jjang-detail .jd-hero img {
+    width: 100%;
+    display: block;
+  }
+  #jjang-detail .jd-hero-text {
+    padding: 40px 32px;
+    background: linear-gradient(135deg, #1B2A4A 0%, #2C3E6B 100%);
+  }
+  #jjang-detail .jd-hero-copy {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  #jjang-detail .jd-hero-copy span {
+    color: #D4A843;
+  }
+  #jjang-detail .jd-hero-def {
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* 섹션 공통 */
+  #jjang-detail .jd-section {
+    padding: 40px 24px;
+    background: #fff;
+  }
+  #jjang-detail .jd-section.jd-bg-gray {
+    background: #F7F8FA;
+  }
+  #jjang-detail .jd-section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1B2A4A;
+    border-left: 4px solid #D4A843;
+    padding-left: 16px;
+    margin-bottom: 24px;
+    line-height: 1.4;
+  }
+
+  /* 필요 상황 */
+  #jjang-detail .jd-situation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  #jjang-detail .jd-situation-list li {
+    background: #fff;
+    border: 1px solid #E0E0E0;
+    border-left: 3px solid #D4A843;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+  }
+
+  /* 스펙 표 */
+  #jjang-detail .jd-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  #jjang-detail .jd-table th {
+    background: #1B2A4A;
+    color: #fff;
+    padding: 11px 16px;
+    text-align: left;
+    font-weight: 600;
+    width: 30%;
+  }
+  #jjang-detail .jd-table td {
+    padding: 11px 16px;
+    border-bottom: 1px solid #EEEEEE;
+    color: #333;
+  }
+  #jjang-detail .jd-table tr:nth-child(even) td {
+    background: #F9F9F9;
+  }
+
+  /* 체감 설명 */
+  #jjang-detail .jd-feel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #jjang-detail .jd-feel-list li {
+    padding: 14px 0;
+    border-bottom: 1px solid #EEEEEE;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.7;
+  }
+  #jjang-detail .jd-feel-list li:last-child {
+    border-bottom: none;
+  }
+  #jjang-detail .jd-feel-list li strong {
+    color: #1B2A4A;
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  /* 포지션별 추천 */
+  #jjang-detail .jd-position-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  #jjang-detail .jd-position-card {
+    border: 1px solid #E0E0E0;
+    padding: 16px;
+    text-align: center;
+    background: #fff;
+  }
+  #jjang-detail .jd-position-card .jd-pos-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1B2A4A;
+    margin-bottom: 8px;
+  }
+  #jjang-detail .jd-position-card .jd-pos-rating {
+    font-size: 13px;
+    color: #D4A843;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  #jjang-detail .jd-position-card .jd-pos-desc {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* 사이즈 비교 표 */
+  #jjang-detail .jd-compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: center;
+  }
+  #jjang-detail .jd-compare-table th {
+    background: #1B2A4A;
+    color: #fff;
+    padding: 11px 12px;
+    font-weight: 600;
+  }
+  #jjang-detail .jd-compare-table td {
+    padding: 11px 12px;
+    border-bottom: 1px solid #EEEEEE;
+    color: #333;
+  }
+  #jjang-detail .jd-compare-table tr:nth-child(even) td {
+    background: #F9F9F9;
+  }
+  #jjang-detail .jd-compare-table .jd-hl {
+    background: #FDF8EC;
+    font-weight: 600;
+    color: #1B2A4A;
+  }
+
+  /* 안내 박스 */
+  #jjang-detail .jd-note {
+    background: #FDF8EC;
+    border: 1px solid #D4A843;
+    padding: 14px 18px;
+    font-size: 14px;
+    color: #555;
+    margin-top: 16px;
+    line-height: 1.7;
+  }
+
+  /* FAQ — details/summary */
+  #jjang-detail .jd-faq-item {
+    border: 1px solid #E0E0E0;
+    margin-bottom: 8px;
+  }
+  #jjang-detail .jd-faq-item summary {
+    background: #F7F8FA;
+    padding: 16px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1B2A4A;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #jjang-detail .jd-faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  #jjang-detail .jd-faq-item summary::after {
+    content: "+";
+    font-size: 18px;
+    font-weight: 400;
+    color: #D4A843;
+    flex-shrink: 0;
+  }
+  #jjang-detail .jd-faq-item[open] summary::after {
+    content: "-";
+  }
+  #jjang-detail .jd-faq-item .jd-faq-answer {
+    padding: 16px 20px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+    background: #fff;
+    border-top: 1px solid #EEEEEE;
+  }
+
+  /* 추천 포인트 */
+  #jjang-detail .jd-recommend-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #jjang-detail .jd-recommend-list li {
+    padding: 10px 0 10px 20px;
+    border-bottom: 1px solid #EEEEEE;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+  }
+  #jjang-detail .jd-recommend-list li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    color: #D4A843;
+    font-weight: 700;
+  }
+  #jjang-detail .jd-recommend-list li:last-child {
+    border-bottom: none;
+  }
+
+  /* 배송 안내 */
+  #jjang-detail .jd-delivery {
+    background: #1B2A4A;
+    color: #fff;
+    padding: 28px 24px;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  #jjang-detail .jd-delivery strong {
+    color: #D4A843;
+  }
+
+  /* 모바일 반응형 */
+  @media (max-width: 768px) {
+    #jjang-detail .jd-hero-text {
+      padding: 28px 16px;
+    }
+    #jjang-detail .jd-hero-copy {
+      font-size: 20px;
+    }
+    #jjang-detail .jd-section {
+      padding: 28px 16px;
+    }
+    #jjang-detail .jd-situation-list {
+      grid-template-columns: 1fr;
+    }
+    #jjang-detail .jd-position-grid {
+      grid-template-columns: 1fr;
+    }
+    #jjang-detail .jd-compare-table {
+      font-size: 12px;
+    }
+    #jjang-detail .jd-compare-table th,
+    #jjang-detail .jd-compare-table td {
+      padding: 8px 6px;
+    }
+  }
+</style>
+
+<div id="jjang-detail">
+
+  <!-- 1. 히어로 + 상품 이미지 + 정의 -->
+  <div class="jd-hero">
+    <!-- 상품 이미지 삽입 위치 -->
+    <img src="https://chj1013.hgodo.com/data/image/CLAUDE/FIREAX_detail.jpg" alt="FIREAX 풀알로이 야구배트 상세 이미지" style="width:100%; display:block;">
+    <div class="jd-hero-text">
+      <p class="jd-hero-copy">
+        가장 긴 배럴, 가장 빠른 스윙.<br>
+        <span>FIREAX Full Alloy Bat</span>
+      </p>
+      <p class="jd-hero-def">
+        FIREAX 풀알로이 야구배트는 Longest Barrel 설계와 Super Standard Balanced 밸런스를 결합한 사회인야구용 배트입니다.<br>
+        극세 핸들로 스윙 스피드를 높이고, 넓은 스위트스팟으로 미스히트를 줄여줍니다.
+      </p>
+    </div>
+  </div>
+
+  <!-- 2. 필요 상황 -->
+  <div class="jd-section jd-bg-gray">
+    <h2 class="jd-section-title">이런 분께 맞습니다</h2>
+    <ul class="jd-situation-list">
+      <li>현재 배트의 스위트스팟이 좁아서 미스히트가 잦은 분</li>
+      <li>스윙 스피드는 빠른데 배트가 무거워 타이밍이 늦는 분</li>
+      <li>알로이 배트 특유의 손 저림(진동)이 불편한 분</li>
+      <li>디자인까지 신경 쓰고 싶은 분 (매트 블랙 + 메탈릭 브라운)</li>
+    </ul>
+  </div>
+
+  <!-- 3. 핵심 스펙 -->
+  <div class="jd-section">
+    <h2 class="jd-section-title">핵심 스펙</h2>
+    <table class="jd-table">
+      <tr>
+        <th>상품명</th>
+        <td>FIREAX 풀알로이 야구배트</td>
+      </tr>
+      <tr>
+        <th>소재</th>
+        <td>Full Alloy (알루미늄 합금)</td>
+      </tr>
+      <tr>
+        <th>사이즈</th>
+        <td>33인치 28온스 / 32인치 27온스</td>
+      </tr>
+      <tr>
+        <th>배럴 지름</th>
+        <td>2 3/4 인치</td>
+      </tr>
+      <tr>
+        <th>배럴 특징</th>
+        <td>Longest Barrel (동급 대비 가장 긴 배럴)</td>
+      </tr>
+      <tr>
+        <th>밸런스</th>
+        <td>Super Standard Balanced</td>
+      </tr>
+      <tr>
+        <th>핸들</th>
+        <td>극세 핸들 (Extremely Thin Handle)</td>
+      </tr>
+      <tr>
+        <th>그립</th>
+        <td>Hexagon Cushioned Grip</td>
+      </tr>
+      <tr>
+        <th>마감</th>
+        <td>Matte &amp; Decal Art</td>
+      </tr>
+      <tr>
+        <th>컬러</th>
+        <td>Black Fade / Metallics Brown</td>
+      </tr>
+      <tr>
+        <th>진동 제어</th>
+        <td>No Vibration 설계 적용</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 4. 체감 설명 -->
+  <div class="jd-section jd-bg-gray">
+    <h2 class="jd-section-title">실제로 잡아보면 이렇습니다</h2>
+    <ul class="jd-feel-list">
+      <li>
+        <strong>배럴이 길어서 스위트스팟을 찾기 쉽습니다</strong>
+        동급 알로이 배트 대비 배럴이 길게 설계되어 있습니다. 스위트스팟 영역이 넓기 때문에 정타가 아닌 공도 어느 정도 비거리가 나옵니다. 미스히트 빈도가 줄어드는 체감이 있습니다.
+      </li>
+      <li>
+        <strong>핸들이 가늘어서 스윙이 빠릅니다</strong>
+        극세 핸들(Extremely Thin Handle) 설계로, 손에 감기는 느낌이 가볍습니다. 같은 무게의 배트라도 핸들이 가늘면 헤드 쪽에 무게가 실리기 때문에 스윙 가속이 자연스럽게 붙습니다.
+      </li>
+      <li>
+        <strong>미스히트 시 손이 덜 저립니다</strong>
+        No Vibration 설계가 적용되어 배럴 끝이나 핸들 가까이에 맞더라도 진동이 상당 부분 흡수됩니다. 알로이 배트 특유의 손 저림이 적어 장시간 타격 연습에도 부담이 줄어듭니다.
+      </li>
+      <li>
+        <strong>그립감이 안정적입니다</strong>
+        헥사곤 패턴의 쿠션 그립이 적용되어 있어 땀이 나도 미끄러지지 않습니다. 별도 그립 테이프 없이도 잡히는 느낌이 좋습니다.
+      </li>
+      <li>
+        <strong>밸런스가 중립이라 다루기 쉽습니다</strong>
+        Super Standard Balanced 설계로 엔드로드 배트처럼 헤드가 무겁지 않습니다. 밀어치기, 당겨치기 모두 대응이 가능한 범용 밸런스입니다.
+      </li>
+    </ul>
+  </div>
+
+  <!-- 5. 포지션 / 타겟별 추천 -->
+  <div class="jd-section">
+    <h2 class="jd-section-title">타자 유형별 적합도</h2>
+    <div class="jd-position-grid">
+      <div class="jd-position-card">
+        <div class="jd-pos-name">컨택 타자</div>
+        <div class="jd-pos-rating">적합</div>
+        <div class="jd-pos-desc">밸런스드 설계로 빠른 스윙이 가능합니다. 넓은 스위트스팟이 컨택률을 높여줍니다.</div>
+      </div>
+      <div class="jd-position-card">
+        <div class="jd-pos-name">장타형 타자</div>
+        <div class="jd-pos-rating">적합</div>
+        <div class="jd-pos-desc">33인치 28온스 모델로 충분한 비거리를 만들 수 있습니다. Longest Barrel이 타구 속도에 기여합니다.</div>
+      </div>
+      <div class="jd-position-card">
+        <div class="jd-pos-name">사회인야구 입문</div>
+        <div class="jd-pos-rating">추천</div>
+        <div class="jd-pos-desc">밸런스드 배트라 다루기 쉽고, 진동이 적어 초심자도 부담 없이 사용할 수 있습니다.</div>
+      </div>
+      <div class="jd-position-card">
+        <div class="jd-pos-name">2번~6번 타순</div>
+        <div class="jd-pos-rating">적합</div>
+        <div class="jd-pos-desc">컨택과 장타 모두 커버하는 밸런스. 중심 타순의 범용 배트로 활용도가 높습니다.</div>
+      </div>
+      <div class="jd-position-card">
+        <div class="jd-pos-name">극장타형 (엔드로드 선호)</div>
+        <div class="jd-pos-rating">비추천</div>
+        <div class="jd-pos-desc">엔드로드 배트처럼 헤드가 무겁지 않습니다. 헤드 무게에 의존하는 타격 스타일에는 맞지 않을 수 있습니다.</div>
+      </div>
+      <div class="jd-position-card">
+        <div class="jd-pos-name">유소년 / 중등부</div>
+        <div class="jd-pos-rating">사이즈 확인 필요</div>
+        <div class="jd-pos-desc">32인치 27온스가 최소 사이즈입니다. 체격과 스윙 파워에 따라 무거울 수 있으니 실측 후 선택하시기 바랍니다.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. 사이즈 가이드 -->
+  <div class="jd-section jd-bg-gray">
+    <h2 class="jd-section-title">사이즈 선택 가이드</h2>
+    <table class="jd-compare-table">
+      <tr>
+        <th>모델</th>
+        <th>길이</th>
+        <th>무게</th>
+        <th>드롭</th>
+        <th>추천 타자</th>
+      </tr>
+      <tr>
+        <td>FIREAX 32</td>
+        <td>32인치</td>
+        <td>27온스</td>
+        <td>-5</td>
+        <td>빠른 스윙, 컨택 중심</td>
+      </tr>
+      <tr class="jd-hl">
+        <td><strong>FIREAX 33</strong></td>
+        <td><strong>33인치</strong></td>
+        <td><strong>28온스</strong></td>
+        <td><strong>-5</strong></td>
+        <td><strong>사회인야구 기본, 밸런스형</strong></td>
+      </tr>
+    </table>
+    <div class="jd-note">
+      사회인야구 성인 기준 33인치 28온스가 가장 범용적입니다. 스윙 스피드가 빠르고 컨택을 우선하는 타자는 32인치 27온스도 고려해 보시기 바랍니다.
+    </div>
+  </div>
+
+  <!-- 7. 비교표 -->
+  <div class="jd-section">
+    <h2 class="jd-section-title">알로이 배트 타입 비교</h2>
+    <table class="jd-compare-table">
+      <tr>
+        <th>항목</th>
+        <th>FIREAX (밸런스드)</th>
+        <th>일반 엔드로드 배트</th>
+      </tr>
+      <tr>
+        <td>밸런스</td>
+        <td class="jd-hl">Standard Balanced</td>
+        <td>헤드 쏠림</td>
+      </tr>
+      <tr>
+        <td>스윙 스피드</td>
+        <td class="jd-hl">빠름</td>
+        <td>보통</td>
+      </tr>
+      <tr>
+        <td>컨택률</td>
+        <td class="jd-hl">높음 (넓은 스위트스팟)</td>
+        <td>보통</td>
+      </tr>
+      <tr>
+        <td>비거리</td>
+        <td>좋음</td>
+        <td class="jd-hl">매우 좋음 (헤드 무게)</td>
+      </tr>
+      <tr>
+        <td>진동 제어</td>
+        <td class="jd-hl">No Vibration 설계</td>
+        <td>제품마다 상이</td>
+      </tr>
+      <tr>
+        <td>핸들</td>
+        <td class="jd-hl">극세 핸들</td>
+        <td>보통~두꺼움</td>
+      </tr>
+      <tr>
+        <td>적합 타자</td>
+        <td>컨택 + 장타 범용</td>
+        <td>장타 특화</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 8. FAQ -->
+  <div class="jd-section jd-bg-gray">
+    <h2 class="jd-section-title">자주 묻는 질문</h2>
+
+    <details class="jd-faq-item">
+      <summary>사이즈는 어떻게 선택하나요?</summary>
+      <div class="jd-faq-answer">
+        33인치 28온스는 장타력과 비거리를 원하는 타자에게, 32인치 27온스는 컨택과 빠른 스윙을 원하는 타자에게 적합합니다. 사회인야구 성인 기준 대부분 33인치를 선택합니다.
+      </div>
+    </details>
+
+    <details class="jd-faq-item">
+      <summary>사회인야구 공인배트인가요?</summary>
+      <div class="jd-faq-answer">
+        배럴 지름 2 3/4인치 규격으로, 사회인야구 리그 대부분에서 사용 가능합니다. 소속 리그의 배트 규정(KBSA 등)을 확인하시기 바랍니다.
+      </div>
+    </details>
+
+    <details class="jd-faq-item">
+      <summary>알로이 배트인데 진동은 어떤가요?</summary>
+      <div class="jd-faq-answer">
+        FIREAX는 No Vibration 설계를 적용해 미스히트 시에도 진동이 적습니다. 극세 핸들이지만 핸들~배럴 연결부 구조가 진동을 흡수합니다.
+      </div>
+    </details>
+
+    <details class="jd-faq-item">
+      <summary>목재 배트와 비교하면 어떤 차이가 있나요?</summary>
+      <div class="jd-faq-answer">
+        풀알로이 소재는 목재 대비 내구성이 높고, 스위트스팟이 넓어 미스히트 확률이 줄어듭니다. 반발력도 목재보다 높아 같은 스윙 스피드에서 더 먼 비거리를 기대할 수 있습니다.
+      </div>
+    </details>
+
+    <details class="jd-faq-item">
+      <summary>그립 테이프를 따로 감아야 하나요?</summary>
+      <div class="jd-faq-answer">
+        헥사곤 쿠션 그립이 기본 장착되어 있어 별도 그립 테이프 없이 사용 가능합니다. 개인 취향에 따라 추가 감기도 가능합니다.
+      </div>
+    </details>
+
+  </div>
+
+  <!-- 9. 추천 포인트 -->
+  <div class="jd-section">
+    <h2 class="jd-section-title">이런 분께 추천합니다</h2>
+    <ul class="jd-recommend-list">
+      <li>스위트스팟이 넓은 배트를 찾는 사회인야구 타자</li>
+      <li>알로이 배트의 진동이 불편해서 진동 제어 기능을 원하는 분</li>
+      <li>빠른 스윙 스피드를 살리고 싶은 컨택 타자</li>
+      <li>밸런스드 배트로 컨택과 장타를 모두 커버하고 싶은 분</li>
+      <li>매트 블랙 + 메탈릭 브라운 디자인을 선호하는 분</li>
+    </ul>
+  </div>
+
+  <!-- 10. 배송/교환/반품 안내 -->
+  <div class="jd-delivery">
+    <strong>배송 안내</strong><br>
+    평일 오후 2시 이전 주문 시 당일 발송 &#183; 택배 배송 2~3일 소요<br><br>
+    <strong>교환/반품 안내</strong><br>
+    수령 후 7일 이내 교환/반품 가능 &#183; 사용 흔적(타흔, 스크래치)이 있을 경우 교환/반품 불가<br>
+    배트는 특성상 사용 후 반품이 어렵습니다. 사이즈를 꼭 확인 후 구매하시기 바랍니다.<br><br>
+    <strong>짱베이스볼</strong> &#183; jjangbaseball.com
+  </div>
+
+</div>
