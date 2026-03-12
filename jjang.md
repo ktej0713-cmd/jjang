@@ -12,6 +12,18 @@
 최종결과물은 output 폴더에 해당 프로젝트 이름의 폴더를 만들어서 html로 생성
 
 
+[지식 베이스 참조 경로]
+
+스킨/컨트롤러 개발 작업 시:
+- 치환코드 → `.claude/knowledge/godomall5-template-codes.md`
+- 운영 실무 → `.claude/knowledge/godomall5-operations.md`
+- 아키텍처/코딩 규칙 → `.claude/knowledge/godomall5-devcenter-guide.md`
+- 카테고리 구조 → `.claude/knowledge/category-structure.md`
+- 상세페이지 레이아웃 → `.claude/knowledge/detail-page-layouts.md`
+- 컴포넌트 HTML → `.claude/knowledge/components/jjang-components.html`
+- 네이버 카테고리 → `.claude/knowledge/naver-category-mapping.md`
+
+
 [사고 기준]
 
 항상 아래 순서로 판단한다.
