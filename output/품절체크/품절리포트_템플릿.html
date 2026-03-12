@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>품절체크 리포트 — 짱베이스볼</title>
+<style>
+  :root {
+    --primary: #1B2A4A;
+    --primary-light: #2C3E6B;
+    --accent: #D4A843;
+    --success: #2E7D32;
+    --warning: #E65100;
+    --danger: #C62828;
+    --info: #1565C0;
+    --gray-900: #222222;
+    --gray-700: #555555;
+    --gray-500: #888888;
+    --gray-300: #CCCCCC;
+    --gray-100: #F5F5F5;
+    --gray-50: #FAFAFA;
+    --bg-page: #F9F9F9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--gray-900);
+    background: var(--bg-page);
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  .report {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  /* 헤더 */
+  .report-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #fff;
+    padding: 32px;
+    margin-bottom: 24px;
+  }
+  .report-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .report-header .report-date {
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* 요약 카드 */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .summary-card {
+    background: #fff;
+    border: 1px solid var(--gray-100);
+    padding: 20px;
+    text-align: center;
+  }
+  .summary-card .sc-label {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .summary-card .sc-value {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .summary-card .sc-sub {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-top: 4px;
+  }
+  .sc-danger { color: var(--danger); }
+  .sc-warning { color: var(--warning); }
+  .sc-success { color: var(--success); }
+  .sc-info { color: var(--info); }
+
+  /* 섹션 */
+  .section {
+    background: #fff;
+    border: 1px solid var(--gray-100);
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary);
+    border-left: 4px solid var(--accent);
+    padding: 16px 20px;
+    background: var(--gray-50);
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .section-body {
+    padding: 20px;
+  }
+
+  /* 테이블 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  th {
+    background: var(--primary);
+    color: #fff;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--gray-100);
+  }
+  tr:nth-child(even) td {
+    background: var(--gray-50);
+  }
+
+  /* 상태 배지 */
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 3px;
+  }
+  .badge-stock { background: #E8F5E9; color: var(--success); }
+  .badge-soldout { background: #FFEBEE; color: var(--danger); }
+  .badge-partial { background: #FFF3E0; color: var(--warning); }
+  .badge-unknown { background: var(--gray-100); color: var(--gray-500); }
+
+  /* 긴급 알림 */
+  .alert {
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .alert-danger {
+    background: #FFEBEE;
+    border-left: 4px solid var(--danger);
+    color: #B71C1C;
+  }
+  .alert-warning {
+    background: #FFF3E0;
+    border-left: 4px solid var(--warning);
+    color: #E65100;
+  }
+  .alert-success {
+    background: #E8F5E9;
+    border-left: 4px solid var(--success);
+    color: #1B5E20;
+  }
+
+  /* 액션 아이템 */
+  .action-list {
+    list-style: none;
+    padding: 0;
+  }
+  .action-list li {
+    padding: 10px 0 10px 24px;
+    border-bottom: 1px solid var(--gray-100);
+    position: relative;
+  }
+  .action-list li::before {
+    content: "\25B6";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 10px;
+    top: 13px;
+  }
+  .action-list li:last-child { border-bottom: none; }
+  .action-priority {
+    font-size: 11px;
+    font-weight: 600;
+    margin-right: 8px;
+  }
+  .priority-urgent { color: var(--danger); }
+  .priority-high { color: var(--warning); }
+  .priority-normal { color: var(--info); }
+
+  /* 반응형 */
+  @media (max-width: 768px) {
+    .summary-grid { grid-template-columns: repeat(2, 1fr); }
+    .report { padding: 12px; }
+    .report-header { padding: 20px; }
+    table { font-size: 11px; }
+    th, td { padding: 8px 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="report">
+
+  <!-- 헤더 -->
+  <div class="report-header">
+    <h1>품절체크 리포트</h1>
+    <div class="report-date">체크 일시: {날짜} | 짱베이스볼 MD팀</div>
+  </div>
+
+  <!-- 요약 카드 -->
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="sc-label">전체 품절률</div>
+      <div class="sc-value sc-danger">{전체품절률}%</div>
+      <div class="sc-sub">전주 대비 {변동}</div>
+    </div>
+    <div class="summary-card">
+      <div class="sc-label">긴급 항목</div>
+      <div class="sc-value sc-danger">{긴급수}건</div>
+      <div class="sc-sub">즉시 대응 필요</div>
+    </div>
+    <div class="summary-card">
+      <div class="sc-label">우리만 품절</div>
+      <div class="sc-value sc-warning">{우리만품절}건</div>
+      <div class="sc-sub">기회 손실 발생</div>
+    </div>
+    <div class="summary-card">
+      <div class="sc-label">판매 기회</div>
+      <div class="sc-value sc-success">{판매기회}건</div>
+      <div class="sc-sub">경쟁몰만 품절</div>
+    </div>
+  </div>
+
+  <!-- 긴급 알림 -->
+  <div class="section">
+    <div class="section-title">긴급 알림</div>
+    <div class="section-body">
+      <div class="alert alert-danger">
+        <strong>[긴급]</strong> {베스트셀러 품절 상품명} — 경쟁몰(야구야)에 재고 있음. 즉시 재입고 필요.
+      </div>
+      <div class="alert alert-warning">
+        <strong>[주의]</strong> {카테고리명} 카테고리 품절률 {N}% — 기준(30%) 초과.
+      </div>
+      <div class="alert alert-success">
+        <strong>[기회]</strong> {상품명} — 야구야, 야구넷 모두 품절. 짱베이스볼만 재고 보유.
+      </div>
+    </div>
+  </div>
+
+  <!-- 카테고리별 품절 현황 -->
+  <div class="section">
+    <div class="section-title">카테고리별 품절 현황</div>
+    <div class="section-body">
+      <table>
+        <tr>
+          <th>카테고리</th>
+          <th>전체 상품</th>
+          <th>품절</th>
+          <th>품절률</th>
+          <th>전주 대비</th>
+          <th>상태</th>
+        </tr>
+        <tr>
+          <td>글러브</td>
+          <td>{N}개</td>
+          <td>{N}개</td>
+          <td>{N}%</td>
+          <td>{변동}</td>
+          <td><span class="badge badge-stock">정상</span></td>
+        </tr>
+        <tr>
+          <td>배트</td>
+          <td>{N}개</td>
+          <td>{N}개</td>
+          <td>{N}%</td>
+          <td>{변동}</td>
+          <td><span class="badge badge-partial">주의</span></td>
+        </tr>
+        <!-- 보호장비, 야구화, 의류, 장갑 등 동일 패턴 반복 -->
+      </table>
+    </div>
+  </div>
+
+  <!-- 경쟁몰 비교 -->
+  <div class="section">
+    <div class="section-title">경쟁몰 재고 비교</div>
+    <div class="section-body">
+      <table>
+        <tr>
+          <th>상품명</th>
+          <th>짱베이스볼</th>
+          <th>야구야</th>
+          <th>야구넷</th>
+          <th>베이스볼파크</th>
+          <th>네이버 최저가</th>
+          <th>판단</th>
+        </tr>
+        <tr>
+          <td>{상품명}</td>
+          <td><span class="badge badge-soldout">품절</span></td>
+          <td><span class="badge badge-stock">재고</span> {가격}</td>
+          <td><span class="badge badge-stock">재고</span> {가격}</td>
+          <td><span class="badge badge-unknown">미확인</span></td>
+          <td>{최저가}</td>
+          <td><span class="action-priority priority-urgent">긴급 재입고</span></td>
+        </tr>
+        <tr>
+          <td>{상품명}</td>
+          <td><span class="badge badge-stock">재고</span> {가격}</td>
+          <td><span class="badge badge-soldout">품절</span></td>
+          <td><span class="badge badge-soldout">품절</span></td>
+          <td><span class="badge badge-soldout">품절</span></td>
+          <td>-</td>
+          <td><span class="action-priority priority-normal">마케팅 강화</span></td>
+        </tr>
+        <!-- 추가 상품 동일 패턴 -->
+      </table>
+    </div>
+  </div>
+
+  <!-- 소싱 MD 액션 아이템 -->
+  <div class="section">
+    <div class="section-title">소싱 MD 액션 아이템</div>
+    <div class="section-body">
+      <ul class="action-list">
+        <li>
+          <span class="action-priority priority-urgent">[긴급]</span>
+          {상품명} 재입고 발주 — 경쟁몰 3곳 모두 재고 보유, 일 예상 기회손실 {N}건
+        </li>
+        <li>
+          <span class="action-priority priority-high">[높음]</span>
+          {브랜드명} {카테고리} 전량 품절 — 브랜드사/도매처 입고 일정 확인 필요
+        </li>
+        <li>
+          <span class="action-priority priority-normal">[참고]</span>
+          {상품명} — 경쟁몰 전체 품절, 가격 유지 또는 소폭 인상 검토 가능
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <div style="text-align:center; padding:20px; color:var(--gray-500); font-size:12px;">
+    짱베이스볼 MD팀 품절체크 자동 리포트 | 생성: {날짜시간}
+  </div>
+
+</div>
+</body>
+</html>
