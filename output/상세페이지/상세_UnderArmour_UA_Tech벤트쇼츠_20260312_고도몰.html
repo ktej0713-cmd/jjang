@@ -52,7 +52,7 @@
     },
     {
       "@type": "Question",
-      "name": "일반 반바지와 뭐가 다른가요?",
+      "name": "일반 면 반바지와 뭐가 다른가요?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "일반 면 반바지 대비 수분 흡수 후 건조 속도가 빠르고, 체취 억제 기술이 적용되어 있습니다. 4방향 스트레치로 운동 시 움직임 제한이 없으며, 메쉬 패널로 환기가 잘 됩니다. 운동 후 땀에 젖어 무거워지는 면 소재와 달리 가볍고 쾌적한 상태가 유지됩니다."
@@ -63,7 +63,7 @@
 </script>
 
 <style>
-  /* ===== 짱베이스볼 상세페이지 — UA Tech 벤트 쇼츠 ===== */
+  /* ===== 짱베이스볼 상세페이지 — UA Tech 벤트 쇼츠 [의류 레이아웃] ===== */
   #jjang-detail {
     font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     color: #222222;
@@ -191,34 +191,87 @@
     font-weight: 600;
   }
 
-  /* 포지션별 추천 */
-  #jjang-detail .jd-position-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+  /* [의류 전용] 착용 상황 가이드 */
+  #jjang-detail .jd-scene-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
-  #jjang-detail .jd-position-card {
-    border: 1px solid #E0E0E0;
-    padding: 16px;
+  #jjang-detail .jd-scene-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid #EEEEEE;
+  }
+  #jjang-detail .jd-scene-item:last-child {
+    border-bottom: none;
+  }
+  #jjang-detail .jd-scene-tag {
+    flex-shrink: 0;
+    width: 110px;
     text-align: center;
-    background: #fff;
-  }
-  #jjang-detail .jd-position-card .jd-pos-name {
-    font-size: 14px;
+    padding: 6px 0;
+    font-size: 13px;
     font-weight: 700;
     color: #1B2A4A;
-    margin-bottom: 8px;
+    background: #F0F1F5;
+    border-left: 3px solid #D4A843;
   }
-  #jjang-detail .jd-position-card .jd-pos-rating {
-    font-size: 13px;
+  #jjang-detail .jd-scene-tag.jd-scene-best {
+    background: #1B2A4A;
     color: #D4A843;
-    font-weight: 600;
-    margin-bottom: 6px;
+    border-left: 3px solid #D4A843;
   }
-  #jjang-detail .jd-position-card .jd-pos-desc {
-    font-size: 12px;
-    color: #666;
-    line-height: 1.5;
+  #jjang-detail .jd-scene-body {
+    flex: 1;
+  }
+  #jjang-detail .jd-scene-body .jd-scene-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1B2A4A;
+    margin-bottom: 4px;
+  }
+  #jjang-detail .jd-scene-body .jd-scene-desc {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* [의류 전용] 소재 비교 */
+  #jjang-detail .jd-material-compare {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  #jjang-detail .jd-material-compare th {
+    background: #1B2A4A;
+    color: #fff;
+    padding: 11px 16px;
+    font-weight: 600;
+    text-align: center;
+    width: 33.33%;
+  }
+  #jjang-detail .jd-material-compare th:first-child {
+    text-align: left;
+    width: 20%;
+  }
+  #jjang-detail .jd-material-compare td {
+    padding: 11px 16px;
+    border-bottom: 1px solid #EEEEEE;
+    color: #333;
+    text-align: center;
+  }
+  #jjang-detail .jd-material-compare td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: #1B2A4A;
+    background: #F7F8FA;
+  }
+  #jjang-detail .jd-material-compare .jd-hl {
+    background: #FDF8EC;
+    font-weight: 600;
+    color: #1B2A4A;
   }
 
   /* 사이즈 표 */
@@ -246,6 +299,37 @@
     background: #FDF8EC;
     font-weight: 600;
     color: #1B2A4A;
+  }
+
+  /* 핏 가이드 박스 */
+  #jjang-detail .jd-fit-guide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  #jjang-detail .jd-fit-card {
+    border: 1px solid #E0E0E0;
+    padding: 16px;
+    background: #fff;
+  }
+  #jjang-detail .jd-fit-card .jd-fit-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #D4A843;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+  }
+  #jjang-detail .jd-fit-card .jd-fit-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1B2A4A;
+    margin-bottom: 4px;
+  }
+  #jjang-detail .jd-fit-card .jd-fit-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
   }
 
   /* 안내 박스 */
@@ -336,7 +420,16 @@
     #jjang-detail .jd-situation-list {
       grid-template-columns: 1fr;
     }
-    #jjang-detail .jd-position-grid {
+    #jjang-detail .jd-scene-item {
+      flex-direction: column;
+      gap: 8px;
+    }
+    #jjang-detail .jd-scene-tag {
+      width: auto;
+      display: inline-block;
+      padding: 4px 12px;
+    }
+    #jjang-detail .jd-fit-guide {
       grid-template-columns: 1fr;
     }
     #jjang-detail .jd-size-table {
@@ -345,6 +438,13 @@
     #jjang-detail .jd-size-table th,
     #jjang-detail .jd-size-table td {
       padding: 8px 6px;
+    }
+    #jjang-detail .jd-material-compare {
+      font-size: 12px;
+    }
+    #jjang-detail .jd-material-compare th,
+    #jjang-detail .jd-material-compare td {
+      padding: 8px 8px;
     }
   }
 </style>
@@ -397,7 +497,7 @@
       </tr>
       <tr>
         <th>핏</th>
-        <td>Loose (루즈핏 — 편안한 여유 있는 핏)</td>
+        <td>Loose (루즈핏 &#8212; 편안한 여유 있는 핏)</td>
       </tr>
       <tr>
         <th>인심</th>
@@ -459,47 +559,74 @@
   </div>
   <!-- [/SEC:체감설명] -->
 
-  <!-- [SEC:포지션] -->
+  <!-- [SEC:착용상황] — 의류 전용: 포지션 카드 대신 상황별 가이드 -->
   <div class="jd-section">
-    <h2 class="jd-section-title">용도별 적합도</h2>
-    <div class="jd-position-grid">
-      <div class="jd-position-card">
-        <div class="jd-pos-name">배팅 연습</div>
-        <div class="jd-pos-rating">추천</div>
-        <div class="jd-pos-desc">4방향 스트레치로 스윙 동작에 제한이 없고, 메쉬 통기로 장시간 연습에도 쾌적합니다.</div>
-      </div>
-      <div class="jd-position-card">
-        <div class="jd-pos-name">웨이트 트레이닝</div>
-        <div class="jd-pos-rating">추천</div>
-        <div class="jd-pos-desc">스쿼트, 데드리프트 등 하체 운동에서 움직임 제한이 없습니다. 빠른 건조로 세트 간 쾌적함 유지.</div>
-      </div>
-      <div class="jd-position-card">
-        <div class="jd-pos-name">런닝 / 유산소</div>
-        <div class="jd-pos-rating">적합</div>
-        <div class="jd-pos-desc">가벼운 무게와 통기성으로 달리기에도 적합합니다. 7인치 인심이라 무릎 위로 충분히 여유 있습니다.</div>
-      </div>
-      <div class="jd-position-card">
-        <div class="jd-pos-name">불펜 / 수비 훈련</div>
-        <div class="jd-pos-rating">적합</div>
-        <div class="jd-pos-desc">투구 동작이나 수비 스텝에서 허벅지 안쪽이 당기지 않습니다. 야외 훈련 시 통기성이 도움됩니다.</div>
-      </div>
-      <div class="jd-position-card">
-        <div class="jd-pos-name">시합 경기</div>
-        <div class="jd-pos-rating">해당 없음</div>
-        <div class="jd-pos-desc">정식 경기에서는 야구 유니폼 바지를 착용해야 합니다. 훈련복/워밍업용으로 적합합니다.</div>
-      </div>
-      <div class="jd-position-card">
-        <div class="jd-pos-name">일상 / 캐주얼</div>
-        <div class="jd-pos-rating">적합</div>
-        <div class="jd-pos-desc">블랙 컬러에 깔끔한 디자인이라 운동 외 일상 착용에도 무난합니다.</div>
-      </div>
-    </div>
+    <h2 class="jd-section-title">이 쇼츠가 어울리는 상황</h2>
+    <ul class="jd-scene-list">
+      <li class="jd-scene-item">
+        <div class="jd-scene-tag jd-scene-best">BEST</div>
+        <div class="jd-scene-body">
+          <div class="jd-scene-name">배팅 연습 / 타격 훈련</div>
+          <div class="jd-scene-desc">4방향 스트레치로 스윙 동작에 제한이 없습니다. 메쉬 통기로 장시간 타격 연습에도 하체가 쾌적합니다. 허리 조절끈으로 배팅 자세에서 흘러내림이 없습니다.</div>
+        </div>
+      </li>
+      <li class="jd-scene-item">
+        <div class="jd-scene-tag jd-scene-best">BEST</div>
+        <div class="jd-scene-body">
+          <div class="jd-scene-name">웨이트 트레이닝</div>
+          <div class="jd-scene-desc">스쿼트, 데드리프트 등 하체 운동에서 움직임 제한이 없습니다. 세트 간 빠른 건조로 쾌적함이 유지됩니다. 루즈핏이라 허벅지 안쪽이 조이지 않습니다.</div>
+        </div>
+      </li>
+      <li class="jd-scene-item">
+        <div class="jd-scene-tag">적합</div>
+        <div class="jd-scene-body">
+          <div class="jd-scene-name">불펜 / 수비 훈련</div>
+          <div class="jd-scene-desc">투구 동작이나 수비 스텝에서 허벅지 안쪽이 당기지 않습니다. 야외 훈련 시 측면 메쉬가 환기를 도와줍니다.</div>
+        </div>
+      </li>
+      <li class="jd-scene-item">
+        <div class="jd-scene-tag">적합</div>
+        <div class="jd-scene-body">
+          <div class="jd-scene-name">런닝 / 유산소</div>
+          <div class="jd-scene-desc">가벼운 무게와 통기성으로 달리기에 적합합니다. 7인치 인심이라 무릎 위로 충분히 여유 있습니다.</div>
+        </div>
+      </li>
+      <li class="jd-scene-item">
+        <div class="jd-scene-tag">적합</div>
+        <div class="jd-scene-body">
+          <div class="jd-scene-name">일상 / 캐주얼</div>
+          <div class="jd-scene-desc">블랙 컬러에 깔끔한 디자인이라 운동 외 일상 착용에도 무난합니다. 주말 외출이나 가벼운 산책에 부담 없습니다.</div>
+        </div>
+      </li>
+      <li class="jd-scene-item">
+        <div class="jd-scene-tag" style="background:#F0F1F5; color:#888;">해당 없음</div>
+        <div class="jd-scene-body">
+          <div class="jd-scene-name">정식 경기</div>
+          <div class="jd-scene-desc">정식 경기에서는 야구 유니폼 바지를 착용해야 합니다. 경기 전 워밍업이나 벤치에서의 대기 시에는 착용 가능합니다.</div>
+        </div>
+      </li>
+    </ul>
   </div>
-  <!-- [/SEC:포지션] -->
+  <!-- [/SEC:착용상황] -->
 
   <!-- [SEC:사이즈] -->
   <div class="jd-section jd-bg-gray">
     <h2 class="jd-section-title">사이즈 선택 가이드</h2>
+
+    <!-- 핏/인심 요약 카드 -->
+    <div class="jd-fit-guide">
+      <div class="jd-fit-card">
+        <div class="jd-fit-label">FIT</div>
+        <div class="jd-fit-value">Loose (루즈핏)</div>
+        <div class="jd-fit-desc">모든 체형에 여유 있게 맞는 편안한 핏. 평소 사이즈 그대로 선택합니다.</div>
+      </div>
+      <div class="jd-fit-card">
+        <div class="jd-fit-label">INSEAM</div>
+        <div class="jd-fit-value">7인치 (17.78cm)</div>
+        <div class="jd-fit-desc">무릎 위 적당한 길이. 운동 시 움직임에 방해되지 않는 기본 기장입니다.</div>
+      </div>
+    </div>
+
     <table class="jd-size-table">
       <tr>
         <th>사이즈</th>
@@ -548,8 +675,64 @@
   </div>
   <!-- [/SEC:사이즈] -->
 
-  <!-- [SEC:FAQ] -->
+  <!-- [SEC:소재비교] — 의류 전용: 모델 vs 모델 비교 대신 소재 비교 -->
   <div class="jd-section">
+    <h2 class="jd-section-title">기능성 소재 vs 일반 면 소재</h2>
+    <table class="jd-material-compare">
+      <tr>
+        <th>항목</th>
+        <th>UA Tech Vent (이 제품)</th>
+        <th>일반 면 반바지</th>
+      </tr>
+      <tr>
+        <td>소재</td>
+        <td class="jd-hl">폴리에스테르 90% + 엘라스테인 10%</td>
+        <td>면 100% 또는 면혼방</td>
+      </tr>
+      <tr>
+        <td>무게</td>
+        <td class="jd-hl">가벼움</td>
+        <td>보통~무거움</td>
+      </tr>
+      <tr>
+        <td>건조 속도</td>
+        <td class="jd-hl">빠름 (수분 흡수 후 속건)</td>
+        <td>느림 (젖으면 무거워짐)</td>
+      </tr>
+      <tr>
+        <td>통기성</td>
+        <td class="jd-hl">우수 (메쉬 패널 적용)</td>
+        <td>보통</td>
+      </tr>
+      <tr>
+        <td>스트레치</td>
+        <td class="jd-hl">4방향 스트레치</td>
+        <td>거의 없음</td>
+      </tr>
+      <tr>
+        <td>체취 억제</td>
+        <td class="jd-hl">기술 적용</td>
+        <td>없음</td>
+      </tr>
+      <tr>
+        <td>형태 유지</td>
+        <td>우수 (세탁 후에도 유지)</td>
+        <td>반복 세탁 시 늘어남</td>
+      </tr>
+      <tr>
+        <td>가격대</td>
+        <td>55,000원</td>
+        <td>15,000~30,000원</td>
+      </tr>
+    </table>
+    <div class="jd-note">
+      기능성 소재는 면 대비 가격이 높지만, 운동 시 건조 속도, 통기성, 스트레치에서 체감 차이가 분명합니다. 야구 훈련처럼 땀이 많고 동작이 큰 운동에서는 기능성 소재의 장점이 더 두드러집니다.
+    </div>
+  </div>
+  <!-- [/SEC:소재비교] -->
+
+  <!-- [SEC:FAQ] -->
+  <div class="jd-section jd-bg-gray">
     <h2 class="jd-section-title">자주 묻는 질문</h2>
 
     <details class="jd-faq-item">
@@ -584,7 +767,7 @@
   <!-- [/SEC:FAQ] -->
 
   <!-- [SEC:추천포인트] -->
-  <div class="jd-section jd-bg-gray">
+  <div class="jd-section">
     <h2 class="jd-section-title">이런 분께 추천합니다</h2>
     <ul class="jd-recommend-list">
       <li>여름 야구 훈련용 반바지를 찾는 사회인야구 선수</li>
