@@ -116,7 +116,8 @@
     "pr-review-toolkit@claude-plugins-official": true,
     "firecrawl@firecrawl": true,
     "claude-mem@thedotmack": true,
-    "review-loop@hamel-review": true
+    "review-loop@hamel-review": true,
+    "cli-anything@cli-anything": true
   },
   "extraKnownMarketplaces": {
     "anthropic-agent-skills": {
@@ -141,6 +142,12 @@
       "source": {
         "source": "github",
         "repo": "hamelsmu/claude-review-loop"
+      }
+    },
+    "cli-anything": {
+      "source": {
+        "source": "github",
+        "repo": "HKUDS/CLI-Anything"
       }
     }
   },
