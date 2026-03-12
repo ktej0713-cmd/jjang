@@ -250,43 +250,43 @@
     line-height: 1.7;
   }
 
-  /* FAQ 아코디언 */
+  /* FAQ — details/summary (스크립트 불필요) */
   #jjang-detail .jd-faq-item {
     border: 1px solid #E0E0E0;
     margin-bottom: 8px;
   }
-  #jjang-detail .jd-faq-btn {
-    width: 100%;
+  #jjang-detail .jd-faq-item summary {
     background: #F7F8FA;
-    border: none;
     padding: 16px 20px;
-    text-align: left;
     font-size: 14px;
     font-weight: 600;
     color: #1B2A4A;
     cursor: pointer;
+    list-style: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Noto Sans KR', sans-serif;
   }
-  #jjang-detail .jd-faq-btn .jd-faq-icon {
+  #jjang-detail .jd-faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  #jjang-detail .jd-faq-item summary::after {
+    content: "+";
     font-size: 18px;
     font-weight: 400;
     color: #D4A843;
     flex-shrink: 0;
   }
-  #jjang-detail .jd-faq-answer {
-    display: none;
+  #jjang-detail .jd-faq-item[open] summary::after {
+    content: "-";
+  }
+  #jjang-detail .jd-faq-item .jd-faq-answer {
     padding: 16px 20px;
     font-size: 14px;
     color: #555;
     line-height: 1.8;
     background: #fff;
     border-top: 1px solid #EEEEEE;
-  }
-  #jjang-detail .jd-faq-answer.jd-open {
-    display: block;
   }
 
   /* 추천 포인트 */
@@ -529,45 +529,33 @@
   <div class="jd-section jd-bg-gray">
     <h2 class="jd-section-title">자주 묻는 질문</h2>
 
-    <div class="jd-faq-item">
-      <button class="jd-faq-btn" onclick="jjangFaqToggle(this)">
-        사이즈는 어떻게 선택하나요?
-        <span class="jd-faq-icon">+</span>
-      </button>
+    <details class="jd-faq-item">
+      <summary>사이즈는 어떻게 선택하나요?</summary>
       <div class="jd-faq-answer">
         컴프레션 베이스레이어는 몸에 밀착되는 핏입니다. 평소 입으시는 사이즈로 선택하시면 됩니다. 여유 핏을 원하시면 한 사이즈 업도 가능합니다.
       </div>
-    </div>
+    </details>
 
-    <div class="jd-faq-item">
-      <button class="jd-faq-btn" onclick="jjangFaqToggle(this)">
-        야구 경기 중 착용해도 규정 위반이 아닌가요?
-        <span class="jd-faq-icon">+</span>
-      </button>
+    <details class="jd-faq-item">
+      <summary>야구 경기 중 착용해도 규정 위반이 아닌가요?</summary>
       <div class="jd-faq-answer">
         사회인야구에서 이너셔츠(베이스레이어) 착용은 일반적으로 허용됩니다. 다만 소매 색상이 유니폼과 다를 경우 일부 리그에서 제한할 수 있으니 소속 리그 규정을 미리 확인하시기 바랍니다.
       </div>
-    </div>
+    </details>
 
-    <div class="jd-faq-item">
-      <button class="jd-faq-btn" onclick="jjangFaqToggle(this)">
-        여름 야구에서 덥지 않나요?
-        <span class="jd-faq-icon">+</span>
-      </button>
+    <details class="jd-faq-item">
+      <summary>여름 야구에서 덥지 않나요?</summary>
       <div class="jd-faq-answer">
         HeatGear 소재는 땀을 빠르게 흡수해 외부로 배출하는 속건 소재입니다. 겨드랑이와 등에 메쉬 패널이 있어 통풍이 됩니다. 코튼 소재 이너셔츠 대비 체감 온도가 낮게 유지됩니다.
       </div>
-    </div>
+    </details>
 
-    <div class="jd-faq-item">
-      <button class="jd-faq-btn" onclick="jjangFaqToggle(this)">
-        세탁 시 주의사항이 있나요?
-        <span class="jd-faq-icon">+</span>
-      </button>
+    <details class="jd-faq-item">
+      <summary>세탁 시 주의사항이 있나요?</summary>
       <div class="jd-faq-answer">
         30도 이하 찬물 세탁을 권장합니다. 건조기 사용 금지, 표백제 사용 금지입니다. 땀이 많이 배면 신속히 세탁하시면 소재 수명이 길어집니다.
       </div>
-    </div>
+    </details>
 
   </div>
 
@@ -586,23 +574,3 @@
 
 </div>
 
-<script>
-  /* 짱베이스볼 FAQ 아코디언 */
-  function jjangFaqToggle(btn) {
-    var answer = btn.nextElementSibling;
-    var icon = btn.querySelector('.jd-faq-icon');
-    var isOpen = answer.classList.contains('jd-open');
-
-    /* 같은 영역 내 모든 항목 닫기 */
-    var allAnswers = btn.closest('#jjang-detail').querySelectorAll('.jd-faq-answer');
-    var allIcons = btn.closest('#jjang-detail').querySelectorAll('.jd-faq-icon');
-    allAnswers.forEach(function(a) { a.classList.remove('jd-open'); });
-    allIcons.forEach(function(i) { i.textContent = '+'; });
-
-    /* 현재 항목 토글 */
-    if (!isOpen) {
-      answer.classList.add('jd-open');
-      icon.textContent = '-';
-    }
-  }
-</script>
