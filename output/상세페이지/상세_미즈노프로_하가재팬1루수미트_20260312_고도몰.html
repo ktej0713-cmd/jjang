@@ -354,19 +354,16 @@
   line-height: 1.65;
 }
 
-/* --- FAQ 아코디언 --- */
+/* --- FAQ 아코디언 (details/summary — JS 불필요) --- */
 #jjang-detail .jjang-faq-item {
   border: 1px solid var(--gray-100);
   margin-bottom: 8px;
   overflow: hidden;
 }
 
-#jjang-detail .jjang-faq-btn {
-  width: 100%;
+#jjang-detail .jjang-faq-item summary {
   background: var(--gray-100);
-  border: none;
   padding: 15px 20px;
-  text-align: left;
   font-size: 14px;
   font-weight: 600;
   color: var(--primary);
@@ -374,13 +371,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Noto Sans KR', sans-serif;
+  list-style: none;
   line-height: 1.5;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
-#jjang-detail .jjang-faq-btn:hover { background: #EBEBEB; }
+#jjang-detail .jjang-faq-item summary::-webkit-details-marker { display: none; }
+#jjang-detail .jjang-faq-item summary::marker { display: none; }
+#jjang-detail .jjang-faq-item summary:hover { background: #EBEBEB; }
 
-#jjang-detail .jjang-faq-icon {
+#jjang-detail .jjang-faq-item summary::after {
+  content: '+';
   flex-shrink: 0;
   margin-left: 12px;
   font-size: 20px;
@@ -389,8 +390,11 @@
   line-height: 1;
 }
 
+#jjang-detail .jjang-faq-item[open] summary::after {
+  content: '-';
+}
+
 #jjang-detail .jjang-faq-ans {
-  display: none;
   padding: 16px 20px;
   font-size: 14px;
   color: var(--gray-700);
@@ -652,45 +656,33 @@
   <div class="jjang-sec-title">자주 묻는 질문</div>
   <div class="jjang-sec-sub">구매 전 가장 많이 들어오는 질문</div>
 
-  <div class="jjang-faq-item">
-    <button class="jjang-faq-btn" onclick="jjangFaqToggle(this)">
-      HAGA JAPAN 각인이 뭔가요? 일반 미즈노 프로랑 다른 건가요?
-      <span class="jjang-faq-icon">+</span>
-    </button>
+  <details class="jjang-faq-item">
+    <summary>HAGA JAPAN 각인이 뭔가요? 일반 미즈노 프로랑 다른 건가요?</summary>
     <div class="jjang-faq-ans">
       HAGA JAPAN은 별도 제품 라인명이 아닙니다. 효고현 하가 공장(波賀工場, 미즈노 테크닉스 주식회사)에서 제조된 일본산임을 증명하는 각인입니다. 미즈노 프로 글러브라도 기성품 1루수 미트는 전부 중국산입니다. BSS 오더에서 국산화 옵션을 선택해야만 HAGA JAPAN 각인을 받을 수 있습니다.
     </div>
-  </div>
+  </details>
 
-  <div class="jjang-faq-item">
-    <button class="jjang-faq-btn" onclick="jjangFaqToggle(this)">
-      BSS 오더란 무엇인가요?
-      <span class="jjang-faq-icon">+</span>
-    </button>
+  <details class="jjang-faq-item">
+    <summary>BSS 오더란 무엇인가요?</summary>
     <div class="jjang-faq-ans">
       BSS(Baseball Special Store)는 미즈노가 인정한 야구 전문 취급점 인증 제도입니다. 자체 공방 보유, 미즈노 하가 공장 연수 수료 등 조건을 갖춘 인증점에서만 미즈노 프로 오더를 접수할 수 있습니다. HAGA JAPAN 일본산 옵션도 이 경로를 통해서만 선택 가능하며, 이 제품은 BSS 오더로 주문 후 하가 공장에서 제작된 상품입니다.
     </div>
-  </div>
+  </details>
 
-  <div class="jjang-faq-item">
-    <button class="jjang-faq-btn" onclick="jjangFaqToggle(this)">
-      BSS 오더로 직접 넣으면 얼마나 걸리나요?
-      <span class="jjang-faq-icon">+</span>
-    </button>
+  <details class="jjang-faq-item">
+    <summary>BSS 오더로 직접 넣으면 얼마나 걸리나요?</summary>
     <div class="jjang-faq-ans">
       HAGA JAPAN 옵션이 적용된 BSS 오더는 통상 4~6개월의 납기가 소요됩니다. 시즌 전(2~3월) 주문이 몰리는 시기에는 더 길어질 수 있습니다. 이 제품은 이미 제작 완료된 재고 상품으로, 별도 대기 없이 바로 수령 가능합니다.
     </div>
-  </div>
+  </details>
 
-  <div class="jjang-faq-item">
-    <button class="jjang-faq-btn" onclick="jjangFaqToggle(this)">
-      새 미트 길들이는 방법이 궁금합니다.
-      <span class="jjang-faq-icon">+</span>
-    </button>
+  <details class="jjang-faq-item">
+    <summary>새 미트 길들이는 방법이 궁금합니다.</summary>
     <div class="jjang-faq-ans">
       BSS 오더 미트는 출고 시 기본 형태가 잡혀 있으나, 완전한 길들임에는 실사용이 가장 효과적입니다. 글러브 오일을 얇게 1~2회 바른 후 캐치볼을 반복하면 됩니다. 일본산 가죽은 중국산 대비 유분 흡수가 다를 수 있어 오일은 소량씩 천천히 침투시키는 것이 좋습니다. 물 적심은 권장하지 않습니다.
     </div>
-  </div>
+  </details>
 </section>
 <!-- [/SEC:FAQ] -->
 
@@ -720,24 +712,3 @@
 <!-- [/SEC:추천포인트] -->
 
 </div>
-
-<script>
-/* 짱베이스볼 FAQ 아코디언 — jjang 접두사 스코핑 */
-function jjangFaqToggle(btn) {
-  var ans = btn.nextElementSibling;
-  var icon = btn.querySelector('.jjang-faq-icon');
-  var isOpen = ans.style.display === 'block';
-
-  /* 모두 닫기 — closest() 미지원 환경 대비 document 기반 */
-  var allAns = document.querySelectorAll('#jjang-detail .jjang-faq-ans');
-  var allIcons = document.querySelectorAll('#jjang-detail .jjang-faq-icon');
-  for (var i = 0; i < allAns.length; i++) { allAns[i].style.display = 'none'; }
-  for (var j = 0; j < allIcons.length; j++) { allIcons[j].textContent = '+'; }
-
-  /* 토글 */
-  if (!isOpen) {
-    ans.style.display = 'block';
-    icon.textContent = '-';
-  }
-}
-</script>
