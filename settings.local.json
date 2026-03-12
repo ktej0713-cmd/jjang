@@ -3,7 +3,10 @@
     "allow": [
       "mcp__gmail-full__create_filter",
       "mcp__gmail-full__batch_modify_emails",
-      "mcp__gmail-full__search_emails"
+      "mcp__gmail-full__search_emails",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_evaluate"
     ]
   }
 }
