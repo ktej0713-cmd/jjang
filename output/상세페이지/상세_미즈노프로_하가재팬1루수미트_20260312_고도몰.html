@@ -16,7 +16,7 @@
   "sku": "MIZUNO-BSS-HAGA-1B-7N-14",
   "material": "플렉시 킵 (プレキシーキップ) 일본산 천연 소가죽",
   "color": "블랙/플럼 브라운",
-  "size": "14인치",
+  "size": "약 13인치",
   "offers": {
     "@type": "Offer",
     "priceCurrency": "KRW",
@@ -513,7 +513,7 @@
       </tr>
       <tr>
         <th>사이즈</th>
-        <td>약 14인치</td>
+        <td>약 13인치</td>
       </tr>
       <tr>
         <th>색상</th>
@@ -621,14 +621,14 @@
         <td>유소년 (초중등)</td>
         <td>핸들링 중심</td>
       </tr>
-      <tr>
-        <td>13인치</td>
-        <td>중형</td>
-        <td>중고등부 / 여성 성인</td>
-        <td>균형형</td>
-      </tr>
       <tr class="this-product">
-        <td>14인치 &#9654; 이 제품</td>
+        <td>13인치 &#9654; 이 제품</td>
+        <td>중형</td>
+        <td>중고등부 / 성인 / 사회인</td>
+        <td>이 제품 (약 13인치)</td>
+      </tr>
+      <tr>
+        <td>14인치</td>
         <td>대형</td>
         <td>성인 엘리트 / 사회인 상급</td>
         <td>1루수 표준 사이즈</td>
@@ -642,7 +642,7 @@
     </tbody>
   </table>
   <div class="jjang-size-note">
-    &#8251; 1루수 미트는 일반 외야 글러브보다 포켓이 넓고 깊게 설계되어 있습니다. 14인치는 성인 기준 1루수 미트의 표준 사이즈로, 착용감이 걱정된다면 구매 전 직접 착용 테스트를 권장합니다.
+    &#8251; 1루수 미트는 일반 외야 글러브보다 포켓이 넓고 깊게 설계되어 있습니다. 이 제품은 약 13인치로, 중고등부부터 성인 사회인까지 폭넓게 사용할 수 있는 사이즈입니다. 착용감이 걱정된다면 구매 전 직접 착용 테스트를 권장합니다.
   </div>
 </section>
 <!-- [/SEC:사이즈] -->
@@ -728,10 +728,11 @@ function jjangFaqToggle(btn) {
   var icon = btn.querySelector('.jjang-faq-icon');
   var isOpen = ans.style.display === 'block';
 
-  /* 모두 닫기 */
-  var wrap = btn.closest('#jjang-detail');
-  wrap.querySelectorAll('.jjang-faq-ans').forEach(function(el) { el.style.display = 'none'; });
-  wrap.querySelectorAll('.jjang-faq-icon').forEach(function(el) { el.textContent = '+'; });
+  /* 모두 닫기 — closest() 미지원 환경 대비 document 기반 */
+  var allAns = document.querySelectorAll('#jjang-detail .jjang-faq-ans');
+  var allIcons = document.querySelectorAll('#jjang-detail .jjang-faq-icon');
+  for (var i = 0; i < allAns.length; i++) { allAns[i].style.display = 'none'; }
+  for (var j = 0; j < allIcons.length; j++) { allIcons[j].textContent = '+'; }
 
   /* 토글 */
   if (!isOpen) {
