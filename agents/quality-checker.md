@@ -1,6 +1,6 @@
 ---
 name: 품질체크
-description: 짱베이스볼 자사몰 상품 페이지 품질 + 경쟁 야구몰 품질 비교 검수 에이전트
+description: 짱베이스볼 자사몰 상품 상세페이지 품질 검수 에이전트. 신규/수정 파일만 자동 선별하여 100점 채점
 model: sonnet
 memory: project
 tools:
