@@ -333,45 +333,33 @@
   <div class="jd-section-title">자주 묻는 질문</div>
   <div class="jd-section-desc">구매 전 확인하세요</div>
 
-  <div class="jd-faq-item">
-    <div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-      <span>다른 모델보다 비싼 이유가 있나요?</span>
-      <span class="jd-faq-toggle">+</span>
-    </div>
+  <details class="jd-faq-item">
+    <summary>다른 모델보다 비싼 이유가 있나요?</summary>
     <div class="jd-faq-a">
       터블런스는 루디프로젝트의 최상위 스포츠 라인입니다. 곡률 7의 최대 커버리지 쉴드 렌즈, 29g 초경량 Rilsan 프레임, Powerflow 환기 시스템, 엘라스틱 코드 + 인터페이스 기본 구성 등 프리미엄 기능이 모두 포함되어 있습니다. 트레일 러닝, 철인3종, 수상 스포츠 등 극한 환경을 위한 올라운드 모델입니다.
     </div>
-  </div>
+</details>
 
-  <div class="jd-faq-item">
-    <div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-      <span>야구만 한다면 터블런스가 필요한가요?</span>
-      <span class="jd-faq-toggle">+</span>
-    </div>
+<details class="jd-faq-item">
+    <summary>야구만 한다면 터블런스가 필요한가요?</summary>
     <div class="jd-faq-a">
       야구 전용이라면 스핀쉴드에어(310,000원)가 더 합리적입니다. 26g으로 더 가볍고, 에어 벤틸레이션이 야구 경기 중 김서림 방지에 특화되어 있습니다. 터블런스는 야구 외에 러닝, 사이클링, 수상 스포츠 등 다양한 스포츠를 하나의 선글라스로 커버하고 싶은 분께 적합합니다.
     </div>
-  </div>
+</details>
 
-  <div class="jd-faq-item">
-    <div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-      <span>엘라스틱 코드는 어떻게 사용하나요?</span>
-      <span class="jd-faq-toggle">+</span>
-    </div>
+<details class="jd-faq-item">
+    <summary>엘라스틱 코드는 어떻게 사용하나요?</summary>
     <div class="jd-faq-a">
       엘라스틱 코드는 선글라스 다리 끝에 연결하여 머리 뒤를 감싸는 스트랩입니다. 트레일 러닝에서 급경사를 내려갈 때, 수상 스포츠에서 물에 빠뜨릴 걱정 없이 착용할 수 있습니다. 일반적인 야구 경기나 일상 사용 시에는 분리하고 착용하면 됩니다.
     </div>
-  </div>
+</details>
 
-  <div class="jd-faq-item">
-    <div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-      <span>멀티레이저 옐로우 렌즈는 어떤 환경에 적합한가요?</span>
-      <span class="jd-faq-toggle">+</span>
-    </div>
+<details class="jd-faq-item">
+    <summary>멀티레이저 옐로우 렌즈는 어떤 환경에 적합한가요?</summary>
     <div class="jd-faq-a">
       멀티레이저 옐로우(LE05)는 투과율 10%, Cat.3 등급으로 맑은 날 야외 활동에 적합합니다. 옐로우 미러 코팅이 대비감을 높여 지형이나 물체의 윤곽을 더 선명하게 볼 수 있습니다. 특히 트레일 러닝에서 노면 상태를 파악하거나, 수면 위 반사광을 줄이는 데 효과적입니다. 야구에서는 밝은 잔디와 흙 위에서 공의 윤곽이 더 또렷하게 보입니다.
     </div>
-  </div>
+</details>
 </div>
 <!-- [/SEC:FAQ] -->
 
@@ -408,16 +396,3 @@
 
 </div>
 
-<script>
-function jjangToggleFaq(el) {
-  var item = el.parentElement;
-  var isActive = item.classList.contains('active');
-  var allItems = document.querySelectorAll('#jjang-detail .jd-faq-item');
-  for (var i = 0; i < allItems.length; i++) {
-    allItems[i].classList.remove('active');
-  }
-  if (!isActive) {
-    item.classList.add('active');
-  }
-}
-</script>

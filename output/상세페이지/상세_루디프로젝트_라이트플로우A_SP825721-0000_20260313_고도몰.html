@@ -726,45 +726,33 @@
   <div class="jd-section-title">자주 묻는 질문</div>
   <div class="jd-section-desc">구매 전 확인하세요</div>
 
-  <div class="jd-faq-item">
-    <div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-      <span>라이트플로우A와 스핀쉴드에어 중 어떤 걸 사야 하나요?</span>
-      <span class="jd-faq-toggle">+</span>
-    </div>
+  <details class="jd-faq-item">
+    <summary>라이트플로우A와 스핀쉴드에어 중 어떤 걸 사야 하나요?</summary>
     <div class="jd-faq-a">
       용도에 따라 다릅니다. 야구 경기 전용이라면 에어 벤틸레이션과 넓은 쉴드 렌즈가 있는 <strong>스핀쉴드에어</strong>(310,000원)가 적합합니다. 야구뿐 아니라 일상에서도 쓰고 싶다면 클래식 디자인의 <strong>라이트플로우A</strong>(230,000원)가 활용도가 높습니다. 무게는 라이트플로우A 31g, 스핀쉴드에어 26g으로 둘 다 경량입니다.
     </div>
-  </div>
+</details>
 
-  <div class="jd-faq-item">
-    <div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-      <span>야구할 때 착용해도 괜찮은가요?</span>
-      <span class="jd-faq-toggle">+</span>
-    </div>
+<details class="jd-faq-item">
+    <summary>야구할 때 착용해도 괜찮은가요?</summary>
     <div class="jd-faq-a">
       네, 사회인 야구 경기에서 착용 가능합니다. 31g 경량이라 헬멧과 함께 착용해도 부담이 없고, 커브 6 렌즈가 측면 바람과 이물질을 차단합니다. 다만 파노라믹 쉴드 렌즈 타입보다는 좌우 시야가 좁으므로, 외야 수비에서 넓은 커버리지가 필요하면 스핀쉴드에어를 권장합니다.
     </div>
-  </div>
+</details>
 
-  <div class="jd-faq-item">
-    <div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-      <span>렌즈 교체가 가능한가요?</span>
-      <span class="jd-faq-toggle">+</span>
-    </div>
+<details class="jd-faq-item">
+    <summary>렌즈 교체가 가능한가요?</summary>
     <div class="jd-faq-a">
       루디프로젝트 라이트플로우A는 렌즈 교체가 가능한 구조입니다. 변색 렌즈(ImpactX Photochromic), 다른 색상의 멀티레이저 렌즈 등을 별도 구매하여 날씨와 상황에 맞게 교체할 수 있습니다. 교체 렌즈는 루디프로젝트 공식 취급점에서 구매 가능합니다.
     </div>
-  </div>
+</details>
 
-  <div class="jd-faq-item">
-    <div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-      <span>다리(템플) 길이 조절이 가능한가요?</span>
-      <span class="jd-faq-toggle">+</span>
-    </div>
+<details class="jd-faq-item">
+    <summary>다리(템플) 길이 조절이 가능한가요?</summary>
     <div class="jd-faq-a">
       라이트플로우A는 어저스터블 템플(Adjustable Temple) 기능이 있어 다리 끝 팁의 각도를 조절할 수 있습니다. 귀 뒤 형태에 맞게 안쪽이나 바깥쪽으로 조정하면 보다 안정적인 피팅을 얻을 수 있습니다. 길이 자체가 늘어나는 것은 아니며, 팁 부분의 각도가 변합니다.
     </div>
-  </div>
+</details>
 </div>
 <!-- [/SEC:FAQ] -->
 
@@ -801,16 +789,3 @@
 
 </div>
 
-<script>
-function jjangToggleFaq(el) {
-  var item = el.parentElement;
-  var isActive = item.classList.contains('active');
-  var allItems = document.querySelectorAll('#jjang-detail .jd-faq-item');
-  for (var i = 0; i < allItems.length; i++) {
-    allItems[i].classList.remove('active');
-  }
-  if (!isActive) {
-    item.classList.add('active');
-  }
-}
-</script>

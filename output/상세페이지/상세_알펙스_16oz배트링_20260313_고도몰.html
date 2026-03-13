@@ -90,6 +90,11 @@
 #jjang-detail .jd-feel-title{font-size:17px;font-weight:700;color:#1B2A4A;margin-bottom:8px;padding-bottom:6px;border-bottom:2px solid #D4A843;display:inline-block}
 #jjang-detail .jd-feel-text{font-size:15px;color:#444;line-height:1.8}
 #jjang-detail .jd-faq-item{border:1px solid #e8e8e8;margin-bottom:8px;background:#fff}
+#jjang-detail .jd-faq-item summary{padding:16px 20px;background:#fafafa;cursor:pointer;font-size:15px;font-weight:600;color:#1B2A4A;list-style:none}
+#jjang-detail .jd-faq-item summary::-webkit-details-marker{display:none}
+#jjang-detail .jd-faq-item summary::after{content:'+';float:right;font-size:18px}
+#jjang-detail .jd-faq-item[open] summary::after{content:'\2212'}
+#jjang-detail .jd-faq-item .jd-faq-a{padding:16px 20px;font-size:14px;color:#555;line-height:1.7;border-top:1px solid #eee}
 #jjang-detail .jd-faq-q{display:flex;align-items:center;padding:16px 20px;cursor:pointer;gap:12px;font-size:15px;font-weight:600;color:#1B2A4A}
 #jjang-detail .jd-faq-q:hover{background:#fafafa}
 #jjang-detail .jd-faq-label{flex-shrink:0;background:#1B2A4A;color:#D4A843;font-size:12px;font-weight:700;padding:2px 8px}
@@ -194,41 +199,25 @@
 <div class="jd-section-title">자주 묻는 질문</div>
 <div class="jd-section-sub">구매 전 가장 많이 궁금해하시는 내용</div>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-<span class="jd-faq-label">Q</span>
-<span>어떤 배트에 사용할 수 있나요?</span>
-<span class="jd-faq-toggle">+</span>
-</div>
+<details class="jd-faq-item">
+<summary>어떤 배트에 사용할 수 있나요?</summary>
 <div class="jd-faq-a">내경 약 5.5cm로, 성인 및 청소년용 표준 규격 배트에 모두 호환됩니다. 나무배트, 알루미늄배트 관계없이 사용 가능합니다. 다만 극단적으로 두꺼운 트레이닝 배트는 맞지 않을 수 있습니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-<span class="jd-faq-label">Q</span>
-<span>16oz 무게가 적당한가요?</span>
-<span class="jd-faq-toggle">+</span>
-</div>
+<details class="jd-faq-item">
+<summary>16oz 무게가 적당한가요?</summary>
 <div class="jd-faq-a">16oz(약 453g)는 가장 보편적인 배트 웨이트 무게입니다. 타석 대기 중 워밍업용으로 적당하며, 과도하지 않은 부하로 부상 위험도 적습니다. 더 강한 부하를 원하면 배트 슬리브 타입을 고려해 보세요.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-<span class="jd-faq-label">Q</span>
-<span>배트링으로 스윙 스피드가 올라가나요?</span>
-<span class="jd-faq-toggle">+</span>
-</div>
+<details class="jd-faq-item">
+<summary>배트링으로 스윙 스피드가 올라가나요?</summary>
 <div class="jd-faq-a">배트링을 끼고 부하 스윙 후 링을 빼면, 배트가 가볍게 느껴지면서 스윙 스피드가 일시적으로 빨라지는 효과가 있습니다. 타석 직전 3~5회 스윙하는 것이 일반적인 활용법입니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-<span class="jd-faq-label">Q</span>
-<span>비닐 코팅이 벗겨지면 어떻게 하나요?</span>
-<span class="jd-faq-toggle">+</span>
-</div>
+<details class="jd-faq-item">
+<summary>비닐 코팅이 벗겨지면 어떻게 하나요?</summary>
 <div class="jd-faq-a">비닐 코팅은 배트 표면 보호를 위한 것입니다. 코팅이 심하게 벗겨진 경우 주철이 배트에 직접 닿아 긁힘이 생길 수 있으므로, 코팅 상태를 주기적으로 확인하시기 바랍니다.</div>
-</div>
+</details>
 </div>
 <!-- [/SEC:FAQ] -->
 
@@ -259,6 +248,3 @@
 
 <div class="jd-auth-banner">짱베이스볼 - 야구용품 전문몰</div>
 </div>
-<script>
-function jjangToggleFaq(el){var item=el.parentElement;item.classList.toggle('active');}
-</script>

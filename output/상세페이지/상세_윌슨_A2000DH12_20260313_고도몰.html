@@ -90,11 +90,11 @@
 #jjang-detail .jd-pos-card .jd-fit-good{background:#f0f0f0;color:#555}
 #jjang-detail .jd-pos-card p{font-size:14px;color:#555;margin:8px 0 0;line-height:1.6}
 #jjang-detail .jd-faq-item{border:1px solid #eee;border-radius:4px;margin-bottom:8px;overflow:hidden}
-#jjang-detail .jd-faq-q{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:#fafafa;cursor:pointer;font-size:15px;font-weight:600;color:#1B2A4A}
-#jjang-detail .jd-faq-q span{font-size:18px;transition:transform 0.3s}
-#jjang-detail .jd-faq-a{display:none;padding:16px 20px;font-size:14px;color:#555;line-height:1.7;border-top:1px solid #eee}
+#jjang-detail .jd-faq-item summary{padding:16px 20px;background:#fafafa;cursor:pointer;font-size:15px;font-weight:600;color:#1B2A4A;list-style:none}
+#jjang-detail .jd-faq-item summary::-webkit-details-marker{display:none}
+#jjang-detail .jd-faq-item summary::after{content:'+';float:right;font-size:18px}
 #jjang-detail .jd-faq-item.active .jd-faq-a{display:block}
-#jjang-detail .jd-faq-item.active .jd-faq-q span{transform:rotate(45deg)}
+#jjang-detail .jd-faq-item .jd-faq-a{padding:16px 20px;font-size:14px;color:#555;line-height:1.7;border-top:1px solid #eee}
 #jjang-detail .jd-rec-list{list-style:none;padding:0;margin:0}
 #jjang-detail .jd-rec-list li{padding:14px 20px;font-size:15px;color:#333;border-left:3px solid #D4A843;margin-bottom:8px;background:#fff}
 #jjang-detail .jd-auth-banner{text-align:center;padding:32px 20px;background:#1B2A4A;color:#D4A843;font-size:14px;font-weight:600;letter-spacing:2px}
@@ -206,25 +206,25 @@
 <div class="jd-title">자주 묻는 질문</div>
 <div class="jd-subtitle">구매 전 확인하세요</div>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">A2000과 A2K의 차이가 무엇인가요?<span>+</span></div>
+<details class="jd-faq-item">
+<summary>A2000과 A2K의 차이가 무엇인가요?</summary>
 <div class="jd-faq-a">A2000은 Pro Stock Select 가죽을, A2K는 동일 가죽에 3회 추가 스티밍 공정을 거칩니다. A2K가 초기부터 더 부드럽고 손에 빨리 맞지만, A2000도 길들이기를 거치면 충분히 좋은 핏을 형성합니다. 가격 차이는 약 15~20만원이며, 내구성은 A2000이 오히려 더 오래갑니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">투수 글러브에 바스켓 웹이 좋은 이유는?<span>+</span></div>
+<details class="jd-faq-item">
+<summary>투수 글러브에 바스켓 웹이 좋은 이유는?</summary>
 <div class="jd-faq-a">바스켓 웹은 가죽이 빈틈 없이 짜여 있어 타자가 투수의 그립을 볼 수 없습니다. 체인지업, 커브 등 구종 파악을 어렵게 만드는 가장 효과적인 웹 구조입니다. KBO, MLB 프로 투수들도 대부분 바스켓 웹이나 클로즈드 웹을 사용합니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">길들이기 작업은 어떤 것을 선택해야 하나요?<span>+</span></div>
+<details class="jd-faq-item">
+<summary>길들이기 작업은 어떤 것을 선택해야 하나요?</summary>
 <div class="jd-faq-a">세 가지 옵션 모두 무료입니다. 기본 길각작업(30~40%)은 최소한의 접힘만 잡아주는 수준으로, 직접 길들이기를 원하는 분께 맞습니다. 수타 길들이기(70~80%)는 가장 많이 선택하는 옵션으로, 어느 정도 실전 투입이 가능한 수준까지 작업합니다. 물형부 길들이기(80~90%)는 포켓 형태까지 완성해주는 작업으로, 바로 경기에 써야 하는 분께 추천합니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">사회인 야구에서 A2000 등급이 적합한가요?<span>+</span></div>
+<details class="jd-faq-item">
+<summary>사회인 야구에서 A2000 등급이 적합한가요?</summary>
 <div class="jd-faq-a">A2000은 사회인 야구에서 가장 많이 선택하는 프리미엄 라인 중 하나입니다. Pro Stock Select 가죽의 내구성이 좋아 주 1~2회 경기 기준 3~5년은 충분히 사용할 수 있습니다. A2K 대비 가격이 합리적이면서도 퀄리티 차이는 크지 않아, 가성비 측면에서 사회인 투수에게 가장 추천하는 등급입니다.</div>
-</div>
+</details>
 </div>
 <!-- [/SEC:FAQ] -->
 
@@ -243,6 +243,3 @@
 
 <div class="jd-auth-banner">공식취급점 &#183; 짱베이스볼</div>
 </div>
-<script>
-function jjangToggleFaq(el){var item=el.parentElement;item.classList.toggle('active');}
-</script>

@@ -96,6 +96,11 @@
 #jjang-detail .jd-size-table tr:nth-child(even) td{background:#fafafa}
 #jjang-detail .jd-size-tip{margin-top:16px;background:#FDF8EC;padding:16px 20px;font-size:14px;color:#555;line-height:1.7;border-left:3px solid #D4A843}
 #jjang-detail .jd-faq-item{border:1px solid #e8e8e8;margin-bottom:8px;background:#fff}
+#jjang-detail .jd-faq-item summary{padding:16px 20px;background:#fafafa;cursor:pointer;font-size:15px;font-weight:600;color:#1B2A4A;list-style:none}
+#jjang-detail .jd-faq-item summary::-webkit-details-marker{display:none}
+#jjang-detail .jd-faq-item summary::after{content:'+';float:right;font-size:18px}
+#jjang-detail .jd-faq-item[open] summary::after{content:'\2212'}
+#jjang-detail .jd-faq-item .jd-faq-a{padding:16px 20px;font-size:14px;color:#555;line-height:1.7;border-top:1px solid #eee}
 #jjang-detail .jd-faq-q{display:flex;align-items:center;padding:16px 20px;cursor:pointer;gap:12px;font-size:15px;font-weight:600;color:#1B2A4A}
 #jjang-detail .jd-faq-q:hover{background:#fafafa}
 #jjang-detail .jd-faq-label{flex-shrink:0;background:#1B2A4A;color:#D4A843;font-size:12px;font-weight:700;padding:2px 8px}
@@ -232,41 +237,25 @@
 <div class="jd-section-title">자주 묻는 질문</div>
 <div class="jd-section-sub">구매 전 가장 많이 궁금해하시는 내용</div>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-<span class="jd-faq-label">Q</span>
-<span>사이즈는 어떻게 선택하나요?</span>
-<span class="jd-faq-toggle">+</span>
-</div>
+<details class="jd-faq-item">
+<summary>사이즈는 어떻게 선택하나요?</summary>
 <div class="jd-faq-a">평소 입는 상의 사이즈 기준으로 선택하시면 됩니다. M(95)부터 4XL(120)까지 폭넓게 준비되어 있습니다. 엘보가드 등 보호장비 위에 착용하실 경우 한 사이즈 업을 권장합니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-<span class="jd-faq-label">Q</span>
-<span>시합 중에도 착용할 수 있나요?</span>
-<span class="jd-faq-toggle">+</span>
-</div>
+<details class="jd-faq-item">
+<summary>시합 중에도 착용할 수 있나요?</summary>
 <div class="jd-faq-a">반팔 바람막이는 웜업, 벤치 대기, 연습 시 착용이 일반적입니다. 시합 중 착용 가능 여부는 소속 리그의 유니폼 규정에 따라 다르므로, 해당 리그 규정을 먼저 확인하시기 바랍니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-<span class="jd-faq-label">Q</span>
-<span>메쉬 원단인데 바람은 잘 막아주나요?</span>
-<span class="jd-faq-toggle">+</span>
-</div>
+<details class="jd-faq-item">
+<summary>메쉬 원단인데 바람은 잘 막아주나요?</summary>
 <div class="jd-faq-a">겉감은 바람을 막아주는 소재이고, 안감에 메쉬를 적용한 구조입니다. 바람 차단과 통기성을 동시에 잡은 설계로, 봄/가을 시즌 야외 활동에 적합합니다. 한겨울 방한용으로는 적합하지 않습니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-<span class="jd-faq-label">Q</span>
-<span>세탁은 어떻게 하나요?</span>
-<span class="jd-faq-toggle">+</span>
-</div>
+<details class="jd-faq-item">
+<summary>세탁은 어떻게 하나요?</summary>
 <div class="jd-faq-a">세탁망에 넣어 약하게 세탁하시는 것을 권장합니다. 표백제와 건조기 사용은 피해 주세요. 그늘에서 자연 건조하면 원단 수명을 오래 유지할 수 있습니다.</div>
-</div>
+</details>
 </div>
 <!-- [/SEC:FAQ] -->
 
@@ -297,6 +286,3 @@
 
 <div class="jd-auth-banner">짱베이스볼 - 프로스펙스 공식 취급점</div>
 </div>
-<script>
-function jjangToggleFaq(el){var item=el.parentElement;item.classList.toggle('active');}
-</script>

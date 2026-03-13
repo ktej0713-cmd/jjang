@@ -91,6 +91,11 @@
 #jjang-detail .jd-feel-title{font-size:17px;font-weight:700;color:#1B2A4A;margin-bottom:8px;padding-bottom:6px;border-bottom:2px solid #D4A843;display:inline-block}
 #jjang-detail .jd-feel-text{font-size:15px;color:#444;line-height:1.8}
 #jjang-detail .jd-faq-item{border:1px solid #e8e8e8;margin-bottom:8px;background:#fff}
+#jjang-detail .jd-faq-item summary{padding:16px 20px;background:#fafafa;cursor:pointer;font-size:15px;font-weight:600;color:#1B2A4A;list-style:none}
+#jjang-detail .jd-faq-item summary::-webkit-details-marker{display:none}
+#jjang-detail .jd-faq-item summary::after{content:'+';float:right;font-size:18px}
+#jjang-detail .jd-faq-item[open] summary::after{content:'\2212'}
+#jjang-detail .jd-faq-item .jd-faq-a{padding:16px 20px;font-size:14px;color:#555;line-height:1.7;border-top:1px solid #eee}
 #jjang-detail .jd-faq-q{display:flex;align-items:center;padding:16px 20px;cursor:pointer;gap:12px;font-size:15px;font-weight:600;color:#1B2A4A}
 #jjang-detail .jd-faq-q:hover{background:#fafafa}
 #jjang-detail .jd-faq-label{flex-shrink:0;background:#1B2A4A;color:#D4A843;font-size:12px;font-weight:700;padding:2px 8px}
@@ -207,41 +212,25 @@
 <div class="jd-section-title">자주 묻는 질문</div>
 <div class="jd-section-sub">구매 전 가장 많이 궁금해하시는 내용</div>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-<span class="jd-faq-label">Q</span>
-<span>KBN 1.21 인증이 없는데 시합에서 사용할 수 있나요?</span>
-<span class="jd-faq-toggle">+</span>
-</div>
+<details class="jd-faq-item">
+<summary>KBN 1.21 인증이 없는데 시합에서 사용할 수 있나요?</summary>
 <div class="jd-faq-a">대부분의 사회인 동호회 리그에서는 KBN 1.21 인증이 필수가 아닙니다. 다만 일부 공식 대회에서는 KBN 인증 배트만 허용하므로, 소속 리그의 장비 규정을 먼저 확인하시기 바랍니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-<span class="jd-faq-label">Q</span>
-<span>33인치 25온스(-8)는 어떤 타자에게 맞나요?</span>
-<span class="jd-faq-toggle">+</span>
-</div>
+<details class="jd-faq-item">
+<summary>33인치 25온스(-8)는 어떤 타자에게 맞나요?</summary>
 <div class="jd-faq-a">33인치 리치를 원하지만 28온스 이상의 무게가 부담스러운 분에게 적합합니다. 스윙 스피드를 높여 비거리를 유지하고 싶은 30~50대 사회인 타자, 또는 변화구 대응력을 높이고 싶은 타자에게 추천합니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-<span class="jd-faq-label">Q</span>
-<span>원피스 알로이와 투피스 배트의 차이가 뭔가요?</span>
-<span class="jd-faq-toggle">+</span>
-</div>
+<details class="jd-faq-item">
+<summary>원피스 알로이와 투피스 배트의 차이가 뭔가요?</summary>
 <div class="jd-faq-a">원피스는 배럴과 핸들이 하나의 금속으로 이어진 구조로, 타격 시 에너지 전달 효율이 높고 묵직한 타구감이 특징입니다. 투피스는 배럴과 핸들을 별도로 연결한 구조로, 진동 흡수에 유리합니다. GEN-X SPEED는 원피스로 힘의 손실 없는 타격을 추구합니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-<span class="jd-faq-label">Q</span>
-<span>워런티는 어떻게 적용되나요?</span>
-<span class="jd-faq-toggle">+</span>
-</div>
+<details class="jd-faq-item">
+<summary>워런티는 어떻게 적용되나요?</summary>
 <div class="jd-faq-a">구매일로부터 6개월 이내, 1회에 한해 교환이 가능합니다. 정상적인 사용 중 발생한 파손(크랙, 찌그러짐)에 한하며, 외부 충격이나 부적절한 사용(저온 환경, 딱딱한 물체 타격 등)으로 인한 파손은 보증 대상에서 제외됩니다.</div>
-</div>
+</details>
 </div>
 <!-- [/SEC:FAQ] -->
 
@@ -272,6 +261,3 @@
 
 <div class="jd-auth-banner">짱베이스볼 - 알펙스 공식 취급점</div>
 </div>
-<script>
-function jjangToggleFaq(el){var item=el.parentElement;item.classList.toggle('active');}
-</script>

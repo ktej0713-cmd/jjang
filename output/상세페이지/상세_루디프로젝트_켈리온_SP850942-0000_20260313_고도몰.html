@@ -745,45 +745,33 @@
   <div class="jd-section-title">자주 묻는 질문</div>
   <div class="jd-section-desc">구매 전 확인하세요</div>
 
-  <div class="jd-faq-item">
-    <div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-      <span>켈리온과 스핀쉴드에어 중 어떤 걸 사야 하나요?</span>
-      <span class="jd-faq-toggle">+</span>
-    </div>
+  <details class="jd-faq-item">
+    <summary>켈리온과 스핀쉴드에어 중 어떤 걸 사야 하나요?</summary>
     <div class="jd-faq-a">
       두 모델 모두 쉴드형이지만 성격이 다릅니다. <strong>스핀쉴드에어</strong>는 하프림 26g 초경량으로 가벼움과 통풍이 우선인 분께, <strong>켈리온</strong>은 풀프레임 36g으로 렌즈 보호와 안정감이 우선인 분께 적합합니다. 가격은 스핀쉴드에어 310,000원, 켈리온 315,000원으로 비슷합니다. 투과율은 둘 다 11%로 동일합니다.
     </div>
-  </div>
+</details>
 
-  <div class="jd-faq-item">
-    <div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-      <span>도수 렌즈를 장착할 수 있나요?</span>
-      <span class="jd-faq-toggle">+</span>
-    </div>
+<details class="jd-faq-item">
+    <summary>도수 렌즈를 장착할 수 있나요?</summary>
     <div class="jd-faq-a">
       네, 켈리온은 RX Solutions 기능을 지원합니다. 전용 도수클립을 별도 구매하여 프레임 안쪽에 장착할 수 있습니다. 안경원에서 본인 도수에 맞는 렌즈를 클립에 가공하여 사용합니다. 도수클립은 루디프로젝트 공식 취급점에서 구매 가능합니다.
     </div>
-  </div>
+</details>
 
-  <div class="jd-faq-item">
-    <div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-      <span>렌즈 교체가 가능한가요?</span>
-      <span class="jd-faq-toggle">+</span>
-    </div>
+<details class="jd-faq-item">
+    <summary>렌즈 교체가 가능한가요?</summary>
     <div class="jd-faq-a">
       네, 켈리온은 렌즈 교체가 가능한 구조입니다. 변색 렌즈(ImpactX Photochromic), 다른 색상의 레이저/멀티레이저 렌즈 등을 별도 구매하여 날씨와 상황에 맞게 교체할 수 있습니다. 변색 렌즈를 사용하면 낮과 저녁, 맑은 날과 흐린 날 모두 하나의 렌즈로 대응 가능합니다.
     </div>
-  </div>
+</details>
 
-  <div class="jd-faq-item">
-    <div class="jd-faq-q" onclick="jjangToggleFaq(this)">
-      <span>레이저 블랙과 멀티레이저 블랙미러의 차이는?</span>
-      <span class="jd-faq-toggle">+</span>
-    </div>
+<details class="jd-faq-item">
+    <summary>레이저 블랙과 멀티레이저 블랙미러의 차이는?</summary>
     <div class="jd-faq-a">
       레이저 블랙(LE09)은 은은한 미러 코팅으로 절제된 느낌이며, 멀티레이저 블랙미러는 다층 미러 코팅으로 반사가 강합니다. 투과율은 둘 다 11%로 차광 성능은 동일합니다. 외관 차이가 주된 차이점으로, 차분한 디자인이면 레이저 블랙, 스포티한 미러 느낌이면 멀티레이저 블랙미러를 선택하시면 됩니다.
     </div>
-  </div>
+</details>
 </div>
 <!-- [/SEC:FAQ] -->
 
@@ -820,16 +808,3 @@
 
 </div>
 
-<script>
-function jjangToggleFaq(el) {
-  var item = el.parentElement;
-  var isActive = item.classList.contains('active');
-  var allItems = document.querySelectorAll('#jjang-detail .jd-faq-item');
-  for (var i = 0; i < allItems.length; i++) {
-    allItems[i].classList.remove('active');
-  }
-  if (!isActive) {
-    item.classList.add('active');
-  }
-}
-</script>

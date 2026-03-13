@@ -923,24 +923,28 @@
   <p class="jd-section-desc">구매 전 확인이 필요한 내용입니다.</p>
 
   <div class="jd-faq-list">
-    <div class="jd-faq-item">
-      <div class="jd-faq-q" onclick="jjangToggleFaq(this)">왼팔/오른팔 전용 제품인가요?</div>
+    <details class="jd-faq-item">
+      <summary>왼팔/오른팔 전용 제품인가요?</summary>
       <div class="jd-faq-a">왼팔/오른팔 구분이 없는 제품입니다. 1쌍(pair) 구성으로, 두 팔 모두 착용 가능합니다. 한 팔에만 착용하는 경우도 있으나, 기본 판매 단위는 2개 세트입니다.</div>
-    </div>
-    <div class="jd-faq-item">
-      <div class="jd-faq-q" onclick="jjangToggleFaq(this)">세탁은 어떻게 하나요?</div>
+</details>
+
+<details class="jd-faq-item">
+      <summary>세탁은 어떻게 하나요?</summary>
       <div class="jd-faq-a">찬물 단독 세탁을 권장합니다. 건조기 사용은 소재 변형 및 컴프레션 기능 저하 원인이 될 수 있어 자연 건조를 권장합니다. 섬유 유연제 사용 시 속건 기능이 일부 저하될 수 있습니다.</div>
-    </div>
-    <div class="jd-faq-item">
-      <div class="jd-faq-q" onclick="jjangToggleFaq(this)">여름에 덥지 않나요?</div>
+</details>
+
+<details class="jd-faq-item">
+      <summary>여름에 덥지 않나요?</summary>
       <div class="jd-faq-a">나일론 88% 속건 소재로 땀 발산이 빠릅니다. 일반 면 슬리브 대비 체열 배출이 개선되어 있으나, 기온이 35도 이상인 환경에서는 개인 체감 차가 있을 수 있습니다.</div>
-    </div>
-    <div class="jd-faq-item">
-      <div class="jd-faq-q" onclick="jjangToggleFaq(this)">컴프레션이 너무 조이지 않나요?</div>
+</details>
+
+<details class="jd-faq-item">
+      <summary>컴프레션이 너무 조이지 않나요?</summary>
       <div class="jd-faq-a">처음 착용 시 타이트한 느낌이 정상입니다. 컴프레션 핏은 피부 밀착을 통해 기능을 발휘하는 구조입니다. 손 순환이 막히거나 통증이 느껴지면 한 단계 큰 사이즈로 교체를 권장합니다. 사이즈 교환 문의는 구매 후 7일 이내 미착용 상태에서 가능합니다.</div>
-    </div>
-    <div class="jd-faq-item">
-      <div class="jd-faq-q" onclick="jjangToggleFaq(this)">야구 경기 공식 규정에 허용되는 아이템인가요?</div>
+</details>
+
+<details class="jd-faq-item">
+      <summary>야구 경기 공식 규정에 허용되는 아이템인가요?</summary>
       <div class="jd-faq-a">KBO 규정 기준 색상 제한이 있습니다. 공식 경기에서는 구단/팀 유니폼 색상 규정에 따라 허용 여부가 다를 수 있습니다. 사회인야구 리그의 경우 일반적으로 별도 제한이 없으나, 주관 단체 규정을 먼저 확인하시기 바랍니다.</div>
     </div>
   </div>
@@ -949,33 +953,3 @@
 
 </div><!-- /#jjang-detail -->
 
-<script>
-  /* 상품 이미지 오버레이 */
-  function jjangOpenImg(src, alt) {
-    document.getElementById('jjangOverlayImg').src = src;
-    document.getElementById('jjangOverlayImg').alt = alt;
-    document.getElementById('jjang-img-overlay').style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  }
-  function jjangCloseImg() {
-    document.getElementById('jjang-img-overlay').style.display = 'none';
-    document.body.style.overflow = '';
-  }
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') jjangCloseImg();
-  });
-
-  /* FAQ 토글 */
-  function jjangToggleFaq(el) {
-    var answer = el.nextElementSibling;
-    var isOpen = el.classList.contains('jd-open');
-    document.querySelectorAll('.jd-faq-q').forEach(function(q) {
-      q.classList.remove('jd-open');
-      q.nextElementSibling.classList.remove('jd-open');
-    });
-    if (!isOpen) {
-      el.classList.add('jd-open');
-      answer.classList.add('jd-open');
-    }
-  }
-</script>
