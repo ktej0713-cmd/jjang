@@ -89,11 +89,11 @@
 #jjang-detail .jd-size-table tr:nth-child(even) td{background:#fafafa}
 #jjang-detail .jd-size-tip{background:#FDF8EC;border:1px solid #E8C876;border-radius:4px;padding:16px 20px;margin-top:16px;font-size:14px;color:#555;line-height:1.7}
 #jjang-detail .jd-faq-item{border:1px solid #eee;border-radius:4px;margin-bottom:8px;overflow:hidden}
-#jjang-detail .jd-faq-q{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:#fafafa;cursor:pointer;font-size:15px;font-weight:600;color:#1B2A4A}
-#jjang-detail .jd-faq-q span{font-size:18px;transition:transform 0.3s}
-#jjang-detail .jd-faq-a{display:none;padding:16px 20px;font-size:14px;color:#555;line-height:1.7;border-top:1px solid #eee}
-#jjang-detail .jd-faq-item.active .jd-faq-a{display:block}
-#jjang-detail .jd-faq-item.active .jd-faq-q span{transform:rotate(45deg)}
+#jjang-detail .jd-faq-item summary{padding:16px 20px;background:#fafafa;cursor:pointer;font-size:15px;font-weight:600;color:#1B2A4A;list-style:none}
+#jjang-detail .jd-faq-item summary::-webkit-details-marker{display:none}
+#jjang-detail .jd-faq-item summary::after{content:'+';float:right;font-size:18px}
+#jjang-detail .jd-faq-item[open] summary::after{content:'\2212'}
+#jjang-detail .jd-faq-item .jd-faq-a{padding:16px 20px;font-size:14px;color:#555;line-height:1.7;border-top:1px solid #eee}
 #jjang-detail .jd-rec-list{list-style:none;padding:0;margin:0}
 #jjang-detail .jd-rec-list li{padding:14px 20px;font-size:15px;color:#333;border-left:3px solid #D4A843;margin-bottom:8px;background:#fff}
 #jjang-detail .jd-auth-banner{text-align:center;padding:32px 20px;background:#1B2A4A;color:#D4A843;font-size:14px;font-weight:600;letter-spacing:2px}
@@ -208,25 +208,25 @@
 <div class="jd-title">자주 묻는 질문</div>
 <div class="jd-subtitle">구매 전 확인하세요</div>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">인조잔디 구장에서만 사용할 수 있나요?<span>+</span></div>
+<details class="jd-faq-item">
+<summary>인조잔디 구장에서만 사용할 수 있나요?</summary>
 <div class="jd-faq-a">인조잔디 구장에 최적화된 밑창이지만, 케이지 연습이나 실내 트레이닝에서도 사용할 수 있습니다. 다만 흙 구장에서는 접지력이 부족할 수 있으므로 권장하지 않습니다. 흙 구장용으로는 포인트 스파이크나 징스파이크를 추천합니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">사이즈는 정사이즈로 신으면 되나요?<span>+</span></div>
+<details class="jd-faq-item">
+<summary>사이즈는 정사이즈로 신으면 되나요?</summary>
 <div class="jd-faq-a">정사이즈 또는 5mm 업사이즈를 권장합니다. 발볼이 넓은 분은 5mm 업사이즈를 추천합니다. 탈부착 스트랩이 발등을 잡아주기 때문에 핏 조절이 가능하며, 야구 스타킹 착용을 고려해서 선택하시면 됩니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">징스파이크와 어떤 차이가 있나요?<span>+</span></div>
+<details class="jd-faq-item">
+<summary>징스파이크와 어떤 차이가 있나요?</summary>
 <div class="jd-faq-a">징스파이크는 금속 징이 달려 흙 구장에서 강한 접지력을 제공하지만, 인조잔디에서는 사용이 제한됩니다. Japan Trainer AC는 고무 밑창으로 인조잔디, 케이지, 실내 등 다양한 환경에서 사용할 수 있는 트레이닝 전용 야구화입니다.</div>
-</div>
+</details>
 
-<div class="jd-faq-item">
-<div class="jd-faq-q" onclick="jjangToggleFaq(this)">세탁 및 관리는 어떻게 하나요?<span>+</span></div>
+<details class="jd-faq-item">
+<summary>세탁 및 관리는 어떻게 하나요?</summary>
 <div class="jd-faq-a">물세탁은 권장하지 않습니다. 사용 후 흙이나 먼지를 부드러운 솔로 털어내고, 젖은 천으로 표면을 닦아주세요. 그늘에서 자연 건조하며, 직사광선이나 드라이어 사용은 소재 변형을 일으킬 수 있습니다. 착용 후 신문지를 넣어두면 습기 제거에 도움이 됩니다.</div>
-</div>
+</details>
 </div>
 <!-- [/SEC:FAQ] -->
 
@@ -245,6 +245,3 @@
 
 <div class="jd-auth-banner">공식취급점 &#183; 짱베이스볼</div>
 </div>
-<script>
-function jjangToggleFaq(el){var item=el.parentElement;item.classList.toggle('active');}
-</script>
