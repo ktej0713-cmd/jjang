@@ -1,23 +1,28 @@
 """
-고도몰 오더갤러리 이미지 자동 업로드 스크립트 (Open API 방식)
+고도몰 오더갤러리 이미지 자동 업로드 스크립트
+
+흐름:
+    1. 폴더에서 새 이미지 스캔
+    2. NHN 이미지호스팅(FTP)에 이미지 업로드 → URL 획득
+    3. 고도몰 Open API로 게시물 등록 (이미지 URL 첨부)
 
 사용법:
     python upload.py              # 폴더 내 모든 이미지 업로드
     python upload.py --dry-run    # 실제 업로드 없이 대상 파일만 확인
+    python upload.py --test       # API/FTP 연결 테스트
 
 사전 준비:
     1. pip install requests
-    2. config.ini에 API 키와 설정값 입력
-    3. 고도몰 개발자센터에서 API 키 발급 필요
-       https://devcenter.nhn-commerce.com
+    2. config.ini에 고도몰 API 키 + FTP 정보 입력
 """
 
 import argparse
-import base64
 import configparser
+import ftplib
 import json
 import os
 import shutil
+import ssl
 import sys
 import time
 from datetime import datetime
@@ -25,19 +30,16 @@ from pathlib import Path
 
 import requests
 
-# 업로드 기록 파일
 UPLOAD_LOG_FILE = "upload_log.json"
 
 
 def load_config(config_path="config.ini"):
-    """설정 파일 로드"""
     config = configparser.ConfigParser()
     config.read(config_path, encoding="utf-8")
     return config
 
 
 def load_upload_log():
-    """업로드 기록 로드"""
     if os.path.exists(UPLOAD_LOG_FILE):
         with open(UPLOAD_LOG_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -45,13 +47,11 @@ def load_upload_log():
 
 
 def save_upload_log(log):
-    """업로드 기록 저장"""
     with open(UPLOAD_LOG_FILE, "w", encoding="utf-8") as f:
         json.dump(log, f, ensure_ascii=False, indent=2)
 
 
 def get_image_files(image_folder, extensions):
-    """폴더에서 이미지 파일 목록 가져오기"""
     ext_list = [ext.strip().lower() for ext in extensions.split(",")]
     files = []
     folder = Path(image_folder)
@@ -67,129 +67,116 @@ def get_image_files(image_folder, extensions):
     return files
 
 
-class GodoAPI:
-    """고도몰 Open API 클라이언트"""
+def ftp_upload(image_path, ftp_host, ftp_user, ftp_pass, ftp_upload_dir, image_base_url):
+    """NHN 이미지호스팅 FTP에 이미지 업로드 후 URL 반환"""
+    filename = Path(image_path).name
 
-    def __init__(self, shop_url, partner_key, user_key):
-        self.shop_url = shop_url.rstrip("/")
-        self.partner_key = partner_key
-        self.user_key = user_key
-        self.session = requests.Session()
-        self.session.headers.update({
-            "User-Agent": "GodoUploader/1.0",
-        })
-
-    def _get_auth_params(self):
-        """인증 파라미터 반환"""
-        return {
-            "partner_key": self.partner_key,
-            "key": self.user_key,
-        }
-
-    def _api_url(self, endpoint):
-        """API URL 생성"""
-        return f"{self.shop_url}/openapi/{endpoint}"
-
-    def _request(self, method, endpoint, data=None, files=None):
-        """API 요청 실행"""
-        url = self._api_url(endpoint)
-        params = self._get_auth_params()
-
+    ftp = None
+    try:
+        # FTP 연결 (일반 FTP 시도, 실패 시 FTPS 시도)
         try:
-            if method == "GET":
-                resp = self.session.get(url, params={**params, **(data or {})}, timeout=30)
-            elif method == "POST":
-                if files:
-                    resp = self.session.post(url, data={**params, **(data or {})}, files=files, timeout=60)
-                else:
-                    resp = self.session.post(url, data={**params, **(data or {})}, timeout=30)
-            else:
-                raise ValueError(f"지원하지 않는 HTTP 메서드: {method}")
+            ftp = ftplib.FTP(ftp_host, timeout=30)
+            ftp.login(ftp_user, ftp_pass)
+        except Exception:
+            print(f"  [FTP] 일반 FTP 실패, FTPS로 재시도...")
+            context = ssl.create_default_context()
+            context.check_hostname = False
+            context.verify_mode = ssl.CERT_NONE
+            ftp = ftplib.FTP_TLS(ftp_host, timeout=30)
+            ftp.login(ftp_user, ftp_pass)
+            ftp.prot_p()
 
-            print(f"  [API] {method} {endpoint} -> {resp.status_code}")
+        # 업로드 디렉토리 이동 (없으면 생성)
+        dirs = ftp_upload_dir.strip("/").split("/")
+        for d in dirs:
+            try:
+                ftp.cwd(d)
+            except ftplib.error_perm:
+                ftp.mkd(d)
+                ftp.cwd(d)
 
-            if resp.status_code != 200:
-                print(f"  [API 오류] Status: {resp.status_code}")
-                print(f"  [API 오류] Response: {resp.text[:500]}")
-                return None
+        # 파일 업로드
+        with open(image_path, "rb") as f:
+            ftp.storbinary(f"STOR {filename}", f)
 
-            # JSON 또는 텍스트 응답 처리
-            content_type = resp.headers.get("Content-Type", "")
-            if "json" in content_type:
-                return resp.json()
-            elif "xml" in content_type:
-                return resp.text
-            else:
-                # JSON 파싱 시도
-                try:
-                    return resp.json()
-                except (json.JSONDecodeError, ValueError):
-                    return resp.text
+        # URL 생성
+        image_url = f"{image_base_url.rstrip('/')}/{ftp_upload_dir.strip('/')}/{filename}"
+        print(f"  [FTP] 업로드 성공: {image_url}")
+        return image_url
 
-        except requests.exceptions.ConnectionError as e:
-            print(f"  [연결 오류] API 서버에 연결할 수 없습니다: {e}")
-            return None
-        except requests.exceptions.Timeout:
-            print(f"  [타임아웃] API 요청 시간 초과")
-            return None
+    except Exception as e:
+        print(f"  [FTP 오류] {e}")
+        return None
 
-    def test_connection(self):
-        """API 연결 테스트"""
-        print("[API] 연결 테스트 중...")
-        result = self._request("GET", "board/list")
-        if result is not None:
-            print("[API] 연결 성공!")
-            return True
-        else:
-            print("[API] 연결 실패. API 키와 URL을 확인해주세요.")
-            return False
+    finally:
+        if ftp:
+            try:
+                ftp.quit()
+            except Exception:
+                pass
 
-    def get_board_list(self):
-        """게시판 목록 조회"""
-        return self._request("GET", "board/list")
 
-    def get_articles(self, board_id, page=1):
-        """게시물 목록 조회"""
-        return self._request("GET", "board/article/list", data={
-            "bdId": board_id,
-            "page": page,
-        })
-
-    def write_article(self, board_id, subject, content, image_path=None):
-        """게시물 등록 (이미지 첨부)"""
-        data = {
-            "bdId": board_id,
-            "subject": subject,
-            "contents": content or subject,
-        }
-
-        files = None
-        if image_path and os.path.exists(image_path):
-            mime_types = {
-                ".jpg": "image/jpeg",
-                ".jpeg": "image/jpeg",
-                ".png": "image/png",
-                ".gif": "image/gif",
-                ".webp": "image/webp",
-                ".bmp": "image/bmp",
-            }
-            ext = Path(image_path).suffix.lower()
-            mime = mime_types.get(ext, "application/octet-stream")
-            filename = Path(image_path).name
-            files = {
-                "uploadFile": (filename, open(image_path, "rb"), mime)
-            }
-
+def ftp_test(ftp_host, ftp_user, ftp_pass):
+    """FTP 연결 테스트"""
+    print(f"[테스트] FTP 연결 테스트: {ftp_host}")
+    try:
         try:
-            result = self._request("POST", "board/article/write", data=data, files=files)
+            ftp = ftplib.FTP(ftp_host, timeout=10)
+            ftp.login(ftp_user, ftp_pass)
+            print(f"[테스트] FTP 연결 성공! (일반 FTP)")
+        except Exception:
+            print(f"  [FTP] 일반 FTP 실패, FTPS로 재시도...")
+            context = ssl.create_default_context()
+            context.check_hostname = False
+            context.verify_mode = ssl.CERT_NONE
+            ftp = ftplib.FTP_TLS(ftp_host, timeout=10)
+            ftp.login(ftp_user, ftp_pass)
+            ftp.prot_p()
+            print(f"[테스트] FTP 연결 성공! (FTPS)")
+
+        # 현재 디렉토리 목록 출력
+        print(f"  현재 경로: {ftp.pwd()}")
+        files = ftp.nlst()
+        print(f"  파일/폴더: {files[:10]}{'...' if len(files) > 10 else ''}")
+        ftp.quit()
+        return True
+
+    except Exception as e:
+        print(f"[테스트] FTP 연결 실패: {e}")
+        return False
+
+
+def write_board_article(godo_api_url, partner_key, user_key, board_id, subject, contents, files_data=None):
+    """고도몰 Open API로 게시물 등록"""
+    data = {
+        "partner_key": partner_key,
+        "key": user_key,
+        "bdId": board_id,
+        "subject": subject,
+        "contents": contents,
+    }
+
+    if files_data:
+        data["filesData"] = files_data
+
+    resp = requests.post(godo_api_url, data=data, timeout=30)
+    print(f"  [고도몰] POST board_write -> {resp.status_code}")
+
+    if resp.status_code == 200:
+        try:
+            result = resp.json()
+            print(f"  [고도몰] 응답: {json.dumps(result, ensure_ascii=False)[:300]}")
             return result
-        finally:
-            if files and "uploadFile" in files:
-                files["uploadFile"][1].close()
+        except (json.JSONDecodeError, ValueError):
+            print(f"  [고도몰] 응답: {resp.text[:300]}")
+            return resp.text
+    else:
+        print(f"  [고도몰 오류] Status: {resp.status_code}")
+        print(f"  [고도몰 오류] Response: {resp.text[:300]}")
+        return None
 
 
 def move_to_done(image_path, done_folder):
-    """업로드 완료된 파일을 done 폴더로 이동"""
     if not done_folder:
         return
 
@@ -208,41 +195,48 @@ def move_to_done(image_path, done_folder):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="고도몰 오더갤러리 이미지 자동 업로드 (API)")
+    parser = argparse.ArgumentParser(description="고도몰 오더갤러리 이미지 자동 업로드")
     parser.add_argument("--config", default="config.ini", help="설정 파일 경로")
     parser.add_argument("--dry-run", action="store_true", help="실제 업로드 없이 대상 파일만 확인")
-    parser.add_argument("--test", action="store_true", help="API 연결 테스트만 실행")
+    parser.add_argument("--test", action="store_true", help="API/FTP 연결 테스트")
     args = parser.parse_args()
 
-    # 설정 로드
     config = load_config(args.config)
 
     try:
         api_config = config["api"]
+        ftp_config = config["ftp"]
         settings = config["settings"]
     except KeyError as e:
-        print(f"[오류] config.ini에 [{e}] 섹션이 없습니다. 설정 파일을 확인해주세요.")
+        print(f"[오류] config.ini에 [{e}] 섹션이 없습니다.")
         sys.exit(1)
 
-    shop_url = api_config.get("shop_url")
+    godo_api_url = api_config.get("godo_api_url")
     partner_key = api_config.get("partner_key")
     user_key = api_config.get("user_key")
     board_id = api_config.get("board_id", "customgallery")
 
-    # API 키 확인
-    if partner_key == "YOUR_PARTNER_KEY" or user_key == "YOUR_USER_KEY":
-        print("[오류] config.ini에 API 키를 입력해주세요.")
-        print("  partner_key = 제휴사 고유키")
-        print("  user_key = API 승인시 발급된 사용자 키")
-        print("  발급: https://devcenter.nhn-commerce.com")
-        sys.exit(1)
+    ftp_host = ftp_config.get("ftp_host")
+    ftp_user = ftp_config.get("ftp_user")
+    ftp_pass = ftp_config.get("ftp_pass")
+    ftp_upload_dir = ftp_config.get("ftp_upload_dir", "/data/image/ORDER_GALLERY")
+    image_base_url = ftp_config.get("image_base_url")
 
-    # API 클라이언트 생성
-    api = GodoAPI(shop_url, partner_key, user_key)
-
-    # 연결 테스트 모드
+    # 연결 테스트
     if args.test:
-        api.test_connection()
+        print("=" * 50)
+        ftp_test(ftp_host, ftp_user, ftp_pass)
+        print()
+        print("[테스트] 고도몰 API 연결 테스트...")
+        result = write_board_article(
+            godo_api_url, partner_key, user_key,
+            board_id, "API 테스트", "자동 업로드 시스템 테스트"
+        )
+        if result is not None:
+            print("[테스트] 고도몰 API 성공!")
+        else:
+            print("[테스트] 고도몰 API 실패.")
+        print("=" * 50)
         return
 
     image_folder = settings.get("image_folder")
@@ -252,10 +246,9 @@ def main():
     title_format = settings.get("post_title_format", "{filename}")
     content_format = settings.get("post_content_format", "")
 
-    # 이미지 파일 목록
+    # 이미지 파일 스캔
     image_files = get_image_files(image_folder, extensions)
 
-    # 업로드 기록 로드 (이미 업로드된 파일 제외)
     upload_log = load_upload_log()
     uploaded_set = set(upload_log["uploaded_files"])
     new_files = [f for f in image_files if str(f.resolve()) not in uploaded_set]
@@ -268,7 +261,7 @@ def main():
     print(f"  업로드 대상: {len(new_files)}개 이미지")
     print(f"  이미지 폴더: {image_folder}")
     print(f"  게시판 ID: {board_id}")
-    print(f"  API: {shop_url}")
+    print(f"  FTP: {ftp_host}")
     print(f"{'='*50}")
     for i, f in enumerate(new_files, 1):
         print(f"  {i}. {f.name}")
@@ -288,26 +281,36 @@ def main():
 
             filename = image_path.stem
             title = title_format.replace("{filename}", filename)
-            content = content_format.replace("{filename}", filename) if content_format else ""
+            content = content_format.replace("{filename}", filename) if content_format else title
 
-            result = api.write_article(
-                board_id=board_id,
-                subject=title,
-                content=content,
-                image_path=str(image_path.resolve()),
+            # 1. FTP에 이미지 업로드
+            print(f"  [1/2] FTP에 이미지 업로드 중...")
+            image_url = ftp_upload(
+                str(image_path), ftp_host, ftp_user, ftp_pass,
+                ftp_upload_dir, image_base_url
+            )
+            if not image_url:
+                print(f"  [실패] FTP 업로드 실패, 건너뜁니다.")
+                fail_count += 1
+                continue
+
+            # 2. 고도몰 게시판에 글 등록
+            print(f"  [2/2] 고도몰 게시판에 등록 중...")
+            result = write_board_article(
+                godo_api_url, partner_key, user_key,
+                board_id, title, content, files_data=image_url
             )
 
             if result is not None:
-                print(f"  [성공] {image_path.name} 업로드 완료")
+                print(f"  [성공] {image_path.name} 업로드 완료!")
                 upload_log["uploaded_files"].append(str(image_path.resolve()))
                 save_upload_log(upload_log)
                 move_to_done(image_path, done_folder)
                 success_count += 1
             else:
-                print(f"  [실패] {image_path.name} 업로드 실패")
+                print(f"  [실패] 고도몰 게시판 등록 실패")
                 fail_count += 1
 
-            # 다음 업로드 전 대기
             if i < len(new_files):
                 print(f"  [대기] {upload_delay}초...")
                 time.sleep(upload_delay)
