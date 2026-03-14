@@ -1,6 +1,3 @@
-# 설정 파일 (API 키 포함)
-config.ini
-
 # 업로드 기록
 upload_log.json
 
