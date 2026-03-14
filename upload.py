@@ -75,14 +75,14 @@ def ftp_upload(image_path, ftp_host, ftp_user, ftp_pass, ftp_upload_dir, image_b
     try:
         # FTP 연결 (일반 FTP 시도, 실패 시 FTPS 시도)
         try:
-            ftp = ftplib.FTP(ftp_host, timeout=30)
+            ftp = ftplib.FTP(ftp_host, timeout=30, encoding="utf-8")
             ftp.login(ftp_user, ftp_pass)
         except Exception:
             print(f"  [FTP] 일반 FTP 실패, FTPS로 재시도...")
             context = ssl.create_default_context()
             context.check_hostname = False
             context.verify_mode = ssl.CERT_NONE
-            ftp = ftplib.FTP_TLS(ftp_host, timeout=30)
+            ftp = ftplib.FTP_TLS(ftp_host, timeout=30, encoding="utf-8")
             ftp.login(ftp_user, ftp_pass)
             ftp.prot_p()
 
@@ -121,7 +121,7 @@ def ftp_test(ftp_host, ftp_user, ftp_pass):
     print(f"[테스트] FTP 연결 테스트: {ftp_host}")
     try:
         try:
-            ftp = ftplib.FTP(ftp_host, timeout=10)
+            ftp = ftplib.FTP(ftp_host, timeout=10, encoding="utf-8")
             ftp.login(ftp_user, ftp_pass)
             print(f"[테스트] FTP 연결 성공! (일반 FTP)")
         except Exception:
@@ -129,7 +129,7 @@ def ftp_test(ftp_host, ftp_user, ftp_pass):
             context = ssl.create_default_context()
             context.check_hostname = False
             context.verify_mode = ssl.CERT_NONE
-            ftp = ftplib.FTP_TLS(ftp_host, timeout=10)
+            ftp = ftplib.FTP_TLS(ftp_host, timeout=10, encoding="utf-8")
             ftp.login(ftp_user, ftp_pass)
             ftp.prot_p()
             print(f"[테스트] FTP 연결 성공! (FTPS)")
