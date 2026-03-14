@@ -4,7 +4,8 @@
 
   "godomall": {
     "api_url": "https://jjangbaseball.com/api",
-    "partner_key": "JTJDJTA2UyUyOCVENCVCNSVCMyU4Mw=="
+    "partner_key": "JTJDJTA2UyUyOCVENCVCNSVCMyU4Mw==",
+    "secret_key": "JUIwJTFCJTEyJURFaSVCMyUxNiVBNSVGQVYxJUQwJURCJUFFJUQ5JUU4SSVDRSVCQyUxRiUyNyU1QiU4MiVCM1klMjQlODYlRTFOJUFDJTk5JUE0JUMyQiVFNjclQzElRTElMjclRERkJUE2JTg1JTVF"
   },
 
   "monitor_products": [
