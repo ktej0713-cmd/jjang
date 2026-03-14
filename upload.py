@@ -154,6 +154,7 @@ def write_board_article(godo_api_url, partner_key, user_key, board_id, subject, 
         "bdId": board_id,
         "subject": subject,
         "contents": contents,
+        "notice": "n",
     }
 
     if files_data:
