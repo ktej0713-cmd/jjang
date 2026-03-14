@@ -1,12 +1,19 @@
 """
-고도몰 오더갤러리 이미지 자동 업로드 스크립트
+고도몰 오더갤러리 이미지 자동 업로드 스크립트 (Open API 방식)
 
 사용법:
     python upload.py              # 폴더 내 모든 이미지 업로드
     python upload.py --dry-run    # 실제 업로드 없이 대상 파일만 확인
+
+사전 준비:
+    1. pip install requests
+    2. config.ini에 API 키와 설정값 입력
+    3. 고도몰 개발자센터에서 API 키 발급 필요
+       https://devcenter.nhn-commerce.com
 """
 
 import argparse
+import base64
 import configparser
 import json
 import os
@@ -16,13 +23,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-from webdriver_manager.chrome import ChromeDriverManager
+import requests
 
 # 업로드 기록 파일
 UPLOAD_LOG_FILE = "upload_log.json"
@@ -66,95 +67,125 @@ def get_image_files(image_folder, extensions):
     return files
 
 
-def create_driver(headless=False):
-    """Chrome WebDriver 생성"""
-    options = Options()
-    if headless:
-        options.add_argument("--headless=new")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--window-size=1920,1080")
+class GodoAPI:
+    """고도몰 Open API 클라이언트"""
 
-    service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
-    driver.implicitly_wait(10)
-    return driver
+    def __init__(self, shop_url, partner_key, user_key):
+        self.shop_url = shop_url.rstrip("/")
+        self.partner_key = partner_key
+        self.user_key = user_key
+        self.session = requests.Session()
+        self.session.headers.update({
+            "User-Agent": "GodoUploader/1.0",
+        })
 
+    def _get_auth_params(self):
+        """인증 파라미터 반환"""
+        return {
+            "partner_key": self.partner_key,
+            "key": self.user_key,
+        }
 
-def login(driver, config, wait):
-    """고도몰 관리자 로그인"""
-    login_url = config.get("godo", "admin_login_url")
-    admin_id = config.get("godo", "admin_id")
-    admin_pw = config.get("godo", "admin_pw")
-    selectors = config["selectors"]
+    def _api_url(self, endpoint):
+        """API URL 생성"""
+        return f"{self.shop_url}/openapi/{endpoint}"
 
-    print(f"[로그인] {login_url} 접속 중...")
-    driver.get(login_url)
-    time.sleep(2)
+    def _request(self, method, endpoint, data=None, files=None):
+        """API 요청 실행"""
+        url = self._api_url(endpoint)
+        params = self._get_auth_params()
 
-    # ID 입력
-    id_field = wait.until(EC.presence_of_element_located(
-        (By.CSS_SELECTOR, selectors.get("id_input"))
-    ))
-    id_field.clear()
-    id_field.send_keys(admin_id)
-
-    # 비밀번호 입력
-    pw_field = driver.find_element(By.CSS_SELECTOR, selectors.get("pw_input"))
-    pw_field.clear()
-    pw_field.send_keys(admin_pw)
-
-    # 로그인 버튼 클릭
-    login_btn = driver.find_element(By.CSS_SELECTOR, selectors.get("login_button"))
-    login_btn.click()
-
-    time.sleep(3)
-    print("[로그인] 로그인 완료")
-
-
-def upload_image(driver, config, wait, image_path):
-    """이미지를 게시판에 업로드"""
-    board_url = config.get("godo", "board_write_url")
-    selectors = config["selectors"]
-    settings = config["settings"]
-
-    filename = image_path.stem  # 확장자 제외 파일명
-    title = settings.get("post_title_format", "{filename}").replace("{filename}", filename)
-    content = settings.get("post_content_format", "").replace("{filename}", filename)
-
-    print(f"[업로드] 게시판 글쓰기 페이지 이동: {image_path.name}")
-    driver.get(board_url)
-    time.sleep(2)
-
-    # 제목 입력
-    title_field = wait.until(EC.presence_of_element_located(
-        (By.CSS_SELECTOR, selectors.get("title_input"))
-    ))
-    title_field.clear()
-    title_field.send_keys(title)
-
-    # 내용 입력 (있는 경우)
-    if content:
         try:
-            content_field = driver.find_element(
-                By.CSS_SELECTOR, selectors.get("content_textarea")
-            )
-            content_field.clear()
-            content_field.send_keys(content)
-        except Exception:
-            print(f"  [경고] 내용 입력란을 찾을 수 없습니다. 건너뜁니다.")
+            if method == "GET":
+                resp = self.session.get(url, params={**params, **(data or {})}, timeout=30)
+            elif method == "POST":
+                if files:
+                    resp = self.session.post(url, data={**params, **(data or {})}, files=files, timeout=60)
+                else:
+                    resp = self.session.post(url, data={**params, **(data or {})}, timeout=30)
+            else:
+                raise ValueError(f"지원하지 않는 HTTP 메서드: {method}")
 
-    # 파일 업로드 (input[type=file]에 파일 경로 전송)
-    file_input = driver.find_element(By.CSS_SELECTOR, selectors.get("file_input"))
-    file_input.send_keys(str(image_path.resolve()))
-    time.sleep(2)
+            print(f"  [API] {method} {endpoint} -> {resp.status_code}")
 
-    # 등록 버튼 클릭
-    submit_btn = driver.find_element(By.CSS_SELECTOR, selectors.get("submit_button"))
-    submit_btn.click()
-    time.sleep(3)
+            if resp.status_code != 200:
+                print(f"  [API 오류] Status: {resp.status_code}")
+                print(f"  [API 오류] Response: {resp.text[:500]}")
+                return None
 
-    print(f"[업로드] 완료: {image_path.name}")
+            # JSON 또는 텍스트 응답 처리
+            content_type = resp.headers.get("Content-Type", "")
+            if "json" in content_type:
+                return resp.json()
+            elif "xml" in content_type:
+                return resp.text
+            else:
+                # JSON 파싱 시도
+                try:
+                    return resp.json()
+                except (json.JSONDecodeError, ValueError):
+                    return resp.text
+
+        except requests.exceptions.ConnectionError as e:
+            print(f"  [연결 오류] API 서버에 연결할 수 없습니다: {e}")
+            return None
+        except requests.exceptions.Timeout:
+            print(f"  [타임아웃] API 요청 시간 초과")
+            return None
+
+    def test_connection(self):
+        """API 연결 테스트"""
+        print("[API] 연결 테스트 중...")
+        result = self._request("GET", "board/list")
+        if result is not None:
+            print("[API] 연결 성공!")
+            return True
+        else:
+            print("[API] 연결 실패. API 키와 URL을 확인해주세요.")
+            return False
+
+    def get_board_list(self):
+        """게시판 목록 조회"""
+        return self._request("GET", "board/list")
+
+    def get_articles(self, board_id, page=1):
+        """게시물 목록 조회"""
+        return self._request("GET", "board/article/list", data={
+            "bdId": board_id,
+            "page": page,
+        })
+
+    def write_article(self, board_id, subject, content, image_path=None):
+        """게시물 등록 (이미지 첨부)"""
+        data = {
+            "bdId": board_id,
+            "subject": subject,
+            "contents": content or subject,
+        }
+
+        files = None
+        if image_path and os.path.exists(image_path):
+            mime_types = {
+                ".jpg": "image/jpeg",
+                ".jpeg": "image/jpeg",
+                ".png": "image/png",
+                ".gif": "image/gif",
+                ".webp": "image/webp",
+                ".bmp": "image/bmp",
+            }
+            ext = Path(image_path).suffix.lower()
+            mime = mime_types.get(ext, "application/octet-stream")
+            filename = Path(image_path).name
+            files = {
+                "uploadFile": (filename, open(image_path, "rb"), mime)
+            }
+
+        try:
+            result = self._request("POST", "board/article/write", data=data, files=files)
+            return result
+        finally:
+            if files and "uploadFile" in files:
+                files["uploadFile"][1].close()
 
 
 def move_to_done(image_path, done_folder):
@@ -166,7 +197,6 @@ def move_to_done(image_path, done_folder):
     done_path.mkdir(parents=True, exist_ok=True)
 
     dest = done_path / image_path.name
-    # 동일 파일명이 있으면 타임스탬프 추가
     if dest.exists():
         stem = image_path.stem
         suffix = image_path.suffix
@@ -178,20 +208,49 @@ def move_to_done(image_path, done_folder):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="고도몰 오더갤러리 이미지 자동 업로드")
+    parser = argparse.ArgumentParser(description="고도몰 오더갤러리 이미지 자동 업로드 (API)")
     parser.add_argument("--config", default="config.ini", help="설정 파일 경로")
     parser.add_argument("--dry-run", action="store_true", help="실제 업로드 없이 대상 파일만 확인")
+    parser.add_argument("--test", action="store_true", help="API 연결 테스트만 실행")
     args = parser.parse_args()
 
     # 설정 로드
     config = load_config(args.config)
-    settings = config["settings"]
+
+    try:
+        api_config = config["api"]
+        settings = config["settings"]
+    except KeyError as e:
+        print(f"[오류] config.ini에 [{e}] 섹션이 없습니다. 설정 파일을 확인해주세요.")
+        sys.exit(1)
+
+    shop_url = api_config.get("shop_url")
+    partner_key = api_config.get("partner_key")
+    user_key = api_config.get("user_key")
+    board_id = api_config.get("board_id", "customgallery")
+
+    # API 키 확인
+    if partner_key == "YOUR_PARTNER_KEY" or user_key == "YOUR_USER_KEY":
+        print("[오류] config.ini에 API 키를 입력해주세요.")
+        print("  partner_key = 제휴사 고유키")
+        print("  user_key = API 승인시 발급된 사용자 키")
+        print("  발급: https://devcenter.nhn-commerce.com")
+        sys.exit(1)
+
+    # API 클라이언트 생성
+    api = GodoAPI(shop_url, partner_key, user_key)
+
+    # 연결 테스트 모드
+    if args.test:
+        api.test_connection()
+        return
 
     image_folder = settings.get("image_folder")
     extensions = settings.get("image_extensions", ".jpg,.jpeg,.png,.gif,.webp,.bmp")
     done_folder = settings.get("done_folder", "")
-    upload_delay = int(settings.get("upload_delay", "3"))
-    headless = settings.get("headless", "false").lower() == "true"
+    upload_delay = int(settings.get("upload_delay", "2"))
+    title_format = settings.get("post_title_format", "{filename}")
+    content_format = settings.get("post_content_format", "")
 
     # 이미지 파일 목록
     image_files = get_image_files(image_folder, extensions)
@@ -208,6 +267,8 @@ def main():
     print(f"\n{'='*50}")
     print(f"  업로드 대상: {len(new_files)}개 이미지")
     print(f"  이미지 폴더: {image_folder}")
+    print(f"  게시판 ID: {board_id}")
+    print(f"  API: {shop_url}")
     print(f"{'='*50}")
     for i, f in enumerate(new_files, 1):
         print(f"  {i}. {f.name}")
@@ -217,55 +278,48 @@ def main():
         print("[Dry Run] 실제 업로드는 수행하지 않습니다.")
         return
 
-    # Selenium 브라우저 시작
-    driver = None
-    try:
-        driver = create_driver(headless=headless)
-        wait = WebDriverWait(driver, 15)
+    # 업로드 실행
+    success_count = 0
+    fail_count = 0
 
-        # 로그인
-        login(driver, config, wait)
+    for i, image_path in enumerate(new_files, 1):
+        try:
+            print(f"\n--- [{i}/{len(new_files)}] {image_path.name} ---")
 
-        # 각 이미지 업로드
-        success_count = 0
-        fail_count = 0
+            filename = image_path.stem
+            title = title_format.replace("{filename}", filename)
+            content = content_format.replace("{filename}", filename) if content_format else ""
 
-        for i, image_path in enumerate(new_files, 1):
-            try:
-                print(f"\n--- [{i}/{len(new_files)}] ---")
-                upload_image(driver, config, wait, image_path)
+            result = api.write_article(
+                board_id=board_id,
+                subject=title,
+                content=content,
+                image_path=str(image_path.resolve()),
+            )
 
-                # 업로드 기록 저장
+            if result is not None:
+                print(f"  [성공] {image_path.name} 업로드 완료")
                 upload_log["uploaded_files"].append(str(image_path.resolve()))
                 save_upload_log(upload_log)
-
-                # 완료 폴더로 이동
                 move_to_done(image_path, done_folder)
-
                 success_count += 1
-
-                # 다음 업로드 전 대기
-                if i < len(new_files):
-                    print(f"  [대기] {upload_delay}초 후 다음 업로드...")
-                    time.sleep(upload_delay)
-
-            except Exception as e:
-                print(f"  [오류] {image_path.name} 업로드 실패: {e}")
+            else:
+                print(f"  [실패] {image_path.name} 업로드 실패")
                 fail_count += 1
-                continue
 
-        print(f"\n{'='*50}")
-        print(f"  업로드 결과: 성공 {success_count}개 / 실패 {fail_count}개")
-        print(f"{'='*50}")
+            # 다음 업로드 전 대기
+            if i < len(new_files):
+                print(f"  [대기] {upload_delay}초...")
+                time.sleep(upload_delay)
 
-    except Exception as e:
-        print(f"[오류] {e}")
-        sys.exit(1)
+        except Exception as e:
+            print(f"  [오류] {image_path.name}: {e}")
+            fail_count += 1
+            continue
 
-    finally:
-        if driver:
-            driver.quit()
-            print("[브라우저] 종료")
+    print(f"\n{'='*50}")
+    print(f"  업로드 결과: 성공 {success_count}개 / 실패 {fail_count}개")
+    print(f"{'='*50}")
 
 
 if __name__ == "__main__":
