@@ -1,0 +1,29 @@
+{
+  "_설명": "짱베이스볼 재고 모니터링 설정",
+  "_사용법": "/재고체크 명령으로 실행",
+
+  "godomall": {
+    "api_url": "https://jjangbaseball.com/api",
+    "partner_key": "여기에_파트너키_입력"
+  },
+
+  "monitor_products": [
+    {
+      "goodsNo": "1000000001",
+      "name": "예시: 미즈노 글로브 GMP-600",
+      "alert_threshold": 3
+    },
+    {
+      "goodsNo": "1000000002",
+      "name": "예시: 롤링스 배팅장갑 WH950BG",
+      "alert_threshold": 5
+    }
+  ],
+
+  "email": {
+    "send_to": "self",
+    "subject_prefix": "[짱베이스볼 재고알림]"
+  },
+
+  "alert_threshold_default": 5
+}
