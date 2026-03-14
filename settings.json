@@ -17,7 +17,8 @@
       "TodoWrite",
       "mcp__pencil",
       "mcp__plugin_playwright_playwright__browser_press_key",
-      "mcp__plugin_playwright_playwright__browser_handle_dialog"
+      "mcp__plugin_playwright_playwright__browser_handle_dialog",
+      "mcp__claude_ai_Gmail__gmail_create_draft"
     ],
     "deny": [
       "Bash(rm -rf /)",
