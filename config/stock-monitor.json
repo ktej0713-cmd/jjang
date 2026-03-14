@@ -10,13 +10,8 @@
 
   "monitor_products": [
     {
-      "goodsNo": "1000000001",
-      "name": "예시: 미즈노 글로브 GMP-600",
-      "alert_threshold": 3
-    },
-    {
-      "goodsNo": "1000000002",
-      "name": "예시: 롤링스 배팅장갑 WH950BG",
+      "goodsNo": "44023",
+      "name": "",
       "alert_threshold": 5
     }
   ],
