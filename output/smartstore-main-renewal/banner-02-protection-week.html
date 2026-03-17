@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>배너 02 - 보호장비 주간</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+  .banner {
+    width: 1200px;
+    height: 400px;
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  /* 좌측 컬러 블록 */
+  .color-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 520px;
+    height: 100%;
+    background: #1B2A4A;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  }
+
+  /* 경고색 액센트 라인 */
+  .accent-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: #E65100;
+  }
+
+  .banner-text {
+    position: relative;
+    z-index: 2;
+    padding-left: 60px;
+    max-width: 440px;
+  }
+
+  .week-label {
+    display: inline-block;
+    background: #E65100;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 14px;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  .title {
+    color: #FFFFFF;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+  .title .highlight {
+    color: #D4A843;
+  }
+
+  .subtitle {
+    color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .cta {
+    display: inline-block;
+    background: #D4A843;
+    color: #0F1A30;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 28px;
+    text-decoration: none;
+  }
+
+  /* 우측 상품 리스트 */
+  .right-area {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .item-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #F5F5F5;
+    padding: 12px 20px;
+    min-width: 380px;
+  }
+
+  .item-num {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1B2A4A;
+    min-width: 28px;
+  }
+
+  .item-info {
+    flex: 1;
+  }
+  .item-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 2px;
+  }
+  .item-desc {
+    font-size: 11px;
+    color: #888888;
+  }
+
+  .item-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1B2A4A;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <div class="color-block"></div>
+  <div class="accent-line"></div>
+
+  <div class="banner-text">
+    <div class="week-label">3&#xC6D4; 3&#xC8FC;&#xCC28; &#xD2B9;&#xC9D1;</div>
+    <div class="title">
+      <span class="highlight">&#xBCF4;&#xD638;&#xC7A5;&#xBE44;</span><br>
+      &#xC548;&#xC804;&#xD558;&#xAC8C; &#xC2DC;&#xC98C; &#xC2DC;&#xC791;
+    </div>
+    <div class="subtitle">
+      &#xD5EC;&#xBA67; &#183; &#xAC80;&#xD22C;&#xC0AC; &#xBCF4;&#xD638;&#xB300; &#183; &#xC554;&#xAC00;&#xB4DC; &#183; &#xD48B;&#xAC00;&#xB4DC;<br>
+      &#xD0C0;&#xC790; &#xD544;&#xC218; &#xBCF4;&#xD638;&#xC7A5;&#xBE44;&#xB97C; &#xD55C;&#xBC88;&#xC5D0;
+    </div>
+    <div>
+      <a href="#" class="cta">&#xBCF4;&#xD638;&#xC7A5;&#xBE44; &#xC804;&#xCCB4;&#xBCF4;&#xAE30; &#10140;</a>
+    </div>
+  </div>
+
+  <div class="right-area">
+    <div class="item-list">
+      <div class="item-row">
+        <div class="item-num">01</div>
+        <div class="item-info">
+          <div class="item-name">&#xACE8;&#xB4DC; 2026 G-SHIELD &#xD5EC;&#xBA67; &#xAC80;&#xD22C;&#xC0AC;</div>
+          <div class="item-desc">&#xAC01;&#xB3C4; &#xC870;&#xC808;&#xD615; &#xC591;&#xADC0; &#xD5EC;&#xBA67;</div>
+        </div>
+        <div class="item-price">99,000&#xC6D0;</div>
+      </div>
+      <div class="item-row">
+        <div class="item-num">02</div>
+        <div class="item-info">
+          <div class="item-name">&#xB864;&#xB9C1;&#xC2A4; &#xB9C8;&#xD558; &#xAC80;&#xD22C;&#xC0AC; &#xBCF4;&#xD638;&#xB300;</div>
+          <div class="item-desc">&#xC870;&#xC808;&#xD615; &#xC775;&#xC2A4;&#xD150;&#xC158; &#xBCF4;&#xD638;&#xB300;</div>
+        </div>
+        <div class="item-price">30,000&#xC6D0;</div>
+      </div>
+      <div class="item-row">
+        <div class="item-num">03</div>
+        <div class="item-info">
+          <div class="item-name">&#xBBF8;&#xC988;&#xB178; &#xACBD;&#xC2DD; &#xACBD;&#xB7C9;&#xD615; &#xC554;&#xAC00;&#xB4DC;/&#xD48B;&#xAC00;&#xB4DC;</div>
+          <div class="item-desc">&#xC77C;&#xBCF8; &#xB0B4;&#xC218;&#xC6A9; &#xACBD;&#xC2DD;</div>
+        </div>
+        <div class="item-price">180,000&#xC6D0;</div>
+      </div>
+      <div class="item-row">
+        <div class="item-num">04</div>
+        <div class="item-info">
+          <div class="item-name">&#xC774;&#xC9C0;&#xC2A4; &#xD5EC;&#xBA67; &#xAD50;&#xCCB4;&#xD615; &#xC774;&#xB108;&#xD328;&#xB4DC;</div>
+          <div class="item-desc">&#xD0C0;&#xC81C;&#xD488; &#xD638;&#xD658; &#xAC00;&#xB2A5;</div>
+        </div>
+        <div class="item-price">8,900&#xC6D0;</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
