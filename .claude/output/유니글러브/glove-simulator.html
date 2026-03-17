@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>유니글러브 커스텀 시뮬레이터 | UNIGLOVE CUSTOM STUDIO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ==============================
+   유니글러브 커스텀 시뮬레이터
+============================== */
+:root {
+  --brand: #1C2B3A;
+  --brand-light: #2D4156;
+  --gold: #C8A435;
+  --gold-light: #E8C96A;
+  --bg: #F4F1EC;
+  --bg-card: #FFFFFF;
+  --text: #1A1A1A;
+  --text-sub: #666666;
+  --border: #D8D2C8;
+  --radius: 10px;
+
+  /* 글러브 컬러 변수 */
+  --c-shell:  #C8844A;
+  --c-palm:   #E2B87A;
+  --c-laces:  #C07035;
+  --c-web:    #C8844A;
+  --c-badge:  #1C2B3A;
+  --c-stitch: rgba(0,0,0,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Noto Sans KR', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ── 헤더 ─────────────────────── */
+.site-header {
+  background: var(--brand);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+.site-logo {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.site-logo span { color: var(--gold); }
+.site-tagline {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1.5px;
+}
+
+/* ── 메인 레이아웃 ────────────── */
+.simulator-wrap {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 0;
+  min-height: calc(100vh - 56px);
+}
+
+/* ── 왼쪽 패널 (글러브 미리보기) ─ */
+.panel-preview {
+  background: var(--brand);
+  padding: 28px 20px;
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.glove-canvas {
+  background: rgba(255,255,255,0.04);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#glove-svg {
+  width: 100%;
+  max-width: 280px;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.4));
+}
+
+/* SVG 글러브 존 스타일 */
+.z-shell    { fill: var(--c-shell); transition: fill 0.3s; }
+.z-palm     { fill: var(--c-palm); transition: fill 0.3s; }
+.z-laces    { fill: var(--c-laces); transition: fill 0.3s; }
+.z-web      { fill: var(--c-web); transition: fill 0.3s; }
+.z-badge    { fill: var(--c-badge); transition: fill 0.3s; }
+.z-stitch   { fill: var(--c-stitch); }
+.z-outline  { fill: rgba(0,0,0,0.12); }
+
+.clickable {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.clickable:hover { opacity: 0.82; }
+.zone-active path,
+.zone-active ellipse,
+.zone-active rect,
+.zone-active circle {
+  stroke: #fff !important;
+  stroke-width: 2.5 !important;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.6));
+}
+
+/* ── 컬러 범례 ─────────────────── */
+.color-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.legend-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 1.5px;
+  margin-bottom: 4px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.legend-item:hover { background: rgba(255,255,255,0.06); }
+.legend-item.active { background: rgba(255,255,255,0.1); }
+.legend-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  flex-shrink: 0;
+  transition: background-color 0.3s;
+}
+.legend-label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+}
+.legend-value {
+  margin-left: auto;
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ── 오른쪽 패널 (옵션) ────────── */
+.panel-options {
+  padding: 28px 32px 60px;
+  overflow-y: auto;
+  max-width: 720px;
+}
+
+.section-block {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+}
+
+.step-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+.step-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--brand);
+  margin-bottom: 16px;
+}
+
+/* ── 포지션 선택 ────────────────── */
+.position-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+.pos-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 6px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.pos-btn:hover {
+  border-color: var(--gold);
+  background: #FDFAF3;
+}
+.pos-btn.active {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: #fff;
+}
+.pos-icon { font-size: 22px; line-height: 1; }
+.pos-name { font-size: 11px; font-weight: 600; }
+
+/* ── 사이즈 선택 ────────────────── */
+.size-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.size-btn {
+  padding: 8px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: var(--text);
+}
+.size-btn:hover { border-color: var(--gold); }
+.size-btn.active {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: #fff;
+}
+
+/* ── 파츠 탭 ────────────────────── */
+.zone-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.zone-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: var(--text);
+}
+.zone-tab:hover { border-color: var(--gold); }
+.zone-tab.active {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: #fff;
+}
+.zone-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  border: 1.5px solid rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+/* ── 컬러 팔레트 ─────────────────── */
+.palette-section {
+  margin-top: 4px;
+}
+.palette-category {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-sub);
+  letter-spacing: 1px;
+  margin: 14px 0 8px;
+}
+.palette-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.color-chip {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  position: relative;
+  flex-shrink: 0;
+}
+.color-chip:hover {
+  transform: scale(1.15);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+.color-chip.selected {
+  border-color: var(--brand);
+  transform: scale(1.1);
+  box-shadow: 0 0 0 3px rgba(28,43,58,0.25);
+}
+.color-chip[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.82);
+  color: #fff;
+  font-size: 10px;
+  white-space: nowrap;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: 'Noto Sans KR', sans-serif;
+  pointer-events: none;
+}
+
+/* ── 웹 타입 ─────────────────────── */
+.web-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.web-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 10px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.web-btn:hover { border-color: var(--gold); }
+.web-btn.active {
+  border-color: var(--brand);
+  background: #F3F6F9;
+}
+.web-icon {
+  width: 52px;
+  height: 52px;
+}
+.web-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--brand);
+}
+.web-desc {
+  font-size: 10px;
+  color: var(--text-sub);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ── 추가 옵션 ────────────────────── */
+.option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.option-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #fff;
+}
+.option-item:hover { border-color: var(--gold); background: #FDFAF3; }
+.option-item.active { border-color: var(--brand); background: #F3F6F9; }
+.option-check {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: all 0.2s;
+}
+.option-item.active .option-check {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+  font-size: 11px;
+}
+.option-info { flex: 1; }
+.option-name { font-size: 13px; font-weight: 700; color: var(--brand); }
+.option-note { font-size: 11px; color: var(--text-sub); margin-top: 2px; }
+
+/* ── 각인 ──────────────────────────── */
+.engraving-wrap { display: flex; flex-direction: column; gap: 12px; }
+.input-row { display: flex; gap: 10px; align-items: center; }
+.input-label { font-size: 12px; font-weight: 600; color: var(--text-sub); width: 56px; flex-shrink: 0; }
+.styled-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+  outline: none;
+  transition: border 0.2s;
+  background: #fff;
+}
+.styled-input:focus { border-color: var(--brand); }
+.engraving-preview {
+  padding: 14px 16px;
+  background: var(--brand);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.preview-label { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.4); letter-spacing: 1px; white-space: nowrap; }
+#engraving-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+/* ── 주문 요약 ─────────────────────── */
+.order-summary {
+  background: var(--brand);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  margin-top: 24px;
+}
+.summary-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+  margin-bottom: 16px;
+}
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.summary-key { font-size: 10px; color: rgba(255,255,255,0.4); font-weight: 600; letter-spacing: 0.5px; }
+.summary-val { font-size: 13px; color: #fff; font-weight: 600; }
+.summary-val .color-pill {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  border: 1px solid rgba(255,255,255,0.3);
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.summary-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 14px 0; }
+.delivery-info {
+  font-size: 12px;
+  color: var(--gold-light);
+  margin-bottom: 16px;
+}
+.cta-row { display: flex; gap: 10px; }
+.cta-btn {
+  flex: 1;
+  padding: 13px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Noto Sans KR', sans-serif;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  text-align: center;
+}
+.cta-kakao { background: #FEE500; color: #3A1D06; }
+.cta-kakao:hover { background: #FFD600; }
+.cta-phone { background: rgba(255,255,255,0.12); color: #fff; border: 1.5px solid rgba(255,255,255,0.2); }
+.cta-phone:hover { background: rgba(255,255,255,0.18); }
+.cta-copy { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7); font-size: 12px; }
+.cta-copy:hover { background: rgba(255,255,255,0.14); }
+
+/* ── 반응형 ──────────────────────── */
+@media (max-width: 900px) {
+  .simulator-wrap {
+    grid-template-columns: 1fr;
+  }
+  .panel-preview {
+    position: relative;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .glove-canvas { flex: 0 0 200px; }
+  .color-legend { flex: 1; }
+  .panel-options { padding: 20px 16px 40px; }
+  .position-grid { grid-template-columns: repeat(5, 1fr); }
+  .web-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) {
+  .position-grid { grid-template-columns: repeat(3, 1fr); }
+  .web-grid { grid-template-columns: repeat(2, 1fr); }
+  .summary-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- 헤더 -->
+<header class="site-header">
+  <div class="site-logo">UNI<span>GLOVE</span> <span style="font-weight:400;font-size:14px;color:rgba(255,255,255,0.4);letter-spacing:1px;margin-left:8px;">CUSTOM STUDIO</span></div>
+  <div class="site-tagline">MADE FOR YOUR GAME</div>
+</header>
+
+<div class="simulator-wrap">
+
+  <!-- ──────── 왼쪽 패널 ──────── -->
+  <aside class="panel-preview">
+
+    <!-- SVG 글러브 -->
+    <div class="glove-canvas">
+      <svg id="glove-svg" viewBox="0 0 280 340" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="depth">
+            <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="rgba(0,0,0,0.3)"/>
+          </filter>
+        </defs>
+
+        <!-- 배경 그림자 -->
+        <ellipse cx="148" cy="332" rx="100" ry="10" fill="rgba(0,0,0,0.22)"/>
+
+        <!-- ════ 표혁 (SHELL) ════ -->
+        <g class="clickable" id="svg-zone-shell" data-zone="shell" onclick="selectZone('shell')">
+          <!-- 글러브 전체 외형 (back/outer leather) -->
+          <path class="z-shell" filter="url(#depth)" d="
+            M 105,318
+            L 82,298 C 62,278 54,250 58,222
+            C 62,196 72,180 82,170
+            C 68,158 56,142 60,124 C 64,106 80,100 96,104 C 110,108 116,120 114,134
+            L 112,148
+            L 118,128 L 124,100 L 128,72
+            C 130,54 140,48 152,50 C 164,52 169,65 166,84
+            L 163,112
+            L 167,106 L 170,80
+            C 172,62 182,58 193,61 C 204,64 208,78 205,96
+            L 201,122
+            L 206,117 L 209,93
+            C 211,76 221,73 231,77 C 241,81 244,96 240,113
+            L 235,136
+            L 240,133 L 241,112
+            C 244,96 252,94 261,98 C 270,102 272,118 268,132
+            L 260,152
+            C 274,168 284,192 285,220
+            C 286,252 278,280 264,298
+            L 246,312 L 228,320
+            L 105,320 Z
+          "/>
+        </g>
+
+        <!-- ════ 이혁 (PALM) ════ -->
+        <g class="clickable" id="svg-zone-palm" data-zone="palm" onclick="selectZone('palm')">
+          <!-- 손바닥 가죽 타원 -->
+          <ellipse class="z-palm" cx="170" cy="238" rx="72" ry="72"/>
+          <!-- 손가락 안쪽 (팜 레더 연장) -->
+          <rect class="z-palm" x="125" y="148" width="22" height="72" rx="10"/>
+          <rect class="z-palm" x="150" y="132" width="22" height="88" rx="10"/>
+          <rect class="z-palm" x="175" y="140" width="22" height="82" rx="10"/>
+          <rect class="z-palm" x="199" y="152" width="20" height="72" rx="9"/>
+        </g>
+
+        <!-- ════ 웹 (WEB) ════ — I-웹 기본 -->
+        <g class="clickable" id="svg-zone-web" data-zone="web" onclick="selectZone('web')">
+          <g id="web-i">
+            <!-- 웹 프레임 -->
+            <path class="z-web" stroke="var(--c-laces)" stroke-width="1.5" d="
+              M 98,152 C 94,140 92,125 96,112 C 100,99 110,94 120,98 C 130,102 134,114 130,126
+              L 128,148 L 118,152 Z
+            "/>
+            <!-- 세로 포스트 -->
+            <rect class="z-laces" x="109" y="102" width="9" height="52" rx="4"/>
+            <!-- 가로 바 -->
+            <rect class="z-laces" x="95" y="120" width="37" height="9" rx="4"/>
+          </g>
+          <g id="web-h" style="display:none">
+            <!-- H웹 프레임 -->
+            <path class="z-web" stroke="var(--c-laces)" stroke-width="1.5" d="
+              M 98,152 C 94,140 92,125 96,112 C 100,99 110,94 120,98 C 130,102 134,114 130,126
+              L 128,148 L 118,152 Z
+            "/>
+            <!-- H웹: 좌우 포스트 + 연결바 -->
+            <rect class="z-laces" x="97" y="100" width="8" height="52" rx="3"/>
+            <rect class="z-laces" x="125" y="100" width="8" height="52" rx="3"/>
+            <rect class="z-laces" x="97" y="122" width="36" height="8" rx="3"/>
+          </g>
+          <g id="web-cross" style="display:none">
+            <!-- 크로스웹 -->
+            <path class="z-web" stroke="var(--c-laces)" stroke-width="1.5" d="
+              M 98,152 C 94,140 92,125 96,112 C 100,99 110,94 120,98 C 130,102 134,114 130,126
+              L 128,148 L 118,152 Z
+            "/>
+            <line class="z-laces" x1="97" y1="100" x2="132" y2="150" stroke="var(--c-laces)" stroke-width="7" stroke-linecap="round"/>
+            <line class="z-laces" x1="132" y1="100" x2="97" y2="150" stroke="var(--c-laces)" stroke-width="7" stroke-linecap="round"/>
+          </g>
+          <g id="web-basket" style="display:none">
+            <!-- 바스켓웹 — 격자형 -->
+            <path class="z-web" stroke="var(--c-laces)" stroke-width="1.5" d="
+              M 96,152 C 92,138 90,122 94,110 C 98,97 110,92 122,96 C 134,100 138,114 134,128
+              L 130,150 L 115,154 Z
+            "/>
+            <line stroke="var(--c-laces)" stroke-width="5" x1="96" y1="108" x2="130" y2="108" stroke-linecap="round"/>
+            <line stroke="var(--c-laces)" stroke-width="5" x1="94" y1="118" x2="132" y2="118" stroke-linecap="round"/>
+            <line stroke="var(--c-laces)" stroke-width="5" x1="93" y1="128" x2="133" y2="128" stroke-linecap="round"/>
+            <line stroke="var(--c-laces)" stroke-width="5" x1="93" y1="138" x2="132" y2="138" stroke-linecap="round"/>
+            <line stroke="var(--c-laces)" stroke-width="5" x1="98" y1="100" x2="96" y2="152" stroke-linecap="round"/>
+            <line stroke="var(--c-laces)" stroke-width="5" x1="110" y1="95" x2="107" y2="153" stroke-linecap="round"/>
+            <line stroke="var(--c-laces)" stroke-width="5" x1="122" y1="95" x2="120" y2="152" stroke-linecap="round"/>
+            <line stroke="var(--c-laces)" stroke-width="5" x1="133" y1="100" x2="132" y2="150" stroke-linecap="round"/>
+          </g>
+          <g id="web-trapeze" style="display:none">
+            <!-- 트라페즈웹 -->
+            <path class="z-web" stroke="var(--c-laces)" stroke-width="1.5" d="
+              M 94,152 C 90,138 88,122 94,108 C 100,94 113,90 126,96 C 139,102 141,118 136,132
+              L 130,150 L 110,154 Z
+            "/>
+            <rect class="z-laces" x="93" y="104" width="42" height="11" rx="5"/>
+            <rect class="z-laces" x="95" y="136" width="38" height="11" rx="5"/>
+            <rect class="z-laces" x="91" y="104" width="10" height="45" rx="5"/>
+            <rect class="z-laces" x="123" y="104" width="10" height="45" rx="5"/>
+          </g>
+        </g>
+
+        <!-- ════ 엄지 (THUMB) ════ -->
+        <g class="clickable" id="svg-zone-thumb" data-zone="shell" onclick="selectZone('shell')">
+          <path class="z-shell" d="
+            M 82,170
+            C 68,158 56,142 60,124 C 64,106 80,100 96,104 C 110,108 116,120 114,134
+            L 112,150 L 106,162 L 100,172 L 96,182
+            C 94,190 94,200 98,208 C 102,216 110,220 118,218
+            L 120,224 L 116,240 L 112,256
+            C 108,272 110,286 118,294
+            L 124,300 L 116,312 L 105,318 L 96,312
+            C 88,304 84,290 84,274 L 86,252 L 88,234 L 88,214
+            C 88,196 84,182 82,170
+          "/>
+          <!-- 엄지 안쪽 (palm leather) -->
+          <path class="z-palm" d="
+            M 98,108 C 108,108 115,118 113,130
+            L 110,148 L 104,162 L 99,174
+            C 97,182 97,194 101,202 C 105,210 113,214 120,212
+            L 122,228 L 118,244 L 114,258
+            C 110,274 113,285 120,293
+            L 105,318 L 96,312
+            C 88,304 85,290 85,274 L 87,252 L 89,232 L 90,212
+            C 90,196 87,182 85,172
+            C 74,164 68,150 72,136 C 76,122 88,116 98,118 Z
+          " opacity="0.7"/>
+        </g>
+
+        <!-- ════ 끈 (LACES) ════ -->
+        <g class="clickable" id="svg-zone-laces" data-zone="laces" onclick="selectZone('laces')">
+          <!-- 손가락 사이 끈 -->
+          <ellipse class="z-laces" cx="148" cy="158" rx="5" ry="7"/>
+          <ellipse class="z-laces" cx="148" cy="172" rx="4.5" ry="6"/>
+          <ellipse class="z-laces" cx="173" cy="148" rx="5" ry="7"/>
+          <ellipse class="z-laces" cx="173" cy="162" rx="4.5" ry="6"/>
+          <ellipse class="z-laces" cx="198" cy="156" rx="5" ry="7"/>
+          <ellipse class="z-laces" cx="198" cy="170" rx="4.5" ry="6"/>
+          <!-- 손가락 상단 끈 -->
+          <ellipse class="z-laces" cx="136" cy="68" rx="6" ry="4"/>
+          <ellipse class="z-laces" cx="159" cy="54" rx="6" ry="4"/>
+          <ellipse class="z-laces" cx="183" cy="62" rx="6" ry="4"/>
+          <ellipse class="z-laces" cx="205" cy="76" rx="5" ry="4"/>
+          <!-- 손바닥 주위 끈 -->
+          <ellipse class="z-laces" cx="100" cy="238" rx="4" ry="7" opacity="0.7"/>
+          <ellipse class="z-laces" cx="100" cy="258" rx="4" ry="7" opacity="0.7"/>
+          <ellipse class="z-laces" cx="244" cy="240" rx="4" ry="7" opacity="0.7"/>
+          <ellipse class="z-laces" cx="244" cy="260" rx="4" ry="7" opacity="0.7"/>
+          <!-- 손목 끈 -->
+          <rect class="z-laces" x="120" y="306" width="10" height="16" rx="4" opacity="0.7"/>
+          <rect class="z-laces" x="138" y="310" width="10" height="12" rx="4" opacity="0.7"/>
+          <rect class="z-laces" x="156" y="312" width="10" height="10" rx="4" opacity="0.7"/>
+          <rect class="z-laces" x="174" y="312" width="10" height="10" rx="4" opacity="0.7"/>
+          <rect class="z-laces" x="192" y="310" width="10" height="12" rx="4" opacity="0.7"/>
+        </g>
+
+        <!-- ════ 로고 배지 ════ -->
+        <g class="clickable" id="svg-zone-badge" data-zone="badge" onclick="selectZone('badge')">
+          <ellipse class="z-badge" cx="170" cy="244" rx="42" ry="28" opacity="0.88"/>
+          <text x="170" y="240" text-anchor="middle" font-size="11" font-weight="800"
+                fill="white" font-family="'Noto Sans KR', sans-serif" opacity="0.85" letter-spacing="1">UNI</text>
+          <text x="170" y="254" text-anchor="middle" font-size="9"
+                fill="rgba(255,255,255,0.6)" font-family="'Noto Sans KR', sans-serif" letter-spacing="2">GLOVE</text>
+        </g>
+
+        <!-- 스티칭 디테일 -->
+        <path class="z-stitch" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="1.5" stroke-dasharray="4,3"
+          d="M 112,180 C 105,198 103,218 106,238 C 109,258 116,276 126,288"/>
+      </svg>
+    </div>
+
+    <!-- 컬러 범례 -->
+    <div class="color-legend">
+      <div class="legend-title">COLOR ZONES</div>
+      <div class="legend-item active" id="legend-shell" onclick="selectZone('shell')">
+        <div class="legend-swatch" id="swatch-shell" style="background:var(--c-shell)"></div>
+        <span class="legend-label">표혁 (외피)</span>
+        <span class="legend-value" id="val-shell">탄</span>
+      </div>
+      <div class="legend-item" id="legend-palm" onclick="selectZone('palm')">
+        <div class="legend-swatch" id="swatch-palm" style="background:var(--c-palm)"></div>
+        <span class="legend-label">이혁 (손바닥)</span>
+        <span class="legend-value" id="val-palm">라이트 탄</span>
+      </div>
+      <div class="legend-item" id="legend-laces" onclick="selectZone('laces')">
+        <div class="legend-swatch" id="swatch-laces" style="background:var(--c-laces)"></div>
+        <span class="legend-label">끈 (레이싱)</span>
+        <span class="legend-value" id="val-laces">오렌지 탄</span>
+      </div>
+      <div class="legend-item" id="legend-web" onclick="selectZone('web')">
+        <div class="legend-swatch" id="swatch-web" style="background:var(--c-web)"></div>
+        <span class="legend-label">웹</span>
+        <span class="legend-value" id="val-web">탄</span>
+      </div>
+      <div class="legend-item" id="legend-badge" onclick="selectZone('badge')">
+        <div class="legend-swatch" id="swatch-badge" style="background:var(--c-badge)"></div>
+        <span class="legend-label">로고 배지</span>
+        <span class="legend-value" id="val-badge">네이비</span>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ──────── 오른쪽 패널 ──────── -->
+  <main class="panel-options">
+
+    <!-- STEP 1: 포지션 -->
+    <div class="section-block">
+      <div class="step-label">STEP 1</div>
+      <div class="step-title">포지션 선택</div>
+      <div class="position-grid">
+        <button class="pos-btn active" data-pos="infield" onclick="selectPos(this)">
+          <span class="pos-icon">🤜</span>
+          <span class="pos-name">내야수</span>
+        </button>
+        <button class="pos-btn" data-pos="outfield" onclick="selectPos(this)">
+          <span class="pos-icon">🧤</span>
+          <span class="pos-name">외야수</span>
+        </button>
+        <button class="pos-btn" data-pos="pitcher" onclick="selectPos(this)">
+          <span class="pos-icon">⚾</span>
+          <span class="pos-name">투수</span>
+        </button>
+        <button class="pos-btn" data-pos="catcher" onclick="selectPos(this)">
+          <span class="pos-icon">🛡</span>
+          <span class="pos-name">포수</span>
+        </button>
+        <button class="pos-btn" data-pos="first" onclick="selectPos(this)">
+          <span class="pos-icon">1️⃣</span>
+          <span class="pos-name">1루수</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 2: 사이즈 -->
+    <div class="section-block">
+      <div class="step-label">STEP 2</div>
+      <div class="step-title">글러브 사이즈</div>
+      <div class="size-grid" id="size-grid">
+        <!-- JS로 생성 -->
+      </div>
+      <p style="font-size:11px;color:var(--text-sub);margin-top:10px;" id="size-guide-text">
+        내야수 추천: 11.0~11.75인치 / 성인 기준
+      </p>
+    </div>
+
+    <!-- STEP 3: 컬러 -->
+    <div class="section-block">
+      <div class="step-label">STEP 3</div>
+      <div class="step-title">파츠별 색상 선택</div>
+
+      <!-- 존 선택 탭 -->
+      <div class="zone-tabs">
+        <div class="zone-tab active" data-zone="shell" onclick="selectZone('shell')">
+          <div class="zone-dot" id="tab-dot-shell" style="background:var(--c-shell)"></div>
+          표혁 (외피)
+        </div>
+        <div class="zone-tab" data-zone="palm" onclick="selectZone('palm')">
+          <div class="zone-dot" id="tab-dot-palm" style="background:var(--c-palm)"></div>
+          이혁 (손바닥)
+        </div>
+        <div class="zone-tab" data-zone="laces" onclick="selectZone('laces')">
+          <div class="zone-dot" id="tab-dot-laces" style="background:var(--c-laces)"></div>
+          끈
+        </div>
+        <div class="zone-tab" data-zone="web" onclick="selectZone('web')">
+          <div class="zone-dot" id="tab-dot-web" style="background:var(--c-web)"></div>
+          웹
+        </div>
+        <div class="zone-tab" data-zone="badge" onclick="selectZone('badge')">
+          <div class="zone-dot" id="tab-dot-badge" style="background:var(--c-badge)"></div>
+          로고
+        </div>
+      </div>
+
+      <!-- 컬러 팔레트 -->
+      <div class="palette-section" id="palette-container">
+        <!-- JS로 생성 -->
+      </div>
+    </div>
+
+    <!-- STEP 4: 웹 타입 -->
+    <div class="section-block">
+      <div class="step-label">STEP 4</div>
+      <div class="step-title">웹 타입 선택</div>
+      <div class="web-grid">
+        <button class="web-btn active" data-web="i" onclick="selectWeb(this)">
+          <svg class="web-icon" viewBox="0 0 52 52">
+            <rect x="8" y="8" width="36" height="36" rx="6" fill="#e8e0d4"/>
+            <rect x="22" y="10" width="8" height="32" rx="3" fill="#c8844a"/>
+            <rect x="10" y="22" width="32" height="8" rx="3" fill="#c07035"/>
+          </svg>
+          <div class="web-name">I 웹</div>
+          <div class="web-desc">내야수 표준<br>빠른 공 처리</div>
+        </button>
+        <button class="web-btn" data-web="h" onclick="selectWeb(this)">
+          <svg class="web-icon" viewBox="0 0 52 52">
+            <rect x="8" y="8" width="36" height="36" rx="6" fill="#e8e0d4"/>
+            <rect x="10" y="10" width="8" height="32" rx="3" fill="#c8844a"/>
+            <rect x="34" y="10" width="8" height="32" rx="3" fill="#c8844a"/>
+            <rect x="10" y="22" width="32" height="8" rx="3" fill="#c07035"/>
+          </svg>
+          <div class="web-name">H 웹</div>
+          <div class="web-desc">외야/투수 추천<br>볼 은폐 효과</div>
+        </button>
+        <button class="web-btn" data-web="cross" onclick="selectWeb(this)">
+          <svg class="web-icon" viewBox="0 0 52 52">
+            <rect x="8" y="8" width="36" height="36" rx="6" fill="#e8e0d4"/>
+            <line x1="12" y1="12" x2="40" y2="40" stroke="#c8844a" stroke-width="7" stroke-linecap="round"/>
+            <line x1="40" y1="12" x2="12" y2="40" stroke="#c07035" stroke-width="7" stroke-linecap="round"/>
+          </svg>
+          <div class="web-name">크로스 웹</div>
+          <div class="web-desc">투수 추천<br>그립 보조</div>
+        </button>
+        <button class="web-btn" data-web="basket" onclick="selectWeb(this)">
+          <svg class="web-icon" viewBox="0 0 52 52">
+            <rect x="8" y="8" width="36" height="36" rx="6" fill="#e8e0d4"/>
+            <line x1="10" y1="16" x2="42" y2="16" stroke="#c8844a" stroke-width="5" stroke-linecap="round"/>
+            <line x1="10" y1="24" x2="42" y2="24" stroke="#c8844a" stroke-width="5" stroke-linecap="round"/>
+            <line x1="10" y1="32" x2="42" y2="32" stroke="#c8844a" stroke-width="5" stroke-linecap="round"/>
+            <line x1="18" y1="10" x2="18" y2="42" stroke="#c07035" stroke-width="5" stroke-linecap="round"/>
+            <line x1="26" y1="10" x2="26" y2="42" stroke="#c07035" stroke-width="5" stroke-linecap="round"/>
+            <line x1="34" y1="10" x2="34" y2="42" stroke="#c07035" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+          <div class="web-name">바스켓 웹</div>
+          <div class="web-desc">포수/외야 추천<br>포켓 안정성</div>
+        </button>
+        <button class="web-btn" data-web="trapeze" onclick="selectWeb(this)">
+          <svg class="web-icon" viewBox="0 0 52 52">
+            <rect x="8" y="8" width="36" height="36" rx="6" fill="#e8e0d4"/>
+            <rect x="10" y="10" width="32" height="10" rx="4" fill="#c8844a"/>
+            <rect x="10" y="32" width="32" height="10" rx="4" fill="#c8844a"/>
+            <rect x="10" y="10" width="10" height="32" rx="4" fill="#c07035"/>
+            <rect x="32" y="10" width="10" height="32" rx="4" fill="#c07035"/>
+          </svg>
+          <div class="web-name">트라페즈</div>
+          <div class="web-desc">외야 전용<br>넓은 캐칭면</div>
+        </button>
+        <button class="web-btn" data-web="single" onclick="selectWeb(this)">
+          <svg class="web-icon" viewBox="0 0 52 52">
+            <rect x="8" y="8" width="36" height="36" rx="6" fill="#e8e0d4"/>
+            <rect x="10" y="10" width="32" height="32" rx="6" fill="#c8844a" opacity="0.6"/>
+            <rect x="10" y="10" width="10" height="32" rx="4" fill="#c07035"/>
+            <rect x="32" y="10" width="10" height="32" rx="4" fill="#c07035"/>
+          </svg>
+          <div class="web-name">싱글 포스트</div>
+          <div class="web-desc">1루수/내야<br>경량 설계</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 5: 추가 옵션 -->
+    <div class="section-block">
+      <div class="step-label">STEP 5</div>
+      <div class="step-title">추가 옵션</div>
+      <div class="option-list">
+        <div class="option-item" onclick="toggleOption(this)" data-option="5d-bello">
+          <div class="option-check"></div>
+          <div class="option-info">
+            <div class="option-name">5D 벨로 (5D BELLO)</div>
+            <div class="option-note">벨로부를 5차원 구조로 성형 — 피팅감 대폭 향상</div>
+          </div>
+        </div>
+        <div class="option-item" onclick="toggleOption(this)" data-option="pinky-out">
+          <div class="option-check"></div>
+          <div class="option-info">
+            <div class="option-name">소지 하미다시 (소지 2본 넣기)</div>
+            <div class="option-note">소지 두 개 넣기 타입 — 외야수 추천, 포켓 안정성 향상</div>
+          </div>
+        </div>
+        <div class="option-item" onclick="toggleOption(this)" data-option="thumb-l">
+          <div class="option-check"></div>
+          <div class="option-info">
+            <div class="option-name">엄지 L 하미다시</div>
+            <div class="option-note">얕은 포켓 세팅 — 내야수 스피디한 볼 처리에 적합</div>
+          </div>
+        </div>
+        <div class="option-item" onclick="toggleOption(this)" data-option="reverse-wind">
+          <div class="option-check"></div>
+          <div class="option-info">
+            <div class="option-name">역감기 손목 입구 (手口逆巻)</div>
+            <div class="option-note">글러브가 자연스럽게 닫히는 구조 — 송구 전환 빠름</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 6: 각인 -->
+    <div class="section-block">
+      <div class="step-label">STEP 6</div>
+      <div class="step-title">각인 설정</div>
+      <div class="engraving-wrap">
+        <div class="input-row">
+          <label class="input-label">이름</label>
+          <input type="text" class="styled-input" id="input-name" maxlength="10"
+                 placeholder="예: KIM JIYEON" oninput="updateEngraving()"
+                 style="text-transform:uppercase">
+        </div>
+        <div class="input-row">
+          <label class="input-label">등번호</label>
+          <input type="text" class="styled-input" id="input-number" maxlength="3"
+                 placeholder="예: 7" oninput="updateEngraving()" style="max-width:100px">
+          <span style="font-size:11px;color:var(--text-sub);margin-left:4px;">(0~99)</span>
+        </div>
+        <div class="engraving-preview">
+          <span class="preview-label">미리보기</span>
+          <span id="engraving-text">UNI GLOVE</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 주문 요약 -->
+    <div class="order-summary">
+      <div class="summary-title">ORDER SUMMARY</div>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <span class="summary-key">포지션</span>
+          <span class="summary-val" id="s-pos">내야수</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-key">사이즈</span>
+          <span class="summary-val" id="s-size">11.5인치</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-key">웹 타입</span>
+          <span class="summary-val" id="s-web">I 웹</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-key">각인</span>
+          <span class="summary-val" id="s-engraving">없음</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-key">표혁</span>
+          <span class="summary-val">
+            <span class="color-pill" id="pill-shell" style="background:var(--c-shell)"></span>
+            <span id="s-shell">탄</span>
+          </span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-key">이혁</span>
+          <span class="summary-val">
+            <span class="color-pill" id="pill-palm" style="background:var(--c-palm)"></span>
+            <span id="s-palm">라이트 탄</span>
+          </span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-key">끈</span>
+          <span class="summary-val">
+            <span class="color-pill" id="pill-laces" style="background:var(--c-laces)"></span>
+            <span id="s-laces">오렌지 탄</span>
+          </span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-key">웹 색상</span>
+          <span class="summary-val">
+            <span class="color-pill" id="pill-web" style="background:var(--c-web)"></span>
+            <span id="s-web-color">탄</span>
+          </span>
+        </div>
+      </div>
+      <hr class="summary-divider">
+      <div class="delivery-info" id="s-options">추가 옵션: 없음</div>
+      <div class="delivery-info">예상 납기: <strong>30~45일</strong> (정확한 납기는 상담 후 확정)</div>
+      <div class="cta-row">
+        <button class="cta-btn cta-kakao" onclick="orderKakao()">카카오톡 문의</button>
+        <button class="cta-btn cta-phone" onclick="orderPhone()">전화 문의</button>
+        <button class="cta-btn cta-copy" onclick="copyOrder()">사양 복사</button>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+/* ==============================
+   유니글러브 시뮬레이터 JS
+============================== */
+
+// ── 상태 관리 ─────────────────────
+const state = {
+  position: 'infield',
+  size: '11.5',
+  zone: 'shell',
+  web: 'i',
+  options: new Set(),
+  colors: {
+    shell:  { hex: '#C8844A', name: '탄' },
+    palm:   { hex: '#E2B87A', name: '라이트 탄' },
+    laces:  { hex: '#C07035', name: '오렌지 탄' },
+    web:    { hex: '#C8844A', name: '탄' },
+    badge:  { hex: '#1C2B3A', name: '네이비' },
+  },
+};
+
+// ── 컬러 팔레트 정의 ──────────────
+const PALETTE = [
+  {
+    cat: '가죽 계열 (LEATHER)',
+    colors: [
+      { hex: '#E8C890', name: '라이트 탄' },
+      { hex: '#D4A865', name: '탄 (TAN)' },
+      { hex: '#C8844A', name: '오렌지 탄' },
+      { hex: '#B87035', name: '하바나' },
+      { hex: '#8C5530', name: '브라운' },
+      { hex: '#5C3018', name: '다크 브라운' },
+      { hex: '#A86040', name: '미디엄 브라운' },
+    ],
+  },
+  {
+    cat: '다크/라이트',
+    colors: [
+      { hex: '#1A1A1A', name: '블랙' },
+      { hex: '#3A3A3A', name: '차콜' },
+      { hex: '#F0EDE8', name: '화이트' },
+      { hex: '#D0C8BE', name: '아이보리' },
+    ],
+  },
+  {
+    cat: '컬러',
+    colors: [
+      { hex: '#1C2B3A', name: '네이비' },
+      { hex: '#0D4E8A', name: '로얄 블루' },
+      { hex: '#0288D1', name: '스카이 블루' },
+      { hex: '#C62828', name: '레드' },
+      { hex: '#880E4F', name: '버건디' },
+      { hex: '#C8A435', name: '골드' },
+      { hex: '#2E7D32', name: '다크 그린' },
+      { hex: '#558B2F', name: '그린' },
+      { hex: '#6A1B9A', name: '퍼플' },
+      { hex: '#E65100', name: '오렌지' },
+    ],
+  },
+];
+
+// ── 사이즈 정의 ───────────────────
+const SIZES = {
+  infield:  ['11.0', '11.25', '11.5', '11.75'],
+  outfield: ['12.0', '12.5', '12.75', '13.0'],
+  pitcher:  ['11.5', '11.75', '12.0'],
+  catcher:  ['32.5', '33.0', '33.5'],
+  first:    ['12.0', '12.5', '13.0'],
+};
+const SIZE_GUIDE = {
+  infield:  '내야수 추천: 11.0~11.75인치 / 성인 기준',
+  outfield: '외야수 추천: 12.0~13.0인치 / 깊은 포켓',
+  pitcher:  '투수 추천: 11.5~12.0인치 / 볼 은폐 중시',
+  catcher:  '포수 미트: 32.5~33.5인치 / 포켓 깊이',
+  first:    '1루수 미트: 12.0~13.0인치 / 넓은 캐칭면',
+};
+const POS_LABELS = {
+  infield: '내야수', outfield: '외야수', pitcher: '투수', catcher: '포수', first: '1루수',
+};
+const WEB_LABELS = {
+  i: 'I 웹', h: 'H 웹', cross: '크로스 웹', basket: '바스켓 웹', trapeze: '트라페즈', single: '싱글 포스트',
+};
+
+// ── 초기화 ─────────────────────────
+function init() {
+  buildPalette();
+  buildSizes('infield');
+  updateSummary();
+  // URL 파라미터 복원
+  const p = new URLSearchParams(location.search);
+  if (p.get('config')) {
+    try { loadConfig(JSON.parse(atob(p.get('config')))); } catch(e) {}
+  }
+}
+
+// ── 사이즈 빌드 ────────────────────
+function buildSizes(pos) {
+  const grid = document.getElementById('size-grid');
+  const sizes = SIZES[pos];
+  const defaultSize = sizes[Math.floor(sizes.length / 2)];
+  state.size = defaultSize;
+  grid.innerHTML = sizes.map(s => `
+    <button class="size-btn ${s === defaultSize ? 'active' : ''}"
+            onclick="selectSize(this, '${s}')">${s}인치</button>
+  `).join('');
+  document.getElementById('size-guide-text').textContent = SIZE_GUIDE[pos];
+}
+
+// ── 팔레트 빌드 ────────────────────
+function buildPalette() {
+  const el = document.getElementById('palette-container');
+  el.innerHTML = PALETTE.map(cat => `
+    <div class="palette-category">${cat.cat}</div>
+    <div class="palette-row">
+      ${cat.colors.map(c => `
+        <div class="color-chip"
+             style="background:${c.hex}"
+             title="${c.name}"
+             data-hex="${c.hex}"
+             data-name="${c.name}"
+             onclick="applyColor('${c.hex}', '${c.name}')"></div>
+      `).join('')}
+    </div>
+  `).join('');
+}
+
+// ── 존 선택 ───────────────────────
+function selectZone(zone) {
+  state.zone = zone;
+  // 범례 활성
+  document.querySelectorAll('.legend-item').forEach(el => el.classList.remove('active'));
+  document.getElementById('legend-' + zone)?.classList.add('active');
+  // 탭 활성
+  document.querySelectorAll('.zone-tab').forEach(el => el.classList.remove('active'));
+  document.querySelector(`.zone-tab[data-zone="${zone}"]`)?.classList.add('active');
+  // SVG 존 하이라이트
+  document.querySelectorAll('.clickable').forEach(el => el.classList.remove('zone-active'));
+  document.getElementById('svg-zone-' + zone)?.classList.add('zone-active');
+  // 현재 색 선택 표시
+  refreshChipSelection();
+}
+
+function refreshChipSelection() {
+  const current = state.colors[state.zone]?.hex;
+  document.querySelectorAll('.color-chip').forEach(el => {
+    el.classList.toggle('selected', el.dataset.hex === current);
+  });
+}
+
+// ── 색상 적용 ─────────────────────
+function applyColor(hex, name) {
+  const zone = state.zone;
+  state.colors[zone] = { hex, name };
+  // CSS 변수 업데이트
+  document.documentElement.style.setProperty('--c-' + zone, hex);
+  // 스와치/탭닷 업데이트
+  const swatch = document.getElementById('swatch-' + zone);
+  if (swatch) swatch.style.background = hex;
+  const tabDot = document.getElementById('tab-dot-' + zone);
+  if (tabDot) tabDot.style.background = hex;
+  const valEl = document.getElementById('val-' + zone);
+  if (valEl) valEl.textContent = name;
+  // 요약 업데이트
+  updateSummary();
+  refreshChipSelection();
+}
+
+// ── 포지션 선택 ────────────────────
+function selectPos(btn) {
+  document.querySelectorAll('.pos-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  state.position = btn.dataset.pos;
+  buildSizes(state.position);
+  updateSummary();
+}
+
+// ── 사이즈 선택 ────────────────────
+function selectSize(btn, size) {
+  document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  state.size = size;
+  updateSummary();
+}
+
+// ── 웹 타입 선택 ──────────────────
+function selectWeb(btn) {
+  document.querySelectorAll('.web-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  state.web = btn.dataset.web;
+  // SVG 웹 전환
+  document.querySelectorAll('[id^="web-"]').forEach(g => g.style.display = 'none');
+  const webEl = document.getElementById('web-' + state.web);
+  if (webEl) webEl.style.display = 'block';
+  updateSummary();
+}
+
+// ── 추가 옵션 토글 ────────────────
+function toggleOption(el) {
+  const opt = el.dataset.option;
+  el.classList.toggle('active');
+  const check = el.querySelector('.option-check');
+  if (el.classList.contains('active')) {
+    state.options.add(opt);
+    check.textContent = '✓';
+  } else {
+    state.options.delete(opt);
+    check.textContent = '';
+  }
+  updateSummary();
+}
+
+// ── 각인 업데이트 ─────────────────
+function updateEngraving() {
+  const name = document.getElementById('input-name').value.toUpperCase();
+  const num = document.getElementById('input-number').value;
+  const text = [name, num].filter(Boolean).join(' #') || 'UNI GLOVE';
+  document.getElementById('engraving-text').textContent = text;
+  updateSummary();
+}
+
+// ── 요약 업데이트 ─────────────────
+function updateSummary() {
+  document.getElementById('s-pos').textContent = POS_LABELS[state.position];
+  document.getElementById('s-size').textContent = state.size + '인치';
+  document.getElementById('s-web').textContent = WEB_LABELS[state.web];
+  const name = document.getElementById('input-name')?.value || '';
+  const num = document.getElementById('input-number')?.value || '';
+  const eng = [name.toUpperCase(), num ? '#' + num : ''].filter(Boolean).join(' ') || '없음';
+  document.getElementById('s-engraving').textContent = eng;
+
+  // 색상 요약
+  ['shell', 'palm', 'laces'].forEach(z => {
+    const el = document.getElementById('s-' + z);
+    const pill = document.getElementById('pill-' + z);
+    if (el) el.textContent = state.colors[z].name;
+    if (pill) pill.style.background = state.colors[z].hex;
+  });
+  document.getElementById('s-web-color').textContent = state.colors.web.name;
+  document.getElementById('pill-web').style.background = state.colors.web.hex;
+  document.getElementById('pill-shell').style.background = state.colors.shell.hex;
+  document.getElementById('pill-palm').style.background = state.colors.palm.hex;
+  document.getElementById('pill-laces').style.background = state.colors.laces.hex;
+
+  // 옵션 요약
+  const optLabels = {
+    '5d-bello': '5D 벨로', 'pinky-out': '소지 하미다시',
+    'thumb-l': '엄지 L 하미다시', 'reverse-wind': '역감기 손목',
+  };
+  const opts = [...state.options].map(o => optLabels[o] || o);
+  document.getElementById('s-options').textContent = '추가 옵션: ' + (opts.length ? opts.join(', ') : '없음');
+}
+
+// ── CTA 동작 ──────────────────────
+function buildOrderText() {
+  const c = state.colors;
+  const name = document.getElementById('input-name')?.value || '';
+  const num = document.getElementById('input-number')?.value || '';
+  const eng = [name.toUpperCase(), num ? '#' + num : ''].filter(Boolean).join(' ') || '없음';
+  const optLabels = {
+    '5d-bello': '5D 벨로', 'pinky-out': '소지 하미다시',
+    'thumb-l': '엄지 L 하미다시', 'reverse-wind': '역감기 손목',
+  };
+  const opts = [...state.options].map(o => optLabels[o] || o);
+  return `[유니글러브 커스텀 오더]
+포지션: ${POS_LABELS[state.position]}
+사이즈: ${state.size}인치
+웹 타입: ${WEB_LABELS[state.web]}
+표혁: ${c.shell.name}
+이혁: ${c.palm.name}
+끈: ${c.laces.name}
+웹 색상: ${c.web.name}
+로고: ${c.badge.name}
+추가 옵션: ${opts.length ? opts.join(', ') : '없음'}
+각인: ${eng}`;
+}
+
+function orderKakao() {
+  alert('카카오톡으로 연결합니다.\n\n아래 사양을 복사해서 전달하세요:\n\n' + buildOrderText());
+}
+function orderPhone() {
+  alert('전화 문의: 유니글러브 고객센터\n\n사양을 메모해두시면 빠른 상담이 가능합니다.');
+}
+function copyOrder() {
+  const text = buildOrderText();
+  navigator.clipboard.writeText(text).then(() => {
+    alert('오더 사양이 클립보드에 복사되었습니다!');
+  }).catch(() => {
+    prompt('아래 내용을 복사하세요:', text);
+  });
+}
+
+// ── 시작 ──────────────────────────
+init();
+selectZone('shell');
+</script>
+</body>
+</html>

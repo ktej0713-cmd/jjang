@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>네이버페이 카드사 즉시할인 - 상세페이지 배너</title>
+<style>
+/* ============================================
+   네이버페이 카드사 즉시할인 - 상품 상세페이지 상단 배너
+   용도: 고도몰 상세페이지 HTML 편집기에 삽입
+   규격: 860px (네이버 스마트스토어 호환)
+   기간: 2026.3.10 ~ 3.31
+   ============================================ */
+
+/* 리셋 */
+.npay-banner * { margin: 0; padding: 0; box-sizing: border-box; }
+
+.npay-banner {
+  max-width: 860px;
+  margin: 0 auto 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* 상단: 네이버페이 그린 그래디언트 */
+.npay-banner__header {
+  background: linear-gradient(135deg, #03C75A 0%, #02B350 50%, #029E47 100%);
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 장식 원형 */
+.npay-banner__header::before {
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+
+.npay-banner__header::after {
+  content: '';
+  position: absolute;
+  right: 40px;
+  bottom: -20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+}
+
+.npay-banner__logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1;
+}
+
+/* 네이버페이 텍스트 로고 */
+.npay-banner__logo {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 14px;
+  border-radius: 20px;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+}
+
+.npay-banner__title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.5px;
+  z-index: 1;
+}
+
+.npay-banner__title em {
+  font-style: normal;
+  color: #FFF176;
+  font-size: 24px;
+}
+
+.npay-banner__period {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  z-index: 1;
+  white-space: nowrap;
+}
+
+/* 하단: 혜택 상세 */
+.npay-banner__body {
+  background: #FFFFFF;
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #E8E8E8;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+}
+
+.npay-banner__benefit {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.npay-banner__discount-badge {
+  background: linear-gradient(135deg, #FF6B35 0%, #E53935 100%);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.npay-banner__discount-badge small {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.npay-banner__desc {
+  flex: 1;
+}
+
+.npay-banner__desc-main {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 4px;
+  letter-spacing: -0.3px;
+}
+
+.npay-banner__desc-sub {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.npay-banner__desc-sub strong {
+  color: #E53935;
+  font-weight: 600;
+}
+
+.npay-banner__example {
+  background: #F8F9FA;
+  border: 1px solid #E8E8E8;
+  border-radius: 8px;
+  padding: 12px 16px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.npay-banner__example-label {
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.npay-banner__example-price {
+  font-size: 14px;
+  color: #222;
+  font-weight: 600;
+}
+
+.npay-banner__example-price em {
+  font-style: normal;
+  color: #E53935;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.npay-banner__example-save {
+  font-size: 12px;
+  color: #03C75A;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* 반응형 */
+@media (max-width: 640px) {
+  .npay-banner__header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+    gap: 8px;
+  }
+  .npay-banner__title { font-size: 17px; }
+  .npay-banner__title em { font-size: 20px; }
+  .npay-banner__body {
+    flex-direction: column;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+  .npay-banner__benefit { width: 100%; }
+  .npay-banner__example { width: 100%; }
+}
+</style>
+</head>
+<body style="background: #f5f5f5; padding: 40px 20px;">
+
+<!-- =============================================
+     [사용법]
+     아래 HTML을 고도몰 상품 상세페이지 HTML 편집기 최상단에 삽입
+     경로: 상품관리 > 상품등록/수정 > 상세설명 > HTML 모드
+     또는 스킨 파일: /goods/goods_view.html 상품 설명 영역 상단
+     ============================================= -->
+
+<div class="npay-banner">
+  <!-- 상단: 네이버페이 + 혜택 요약 -->
+  <div class="npay-banner__header">
+    <div class="npay-banner__logo-area">
+      <span class="npay-banner__logo">N Pay</span>
+      <span class="npay-banner__title">카드 결제하면 <em>6% 즉시할인!</em></span>
+    </div>
+    <span class="npay-banner__period">3.10(월) ~ 3.31(월)</span>
+  </div>
+
+  <!-- 하단: 조건 + 예시 -->
+  <div class="npay-banner__body">
+    <div class="npay-banner__benefit">
+      <div class="npay-banner__discount-badge">
+        6%<small>즉시할인</small>
+      </div>
+      <div class="npay-banner__desc">
+        <div class="npay-banner__desc-main">6만원 이상 결제 시 자동 적용</div>
+        <div class="npay-banner__desc-sub">
+          네이버페이 카드 간편결제 시 <strong>최대 8,000원 할인</strong><br>
+          · 무이자할부 중복 가능 · 비용 소진 시 조기 종료
+        </div>
+      </div>
+    </div>
+    <div class="npay-banner__example">
+      <div class="npay-banner__example-label">예) 글러브 89,000원 결제 시</div>
+      <div class="npay-banner__example-price"><em>-5,340원</em> 할인</div>
+      <div class="npay-banner__example-save">실결제 83,660원</div>
+    </div>
+  </div>
+</div>
+
+<!-- 미리보기용: 상세페이지 맥락 시뮬레이션 -->
+<div style="max-width:860px; margin:0 auto; background:#fff; padding:40px 28px; border-radius:12px; text-align:center; color:#888; font-family:'Pretendard',sans-serif;">
+  <p style="font-size:14px;">↑ 위 배너가 상품 상세페이지 상단에 표시됩니다</p>
+  <p style="font-size:13px; margin-top:8px; color:#bbb;">아래로 상품 이미지, 상세 설명이 이어집니다...</p>
+</div>
+
+</body>
+</html>

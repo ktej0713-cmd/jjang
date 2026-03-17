@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>배너 03 - 유소년 시즌</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+  .banner {
+    width: 1200px;
+    height: 400px;
+    background: #F9F9F9;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  /* 좌측 세로 액센트 */
+  .left-accent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    background: #2E7D32;
+  }
+
+  .banner-text {
+    position: relative;
+    z-index: 2;
+    padding-left: 80px;
+    max-width: 550px;
+  }
+
+  .target-badge {
+    display: inline-block;
+    background: #2E7D32;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 14px;
+    margin-bottom: 18px;
+  }
+
+  .title {
+    color: #222222;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  .title .green {
+    color: #2E7D32;
+  }
+
+  .subtitle {
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .checklist {
+    list-style: none;
+    margin-bottom: 24px;
+  }
+  .checklist li {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 0;
+  }
+  .checklist li::before {
+    content: '\2713';
+    color: #2E7D32;
+    font-weight: 700;
+    margin-right: 8px;
+  }
+
+  .cta {
+    display: inline-block;
+    background: #1B2A4A;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 28px;
+    text-decoration: none;
+  }
+
+  /* 우측 세트 구성 카드 */
+  .set-card {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    padding: 28px 32px;
+    width: 360px;
+  }
+
+  .set-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1B2A4A;
+    margin-bottom: 4px;
+  }
+  .set-card-sub {
+    font-size: 12px;
+    color: #888888;
+    margin-bottom: 18px;
+  }
+
+  .set-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .set-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #333333;
+    padding: 6px 0;
+    border-bottom: 1px solid #F0F0F0;
+  }
+  .set-item:last-child {
+    border-bottom: none;
+  }
+  .set-item .label {
+    font-weight: 500;
+  }
+  .set-item .price {
+    font-weight: 600;
+    color: #555555;
+  }
+
+  .set-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 2px solid #1B2A4A;
+  }
+  .set-total .label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1B2A4A;
+  }
+  .set-total .price {
+    font-size: 18px;
+    font-weight: 800;
+    color: #1B2A4A;
+  }
+  .set-total .from {
+    font-size: 12px;
+    color: #888888;
+    font-weight: 400;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <div class="left-accent"></div>
+
+  <div class="banner-text">
+    <div class="target-badge">&#xD559;&#xBD80;&#xBAA8; &#xC548;&#xC2EC; &#xAC00;&#xC774;&#xB4DC;</div>
+    <div class="title">
+      &#xC6B0;&#xB9AC; &#xC544;&#xC774; <span class="green">&#xCCAB; &#xC2DC;&#xC98C;</span>,<br>
+      &#xC7A5;&#xBE44;&#xBD80;&#xD130; &#xC81C;&#xB300;&#xB85C;
+    </div>
+    <div class="subtitle">
+      &#xC720;&#xC18C;&#xB144; &#xC57C;&#xAD6C; &#xC7A5;&#xBE44;, &#xBB50;&#xBD80;&#xD130; &#xC0AC;&#xC57C; &#xD560;&#xC9C0; &#xBAA8;&#xB974;&#xACA0;&#xB2E4;&#xBA74;?<br>
+      &#xD3EC;&#xC9C0;&#xC158;&#xBCC4; &#xD544;&#xC218; &#xCCB4;&#xD06C;&#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; &#xC900;&#xBE44;&#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.
+    </div>
+    <ul class="checklist">
+      <li>&#xD559;&#xB144;&#xBCC4; &#xAE00;&#xB7EC;&#xBE0C; &#xC0AC;&#xC774;&#xC988; &#xAC00;&#xC774;&#xB4DC;</li>
+      <li>&#xC131;&#xC7A5;&#xAE30; &#xB9DE;&#xCDA4; &#xB0B4;&#xAD6C;&#xC131; &#xC88B;&#xC740; &#xC7A5;&#xBE44;</li>
+      <li>&#xC548;&#xC804; &#xBCF4;&#xD638;&#xC7A5;&#xBE44; &#xD544;&#xC218; &#xCCB4;&#xD06C;</li>
+    </ul>
+    <a href="#" class="cta">&#xC720;&#xC18C;&#xB144; &#xC6A9;&#xD488; &#xC804;&#xCCB4;&#xBCF4;&#xAE30; &#10140;</a>
+  </div>
+
+  <div class="set-card">
+    <div class="set-card-title">&#xC720;&#xC18C;&#xB144; &#xC785;&#xBB38; &#xD480;&#xC138;&#xD2B8; &#xAD6C;&#xC131;</div>
+    <div class="set-card-sub">&#xAC1C;&#xBCC4; &#xAD6C;&#xB9E4; &#xC2DC; &#xCC38;&#xACE0; &#xAC00;&#xACA9;</div>
+    <div class="set-items">
+      <div class="set-item">
+        <span class="label">&#xAE00;&#xB7EC;&#xBE0C; (&#xC720;&#xC18C;&#xB144;&#xC6A9;)</span>
+        <span class="price">99,000&#xC6D0;~</span>
+      </div>
+      <div class="set-item">
+        <span class="label">&#xBC30;&#xD2B8; (&#xC54C;&#xB8E8;&#xBBF8;&#xB284;)</span>
+        <span class="price">89,000&#xC6D0;~</span>
+      </div>
+      <div class="set-item">
+        <span class="label">&#xD5EC;&#xBA67; + &#xAC80;&#xD22C;&#xC0AC;</span>
+        <span class="price">99,000&#xC6D0;~</span>
+      </div>
+      <div class="set-item">
+        <span class="label">&#xBC30;&#xD305;&#xC7A5;&#xAC11;</span>
+        <span class="price">25,000&#xC6D0;~</span>
+      </div>
+      <div class="set-item">
+        <span class="label">&#xC57C;&#xAD6C;&#xAC00;&#xBC29;</span>
+        <span class="price">39,000&#xC6D0;~</span>
+      </div>
+    </div>
+    <div class="set-total">
+      <span class="label">&#xD480;&#xC138;&#xD2B8; &#xCD1D;&#xC561;</span>
+      <span class="price"><span class="from">&#xC57D; </span>350,000&#xC6D0;~</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

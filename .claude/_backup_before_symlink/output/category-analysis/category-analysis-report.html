@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>짱베이스볼 카테고리 구조 분석 및 개선안 | MD팀 보고서</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root {
+  --primary: #e94560;
+  --dark: #1a1a2e;
+  --gray-900: #16213e;
+  --gray-700: #334155;
+  --gray-500: #64748b;
+  --gray-300: #cbd5e1;
+  --gray-100: #f1f5f9;
+  --white: #ffffff;
+  --green: #10b981;
+  --yellow: #f59e0b;
+  --red: #ef4444;
+  --blue: #3b82f6;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: Pretendard, -apple-system, sans-serif; color: var(--gray-700); line-height: 1.7; background: var(--gray-100); }
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+.report-header {
+  background: linear-gradient(135deg, var(--dark), var(--gray-900));
+  color: var(--white);
+  padding: 48px 40px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+.report-header h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+.report-header .subtitle { color: var(--gray-300); font-size: 15px; }
+.report-header .meta { margin-top: 16px; display: flex; gap: 24px; font-size: 13px; color: var(--gray-500); }
+.report-header .meta span { background: rgba(255,255,255,.1); padding: 4px 12px; border-radius: 6px; }
+
+.section {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+.section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--gray-100);
+}
+.section h2 .num {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-right: 8px;
+}
+.section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin: 20px 0 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 16px 0;
+}
+th {
+  background: var(--gray-100);
+  font-weight: 600;
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--gray-300);
+  white-space: nowrap;
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--gray-100);
+  vertical-align: top;
+}
+tr:hover { background: #fafafa; }
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge-red { background: #fef2f2; color: var(--red); }
+.badge-yellow { background: #fffbeb; color: var(--yellow); }
+.badge-green { background: #ecfdf5; color: var(--green); }
+.badge-blue { background: #eff6ff; color: var(--blue); }
+
+.problem-card {
+  border-left: 4px solid var(--red);
+  background: #fef2f2;
+  padding: 16px 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 12px 0;
+}
+.problem-card strong { color: var(--red); }
+
+.solution-card {
+  border-left: 4px solid var(--green);
+  background: #ecfdf5;
+  padding: 16px 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 12px 0;
+}
+.solution-card strong { color: var(--green); }
+
+.strength-card {
+  border-left: 4px solid var(--blue);
+  background: #eff6ff;
+  padding: 16px 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 12px 0;
+}
+.strength-card strong { color: var(--blue); }
+
+.tree { font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.8; background: var(--gray-100); padding: 20px 24px; border-radius: 8px; margin: 16px 0; overflow-x: auto; }
+.tree .highlight { color: var(--primary); font-weight: 700; }
+.tree .new { color: var(--green); font-weight: 700; }
+.tree .moved { color: var(--blue); font-weight: 700; }
+
+.priority-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
+@media(max-width:768px) { .priority-grid { grid-template-columns: 1fr; } }
+.priority-box {
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--gray-300);
+}
+.priority-box h4 { font-size: 14px; font-weight: 700; margin-bottom: 12px; }
+.priority-box.urgent { border-color: var(--red); background: #fef2f2; }
+.priority-box.urgent h4 { color: var(--red); }
+.priority-box.short { border-color: var(--yellow); background: #fffbeb; }
+.priority-box.short h4 { color: var(--yellow); }
+.priority-box.mid { border-color: var(--blue); background: #eff6ff; }
+.priority-box.mid h4 { color: var(--blue); }
+.priority-box ul { list-style: none; padding: 0; }
+.priority-box li { font-size: 13px; padding: 4px 0; padding-left: 16px; position: relative; }
+.priority-box li:before { content: "→"; position: absolute; left: 0; color: var(--gray-500); }
+
+.summary-box {
+  background: linear-gradient(135deg, var(--dark), var(--gray-900));
+  color: var(--white);
+  padding: 32px;
+  border-radius: 12px;
+  margin: 24px 0;
+}
+.summary-box h3 { color: var(--primary); margin-bottom: 16px; }
+.summary-box p { color: var(--gray-300); font-size: 15px; line-height: 1.8; }
+.summary-box ul { list-style: none; padding: 0; margin: 16px 0; }
+.summary-box li { padding: 6px 0; font-size: 14px; color: var(--gray-300); }
+.summary-box li:before { content: "✓ "; color: var(--green); font-weight: 700; }
+
+.footer { text-align: center; color: var(--gray-500); font-size: 12px; padding: 32px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- 헤더 -->
+<div class="report-header">
+  <h1>짱베이스볼 카테고리 구조 분석 및 개선안</h1>
+  <div class="subtitle">jjang-md-team 통합 보고서 — Lead MD · 구조 MD · 소싱 MD · SEO전문가 · 고객검증 MD</div>
+  <div class="meta">
+    <span>2026-03-01</span>
+    <span>분석 대상: 대분류 12+ / 상품 10,000+</span>
+    <span>경쟁사 5개 몰 벤치마킹</span>
+  </div>
+</div>
+
+<!-- 1. 현황 진단 -->
+<div class="section">
+  <h2><span class="num">1</span> 현재 카테고리 현황</h2>
+
+  <h3>카테고리별 상품 분포</h3>
+  <table>
+    <thead>
+      <tr><th>대분류</th><th>코드</th><th>상품 수</th><th>중분류 수</th><th>비고</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>글러브</strong></td><td>001</td><td>3,624</td><td>10</td><td>최다 상품 — 비대화 우려</td></tr>
+      <tr><td><strong>보호장비</strong></td><td>005</td><td>1,468</td><td>9</td><td>심판장비 포함</td></tr>
+      <tr><td><strong>의류</strong></td><td>007</td><td>1,415</td><td>7</td><td>세분화 부족</td></tr>
+      <tr><td><strong>유소년용품</strong></td><td>021</td><td>1,126</td><td>10</td><td>별도 대분류 — 중복 발생</td></tr>
+      <tr><td><strong>배트</strong></td><td>003</td><td>574</td><td>8</td><td>적정</td></tr>
+      <tr><td>야구화</td><td>002</td><td>-</td><td>6</td><td></td></tr>
+      <tr><td>가방</td><td>004</td><td>-</td><td>4</td><td></td></tr>
+      <tr><td>장갑</td><td>006</td><td>-</td><td>5</td><td></td></tr>
+      <tr><td>포수장비</td><td>044</td><td>-</td><td>8</td><td>보호장비와 분리됨</td></tr>
+      <tr><td>공·트레이닝·케어·고글</td><td>-</td><td>-</td><td>6</td><td>이질적 묶음</td></tr>
+      <tr><td>커스텀 오더</td><td>035</td><td>-</td><td>11</td><td>차별화 강점</td></tr>
+      <tr><td>짱세일</td><td>012</td><td>-</td><td>9</td><td></td></tr>
+      <tr><td>동계용</td><td>039</td><td>-</td><td>5</td><td>시즌 한정</td></tr>
+      <tr><td>단독상품</td><td>045</td><td>-</td><td>1</td><td></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 2. 문제점 진단 -->
+<div class="section">
+  <h2><span class="num">2</span> 핵심 문제점 6가지</h2>
+
+  <div class="problem-card">
+    <strong>문제 1. 유소년 상품 이중 등록</strong>
+    <p>유소년 글러브가 글러브(001) 중분류 "유소년"에도, 유소년용품(021) 중분류 "글러브"에도 존재합니다. 배트, 야구화, 장갑 등도 동일합니다.</p>
+    <p><strong>영향</strong>: 검색 결과에서 같은 상품이 2번 노출되어 SEO 중복 페이지 이슈 발생. 학부모가 어디서 찾아야 할지 혼란. 재고 관리 시 어느 카테고리 기준인지 불명확.</p>
+  </div>
+
+  <div class="problem-card">
+    <strong>문제 2. "공·트레이닝·케어·고글" 잡동사니 카테고리</strong>
+    <p>야구공, 트레이닝용품, 케어/재활, 선글라스가 하나의 대분류에 묶여 있습니다. 성격이 완전히 다른 상품군이 혼합되어 있습니다.</p>
+    <p><strong>영향</strong>: 네이버 쇼핑에서 "야구공"으로 검색하는 고객이 해당 카테고리를 찾기 어렵습니다. 경쟁몰(야중사, 야구매니아)은 야구공을 독립 대분류로 운영합니다.</p>
+  </div>
+
+  <div class="problem-card">
+    <strong>문제 3. 의류 세분화 부족</strong>
+    <p>"상의" 안에 스판언더셔츠, 티셔츠, 트레이닝상의, 방한의류가 모두 섞여 있습니다. 1,415개 상품이 7개 중분류에만 분산되어 있어 탐색이 어렵습니다.</p>
+    <p><strong>영향</strong>: "야구 언더셔츠" 검색 시 직접 랜딩 불가. 트레이닝복과 경기복 구분이 안 되어 사용자가 직접 필터링해야 합니다.</p>
+  </div>
+
+  <div class="problem-card">
+    <strong>문제 4. 심판용품 분산</strong>
+    <p>심판장비가 보호장비(005)에, 심판의류가 의류(007)에, 심판화가 야구화(002)에 흩어져 있습니다.</p>
+    <p><strong>영향</strong>: 심판이 장비를 한 번에 구매하려면 3개 카테고리를 돌아다녀야 합니다. 경쟁몰(야중사, 야구매니아)은 "포수/심판"으로 통합 운영합니다.</p>
+  </div>
+
+  <div class="problem-card">
+    <strong>문제 5. 유소년 카테고리 네비게이션 후순위 배치</strong>
+    <p>유소년용품이 대분류 목록 하단에 위치합니다. 경쟁몰(야용사, 야구매니아)은 유소년을 2번째에 배치합니다.</p>
+    <p><strong>영향</strong>: 유소년 장비를 찾는 학부모의 첫 클릭 도달률 저하. 유소년은 객단가가 낮지만 반복 구매율이 높고 LTV가 높은 고객군입니다.</p>
+  </div>
+
+  <div class="problem-card">
+    <strong>문제 6. 당일출고/빠른배송 카테고리 부재</strong>
+    <p>경쟁몰(야중사 "당일출고", 야용사 "오늘출발")은 배송 기반 카테고리를 최상단에 배치하고 있으나 짱베이스볼에는 없습니다.</p>
+    <p><strong>영향</strong>: 급하게 장비가 필요한 고객(대회 전, 장비 파손)의 전환 기회 손실.</p>
+  </div>
+</div>
+
+<!-- 3. 경쟁사 벤치마킹 -->
+<div class="section">
+  <h2><span class="num">3</span> 경쟁사 벤치마킹 (5개 몰)</h2>
+
+  <h3>대분류 카테고리 비교</h3>
+  <table>
+    <thead>
+      <tr><th>항목</th><th>야중사</th><th>야용사</th><th>야구매니아</th><th>야구일번지</th><th>짱베이스볼</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>대분류 수</td><td>18개</td><td>10개</td><td>14개</td><td>11개</td><td>12+개</td></tr>
+      <tr><td>유소년 위치</td><td>15번째</td><td><strong>2번째</strong></td><td><strong>2번째</strong></td><td>없음</td><td>후순위</td></tr>
+      <tr><td>야구공</td><td><strong>독립</strong></td><td>가방/공 통합</td><td><strong>독립</strong></td><td>없음</td><td>통합</td></tr>
+      <tr><td>트레이닝</td><td><strong>독립</strong></td><td>트레이닝/악세사리</td><td>없음</td><td><strong>독립</strong></td><td>통합</td></tr>
+      <tr><td>포수/심판</td><td>통합</td><td>글러브 내</td><td>통합</td><td>캐쳐 독립</td><td>포수만 독립</td></tr>
+      <tr><td>당일출고</td><td><strong>있음</strong></td><td><strong>있음</strong></td><td>없음</td><td>없음</td><td>없음</td></tr>
+      <tr><td>세일 위치</td><td>1번째</td><td>별도</td><td>1번째</td><td>없음</td><td>후순위</td></tr>
+      <tr><td>단체납품</td><td><strong>있음</strong></td><td>없음</td><td><strong>있음</strong></td><td>없음</td><td>없음</td></tr>
+    </tbody>
+  </table>
+
+  <h3>짱베이스볼 경쟁 우위 포인트</h3>
+  <div class="strength-card">
+    <strong>경쟁몰 대비 차별화 강점 (유지·강화 필요)</strong>
+    <ul style="margin:8px 0 0; padding-left:20px; font-size:14px;">
+      <li><strong>글러브 수리/작업</strong> — 경쟁몰 어디에도 없는 유일한 카테고리</li>
+      <li><strong>중고 글러브</strong> — 사회인야구 진입 장벽을 낮추는 실용 카테고리</li>
+      <li><strong>커스텀 오더 전 품목</strong> — 글러브·배트·야구화·가방·장갑·포수장비까지 가장 넓은 범위</li>
+      <li><strong>동계용 독립 운영</strong> — 대부분 경쟁몰은 의류에 묻어가지만, 시즌 공략 독립 카테고리</li>
+      <li><strong>글러브 중분류 세분화</strong> — 포지션별 10개 중분류로 업계 최상</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 4. 개선안 -->
+<div class="section">
+  <h2><span class="num">4</span> 카테고리 구조 개선안</h2>
+
+  <h3>A. 대분류 재구성안 (Before → After)</h3>
+  <table>
+    <thead>
+      <tr><th>#</th><th>현재 (Before)</th><th>개선안 (After)</th><th>변경 사항</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>글러브</td><td>글러브</td><td>유소년 중분류 제거 → 유소년 카테고리로 이관</td></tr>
+      <tr><td>2</td><td>야구화</td><td><strong>유소년용품</strong></td><td><span class="badge badge-blue">전진 배치</span> 2번째로 이동</td></tr>
+      <tr><td>3</td><td>배트</td><td>배트</td><td>유소년배트 중분류 제거</td></tr>
+      <tr><td>4</td><td>가방</td><td>야구화</td><td>순서 조정</td></tr>
+      <tr><td>5</td><td>보호장비</td><td>장갑</td><td>순서 조정</td></tr>
+      <tr><td>6</td><td>장갑</td><td>보호장비</td><td>심판장비 분리</td></tr>
+      <tr><td>7</td><td>의류</td><td><strong>포수·심판</strong></td><td><span class="badge badge-green">통합</span> 포수장비 + 심판용품</td></tr>
+      <tr><td>8</td><td>공·트레이닝·케어·고글</td><td>의류</td><td>중분류 세분화 (언더셔츠, 트레이닝복 등)</td></tr>
+      <tr><td>9</td><td>유소년용품 (후순위)</td><td>가방</td><td></td></tr>
+      <tr><td>10</td><td>포수장비</td><td><strong>야구공</strong></td><td><span class="badge badge-green">신설</span> 독립 대분류</td></tr>
+      <tr><td>11</td><td>동계용</td><td><strong>트레이닝·케어</strong></td><td><span class="badge badge-green">분리</span> 공·고글에서 분리</td></tr>
+      <tr><td>12</td><td>-</td><td><strong>선글라스·악세사리</strong></td><td><span class="badge badge-green">신설</span></td></tr>
+    </tbody>
+  </table>
+
+  <h3>B. 카테고리 트리 재구성안</h3>
+  <div class="tree">
+<span class="highlight">■ 글러브 (001)</span>
+├── 투수/올라운드
+├── 내야수용
+├── 외야수용
+├── 1루 미트
+├── 포수 미트
+├── 트레이닝용
+├── 글러브 관리용품
+├── 글러브 수리/작업 ← 경쟁우위, 유지
+└── 중고 글러브 ← 경쟁우위, 유지
+    <del>(유소년 중분류 제거 → 유소년용품으로 일원화)</del>
+
+<span class="moved">■ 유소년용품 (021) ← 2번째로 전진 배치</span>
+├── 글러브
+├── 배트
+├── 야구화
+├── 장갑
+├── 보호장비·포수장비
+├── 의류·유니폼
+├── 가방
+├── 야구공
+└── 고글/선글라스
+
+<span class="highlight">■ 배트 (003)</span>
+├── 알루미늄
+├── 나무 배트
+├── 카본 배트
+├── 트레이닝/펑고
+├── 중고/리퍼브
+├── 배트 용품/그립
+└── 수리/가공
+    <del>(유소년배트 중분류 제거 → 유소년용품으로 일원화)</del>
+
+<span class="highlight">■ 야구화 (002)</span>
+├── 징 스파이크
+├── 인조잔디화
+├── 포인트화
+├── 트레이닝/러닝화
+└── 신발용품
+
+■ 장갑 (006)
+├── 배팅장갑
+├── 수비장갑
+├── 주루장갑
+├── 동계장갑
+└── 장갑 관련용품
+
+■ 보호장비 (005)
+├── 타자헬멧
+├── 암가드
+├── 풋가드
+├── 손등가드
+├── 안면보호대
+├── 낭심보호대
+├── 기능성 보호대
+└── 헬멧 부자재
+    <del>(심판장비 제거 → 포수·심판으로 이관)</del>
+
+<span class="new">■ 포수·심판 (통합 신설)</span>
+├── [포수] 장비 세트
+├── [포수] 마스크·헬멧
+├── [포수] 가슴보호대
+├── [포수] 다리보호대
+├── [포수] 니쿠션·기타
+├── [심판] 심판장비 ← 보호장비에서 이관
+├── [심판] 심판의류 ← 의류에서 이관
+└── [심판] 심판화 ← 야구화에서 이관
+
+■ 의류 (007) — 중분류 세분화
+├── <span class="new">언더셔츠/스판</span> ← 기존 "상의"에서 분리
+├── <span class="new">트레이닝 상의</span>
+├── <span class="new">트레이닝 하의</span>
+├── 야구바지
+├── <span class="new">방한의류</span> ← 동계용에서 시즌 종료 후 이관 검토
+├── 벨트
+├── 양말/스타킹
+└── 야구모자
+    <del>(심판의류 제거 → 포수·심판으로 이관)</del>
+
+■ 가방 (004)
+├── 백팩/개인가방
+├── 배트가방
+├── 휠가방/팀장비
+└── 글러브/볼/기타
+
+<span class="new">■ 야구공 (신설)</span>
+├── 경식/시합구
+├── 연습구
+├── 안전구/캐치볼
+├── 소프트볼
+├── 스냅볼/트레이닝볼
+└── 사인볼/기타
+
+<span class="new">■ 트레이닝·케어</span>
+├── 타격 훈련 (티, 네트)
+├── 투구 훈련
+├── 근력/컨디셔닝
+├── 케어/재활 (아이싱, 테이핑)
+└── 측정/기록 장비
+
+<span class="new">■ 선글라스·악세사리</span>
+├── 스포츠 고글/선글라스
+├── 리스트밴드/암슬리브
+├── 아이블랙
+└── 기타
+  </div>
+
+  <h3>C. 상단 네비게이션 바 개선안</h3>
+  <table>
+    <thead>
+      <tr><th>현재</th><th>개선안</th><th>이유</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>브랜드 | 신상품 | 커스텀 오더 | 짱세일 | 랭킹 | 기획전</td>
+        <td><strong>신상품 | 유소년 | 커스텀 오더 | 짱세일 | 랭킹 | 브랜드 | 기획전</strong></td>
+        <td>
+          · 유소년 전진 배치 (학부모 유입)<br>
+          · 신상품을 1순위로 (리피트 방문 유도)<br>
+          · 브랜드를 뒤로 (탐색형 메뉴는 후순위)
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 5. SEO 매핑 -->
+<div class="section">
+  <h2><span class="num">5</span> SEO 키워드 및 네이버 쇼핑 매핑</h2>
+
+  <h3>네이버 쇼핑 카테고리 매핑 확인</h3>
+  <table>
+    <thead>
+      <tr><th>짱베이스볼 카테고리</th><th>네이버 쇼핑 카테고리</th><th>매핑 상태</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>글러브</td><td>스포츠/레저 > 야구 > 야구글러브</td><td><span class="badge badge-green">정상</span></td></tr>
+      <tr><td>배트</td><td>스포츠/레저 > 야구 > 야구배트</td><td><span class="badge badge-green">정상</span></td></tr>
+      <tr><td>야구화</td><td>스포츠/레저 > 야구 > 야구화</td><td><span class="badge badge-green">정상</span></td></tr>
+      <tr><td>장갑 > 배팅장갑</td><td>스포츠/레저 > 야구 > 야구장갑</td><td><span class="badge badge-green">정상</span></td></tr>
+      <tr><td>보호장비</td><td>스포츠/레저 > 야구 > 야구보호장비</td><td><span class="badge badge-green">정상</span></td></tr>
+      <tr><td>공·트레이닝·케어·고글</td><td>스포츠/레저 > 야구 > 야구공</td><td><span class="badge badge-red">불일치</span> 야구공만 매핑되고 나머지 혼합</td></tr>
+      <tr><td>의류 > 상의</td><td>스포츠/레저 > 야구 > 야구의류</td><td><span class="badge badge-yellow">부분 일치</span> 세분류 미반영</td></tr>
+      <tr><td>포수장비</td><td>스포츠/레저 > 야구 > 야구보호장비 > 포수장비</td><td><span class="badge badge-green">정상</span></td></tr>
+      <tr><td>트레이닝용품 (현재 없음)</td><td>스포츠/레저 > 야구 > 야구훈련용품</td><td><span class="badge badge-red">누락</span> 독립 카테고리 없음</td></tr>
+    </tbody>
+  </table>
+
+  <h3>SEO 키워드 매핑 제안</h3>
+  <table>
+    <thead>
+      <tr><th>카테고리</th><th>타겟 키워드</th><th>월간 검색량 (추정)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>글러브</td><td>야구글러브, 야구미트, 투수글러브, 내야수글러브</td><td>높음</td></tr>
+      <tr><td>유소년</td><td>유소년야구글러브, 어린이야구배트, 유소년야구용품</td><td>중간 (성장세)</td></tr>
+      <tr><td>야구공 (신설)</td><td>야구공, 경식야구공, 연습야구공, 소프트볼공</td><td>중간</td></tr>
+      <tr><td>트레이닝 (신설)</td><td>야구훈련용품, 배팅티, 피칭네트, 야구트레이닝</td><td>중간</td></tr>
+      <tr><td>포수·심판 (통합)</td><td>포수장비, 포수미트, 포수헬멧, 야구심판장비</td><td>중간</td></tr>
+      <tr><td>커스텀 오더</td><td>야구글러브오더, 맞춤야구유니폼, 오더글러브</td><td>낮음 (고객단가 높음)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 6. 중복 해결 방안 -->
+<div class="section">
+  <h2><span class="num">6</span> 유소년 상품 중복 해결 방안</h2>
+
+  <div class="solution-card">
+    <strong>방안: "유소년용품" 카테고리를 메인 카테고리로, 각 장비 카테고리에서 유소년 중분류 제거</strong>
+    <p style="margin-top:8px;">
+      <strong>Before</strong>: 유소년 글러브가 글러브(001) + 유소년(021) 양쪽에 등록<br>
+      <strong>After</strong>: 유소년 글러브는 유소년용품(021) > 글러브에만 등록
+    </p>
+    <p style="margin-top:8px;">
+      <strong>실행 방법</strong>:<br>
+      1. 글러브(001) 중분류에서 "유소년" 삭제<br>
+      2. 배트(003) 중분류에서 "유소년배트" 삭제<br>
+      3. 해당 상품들의 카테고리를 유소년용품(021)으로 일원화<br>
+      4. 글러브(001) 페이지에 "유소년 글러브는 여기" 배너로 크로스링크
+    </p>
+  </div>
+
+  <h3>주의사항</h3>
+  <ul style="padding-left: 20px; font-size: 14px;">
+    <li>고도몰 관리자에서 상품별 카테고리 매핑을 변경해야 합니다 (대량작업 필요)</li>
+    <li>기존 URL의 301 리다이렉트 설정이 필요합니다 (SEO 손실 방지)</li>
+    <li>네이버 EP(상품 피드)에서 카테고리 코드 매핑도 함께 변경해야 합니다</li>
+    <li>변경 후 2~3주간 검색엔진 인덱싱 모니터링이 필요합니다</li>
+  </ul>
+</div>
+
+<!-- 7. 우선순위 -->
+<div class="section">
+  <h2><span class="num">7</span> 실행 우선순위</h2>
+
+  <div class="priority-grid">
+    <div class="priority-box urgent">
+      <h4>즉시 실행 (1~2주)</h4>
+      <ul>
+        <li>유소년 네비게이션 2번째로 전진 배치</li>
+        <li>상단 네비바 순서 변경 (신상품 | 유소년 | 커스텀오더 | 짱세일 | ...)</li>
+        <li>포수장비 + 심판용품 통합 "포수·심판" 카테고리 생성</li>
+      </ul>
+    </div>
+    <div class="priority-box short">
+      <h4>단기 (1~2개월)</h4>
+      <ul>
+        <li>야구공 독립 대분류 신설</li>
+        <li>의류 중분류 세분화 (언더셔츠, 트레이닝복 분리)</li>
+        <li>유소년 상품 중복 등록 일원화</li>
+        <li>카테고리 변경 시 301 리다이렉트 설정</li>
+      </ul>
+    </div>
+    <div class="priority-box mid">
+      <h4>중기 (2~3개월)</h4>
+      <ul>
+        <li>트레이닝·케어 독립 대분류 신설</li>
+        <li>선글라스·악세사리 독립 대분류 신설</li>
+        <li>당일출고 태그/필터 카테고리 검토</li>
+        <li>전체 카테고리 SEO 메타태그 최적화</li>
+        <li>네이버 쇼핑 EP 카테고리 매핑 재정비</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 8. 고객검증 -->
+<div class="section">
+  <h2><span class="num">8</span> 고객검증 MD 최종 판정</h2>
+
+  <div class="strength-card">
+    <strong>PASS — 실제 야구인 관점에서 타당한 개선안</strong>
+  </div>
+
+  <h3>검증 포인트</h3>
+  <table>
+    <thead>
+      <tr><th>검증 항목</th><th>판정</th><th>코멘트</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>유소년 전진 배치</td>
+        <td><span class="badge badge-green">PASS</span></td>
+        <td>유소년 야구 인구 증가 추세. 학부모가 첫 방문 시 유소년 카테고리를 바로 찾을 수 있어야 합니다. 야용사·야구매니아가 이미 2번째에 배치한 건 검증된 패턴입니다.</td>
+      </tr>
+      <tr>
+        <td>포수·심판 통합</td>
+        <td><span class="badge badge-green">PASS</span></td>
+        <td>실제로 심판이 장비를 구매할 때 "심판" 검색 한 번으로 모든 장비를 찾고 싶어합니다. 현재처럼 3곳에 흩어져 있으면 이탈합니다.</td>
+      </tr>
+      <tr>
+        <td>야구공 독립</td>
+        <td><span class="badge badge-green">PASS</span></td>
+        <td>사회인 야구팀 운영진이 "야구공 1다스" 검색할 때 바로 찾을 수 있어야 합니다. 현재 "공·트레이닝·케어·고글"은 너무 길고 찾기 어렵습니다.</td>
+      </tr>
+      <tr>
+        <td>의류 세분화</td>
+        <td><span class="badge badge-green">PASS</span></td>
+        <td>"스판 언더셔츠"와 "트레이닝 긴팔"은 용도가 완전히 다릅니다. 야구인이라면 구분을 기대합니다. 다만 중분류 수가 너무 많아지면 역효과이므로 5~7개가 적정입니다.</td>
+      </tr>
+      <tr>
+        <td>글러브 수리/중고 유지</td>
+        <td><span class="badge badge-green">PASS</span></td>
+        <td>글러브 수리는 짱베이스볼의 핵심 정체성입니다. "야구를 아는 몰"이라는 인식을 만드는 카테고리이므로 절대 제거하면 안 됩니다.</td>
+      </tr>
+      <tr>
+        <td>당일출고 카테고리</td>
+        <td><span class="badge badge-yellow">보류</span></td>
+        <td>실제 운영 가능 여부 확인이 필요합니다. 당일출고를 표방하면서 3~4일 걸리면 신뢰 손실이 큽니다. 물류 역량이 뒷받침된 후 도입을 권장합니다.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 최종 요약 -->
+<div class="summary-box">
+  <h3>Lead MD 최종 판단</h3>
+  <p>현재 짱베이스볼의 카테고리 구조는 "글러브 수리", "중고 글러브", "커스텀 오더 전 품목"이라는 강력한 차별 포인트를 갖고 있습니다. 이건 경쟁몰 어디에도 없는 강점이므로 반드시 유지해야 합니다.</p>
+  <p>반면, 유소년 배치 순서, 야구공·트레이닝 통합 문제, 의류 세분화 부족, 심판용품 분산은 개선이 필요합니다.</p>
+  <ul>
+    <li>유소년 카테고리를 네비게이션 2번째로 전진 배치</li>
+    <li>포수장비 + 심판용품을 "포수·심판"으로 통합</li>
+    <li>"공·트레이닝·케어·고글"을 해체하고 야구공 독립</li>
+    <li>의류 중분류 세분화 (언더셔츠, 트레이닝복 분리)</li>
+    <li>유소년 상품 이중 등록 일원화</li>
+    <li>글러브 수리·중고·커스텀 오더는 핵심 정체성으로 강화</li>
+  </ul>
+</div>
+
+<div class="footer">
+  짱베이스볼 MD팀 | jjang-md-team | 2026-03-01<br>
+  야구를 아는 사람이 운영하는 쇼핑몰
+</div>
+
+</div>
+</body>
+</html>

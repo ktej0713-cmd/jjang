@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "lastComputedDate": "2026-03-01",
+  "dailyActivity": [
+    {
+      "date": "2026-02-08",
+      "messageCount": 190,
+      "sessionCount": 3,
+      "toolCallCount": 42
+    },
+    {
+      "date": "2026-02-26",
+      "messageCount": 14,
+      "sessionCount": 7,
+      "toolCallCount": 0
+    },
+    {
+      "date": "2026-02-28",
+      "messageCount": 3400,
+      "sessionCount": 12,
+      "toolCallCount": 1166
+    },
+    {
+      "date": "2026-03-01",
+      "messageCount": 516,
+      "sessionCount": 4,
+      "toolCallCount": 185
+    }
+  ],
+  "dailyModelTokens": [
+    {
+      "date": "2026-02-08",
+      "tokensByModel": {
+        "claude-opus-4-6": 32858
+      }
+    },
+    {
+      "date": "2026-02-26",
+      "tokensByModel": {
+        "claude-haiku-4-5-20251001": 28
+      }
+    },
+    {
+      "date": "2026-02-28",
+      "tokensByModel": {
+        "claude-opus-4-6": 225442
+      }
+    },
+    {
+      "date": "2026-03-01",
+      "tokensByModel": {
+        "claude-opus-4-6": 68597
+      }
+    }
+  ],
+  "modelUsage": {
+    "claude-opus-4-6": {
+      "inputTokens": 18943,
+      "outputTokens": 307954,
+      "cacheReadInputTokens": 224383656,
+      "cacheCreationInputTokens": 7299275,
+      "webSearchRequests": 0,
+      "costUSD": 0,
+      "contextWindow": 0,
+      "maxOutputTokens": 0
+    },
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 21,
+      "outputTokens": 7,
+      "cacheReadInputTokens": 108328,
+      "cacheCreationInputTokens": 2118,
+      "webSearchRequests": 0,
+      "costUSD": 0,
+      "contextWindow": 0,
+      "maxOutputTokens": 0
+    }
+  },
+  "totalSessions": 26,
+  "totalMessages": 4120,
+  "longestSession": {
+    "sessionId": "86156c0f-feba-4570-80fe-9e52bcd7037d",
+    "duration": 35204132,
+    "messageCount": 256,
+    "timestamp": "2026-02-28T15:12:25.391Z"
+  },
+  "firstSessionDate": "2026-02-08T17:06:02.631Z",
+  "hourCounts": {
+    "0": 8,
+    "1": 1,
+    "2": 4,
+    "10": 1,
+    "14": 1,
+    "21": 4,
+    "22": 4,
+    "23": 3
+  }
+}

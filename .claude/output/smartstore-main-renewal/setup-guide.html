@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>스마트스토어 메인 리뉴얼 설정 가이드 - 짱베이스볼</title>
+<style>
+  :root {
+    --primary: #1B2A4A;
+    --primary-light: #2C3E6B;
+    --accent: #D4A843;
+    --accent-light: #FDF8EC;
+    --success: #2E7D32;
+    --warning: #E65100;
+    --danger: #C62828;
+    --gray-900: #222222;
+    --gray-700: #555555;
+    --gray-500: #888888;
+    --gray-300: #CCCCCC;
+    --gray-100: #F5F5F5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #F9F9F9;
+    color: var(--gray-900);
+    line-height: 1.7;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  /* 헤더 */
+  .header {
+    background: var(--primary);
+    color: #FFFFFF;
+    padding: 40px 0;
+    margin-bottom: 40px;
+  }
+  .header .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .header-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 12px;
+    margin-bottom: 12px;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  .header p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* 섹션 */
+  .section {
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    margin-bottom: 24px;
+    padding: 32px;
+  }
+
+  .section-num {
+    display: inline-block;
+    background: var(--primary);
+    color: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+
+  .section h2 {
+    display: inline;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    vertical-align: middle;
+  }
+
+  .section-desc {
+    color: var(--gray-700);
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    padding-left: 44px;
+  }
+
+  .priority-high {
+    display: inline-block;
+    background: var(--danger);
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .priority-mid {
+    display: inline-block;
+    background: var(--warning);
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  /* 경로 표시 */
+  .path {
+    background: var(--gray-100);
+    border-left: 3px solid var(--accent);
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 16px;
+    font-family: 'Consolas', monospace;
+  }
+
+  /* 스텝 */
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+  }
+  .steps li {
+    counter-increment: step;
+    padding: 12px 0 12px 40px;
+    position: relative;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 14px;
+  }
+  .steps li:last-child {
+    border-bottom: none;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 26px;
+    height: 26px;
+    background: var(--accent-light);
+    color: var(--primary);
+    text-align: center;
+    line-height: 26px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  /* 테이블 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 13px;
+  }
+  th {
+    background: var(--primary);
+    color: #FFFFFF;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--gray-100);
+  }
+  tr:nth-child(even) td {
+    background: #FAFAFA;
+  }
+
+  /* 주의 박스 */
+  .alert {
+    border-left: 4px solid var(--danger);
+    background: #FFF5F5;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 13px;
+  }
+  .alert strong {
+    color: var(--danger);
+  }
+
+  .tip {
+    border-left: 4px solid var(--success);
+    background: #F0FFF0;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 13px;
+  }
+  .tip strong {
+    color: var(--success);
+  }
+
+  .insight {
+    border-left: 4px solid var(--accent);
+    background: var(--accent-light);
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 13px;
+  }
+  .insight strong {
+    color: var(--primary);
+  }
+
+  /* 체크리스트 */
+  .checklist {
+    list-style: none;
+    padding: 0;
+  }
+  .checklist li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+    font-size: 14px;
+  }
+  .checklist li::before {
+    content: '\25A1';
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+    color: var(--gray-500);
+  }
+
+  /* 요약 카드 */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .summary-card {
+    background: var(--gray-100);
+    padding: 20px;
+    text-align: center;
+  }
+  .summary-card .num {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 4px;
+  }
+  .summary-card .label {
+    font-size: 12px;
+    color: var(--gray-700);
+  }
+
+  .footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--gray-500);
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <div class="header-badge">SMART STORE RENEWAL</div>
+    <h1>짱베이스볼 스마트스토어 메인 리뉴얼 가이드</h1>
+    <p>2026.03.18 기준 &#183; 매출 극대화를 위한 단계별 설정 안내</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 현재 문제 요약 -->
+  <div class="section">
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="num" style="color: #C62828;">3/3</div>
+        <div class="label">추천상품 중 품절 수</div>
+      </div>
+      <div class="summary-card">
+        <div class="num">1개</div>
+        <div class="label">배너 수 (최소 3개 필요)</div>
+      </div>
+      <div class="summary-card">
+        <div class="num">0개</div>
+        <div class="label">카테고리 쇼케이스</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 1: 추천상품 교체 -->
+  <div class="section">
+    <span class="section-num">1</span>
+    <h2>추천상품 교체</h2>
+    <span class="priority-high">긴급</span>
+
+    <div class="section-desc">
+      현재 추천상품 3개가 전부 품절입니다. 메인에서 가장 눈에 띄는 영역에 못 사는 상품이 있으면 이탈률이 급증합니다.
+    </div>
+
+    <div class="path">스마트스토어 센터 &#10140; 스토어 전시관리 &#10140; 스토어홈 &#10140; 추천상품</div>
+
+    <ol class="steps">
+      <li>스마트스토어 센터(sell.smartstore.naver.com) 로그인</li>
+      <li>좌측 메뉴에서 [스토어 전시관리] &#10140; [스토어홈] 클릭</li>
+      <li>[추천상품] 탭에서 현재 등록된 품절 상품 3개 모두 삭제</li>
+      <li>아래 표의 상품을 순서대로 등록 (상품명으로 검색)</li>
+      <li>[저장] 클릭 후 스토어 미리보기에서 확인</li>
+    </ol>
+
+    <table>
+      <tr>
+        <th>순서</th>
+        <th>상품명</th>
+        <th>가격</th>
+        <th>선정 이유</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>골드 2026 G-SHIELD 프로 타자헬멧 양귀 검투사</td>
+        <td>99,000원</td>
+        <td>보호장비 주간 + 2026 신모델</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>도쿠마 토코마 프로 메쉬 배팅장갑 퍼플</td>
+        <td>45,000원</td>
+        <td>자체 추천 + AS 강조 문구</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>NIKE 나이키 포스 줌 트라웃 7 프로 야구화</td>
+        <td>79,000원</td>
+        <td>리뷰14/평점4.71 + 시즌 수요</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>BBK NEW 야구 수비장갑 블랙/옐로우</td>
+        <td>17,000원</td>
+        <td>리뷰43/평점4.93 (사회적 증거)</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>SSK 사사키 Superpro 외야 글러브 13인치</td>
+        <td>155,000원</td>
+        <td>글러브 고단가 + 평점5.0</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>짱베이스볼 프로원단 야구바지 슬림핏 JPLS2</td>
+        <td>25,000원</td>
+        <td>PB상품 마진 + 리뷰6</td>
+      </tr>
+    </table>
+
+    <div class="alert">
+      <strong>주의:</strong> 추천상품에는 반드시 재고가 있는 상품만 등록하세요. 품절 상품이 메인에 노출되면 스토어 신뢰도가 떨어집니다. 매주 1회 이상 품절 여부를 점검하세요.
+    </div>
+
+    <div class="insight">
+      <strong>매출 포인트:</strong> 추천상품 6개의 가격대를 17,000원~155,000원으로 분산 배치했습니다. 저가(수비장갑) &#10140; 중가(배팅장갑, 야구화) &#10140; 고가(헬멧, 글러브) 동선으로 다양한 예산의 고객을 잡습니다.
+    </div>
+  </div>
+
+  <!-- STEP 2: 배너 추가 -->
+  <div class="section">
+    <span class="section-num">2</span>
+    <h2>배너 슬라이드 추가</h2>
+    <span class="priority-high">긴급</span>
+
+    <div class="section-desc">
+      현재 배너가 1개뿐입니다. 시즌별 프로모션, 타겟별 배너를 3~5장 세팅해야 합니다.
+    </div>
+
+    <div class="path">스마트스토어 센터 &#10140; 스토어 전시관리 &#10140; 스토어홈 &#10140; 배너 관리</div>
+
+    <table>
+      <tr>
+        <th>순서</th>
+        <th>배너 제목</th>
+        <th>연결 링크</th>
+        <th>타겟</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2026 시즌 개막 - 장비 세팅 완료하셨습니까?</td>
+        <td>베스트 카테고리 또는 기획전 페이지</td>
+        <td>전체 (사회인)</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>보호장비 - 안전하게 시즌 시작 (3월 3주차)</td>
+        <td>보호장비 카테고리</td>
+        <td>타자/주자</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>유소년 첫 시즌 - 장비부터 제대로</td>
+        <td>유소년 용품 카테고리</td>
+        <td>학부모</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>글러브 3,575개 - 포지션별 추천 (유지 가능)</td>
+        <td>글러브 카테고리</td>
+        <td>글러브 교체 수요</td>
+      </tr>
+    </table>
+
+    <ol class="steps">
+      <li>[배너 관리]에서 현재 배너 유지하되, 순서를 4번으로 이동</li>
+      <li>제공된 배너 HTML 파일(banner-01~03)을 브라우저에서 열고 스크린샷으로 이미지 저장 (1200x400px)</li>
+      <li>각 배너 이미지를 순서대로 업로드</li>
+      <li>각 배너에 해당 카테고리/검색 링크 연결</li>
+      <li>슬라이드 자동 전환 시간: 4~5초로 설정</li>
+    </ol>
+
+    <div class="tip">
+      <strong>팁:</strong> 배너 이미지를 직접 만들기 어려우면, 스마트스토어 센터의 [배너 만들기] 도구를 활용하세요. 텍스트 + 배경색만으로도 효과적인 배너를 만들 수 있습니다.
+    </div>
+  </div>
+
+  <!-- STEP 3: 쇼케이스 추가 -->
+  <div class="section">
+    <span class="section-num">3</span>
+    <h2>카테고리 쇼케이스 추가</h2>
+    <span class="priority-mid">중요</span>
+
+    <div class="section-desc">
+      현재 카테고리별 큐레이션이 전혀 없습니다. 쇼케이스를 추가하면 고객이 원하는 상품을 빠르게 찾을 수 있어 전환율이 올라갑니다.
+    </div>
+
+    <div class="path">스마트스토어 센터 &#10140; 스토어 전시관리 &#10140; 스토어홈 &#10140; 쇼케이스</div>
+
+    <ol class="steps">
+      <li>[쇼케이스 추가] 버튼 클릭</li>
+      <li>쇼케이스 유형: [카테고리 지정]</li>
+      <li>아래 표 순서대로 4개 쇼케이스 생성</li>
+      <li>각 쇼케이스에 대표 상품 4~8개를 수동 선택 (재고 있는 것만!)</li>
+      <li>순서: 시즌 세팅 &#10140; 글러브 &#10140; 의류 &#10140; 유소년 순으로 배치</li>
+    </ol>
+
+    <table>
+      <tr>
+        <th>순서</th>
+        <th>쇼케이스명</th>
+        <th>연결 카테고리</th>
+        <th>대표 상품 (예시)</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>시즌 세팅 필수템</td>
+        <td>보호장비 또는 베스트</td>
+        <td>헬멧, 검투사보호대, 암가드, 풋가드, 배팅장갑, 수비장갑</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>글러브 BEST</td>
+        <td>글러브</td>
+        <td>SSK 외야, 미즈노 프로, 롤링스 등 인기 모델 (재고 있는 것)</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>야구 의류 &#183; 바지</td>
+        <td>의류</td>
+        <td>짱베이스볼 야구바지, 바람막이, 국가대표 티셔츠, 암슬리브</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>유소년 전용 장비</td>
+        <td>유소년 용품</td>
+        <td>유소년 글러브, 유소년 배트, 보호장비 세트</td>
+      </tr>
+    </table>
+
+    <div class="insight">
+      <strong>매출 포인트:</strong> 쇼케이스 순서가 곧 고객 동선입니다. "시즌 세팅 필수템"을 1번에 놓으면 "이것도 사야 하네?" 심리로 복수 구매(객단가 상승)를 유도합니다.
+    </div>
+  </div>
+
+  <!-- STEP 4: 카테고리 순서 변경 -->
+  <div class="section">
+    <span class="section-num">4</span>
+    <h2>카테고리 메뉴 순서 변경</h2>
+    <span class="priority-mid">중요</span>
+
+    <div class="section-desc">
+      고단가 카테고리(글러브, 배트, 야구화)를 앞으로, 시즌 끝난 동계의류는 뒤로 이동합니다.
+    </div>
+
+    <div class="path">스마트스토어 센터 &#10140; 상품관리 &#10140; 카테고리 관리 &#10140; 카테고리 순서 변경</div>
+
+    <table>
+      <tr>
+        <th>순서</th>
+        <th>카테고리명</th>
+        <th>이유</th>
+      </tr>
+      <tr><td>1</td><td>베스트</td><td>사회적 증거 (다른 사람이 많이 산 것)</td></tr>
+      <tr><td>2</td><td>신제품&재입고</td><td>새로운 것 보고 싶은 심리</td></tr>
+      <tr><td>3</td><td>글러브</td><td>최고 객단가 카테고리</td></tr>
+      <tr><td>4</td><td>배트</td><td>두 번째 고단가</td></tr>
+      <tr><td>5</td><td>야구화</td><td>시즌 필수 + 브랜드 파워</td></tr>
+      <tr><td>6</td><td>의류</td><td>야구바지/바람막이 반복 구매</td></tr>
+      <tr><td>7</td><td>장갑</td><td>배팅/수비/주루 장갑</td></tr>
+      <tr><td>8</td><td>보호장비</td><td>안전 필수품</td></tr>
+      <tr><td>9</td><td>유소년 용품</td><td>학부모 타겟</td></tr>
+      <tr><td>10</td><td>가방</td><td>장비 구매 후 추가 구매</td></tr>
+      <tr><td>11</td><td>야구공</td><td>소모품 반복 구매</td></tr>
+      <tr><td>12</td><td>포수장비&심판</td><td>특수 포지션</td></tr>
+      <tr><td>13</td><td>기타&트레이닝</td><td>-</td></tr>
+      <tr><td>14</td><td>선글라스&고글</td><td>-</td></tr>
+      <tr><td>15</td><td>마킹작업</td><td>부가 서비스</td></tr>
+      <tr><td>16</td><td>런닝&스니커즈</td><td>-</td></tr>
+      <tr><td>17</td><td>동계 의류&용품</td><td>시즌 끝 &#10140; 최하단 또는 숨김</td></tr>
+    </table>
+  </div>
+
+  <!-- STEP 5: 전체상품 정렬 -->
+  <div class="section">
+    <span class="section-num">5</span>
+    <h2>전체상품 기본 정렬 변경</h2>
+
+    <div class="section-desc">
+      전체상품의 기본 정렬을 "인기도순"에서 "누적 판매순"으로 변경합니다.
+    </div>
+
+    <div class="path">스마트스토어 센터 &#10140; 스토어 전시관리 &#10140; 스토어홈 &#10140; 전체상품 &#10140; 기본 정렬</div>
+
+    <div class="insight">
+      <strong>매출 포인트:</strong> "누적 판매순"은 리뷰가 많고 검증된 상품이 먼저 노출됩니다. 신규 방문자에게 "이 가게는 잘 팔리는 가게"라는 인식을 심어줍니다. 인기도순은 네이버 알고리즘 기반이라 통제가 어렵지만, 판매순은 실제 매출 실적 기반입니다.
+    </div>
+  </div>
+
+  <!-- STEP 6: 신상품 정리 -->
+  <div class="section">
+    <span class="section-num">6</span>
+    <h2>신상품 섹션 정리</h2>
+
+    <div class="section-desc">
+      신상품에 계절 미스매치 상품이 섞여있지 않은지 확인합니다.
+    </div>
+
+    <div class="path">스마트스토어 센터 &#10140; 스토어 전시관리 &#10140; 스토어홈 &#10140; 신상품</div>
+
+    <ol class="steps">
+      <li>신상품은 보통 최근 등록순으로 자동 노출됩니다</li>
+      <li>동계 상품(기모 언더셔츠 등)이 신상품에 포함되어 있다면 해당 상품의 등록일을 확인</li>
+      <li>수동 선택 가능한 경우: 시즌에 맞는 상품(야구화, 배팅장갑, 보호장비 등)을 우선 배치</li>
+      <li>미즈노 HAGA 글러브(90만원)는 신상품에 유지 가능 - 프리미엄 이미지 형성</li>
+    </ol>
+
+    <div class="tip">
+      <strong>팁:</strong> 신상품에 노출할 상품이 부족하면 기존 인기 상품을 "재등록"해서 신상품 섹션에 올리는 방법도 있습니다. 단, 기존 리뷰가 사라지므로 리뷰가 적은 상품만 대상으로 합니다.
+    </div>
+  </div>
+
+  <!-- 주간 관리 체크리스트 -->
+  <div class="section">
+    <span class="section-num">&#10003;</span>
+    <h2>주간 메인 관리 체크리스트</h2>
+
+    <div class="section-desc">
+      매주 월요일에 아래 항목을 점검하면 메인이 항상 최적 상태를 유지합니다.
+    </div>
+
+    <ul class="checklist">
+      <li>추천상품 6개 중 품절된 것이 있는지 확인 &#10140; 있으면 즉시 교체</li>
+      <li>쇼케이스 상품 중 품절된 것 확인 &#10140; 교체</li>
+      <li>배너 내용이 현재 주차 프로모션과 맞는지 확인</li>
+      <li>베스트 상품 탭 확인 (실시간/일간/주간/월간)</li>
+      <li>동계 상품 등 시즌 미스매치 상품이 상단에 노출되는지 확인</li>
+      <li>신규 등록한 상품이 신상품 섹션에 잘 노출되는지 확인</li>
+      <li>스토어홈 미리보기로 모바일 화면 최종 확인</li>
+    </ul>
+
+    <div class="alert">
+      <strong>3월 주차별 배너 교체 일정:</strong><br>
+      &#183; 3월 3주차(현재): 보호장비 주간 배너 노출<br>
+      &#183; 3월 4주차(3/22~): 유소년 시즌 오픈 배너로 교체 (배너 03)<br>
+      &#183; 4월 1주차: 개막 후 소모품(야구공, 장갑) 배너로 교체
+    </div>
+  </div>
+
+  <!-- 예상 효과 -->
+  <div class="section" style="border: 2px solid var(--accent);">
+    <span class="section-num" style="background: var(--accent); color: var(--primary);">&#9733;</span>
+    <h2>예상 효과</h2>
+
+    <div class="section-desc">
+      위 6단계를 모두 적용했을 때 기대할 수 있는 변화입니다.
+    </div>
+
+    <table>
+      <tr>
+        <th>지표</th>
+        <th>현재 (추정)</th>
+        <th>개선 후 (예상)</th>
+        <th>근거</th>
+      </tr>
+      <tr>
+        <td>이탈률</td>
+        <td>높음 (품절 노출)</td>
+        <td>감소</td>
+        <td>품절 제거 + 시즌 맞춤 배치</td>
+      </tr>
+      <tr>
+        <td>페이지당 상품 조회수</td>
+        <td>낮음 (동선 없음)</td>
+        <td>증가</td>
+        <td>쇼케이스 추가로 카테고리별 탐색 유도</td>
+      </tr>
+      <tr>
+        <td>객단가</td>
+        <td>낮음 (소모품 위주)</td>
+        <td>상승</td>
+        <td>고단가 상품(헬멧, 글러브, 야구화) 전면 노출</td>
+      </tr>
+      <tr>
+        <td>복수 구매율</td>
+        <td>낮음</td>
+        <td>상승</td>
+        <td>"시즌 세팅" 프레임으로 복수 구매 유도</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="footer">
+    짱베이스볼 스마트스토어 메인 리뉴얼 가이드 &#183; 2026.03.18 &#183; Lead MD
+  </div>
+
+</div>
+
+</body>
+</html>

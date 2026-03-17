@@ -1,0 +1,71 @@
+2026-03-12 02:58:36,646 [INFO] ====================================================
+2026-03-12 02:58:36,646 [INFO] 짱베이스볼 GEO/AEO 자동 업데이터
+2026-03-12 02:58:36,647 [INFO] 실행: 2026-03-12 02:58:36
+2026-03-12 02:58:36,647 [INFO] ====================================================
+2026-03-12 02:58:36,647 [ERROR] ANTHROPIC_API_KEY 환경변수가 설정되지 않았습니다.
+2026-03-12 03:11:56,792 [INFO] ====================================================
+2026-03-12 03:11:56,793 [INFO] 짱베이스볼 GEO/AEO 자동 업데이터
+2026-03-12 03:11:56,793 [INFO] 실행: 2026-03-12 03:11:56
+2026-03-12 03:11:56,793 [INFO] ====================================================
+2026-03-12 03:11:56,794 [INFO] 대상 파일 3개 발견
+2026-03-12 03:11:56,794 [INFO] 
+[상세_언더아머_UA-UPF-슬리브_20260312.html]
+2026-03-12 03:11:56,795 [INFO]   상품명: 언더아머 UA UPF 유니섹스 슬리브
+2026-03-12 03:11:56,795 [INFO]   FAQ 트렌드 검색: 언더아머 UA UPF 유니섹스 슬리브
+2026-03-12 03:11:57,249 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-03-12 03:11:57,249 [ERROR]   Claude API 오류: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CYwk8kLxLYLomihhLzhs2'}
+2026-03-12 03:11:57,250 [WARNING]   FAQ 검색 결과 없음 — 날짜만 업데이트
+2026-03-12 03:11:57,252 [INFO]   파일 저장 완료: 상세_언더아머_UA-UPF-슬리브_20260312.html
+2026-03-12 03:11:57,253 [INFO] 
+[상세_윌슨_A2000_DH12_20260306.html]
+2026-03-12 03:11:57,254 [INFO]   상품명: 윌슨 A2000 DH12 12인치 투수 글러브 (2026 스프링)
+2026-03-12 03:11:57,254 [INFO]   FAQ 트렌드 검색: 윌슨 A2000 DH12 12인치 투수 글러브 (2026 스프링)
+2026-03-12 03:11:57,494 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-03-12 03:11:57,495 [ERROR]   Claude API 오류: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CYwk8mPDQ1QQVXs6eQCao'}
+2026-03-12 03:11:57,495 [WARNING]   FAQ 검색 결과 없음 — 날짜만 업데이트
+2026-03-12 03:11:57,496 [INFO]   파일 저장 완료: 상세_윌슨_A2000_DH12_20260306.html
+2026-03-12 03:11:57,503 [INFO] 
+[상세_윌슨_A2000_OT7SS_20260305.html]
+2026-03-12 03:11:57,504 [INFO]   상품명: 윌슨 A2000 OT7SS 12.75인치 외야수 글러브 (2026 스프링)
+2026-03-12 03:11:57,504 [INFO]   FAQ 트렌드 검색: 윌슨 A2000 OT7SS 12.75인치 외야수 글러브 (2026 스프링)
+2026-03-12 03:11:57,798 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 401 Unauthorized"
+2026-03-12 03:11:57,798 [ERROR]   Claude API 오류: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CYwk8naeL9c1ZXbJ36RLP'}
+2026-03-12 03:11:57,798 [WARNING]   FAQ 검색 결과 없음 — 날짜만 업데이트
+2026-03-12 03:11:57,800 [INFO]   파일 저장 완료: 상세_윌슨_A2000_OT7SS_20260305.html
+2026-03-12 03:11:57,806 [INFO] 
+────────────────────────────────────────────────────
+2026-03-12 03:11:57,806 [INFO] 완료 — 성공: 0 | 스킵: 3 | 실패: 0
+2026-03-12 03:11:57,806 [INFO] 로그 위치: C:\Users\NO\.claude\output\geo-aeo-logs
+2026-03-12 03:16:03,412 [INFO] ====================================================
+2026-03-12 03:16:03,412 [INFO] 짱베이스볼 GEO/AEO 자동 업데이터
+2026-03-12 03:16:03,412 [INFO] 실행: 2026-03-12 03:16:03
+2026-03-12 03:16:03,412 [INFO] ====================================================
+2026-03-12 03:16:03,413 [INFO] 대상 파일 3개 발견
+2026-03-12 03:16:03,413 [INFO] 
+[상세_언더아머_UA-UPF-슬리브_20260312.html]
+2026-03-12 03:16:03,414 [INFO]   상품명: 언더아머 UA UPF 유니섹스 슬리브
+2026-03-12 03:16:03,414 [INFO]   FAQ 트렌드 검색: 언더아머 UA UPF 유니섹스 슬리브
+2026-03-12 03:16:03,905 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-03-12 03:16:03,906 [ERROR]   Claude API 오류: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYwkSveq4poCyz8omkLsZ'}
+2026-03-12 03:16:03,906 [WARNING]   FAQ 검색 결과 없음 — 날짜만 업데이트
+2026-03-12 03:16:03,908 [INFO]   파일 저장 완료: 상세_언더아머_UA-UPF-슬리브_20260312.html
+2026-03-12 03:16:03,914 [INFO] 
+[상세_윌슨_A2000_DH12_20260306.html]
+2026-03-12 03:16:03,915 [INFO]   상품명: 윌슨 A2000 DH12 12인치 투수 글러브 (2026 스프링)
+2026-03-12 03:16:03,915 [INFO]   FAQ 트렌드 검색: 윌슨 A2000 DH12 12인치 투수 글러브 (2026 스프링)
+2026-03-12 03:16:04,459 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-03-12 03:16:04,459 [ERROR]   Claude API 오류: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYwkSxqYAyZZQxZ6m58SH'}
+2026-03-12 03:16:04,459 [WARNING]   FAQ 검색 결과 없음 — 날짜만 업데이트
+2026-03-12 03:16:04,461 [INFO]   파일 저장 완료: 상세_윌슨_A2000_DH12_20260306.html
+2026-03-12 03:16:04,467 [INFO] 
+[상세_윌슨_A2000_OT7SS_20260305.html]
+2026-03-12 03:16:04,468 [INFO]   상품명: 윌슨 A2000 OT7SS 12.75인치 외야수 글러브 (2026 스프링)
+2026-03-12 03:16:04,468 [INFO]   FAQ 트렌드 검색: 윌슨 A2000 OT7SS 12.75인치 외야수 글러브 (2026 스프링)
+2026-03-12 03:16:04,693 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2026-03-12 03:16:04,693 [ERROR]   Claude API 오류: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYwkSzKqRjRhTnjvuUPg3'}
+2026-03-12 03:16:04,693 [WARNING]   FAQ 검색 결과 없음 — 날짜만 업데이트
+2026-03-12 03:16:04,695 [INFO]   파일 저장 완료: 상세_윌슨_A2000_OT7SS_20260305.html
+2026-03-12 03:16:04,702 [INFO] 
+────────────────────────────────────────────────────
+2026-03-12 03:16:04,702 [INFO] 완료 — 성공: 0 | 스킵: 3 | 실패: 0
+2026-03-12 03:16:04,702 [INFO] 로그 위치: C:\Users\NO\.claude\output\geo-aeo-logs

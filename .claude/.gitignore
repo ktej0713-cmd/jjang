@@ -1,0 +1,34 @@
+# 인증 정보 - 절대 공유 금지
+.credentials.json
+mcp-needs-auth-cache.json
+
+# 세션 기록 - 기기별 독립
+history.jsonl
+session-log.txt
+
+# 플러그인 (외부 저장소 포함, 공유 불필요)
+plugins/
+
+# 프로젝트 세션 로그 전체 제외 (MEMORY.md는 별도 추적)
+projects/
+
+# 임시 할일 (세션별 독립)
+todos/
+
+# 임시/캐시 파일
+cache/
+debug/
+telemetry/
+shell-snapshots/
+session-env/
+backups/
+downloads/
+file-history/
+ide/
+
+# 잠금 파일
+*.lock
+tasks/**/*.lock
+
+# 플랜 파일 (선택: 공유하려면 이 줄 삭제)
+# plans/

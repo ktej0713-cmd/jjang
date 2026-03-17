@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>품질체크 리포트 - 짱베이스볼</title>
+<style>
+  :root {
+    --primary: #1B2A4A;
+    --primary-light: #2C3E6B;
+    --accent: #D4A843;
+    --success: #2E7D32;
+    --warning: #E65100;
+    --danger: #C62828;
+    --info: #1565C0;
+    --gray-900: #222222;
+    --gray-700: #555555;
+    --gray-500: #888888;
+    --gray-300: #CCCCCC;
+    --gray-100: #F5F5F5;
+    --gray-50: #FAFAFA;
+    --bg-page: #F9F9F9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--gray-900);
+    background: var(--bg-page);
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  .report { max-width: 1000px; margin: 0 auto; padding: 24px; }
+
+  /* 헤더 */
+  .report-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #fff;
+    padding: 32px;
+    margin-bottom: 24px;
+  }
+  .report-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+  .report-header .report-date { font-size: 14px; color: rgba(255,255,255,0.8); }
+
+  /* 요약 카드 */
+  .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+  .summary-card { background: #fff; border: 1px solid var(--gray-100); padding: 20px; text-align: center; }
+  .summary-card .sc-label { font-size: 12px; color: var(--gray-500); margin-bottom: 8px; letter-spacing: 0.5px; }
+  .summary-card .sc-value { font-size: 28px; font-weight: 700; }
+  .summary-card .sc-sub { font-size: 12px; color: var(--gray-500); margin-top: 4px; }
+  .sc-danger { color: var(--danger); }
+  .sc-warning { color: var(--warning); }
+  .sc-success { color: var(--success); }
+  .sc-info { color: var(--info); }
+
+  /* 등급 분포 바 */
+  .grade-bar { display: flex; height: 32px; margin-bottom: 24px; overflow: hidden; }
+  .grade-bar div { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: 600; }
+  .grade-s { background: #1565C0; }
+  .grade-a { background: var(--success); }
+  .grade-b { background: var(--accent); }
+  .grade-c { background: var(--warning); }
+  .grade-d { background: var(--danger); }
+
+  /* 섹션 */
+  .section { background: #fff; border: 1px solid var(--gray-100); margin-bottom: 16px; }
+  .section-title {
+    font-size: 16px; font-weight: 700; color: var(--primary);
+    border-left: 4px solid var(--accent);
+    padding: 16px 20px; background: var(--gray-50); border-bottom: 1px solid var(--gray-100);
+  }
+  .section-body { padding: 20px; }
+
+  /* 테이블 */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: var(--primary); color: #fff; padding: 10px 12px; text-align: left; font-weight: 600; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--gray-100); }
+  tr:nth-child(even) td { background: var(--gray-50); }
+
+  /* 등급 배지 */
+  .grade { display: inline-block; padding: 3px 12px; font-size: 12px; font-weight: 700; border-radius: 3px; min-width: 32px; text-align: center; }
+  .grade-S { background: #E3F2FD; color: #1565C0; }
+  .grade-A { background: #E8F5E9; color: var(--success); }
+  .grade-B { background: #FFF8E1; color: #F9A825; }
+  .grade-C { background: #FFF3E0; color: var(--warning); }
+  .grade-D { background: #FFEBEE; color: var(--danger); }
+
+  /* 점수 바 */
+  .score-bar { background: var(--gray-100); height: 8px; width: 100px; display: inline-block; vertical-align: middle; margin-left: 8px; }
+  .score-bar-fill { height: 100%; }
+  .fill-high { background: var(--success); }
+  .fill-mid { background: var(--accent); }
+  .fill-low { background: var(--danger); }
+
+  /* 비교 표시 */
+  .compare-win { color: var(--success); font-weight: 600; }
+  .compare-lose { color: var(--danger); font-weight: 600; }
+  .compare-draw { color: var(--gray-500); }
+
+  /* 액션 리스트 */
+  .action-list { list-style: none; padding: 0; }
+  .action-list li { padding: 10px 0 10px 24px; border-bottom: 1px solid var(--gray-100); position: relative; }
+  .action-list li::before { content: "\25B6"; position: absolute; left: 0; color: var(--accent); font-size: 10px; top: 13px; }
+  .action-list li:last-child { border-bottom: none; }
+  .action-priority { font-size: 11px; font-weight: 600; margin-right: 8px; }
+  .priority-urgent { color: var(--danger); }
+  .priority-high { color: var(--warning); }
+  .priority-normal { color: var(--info); }
+
+  /* 감점 사유 */
+  .deduction { font-size: 12px; color: var(--danger); }
+  .improvement { font-size: 12px; color: var(--info); }
+
+  /* 반응형 */
+  @media (max-width: 768px) {
+    .summary-grid { grid-template-columns: repeat(2, 1fr); }
+    .report { padding: 12px; }
+    .report-header { padding: 20px; }
+    table { font-size: 11px; }
+    th, td { padding: 8px 6px; }
+    .score-bar { width: 60px; }
+  }
+</style>
+</head>
+<body>
+<div class="report">
+
+  <!-- 헤더 -->
+  <div class="report-header">
+    <h1>품질체크 리포트</h1>
+    <div class="report-date">체크 일시: {날짜} | 짱베이스볼 MD팀</div>
+  </div>
+
+  <!-- 요약 카드 -->
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="sc-label">체크 상품</div>
+      <div class="sc-value sc-info">{N}건</div>
+      <div class="sc-sub">상세페이지 검수</div>
+    </div>
+    <div class="summary-card">
+      <div class="sc-label">평균 점수</div>
+      <div class="sc-value">{평균}점</div>
+      <div class="sc-sub">100점 만점</div>
+    </div>
+    <div class="summary-card">
+      <div class="sc-label">S/A등급 비율</div>
+      <div class="sc-value sc-success">{비율}%</div>
+      <div class="sc-sub">목표: 80% 이상</div>
+    </div>
+    <div class="summary-card">
+      <div class="sc-label">즉시 수정 필요</div>
+      <div class="sc-value sc-danger">{N}건</div>
+      <div class="sc-sub">C등급 이하</div>
+    </div>
+  </div>
+
+  <!-- 등급 분포 -->
+  <div class="grade-bar">
+    <div class="grade-s" style="width:{S비율}%">S {S수}건</div>
+    <div class="grade-a" style="width:{A비율}%">A {A수}건</div>
+    <div class="grade-b" style="width:{B비율}%">B {B수}건</div>
+    <div class="grade-c" style="width:{C비율}%">C {C수}건</div>
+    <div class="grade-d" style="width:{D비율}%">D {D수}건</div>
+  </div>
+
+  <!-- 상품별 점수표 -->
+  <div class="section">
+    <div class="section-title">상품별 품질 점수</div>
+    <div class="section-body">
+      <table>
+        <tr>
+          <th>상품명</th>
+          <th>카테고리</th>
+          <th>콘텐츠 (40)</th>
+          <th>SEO (25)</th>
+          <th>디자인 (20)</th>
+          <th>전문성 (15)</th>
+          <th>총점</th>
+          <th>등급</th>
+          <th>주요 감점</th>
+        </tr>
+        <tr>
+          <td>{상품명}</td>
+          <td>글러브</td>
+          <td>35
+            <div class="score-bar"><div class="score-bar-fill fill-high" style="width:87%"></div></div>
+          </td>
+          <td>20
+            <div class="score-bar"><div class="score-bar-fill fill-mid" style="width:80%"></div></div>
+          </td>
+          <td>18
+            <div class="score-bar"><div class="score-bar-fill fill-high" style="width:90%"></div></div>
+          </td>
+          <td>14
+            <div class="score-bar"><div class="score-bar-fill fill-high" style="width:93%"></div></div>
+          </td>
+          <td><strong>87</strong></td>
+          <td><span class="grade grade-A">A</span></td>
+          <td><span class="deduction">JSON-LD price 누락</span></td>
+        </tr>
+        <tr>
+          <td>{상품명}</td>
+          <td>배트</td>
+          <td>28
+            <div class="score-bar"><div class="score-bar-fill fill-mid" style="width:70%"></div></div>
+          </td>
+          <td>15
+            <div class="score-bar"><div class="score-bar-fill fill-low" style="width:60%"></div></div>
+          </td>
+          <td>12
+            <div class="score-bar"><div class="score-bar-fill fill-low" style="width:60%"></div></div>
+          </td>
+          <td>10
+            <div class="score-bar"><div class="score-bar-fill fill-mid" style="width:67%"></div></div>
+          </td>
+          <td><strong>65</strong></td>
+          <td><span class="grade grade-B">B</span></td>
+          <td><span class="deduction">비교표 없음, 모바일 깨짐</span></td>
+        </tr>
+        <!-- 추가 상품 동일 패턴 -->
+      </table>
+    </div>
+  </div>
+
+  <!-- 항목별 분석 -->
+  <div class="section">
+    <div class="section-title">항목별 평균 분석</div>
+    <div class="section-body">
+      <table>
+        <tr>
+          <th>검수 영역</th>
+          <th>만점</th>
+          <th>평균 점수</th>
+          <th>달성률</th>
+          <th>가장 약한 세부 항목</th>
+        </tr>
+        <tr>
+          <td>콘텐츠 품질</td>
+          <td>40점</td>
+          <td>{N}점</td>
+          <td>{N}%</td>
+          <td>{항목명} (평균 {N}점/{만점}점)</td>
+        </tr>
+        <tr>
+          <td>SEO 품질</td>
+          <td>25점</td>
+          <td>{N}점</td>
+          <td>{N}%</td>
+          <td>{항목명} (평균 {N}점/{만점}점)</td>
+        </tr>
+        <tr>
+          <td>디자인/UI 품질</td>
+          <td>20점</td>
+          <td>{N}점</td>
+          <td>{N}%</td>
+          <td>{항목명} (평균 {N}점/{만점}점)</td>
+        </tr>
+        <tr>
+          <td>야구 전문성</td>
+          <td>15점</td>
+          <td>{N}점</td>
+          <td>{N}%</td>
+          <td>{항목명} (평균 {N}점/{만점}점)</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 경쟁몰 비교 -->
+  <div class="section">
+    <div class="section-title">경쟁몰 상세페이지 비교</div>
+    <div class="section-body">
+      <table>
+        <tr>
+          <th>비교 항목</th>
+          <th>짱베이스볼</th>
+          <th>야구야</th>
+          <th>야구넷</th>
+          <th>베이스볼파크</th>
+        </tr>
+        <tr>
+          <td>스펙 표</td>
+          <td><span class="compare-win">O (상세)</span></td>
+          <td>O (기본)</td>
+          <td>O (기본)</td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td>체감 설명</td>
+          <td><span class="compare-win">O (실사용 관점)</span></td>
+          <td>X</td>
+          <td>X</td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td>사이즈 가이드</td>
+          <td><span class="compare-win">O</span></td>
+          <td>X</td>
+          <td>일부</td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td>비교표</td>
+          <td><span class="compare-win">O</span></td>
+          <td>X</td>
+          <td>X</td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td>FAQ</td>
+          <td><span class="compare-win">O (JSON-LD 포함)</span></td>
+          <td>X</td>
+          <td>X</td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td>JSON-LD 스키마</td>
+          <td>O (Product+FAQ)</td>
+          <td><span class="compare-lose">미확인</span></td>
+          <td><span class="compare-lose">미확인</span></td>
+          <td><span class="compare-lose">미확인</span></td>
+        </tr>
+        <tr>
+          <td>모바일 반응형</td>
+          <td>O</td>
+          <td><span class="compare-draw">O</span></td>
+          <td><span class="compare-lose">부분</span></td>
+          <td><span class="compare-draw">O</span></td>
+        </tr>
+        <tr>
+          <td>이미지 수</td>
+          <td>{N}장</td>
+          <td>{N}장</td>
+          <td>{N}장</td>
+          <td>{N}장</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 콘텐츠 MD 액션 아이템 -->
+  <div class="section">
+    <div class="section-title">콘텐츠 MD 액션 아이템</div>
+    <div class="section-body">
+      <ul class="action-list">
+        <li>
+          <span class="action-priority priority-urgent">[즉시 수정]</span>
+          {상품명} — C등급({N}점). 감점: {감점사유}. 재작성 필요.
+        </li>
+        <li>
+          <span class="action-priority priority-high">[보완 권장]</span>
+          {상품명} — B등급({N}점). {부족항목} 추가 시 A등급 가능.
+        </li>
+        <li>
+          <span class="action-priority priority-normal">[공통 개선]</span>
+          전체 상품의 {항목명} 항목 평균 점수가 낮음. 표준 템플릿에 해당 섹션 강화 필요.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <div style="text-align:center; padding:20px; color:var(--gray-500); font-size:12px;">
+    짱베이스볼 MD팀 품질체크 리포트 | 생성: {날짜시간}
+  </div>
+
+</div>
+</body>
+</html>

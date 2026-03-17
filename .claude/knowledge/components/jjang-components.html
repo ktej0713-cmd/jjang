@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>짱베이스볼 CSS 컴포넌트 라이브러리</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
+  <style>
+    /* ============================================================
+       짱베이스볼 디자인 시스템 — CSS 변수 (토큰)
+       모든 컴포넌트는 아래 변수를 참조하여 색상 하드코딩 금지
+    ============================================================ */
+    :root {
+      /* 브랜드 컬러 — Primary (네이비) */
+      --color-primary:       #1B2A4A;
+      --color-primary-light: #2C3E6B;
+      --color-primary-dark:  #0F1A30;
+
+      /* 브랜드 컬러 — Accent (골드) */
+      --color-accent:        #D4A843;
+      --color-accent-light:  #E8C876;
+      --color-accent-dark:   #B8922E;
+
+      /* 상태 컬러 */
+      --color-success:  #2E7D32;
+      --color-warning:  #E65100;
+      --color-danger:   #C62828;
+      --color-info:     #1565C0;
+      --color-new:      #E53935;
+
+      /* 그레이 스케일 */
+      --gray-900: #222222;
+      --gray-700: #555555;
+      --gray-500: #888888;
+      --gray-300: #CCCCCC;
+      --gray-100: #F5F5F5;
+      --gray-50:  #FAFAFA;
+
+      /* 폰트 */
+      --font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-size-xs:  12px;
+      --font-size-sm:  14px;
+      --font-size-md:  16px;
+      --font-size-lg:  18px;
+      --font-size-xl:  22px;
+      --font-size-2xl: 28px;
+
+      /* 보더 라디우스 */
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+
+      /* 그림자 */
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+      /* 전환 효과 */
+      --transition-fast:   0.15s ease;
+      --transition-normal: 0.25s ease;
+    }
+
+    /* ============================================================
+       전역 기본 스타일
+    ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      font-size: var(--font-size-md);
+      color: var(--gray-900);
+      background-color: var(--gray-50);
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       라이브러리 문서 전용 스타일 (실제 사용 시 제거)
+    ============================================================ */
+    .doc-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .doc-header {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+      color: #fff;
+      padding: 48px 40px;
+      border-radius: var(--radius-xl);
+      margin-bottom: 48px;
+    }
+
+    .doc-header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .doc-header p {
+      font-size: var(--font-size-md);
+      opacity: 0.85;
+    }
+
+    /* 목차 */
+    .doc-toc {
+      background: #fff;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      margin-bottom: 48px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .doc-toc h2 {
+      font-size: var(--font-size-lg);
+      font-weight: 700;
+      color: var(--color-primary);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--color-accent);
+    }
+
+    .doc-toc ol {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 8px 24px;
+      padding-left: 20px;
+    }
+
+    .doc-toc li {
+      font-size: var(--font-size-sm);
+    }
+
+    .doc-toc a {
+      color: var(--color-primary-light);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .doc-toc a:hover {
+      color: var(--color-accent-dark);
+      text-decoration: underline;
+    }
+
+    /* 컴포넌트 섹션 */
+    .comp-section {
+      background: #fff;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-lg);
+      margin-bottom: 40px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .comp-section-header {
+      background: var(--gray-100);
+      border-bottom: 1px solid var(--gray-300);
+      padding: 20px 28px;
+    }
+
+    .comp-section-header h2 {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .comp-section-header p {
+      font-size: var(--font-size-sm);
+      color: var(--gray-700);
+      margin-top: 4px;
+    }
+
+    .comp-demo {
+      padding: 32px 28px;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .comp-demo-label {
+      font-size: var(--font-size-xs);
+      font-weight: 700;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .comp-demo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .comp-demo-row:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 코드 스니펫 */
+    .comp-code {
+      background: #1a1d2e;
+      padding: 24px 28px;
+      position: relative;
+    }
+
+    .comp-code pre {
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+      font-size: 13px;
+      color: #c9d1d9;
+      overflow-x: auto;
+      white-space: pre;
+      line-height: 1.7;
+    }
+
+    .comp-code .code-comment { color: #6a9955; }
+    .comp-code .code-tag     { color: #7ee787; }
+    .comp-code .code-attr    { color: #79c0ff; }
+    .comp-code .code-value   { color: #ff7b72; }
+    .comp-code .code-string  { color: #f0a958; }
+
+    .copy-btn {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: var(--color-primary-light);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 6px 14px;
+      font-size: var(--font-size-xs);
+      font-family: var(--font-family);
+      cursor: pointer;
+      transition: background var(--transition-fast);
+    }
+
+    .copy-btn:hover {
+      background: var(--color-accent-dark);
+    }
+
+    /* 상태 그룹 레이블 */
+    .state-label {
+      font-size: var(--font-size-xs);
+      color: var(--gray-500);
+      font-weight: 600;
+      width: 80px;
+      flex-shrink: 0;
+    }
+
+
+    /* ============================================================
+       1. 버튼 컴포넌트
+       용도: Primary=구매/CTA, Accent=장바구니, Outline=보조행동,
+             Ghost=텍스트링크, Danger=삭제
+    ============================================================ */
+
+    /* 버튼 공통 기반 */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border: 2px solid transparent;
+      border-radius: var(--radius-md);
+      font-family: var(--font-family);
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition:
+        background var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        transform var(--transition-fast);
+      white-space: nowrap;
+      line-height: 1;
+    }
+
+    .btn:active:not(:disabled) {
+      transform: translateY(1px);
+    }
+
+    .btn:disabled,
+    .btn.is-disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    /* 버튼 크기 */
+    .btn-sm {
+      font-size: var(--font-size-xs);
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+    }
+
+    .btn-md {
+      font-size: var(--font-size-sm);
+      padding: 12px 24px;
+    }
+
+    .btn-lg {
+      font-size: var(--font-size-md);
+      padding: 16px 32px;
+      border-radius: var(--radius-lg);
+    }
+
+    /* Primary 버튼 — 구매/CTA */
+    .btn-primary {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary);
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: var(--color-primary-dark);
+      border-color: var(--color-primary-dark);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Accent 버튼 — 장바구니 */
+    .btn-accent {
+      background: var(--color-accent);
+      color: #fff;
+      border-color: var(--color-accent);
+    }
+
+    .btn-accent:hover:not(:disabled) {
+      background: var(--color-accent-dark);
+      border-color: var(--color-accent-dark);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Outline 버튼 — 보조 행동 */
+    .btn-outline {
+      background: transparent;
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    .btn-outline:hover:not(:disabled) {
+      background: var(--color-primary);
+      color: #fff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Ghost 버튼 — 텍스트 링크형 */
+    .btn-ghost {
+      background: transparent;
+      color: var(--color-primary-light);
+      border-color: transparent;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+
+    .btn-ghost:hover:not(:disabled) {
+      color: var(--color-accent-dark);
+      text-decoration: underline;
+    }
+
+    /* Danger 버튼 — 삭제/경고 */
+    .btn-danger {
+      background: var(--color-danger);
+      color: #fff;
+      border-color: var(--color-danger);
+    }
+
+    .btn-danger:hover:not(:disabled) {
+      background: #a81e1e;
+      border-color: #a81e1e;
+      box-shadow: var(--shadow-md);
+    }
+
+
+    /* ============================================================
+       2. 배지/태그 컴포넌트
+       용도: 상품 목록/카드에 상태 표시
+    ============================================================ */
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-family);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+
+    /* 배지 크기 */
+    .badge-sm {
+      font-size: 10px;
+      padding: 3px 7px;
+      border-radius: var(--radius-sm);
+    }
+
+    .badge-md {
+      font-size: var(--font-size-xs);
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+    }
+
+    .badge-lg {
+      font-size: var(--font-size-sm);
+      padding: 6px 14px;
+      border-radius: var(--radius-md);
+    }
+
+    /* NEW 배지 — 신상품 */
+    .badge-new {
+      background: var(--color-new);
+      color: #fff;
+    }
+
+    /* BEST 배지 — 베스트셀러 (골드) */
+    .badge-best {
+      background: var(--color-accent);
+      color: #fff;
+    }
+
+    /* SALE 배지 — 할인 (초록) */
+    .badge-sale {
+      background: var(--color-success);
+      color: #fff;
+    }
+
+    /* 품절 배지 — 회색 */
+    .badge-sold-out {
+      background: var(--gray-300);
+      color: var(--gray-700);
+    }
+
+    /* 카테고리 배지 — 골드 틴트 */
+    .badge-category {
+      background: #FFF8E8;
+      color: var(--color-accent-dark);
+      border: 1px solid var(--color-accent-light);
+    }
+
+
+    /* ============================================================
+       3. 상품 카드 컴포넌트
+       용도: 상품 목록 그리드에서 개별 상품 표시
+       반응형: 4열 → 3열 → 2열 (모바일 우선)
+    ============================================================ */
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+
+    @media (min-width: 960px) {
+      .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+      cursor: pointer;
+      border: 1px solid var(--gray-100);
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* 상품 카드 — 이미지 래퍼 */
+    .product-card__img-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 100%; /* 1:1 비율 */
+      overflow: hidden;
+      background: var(--gray-100);
+    }
+
+    .product-card__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-normal);
+    }
+
+    .product-card:hover .product-card__img {
+      transform: scale(1.04);
+    }
+
+    /* 상품 카드 — 배지 영역 (이미지 위 좌상단) */
+    .product-card__badges {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    /* 상품 카드 — 정보 영역 */
+    .product-card__body {
+      padding: 14px 16px 18px;
+    }
+
+    .product-card__brand {
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      color: var(--color-accent-dark);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .product-card__name {
+      font-size: var(--font-size-sm);
+      font-weight: 500;
+      color: var(--gray-900);
+      line-height: 1.4;
+      margin-bottom: 10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* 가격 영역 (카드 전용) */
+    .product-card__price-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .product-card__original-price {
+      font-size: var(--font-size-xs);
+      color: var(--gray-500);
+      text-decoration: line-through;
+    }
+
+    .product-card__sale-price {
+      font-size: var(--font-size-md);
+      font-weight: 700;
+      color: var(--color-danger);
+    }
+
+    /* 할인율 인라인 */
+    .product-card__discount-rate {
+      font-size: var(--font-size-xs);
+      font-weight: 700;
+      color: var(--color-danger);
+      margin-left: 4px;
+    }
+
+
+    /* ============================================================
+       4. 스펙 테이블 컴포넌트
+       용도: 상품 상세 페이지 스펙 정보 표시
+    ============================================================ */
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--font-size-sm);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* 테이블 헤더 — Primary 배경 */
+    .spec-table thead th {
+      background: var(--color-primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: var(--font-size-sm);
+      padding: 14px 16px;
+      text-align: left;
+    }
+
+    /* 테이블 본문 — 라벨 열 */
+    .spec-table tbody td:first-child {
+      background: var(--gray-100);
+      color: var(--gray-700);
+      font-weight: 600;
+      width: 140px;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--gray-300);
+    }
+
+    /* 테이블 본문 — 값 열 */
+    .spec-table tbody td:last-child {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--gray-300);
+      color: var(--gray-900);
+    }
+
+    /* 교차 행 색상 */
+    .spec-table tbody tr:nth-child(even) td:last-child {
+      background: var(--gray-50);
+    }
+
+    .spec-table tbody tr:nth-child(odd) td:last-child {
+      background: #fff;
+    }
+
+    .spec-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* 스펙 하이라이트 (강조 값) */
+    .spec-highlight {
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+
+    /* ============================================================
+       5. 아코디언 컴포넌트
+       용도: FAQ, 상품 상세 정보 접기/펼치기
+    ============================================================ */
+
+    .accordion {
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid var(--gray-300);
+    }
+
+    .accordion-item:last-child {
+      border-bottom: none;
+    }
+
+    /* 아코디언 헤더 버튼 */
+    .accordion-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      background: var(--gray-100);
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-family);
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      color: var(--gray-900);
+      text-align: left;
+      transition: background var(--transition-fast);
+    }
+
+    .accordion-header:hover {
+      background: var(--gray-300);
+    }
+
+    /* 활성화 상태 헤더 */
+    .accordion-item.is-open .accordion-header {
+      background: var(--color-primary);
+      color: #fff;
+    }
+
+    /* +/- 토글 아이콘 */
+    .accordion-icon {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 1;
+      flex-shrink: 0;
+      transition: transform var(--transition-normal);
+      margin-left: 12px;
+    }
+
+    .accordion-item.is-open .accordion-icon {
+      transform: rotate(45deg); /* + → × */
+    }
+
+    /* 아코디언 본문 — 애니메이션 */
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 20px;
+      background: #fff;
+    }
+
+    .accordion-item.is-open .accordion-body {
+      max-height: 500px;
+      padding: 20px;
+    }
+
+    .accordion-body p {
+      font-size: var(--font-size-sm);
+      color: var(--gray-700);
+      line-height: 1.7;
+    }
+
+
+    /* ============================================================
+       6. 섹션 제목 컴포넌트
+       용도: 페이지 내 섹션 구분 제목
+    ============================================================ */
+
+    .section-title {
+      border-left: 4px solid var(--color-accent);
+      padding-left: 16px;
+      margin-bottom: 24px;
+    }
+
+    .section-title__main {
+      font-size: var(--font-size-2xl);
+      font-weight: 700;
+      color: var(--gray-900);
+      line-height: 1.3;
+    }
+
+    .section-title__sub {
+      font-size: 15px;
+      color: var(--gray-700);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    /* 섹션 제목 — 중간 크기 변형 */
+    .section-title--md .section-title__main {
+      font-size: var(--font-size-xl);
+    }
+
+    /* 섹션 제목 — 중앙 정렬 변형 (border 제거) */
+    .section-title--center {
+      border-left: none;
+      padding-left: 0;
+      text-align: center;
+      border-bottom: 2px solid var(--color-accent);
+      padding-bottom: 12px;
+    }
+
+
+    /* ============================================================
+       7. 알림/안내 박스 컴포넌트 (4종)
+       용도: 사용자 안내, 경고, 성공 메시지
+    ============================================================ */
+
+    .alert {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      border: 1px solid transparent;
+      font-size: var(--font-size-sm);
+      line-height: 1.6;
+    }
+
+    .alert-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .alert-content {
+      flex: 1;
+    }
+
+    .alert-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    /* Info — 파랑 */
+    .alert-info {
+      background: #E3F0FF;
+      border-color: #90BEF0;
+      color: #0D3C78;
+    }
+
+    .alert-info .alert-title {
+      color: var(--color-info);
+    }
+
+    /* Success — 초록 */
+    .alert-success {
+      background: #E8F5E9;
+      border-color: #A5D6A7;
+      color: #1B5E20;
+    }
+
+    .alert-success .alert-title {
+      color: var(--color-success);
+    }
+
+    /* Warning — 주황 */
+    .alert-warning {
+      background: #FFF3E0;
+      border-color: #FFB74D;
+      color: #7A3200;
+    }
+
+    .alert-warning .alert-title {
+      color: var(--color-warning);
+    }
+
+    /* Danger — 빨강 */
+    .alert-danger {
+      background: #FFEBEE;
+      border-color: #EF9A9A;
+      color: #7A1212;
+    }
+
+    .alert-danger .alert-title {
+      color: var(--color-danger);
+    }
+
+
+    /* ============================================================
+       8. 가격 표시 컴포넌트
+       용도: 상품 상세 페이지 가격 영역
+    ============================================================ */
+
+    /* 가격 블록 전체 래퍼 */
+    .price-block {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    /* 정가 (취소선 + 회색) */
+    .price-original {
+      font-size: var(--font-size-sm);
+      color: var(--gray-500);
+      text-decoration: line-through;
+      font-weight: 400;
+    }
+
+    /* 할인가 행 (할인가 + 할인율 배지 나란히) */
+    .price-sale-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* 할인가 (빨강 + 굵게) */
+    .price-sale {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--color-danger);
+      line-height: 1;
+    }
+
+    /* 할인율 배지 */
+    .price-discount-badge {
+      background: var(--color-danger);
+      color: #fff;
+      font-size: var(--font-size-sm);
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* 추가 안내 텍스트 (배송비 등) */
+    .price-note {
+      font-size: var(--font-size-xs);
+      color: var(--gray-500);
+      margin-top: 4px;
+    }
+
+    /* Primary 색 할인가 변형 */
+    .price-sale--primary {
+      color: var(--color-primary);
+    }
+
+    .price-discount-badge--primary {
+      background: var(--color-primary);
+    }
+
+
+    /* ============================================================
+       9. 히어로 배너 컴포넌트
+       용도: 메인 페이지 또는 기획전 상단 배너
+    ============================================================ */
+
+    .hero-banner {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+      color: #fff;
+      padding: 60px 32px;
+      border-radius: var(--radius-xl);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    /* 배경 장식 원 */
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 240px;
+      height: 240px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+    }
+
+    .hero-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -40px;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 50%;
+    }
+
+    .hero-banner__content {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* 서브 타이틀 태그 */
+    .hero-banner__eyebrow {
+      display: inline-block;
+      background: var(--color-accent);
+      color: #fff;
+      font-size: var(--font-size-xs);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .hero-banner__title {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .hero-banner__desc {
+      font-size: var(--font-size-md);
+      opacity: 0.85;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .hero-banner__actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* 히어로 배너 — 흰색 버튼 변형 */
+    .btn-hero-primary {
+      background: #fff;
+      color: var(--color-primary);
+      border: 2px solid #fff;
+      border-radius: var(--radius-md);
+      font-family: var(--font-family);
+      font-size: var(--font-size-md);
+      font-weight: 700;
+      padding: 14px 28px;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .btn-hero-primary:hover {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #fff;
+    }
+
+    .btn-hero-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      border-radius: var(--radius-md);
+      font-family: var(--font-family);
+      font-size: var(--font-size-md);
+      font-weight: 600;
+      padding: 14px 28px;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .btn-hero-outline:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* 반응형 — 히어로 배너 모바일 */
+    @media (max-width: 600px) {
+      .hero-banner {
+        padding: 48px 20px;
+      }
+
+      .hero-banner__title {
+        font-size: 26px;
+      }
+    }
+
+
+    /* ============================================================
+       10. 탭 컴포넌트
+       용도: 상품 상세 탭(상세설명/배송/리뷰) 또는 카테고리 필터
+    ============================================================ */
+
+    .tabs {
+      border-bottom: 2px solid var(--gray-300);
+    }
+
+    .tabs-list {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .tabs-list::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab-btn {
+      flex-shrink: 0;
+      background: transparent;
+      border: none;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      padding: 14px 24px;
+      font-family: var(--font-family);
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      color: var(--gray-500);
+      cursor: pointer;
+      transition:
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      color: var(--gray-900);
+    }
+
+    /* 활성 탭 — accent 하단 보더 */
+    .tab-btn.is-active {
+      color: var(--color-primary);
+      border-bottom-color: var(--color-accent);
+    }
+
+    /* 탭 패널 */
+    .tab-panels {
+      padding: 28px 0;
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.is-active {
+      display: block;
+    }
+
+    .tab-panel p {
+      font-size: var(--font-size-sm);
+      color: var(--gray-700);
+      line-height: 1.7;
+    }
+
+
+    /* ============================================================
+       문서 전용 — 상품 카드 플레이스홀더 이미지
+    ============================================================ */
+
+    .card-img-placeholder {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--gray-100), var(--gray-300));
+      color: var(--gray-500);
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="doc-wrap">
+
+  <!-- ===== 문서 헤더 ===== -->
+  <div class="doc-header">
+    <h1>짱베이스볼 CSS 컴포넌트 라이브러리</h1>
+    <p>버전 1.0 &nbsp;|&nbsp; 2026.03.05 &nbsp;|&nbsp; Pretendard 폰트 + CSS 변수 기반 디자인 시스템</p>
+  </div>
+
+  <!-- ===== 목차 ===== -->
+  <nav class="doc-toc" id="toc">
+    <h2>목차</h2>
+    <ol>
+      <li><a href="#sec-tokens">디자인 토큰 (CSS 변수)</a></li>
+      <li><a href="#sec-buttons">버튼 (5종)</a></li>
+      <li><a href="#sec-badges">배지/태그 (5종)</a></li>
+      <li><a href="#sec-product-card">상품 카드</a></li>
+      <li><a href="#sec-spec-table">스펙 테이블</a></li>
+      <li><a href="#sec-accordion">아코디언</a></li>
+      <li><a href="#sec-section-title">섹션 제목</a></li>
+      <li><a href="#sec-alert">알림/안내 박스 (4종)</a></li>
+      <li><a href="#sec-price">가격 표시</a></li>
+      <li><a href="#sec-hero">히어로 배너</a></li>
+      <li><a href="#sec-tabs">탭 컴포넌트</a></li>
+    </ol>
+  </nav>
+
+
+  <!-- ================================================================
+       섹션 0. 디자인 토큰
+  ================================================================ -->
+  <div class="comp-section" id="sec-tokens">
+    <div class="comp-section-header">
+      <h2>0. 디자인 토큰 (CSS 변수)</h2>
+      <p>모든 컴포넌트의 색상/크기/그림자는 아래 변수를 참조합니다. :root에 한번만 선언하면 됩니다.</p>
+    </div>
+    <div class="comp-demo" style="display:flex;flex-wrap:wrap;gap:12px;">
+      <!-- 컬러 칩 -->
+      <div style="text-align:center">
+        <div style="width:80px;height:48px;background:var(--color-primary);border-radius:var(--radius-md);margin-bottom:6px;"></div>
+        <div style="font-size:11px;color:var(--gray-700)">Primary<br>#1B2A4A</div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:80px;height:48px;background:var(--color-primary-light);border-radius:var(--radius-md);margin-bottom:6px;"></div>
+        <div style="font-size:11px;color:var(--gray-700)">Primary-light<br>#2C3E6B</div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:80px;height:48px;background:var(--color-primary-dark);border-radius:var(--radius-md);margin-bottom:6px;"></div>
+        <div style="font-size:11px;color:var(--gray-700)">Primary-dark<br>#0F1A30</div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:80px;height:48px;background:var(--color-accent);border-radius:var(--radius-md);margin-bottom:6px;"></div>
+        <div style="font-size:11px;color:var(--gray-700)">Accent<br>#D4A843</div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:80px;height:48px;background:var(--color-accent-light);border-radius:var(--radius-md);margin-bottom:6px;"></div>
+        <div style="font-size:11px;color:var(--gray-700)">Accent-light<br>#E8C876</div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:80px;height:48px;background:var(--color-accent-dark);border-radius:var(--radius-md);margin-bottom:6px;"></div>
+        <div style="font-size:11px;color:var(--gray-700)">Accent-dark<br>#B8922E</div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:80px;height:48px;background:var(--color-success);border-radius:var(--radius-md);margin-bottom:6px;"></div>
+        <div style="font-size:11px;color:var(--gray-700)">Success<br>#2E7D32</div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:80px;height:48px;background:var(--color-warning);border-radius:var(--radius-md);margin-bottom:6px;"></div>
+        <div style="font-size:11px;color:var(--gray-700)">Warning<br>#E65100</div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:80px;height:48px;background:var(--color-danger);border-radius:var(--radius-md);margin-bottom:6px;"></div>
+        <div style="font-size:11px;color:var(--gray-700)">Danger<br>#C62828</div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:80px;height:48px;background:var(--color-info);border-radius:var(--radius-md);margin-bottom:6px;"></div>
+        <div style="font-size:11px;color:var(--gray-700)">Info<br>#1565C0</div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:80px;height:48px;background:var(--color-new);border-radius:var(--radius-md);margin-bottom:6px;"></div>
+        <div style="font-size:11px;color:var(--gray-700)">New<br>#E53935</div>
+      </div>
+    </div>
+    <div class="comp-code">
+      <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      <pre><span class="code-comment">/* 짱베이스볼 디자인 토큰 — :root에 한 번 선언 */</span>
+<span class="code-tag">:root</span> {
+  <span class="code-comment">/* Primary */</span>
+  --color-primary:       <span class="code-string">#1B2A4A</span>;
+  --color-primary-light: <span class="code-string">#2C3E6B</span>;
+  --color-primary-dark:  <span class="code-string">#0F1A30</span>;
+
+  <span class="code-comment">/* Accent */</span>
+  --color-accent:        <span class="code-string">#D4A843</span>;
+  --color-accent-light:  <span class="code-string">#E8C876</span>;
+  --color-accent-dark:   <span class="code-string">#B8922E</span>;
+
+  <span class="code-comment">/* 상태 */</span>
+  --color-success: <span class="code-string">#2E7D32</span>;
+  --color-warning: <span class="code-string">#E65100</span>;
+  --color-danger:  <span class="code-string">#C62828</span>;
+  --color-info:    <span class="code-string">#1565C0</span>;
+  --color-new:     <span class="code-string">#E53935</span>;
+
+  <span class="code-comment">/* 그레이 */</span>
+  --gray-900: <span class="code-string">#222222</span>;
+  --gray-700: <span class="code-string">#555555</span>;
+  --gray-500: <span class="code-string">#888888</span>;
+  --gray-300: <span class="code-string">#CCCCCC</span>;
+  --gray-100: <span class="code-string">#F5F5F5</span>;
+  --gray-50:  <span class="code-string">#FAFAFA</span>;
+
+  <span class="code-comment">/* 폰트 */</span>
+  --font-family: <span class="code-string">'Pretendard'</span>, -apple-system, BlinkMacSystemFont, <span class="code-string">'Segoe UI'</span>, sans-serif;
+
+  <span class="code-comment">/* 라디우스 */</span>
+  --radius-sm: <span class="code-string">4px</span>;
+  --radius-md: <span class="code-string">8px</span>;
+  --radius-lg: <span class="code-string">12px</span>;
+  --radius-xl: <span class="code-string">16px</span>;
+
+  <span class="code-comment">/* 그림자 */</span>
+  --shadow-sm: <span class="code-string">0 1px 3px rgba(0,0,0,0.08)</span>;
+  --shadow-md: <span class="code-string">0 2px 8px rgba(0,0,0,0.1)</span>;
+  --shadow-lg: <span class="code-string">0 4px 16px rgba(0,0,0,0.12)</span>;
+
+  <span class="code-comment">/* 전환 */</span>
+  --transition-fast:   <span class="code-string">0.15s ease</span>;
+  --transition-normal: <span class="code-string">0.25s ease</span>;
+}</pre>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       섹션 1. 버튼
+  ================================================================ -->
+  <div class="comp-section" id="sec-buttons">
+    <div class="comp-section-header">
+      <h2>1. 버튼 (5종)</h2>
+      <p>Primary=구매/CTA, Accent=장바구니, Outline=보조, Ghost=텍스트링크, Danger=삭제</p>
+    </div>
+    <div class="comp-demo">
+
+      <!-- 종류별 -->
+      <div class="comp-demo-label">종류 (기본 md 크기)</div>
+      <div class="comp-demo-row">
+        <button class="btn btn-primary btn-md">바로 구매</button>
+        <button class="btn btn-accent btn-md">장바구니 담기</button>
+        <button class="btn btn-outline btn-md">찜하기</button>
+        <button class="btn btn-ghost btn-md">자세히 보기 &rsaquo;</button>
+        <button class="btn btn-danger btn-md">삭제</button>
+      </div>
+
+      <!-- 크기별 -->
+      <div class="comp-demo-label" style="margin-top:20px;">크기 (sm / md / lg)</div>
+      <div class="comp-demo-row">
+        <button class="btn btn-primary btn-sm">바로 구매</button>
+        <button class="btn btn-primary btn-md">바로 구매</button>
+        <button class="btn btn-primary btn-lg">바로 구매</button>
+      </div>
+      <div class="comp-demo-row">
+        <button class="btn btn-accent btn-sm">장바구니</button>
+        <button class="btn btn-accent btn-md">장바구니</button>
+        <button class="btn btn-accent btn-lg">장바구니</button>
+      </div>
+
+      <!-- disabled -->
+      <div class="comp-demo-label" style="margin-top:20px;">비활성화 (disabled)</div>
+      <div class="comp-demo-row">
+        <button class="btn btn-primary btn-md" disabled>바로 구매</button>
+        <button class="btn btn-accent btn-md" disabled>장바구니</button>
+        <button class="btn btn-outline btn-md" disabled>찜하기</button>
+        <button class="btn btn-danger btn-md" disabled>삭제</button>
+      </div>
+    </div>
+    <div class="comp-code">
+      <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      <pre><span class="code-comment">/* ── 버튼 공통 CSS ── */</span>
+<span class="code-tag">.btn</span> {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  border: 2px solid transparent; border-radius: var(--radius-md);
+  font-family: var(--font-family); font-weight: 600; cursor: pointer;
+  text-decoration: none; white-space: nowrap; line-height: 1;
+  transition: background var(--transition-fast), color var(--transition-fast),
+              border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+<span class="code-tag">.btn</span>:active:not(:disabled) { transform: translateY(1px); }
+<span class="code-tag">.btn</span>:disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+
+<span class="code-comment">/* 크기 */</span>
+<span class="code-tag">.btn-sm</span> { font-size: 12px; padding: 8px 16px; border-radius: var(--radius-sm); }
+<span class="code-tag">.btn-md</span> { font-size: 14px; padding: 12px 24px; }
+<span class="code-tag">.btn-lg</span> { font-size: 16px; padding: 16px 32px; border-radius: var(--radius-lg); }
+
+<span class="code-comment">/* Primary */</span>
+<span class="code-tag">.btn-primary</span> { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+<span class="code-tag">.btn-primary</span>:hover:not(:disabled) { background: var(--color-primary-dark); box-shadow: var(--shadow-md); }
+
+<span class="code-comment">/* Accent */</span>
+<span class="code-tag">.btn-accent</span> { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
+<span class="code-tag">.btn-accent</span>:hover:not(:disabled) { background: var(--color-accent-dark); box-shadow: var(--shadow-md); }
+
+<span class="code-comment">/* Outline */</span>
+<span class="code-tag">.btn-outline</span> { background: transparent; color: var(--color-primary); border-color: var(--color-primary); }
+<span class="code-tag">.btn-outline</span>:hover:not(:disabled) { background: var(--color-primary); color: #fff; }
+
+<span class="code-comment">/* Ghost */</span>
+<span class="code-tag">.btn-ghost</span> { background: transparent; color: var(--color-primary-light); border-color: transparent; }
+<span class="code-tag">.btn-ghost</span>:hover:not(:disabled) { color: var(--color-accent-dark); text-decoration: underline; }
+
+<span class="code-comment">/* Danger */</span>
+<span class="code-tag">.btn-danger</span> { background: var(--color-danger); color: #fff; border-color: var(--color-danger); }
+<span class="code-tag">.btn-danger</span>:hover:not(:disabled) { background: #a81e1e; box-shadow: var(--shadow-md); }
+
+<span class="code-comment">/* ── HTML 예시 ── */</span>
+&lt;<span class="code-tag">button</span> <span class="code-attr">class</span>=<span class="code-string">"btn btn-primary btn-lg"</span>&gt;바로 구매&lt;/<span class="code-tag">button</span>&gt;
+&lt;<span class="code-tag">button</span> <span class="code-attr">class</span>=<span class="code-string">"btn btn-accent btn-md"</span>&gt;장바구니 담기&lt;/<span class="code-tag">button</span>&gt;
+&lt;<span class="code-tag">button</span> <span class="code-attr">class</span>=<span class="code-string">"btn btn-outline btn-md"</span>&gt;찜하기&lt;/<span class="code-tag">button</span>&gt;
+&lt;<span class="code-tag">button</span> <span class="code-attr">class</span>=<span class="code-string">"btn btn-ghost btn-sm"</span>&gt;자세히 보기 &amp;rsaquo;&lt;/<span class="code-tag">button</span>&gt;
+&lt;<span class="code-tag">button</span> <span class="code-attr">class</span>=<span class="code-string">"btn btn-danger btn-sm"</span>&gt;삭제&lt;/<span class="code-tag">button</span>&gt;
+&lt;<span class="code-tag">button</span> <span class="code-attr">class</span>=<span class="code-string">"btn btn-primary btn-md"</span> <span class="code-attr">disabled</span>&gt;품절&lt;/<span class="code-tag">button</span>&gt;</pre>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       섹션 2. 배지/태그
+  ================================================================ -->
+  <div class="comp-section" id="sec-badges">
+    <div class="comp-section-header">
+      <h2>2. 배지/태그 (5종)</h2>
+      <p>상품 목록 및 카드에서 상태를 시각적으로 표시합니다.</p>
+    </div>
+    <div class="comp-demo">
+      <div class="comp-demo-label">종류</div>
+      <div class="comp-demo-row">
+        <span class="badge badge-new badge-md">NEW</span>
+        <span class="badge badge-best badge-md">BEST</span>
+        <span class="badge badge-sale badge-md">SALE</span>
+        <span class="badge badge-sold-out badge-md">품절</span>
+        <span class="badge badge-category badge-md">글러브</span>
+        <span class="badge badge-category badge-md">배트</span>
+      </div>
+
+      <div class="comp-demo-label" style="margin-top:20px;">크기 (sm / md / lg)</div>
+      <div class="comp-demo-row">
+        <span class="badge badge-new badge-sm">NEW</span>
+        <span class="badge badge-new badge-md">NEW</span>
+        <span class="badge badge-new badge-lg">NEW</span>
+      </div>
+      <div class="comp-demo-row">
+        <span class="badge badge-best badge-sm">BEST</span>
+        <span class="badge badge-best badge-md">BEST</span>
+        <span class="badge badge-best badge-lg">BEST</span>
+      </div>
+    </div>
+    <div class="comp-code">
+      <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      <pre><span class="code-comment">/* ── 배지 CSS ── */</span>
+<span class="code-tag">.badge</span> { display: inline-flex; align-items: center; font-weight: 700; letter-spacing: 0.04em; line-height: 1; }
+<span class="code-tag">.badge-sm</span> { font-size: 10px; padding: 3px 7px; border-radius: var(--radius-sm); }
+<span class="code-tag">.badge-md</span> { font-size: 12px; padding: 4px 10px; border-radius: var(--radius-sm); }
+<span class="code-tag">.badge-lg</span> { font-size: 14px; padding: 6px 14px; border-radius: var(--radius-md); }
+
+<span class="code-tag">.badge-new</span>      { background: var(--color-new);     color: #fff; }
+<span class="code-tag">.badge-best</span>     { background: var(--color-accent);  color: #fff; }
+<span class="code-tag">.badge-sale</span>     { background: var(--color-success); color: #fff; }
+<span class="code-tag">.badge-sold-out</span> { background: var(--gray-300);      color: var(--gray-700); }
+<span class="code-tag">.badge-category</span> { background: #FFF8E8; color: var(--color-accent-dark); border: 1px solid var(--color-accent-light); }
+
+<span class="code-comment">/* ── HTML 예시 ── */</span>
+&lt;<span class="code-tag">span</span> <span class="code-attr">class</span>=<span class="code-string">"badge badge-new badge-md"</span>&gt;NEW&lt;/<span class="code-tag">span</span>&gt;
+&lt;<span class="code-tag">span</span> <span class="code-attr">class</span>=<span class="code-string">"badge badge-best badge-md"</span>&gt;BEST&lt;/<span class="code-tag">span</span>&gt;
+&lt;<span class="code-tag">span</span> <span class="code-attr">class</span>=<span class="code-string">"badge badge-sale badge-md"</span>&gt;SALE&lt;/<span class="code-tag">span</span>&gt;
+&lt;<span class="code-tag">span</span> <span class="code-attr">class</span>=<span class="code-string">"badge badge-sold-out badge-md"</span>&gt;품절&lt;/<span class="code-tag">span</span>&gt;
+&lt;<span class="code-tag">span</span> <span class="code-attr">class</span>=<span class="code-string">"badge badge-category badge-sm"</span>&gt;글러브&lt;/<span class="code-tag">span</span>&gt;</pre>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       섹션 3. 상품 카드
+  ================================================================ -->
+  <div class="comp-section" id="sec-product-card">
+    <div class="comp-section-header">
+      <h2>3. 상품 카드</h2>
+      <p>반응형 그리드: 4열(960px+) &rarr; 3열(600px+) &rarr; 2열(모바일). 호버 시 translateY(-4px) + shadow.</p>
+    </div>
+    <div class="comp-demo">
+      <div class="product-grid">
+
+        <!-- 카드 1: 할인 상품 -->
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <div class="card-img-placeholder">이미지</div>
+            <div class="product-card__badges">
+              <span class="badge badge-new badge-sm">NEW</span>
+              <span class="badge badge-sale badge-sm">SALE</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__brand">SSK</div>
+            <div class="product-card__name">프로엣지 내야수용 글러브 PEG144</div>
+            <div class="product-card__price-wrap">
+              <div class="product-card__original-price">389,000원</div>
+              <div>
+                <span class="product-card__sale-price">311,200원</span>
+                <span class="product-card__discount-rate">20%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 카드 2: BEST 상품 -->
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <div class="card-img-placeholder">이미지</div>
+            <div class="product-card__badges">
+              <span class="badge badge-best badge-sm">BEST</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__brand">Rawlings</div>
+            <div class="product-card__name">로링스 HOH 피처스용 글러브 GR3HF52</div>
+            <div class="product-card__price-wrap">
+              <div class="product-card__sale-price" style="color:var(--color-primary)">298,000원</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 카드 3: 품절 상품 -->
+        <div class="product-card" style="opacity:0.75">
+          <div class="product-card__img-wrap">
+            <div class="card-img-placeholder">이미지</div>
+            <div class="product-card__badges">
+              <span class="badge badge-sold-out badge-sm">품절</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__brand">Mizuno</div>
+            <div class="product-card__name">미즈노 글로벌 엘리트 1AJGHE1400</div>
+            <div class="product-card__price-wrap">
+              <div class="product-card__original-price">450,000원</div>
+              <div>
+                <span class="product-card__sale-price" style="color:var(--gray-500)">360,000원</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 카드 4: 일반 상품 -->
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <div class="card-img-placeholder">이미지</div>
+            <div class="product-card__badges">
+              <span class="badge badge-new badge-sm">NEW</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <div class="product-card__brand">ZETT</div>
+            <div class="product-card__name">제트 BRT 경식 외야수용 글러브 BPGT51990</div>
+            <div class="product-card__price-wrap">
+              <div class="product-card__original-price">520,000원</div>
+              <div>
+                <span class="product-card__sale-price">416,000원</span>
+                <span class="product-card__discount-rate">20%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="comp-code">
+      <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      <pre><span class="code-comment">/* ── 상품 카드 CSS ── */</span>
+<span class="code-tag">.product-grid</span> {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); <span class="code-comment">/* 모바일: 2열 */</span>
+  gap: 16px;
+}
+@media (min-width: 600px)  { <span class="code-tag">.product-grid</span> { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+@media (min-width: 960px)  { <span class="code-tag">.product-grid</span> { grid-template-columns: repeat(4, 1fr); gap: 24px; } }
+
+<span class="code-tag">.product-card</span> {
+  background: #fff; border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: var(--shadow-sm); border: 1px solid var(--gray-100);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+<span class="code-tag">.product-card</span>:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+<span class="code-tag">.product-card__img-wrap</span> { position: relative; width: 100%; padding-top: 100%; overflow: hidden; background: var(--gray-100); }
+<span class="code-tag">.product-card__img</span>      { position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; transition: transform var(--transition-normal); }
+<span class="code-tag">.product-card</span>:hover <span class="code-tag">.product-card__img</span> { transform: scale(1.04); }
+<span class="code-tag">.product-card__badges</span>   { position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 4px; }
+
+<span class="code-tag">.product-card__body</span>          { padding: 14px 16px 18px; }
+<span class="code-tag">.product-card__brand</span>         { font-size: 12px; font-weight: 600; color: var(--color-accent-dark); text-transform: uppercase; margin-bottom: 4px; }
+<span class="code-tag">.product-card__name</span>          { font-size: 14px; font-weight: 500; line-height: 1.4; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+<span class="code-tag">.product-card__original-price</span> { font-size: 12px; color: var(--gray-500); text-decoration: line-through; }
+<span class="code-tag">.product-card__sale-price</span>     { font-size: 16px; font-weight: 700; color: var(--color-danger); }
+<span class="code-tag">.product-card__discount-rate</span>  { font-size: 12px; font-weight: 700; color: var(--color-danger); margin-left: 4px; }
+
+<span class="code-comment">/* ── HTML 예시 ── */</span>
+&lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"product-grid"</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"product-card"</span>&gt;
+    &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"product-card__img-wrap"</span>&gt;
+      &lt;<span class="code-tag">img</span> <span class="code-attr">class</span>=<span class="code-string">"product-card__img"</span> <span class="code-attr">src</span>=<span class="code-string">"{imageUrl}"</span> <span class="code-attr">alt</span>=<span class="code-string">"{goodsNm}"</span>&gt;
+      &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"product-card__badges"</span>&gt;
+        &lt;<span class="code-tag">span</span> <span class="code-attr">class</span>=<span class="code-string">"badge badge-new badge-sm"</span>&gt;NEW&lt;/<span class="code-tag">span</span>&gt;
+      &lt;/<span class="code-tag">div</span>&gt;
+    &lt;/<span class="code-tag">div</span>&gt;
+    &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"product-card__body"</span>&gt;
+      &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"product-card__brand"</span>&gt;{brandNm}&lt;/<span class="code-tag">div</span>&gt;
+      &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"product-card__name"</span>&gt;{goodsNm}&lt;/<span class="code-tag">div</span>&gt;
+      &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"product-card__price-wrap"</span>&gt;
+        &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"product-card__original-price"</span>&gt;{goodsPrice}원&lt;/<span class="code-tag">div</span>&gt;
+        &lt;<span class="code-tag">div</span>&gt;
+          &lt;<span class="code-tag">span</span> <span class="code-attr">class</span>=<span class="code-string">"product-card__sale-price"</span>&gt;{salePrice}원&lt;/<span class="code-tag">span</span>&gt;
+          &lt;<span class="code-tag">span</span> <span class="code-attr">class</span>=<span class="code-string">"product-card__discount-rate"</span>&gt;{dcRatio}%&lt;/<span class="code-tag">span</span>&gt;
+        &lt;/<span class="code-tag">div</span>&gt;
+      &lt;/<span class="code-tag">div</span>&gt;
+    &lt;/<span class="code-tag">div</span>&gt;
+  &lt;/<span class="code-tag">div</span>&gt;
+&lt;/<span class="code-tag">div</span>&gt;</pre>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       섹션 4. 스펙 테이블
+  ================================================================ -->
+  <div class="comp-section" id="sec-spec-table">
+    <div class="comp-section-header">
+      <h2>4. 스펙 테이블</h2>
+      <p>상품 상세 페이지에서 제품 사양 정보를 표시합니다. 헤더 Primary 배경 + 교차 행 색상.</p>
+    </div>
+    <div class="comp-demo">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th colspan="2">SSK 프로엣지 내야수용 글러브 PEG144 스펙</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>포지션</td><td><span class="spec-highlight">내야수용</span></td></tr>
+          <tr><td>크기</td><td>11.5인치</td></tr>
+          <tr><td>소재</td><td>천연가죽 (스티어하이드)</td></tr>
+          <tr><td>웹 타입</td><td>I-Web</td></tr>
+          <tr><td>백 타입</td><td>오픈백</td></tr>
+          <tr><td>색상</td><td>브라운, 블랙, 오렌지</td></tr>
+          <tr><td>원산지</td><td>일본</td></tr>
+          <tr><td>대상</td><td>엘리트 / 사회인</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="comp-code">
+      <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      <pre><span class="code-comment">/* ── 스펙 테이블 CSS ── */</span>
+<span class="code-tag">.spec-table</span> {
+  width: 100%; border-collapse: collapse; font-size: 14px;
+  border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm);
+}
+<span class="code-tag">.spec-table thead th</span> {
+  background: var(--color-primary); color: #fff; font-weight: 700;
+  padding: 14px 16px; text-align: left;
+}
+<span class="code-tag">.spec-table tbody td:first-child</span> {
+  background: var(--gray-100); color: var(--gray-700); font-weight: 600;
+  width: 140px; padding: 12px 16px; border-bottom: 1px solid var(--gray-300);
+}
+<span class="code-tag">.spec-table tbody td:last-child</span>  { padding: 12px 16px; border-bottom: 1px solid var(--gray-300); }
+<span class="code-tag">.spec-table tbody tr:nth-child(even) td:last-child</span> { background: var(--gray-50); }
+<span class="code-tag">.spec-table tbody tr:nth-child(odd)  td:last-child</span> { background: #fff; }
+<span class="code-tag">.spec-table tbody tr:last-child td</span> { border-bottom: none; }
+<span class="code-tag">.spec-highlight</span> { color: var(--color-primary); font-weight: 700; }
+
+<span class="code-comment">/* ── HTML 예시 ── */</span>
+&lt;<span class="code-tag">table</span> <span class="code-attr">class</span>=<span class="code-string">"spec-table"</span>&gt;
+  &lt;<span class="code-tag">thead</span>&gt;&lt;<span class="code-tag">tr</span>&gt;&lt;<span class="code-tag">th</span> <span class="code-attr">colspan</span>=<span class="code-string">"2"</span>&gt;상품명 스펙&lt;/<span class="code-tag">th</span>&gt;&lt;/<span class="code-tag">tr</span>&gt;&lt;/<span class="code-tag">thead</span>&gt;
+  &lt;<span class="code-tag">tbody</span>&gt;
+    &lt;<span class="code-tag">tr</span>&gt;&lt;<span class="code-tag">td</span>&gt;포지션&lt;/<span class="code-tag">td</span>&gt;&lt;<span class="code-tag">td</span>&gt;&lt;<span class="code-tag">span</span> <span class="code-attr">class</span>=<span class="code-string">"spec-highlight"</span>&gt;내야수용&lt;/<span class="code-tag">span</span>&gt;&lt;/<span class="code-tag">td</span>&gt;&lt;/<span class="code-tag">tr</span>&gt;
+    &lt;<span class="code-tag">tr</span>&gt;&lt;<span class="code-tag">td</span>&gt;크기&lt;/<span class="code-tag">td</span>&gt;&lt;<span class="code-tag">td</span>&gt;11.5인치&lt;/<span class="code-tag">td</span>&gt;&lt;/<span class="code-tag">tr</span>&gt;
+  &lt;/<span class="code-tag">tbody</span>&gt;
+&lt;/<span class="code-tag">table</span>&gt;</pre>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       섹션 5. 아코디언
+  ================================================================ -->
+  <div class="comp-section" id="sec-accordion">
+    <div class="comp-section-header">
+      <h2>5. 아코디언</h2>
+      <p>FAQ, 상품 상세 정보 등 접기/펼치기 구현. max-height 애니메이션 방식 적용.</p>
+    </div>
+    <div class="comp-demo">
+      <div class="accordion" id="accordion-demo">
+
+        <div class="accordion-item is-open">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>이 글러브는 어떤 포지션에 적합한가요?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <p>SSK 프로엣지 PEG144는 11.5인치 내야수용 글러브입니다. 특히 유격수(SS)와 2루수(2B) 포지션에 최적화되어 있으며, 빠른 공 처리가 필요한 내야 수비에 적합합니다. 포켓이 얕고 개폐가 부드러워 빠른 전환 송구에 유리합니다.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>글러브 길들이기(형태 잡기)가 필요한가요?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <p>천연가죽 특성상 초기 형태 잡기(길들이기) 과정이 필요합니다. 구매 후 글러브 오일을 가볍게 도포한 후 공을 넣고 밴딩하는 방식을 권장합니다. 짱베이스볼에서는 별도 요청 시 기본 형태 잡기 서비스를 제공합니다.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span>교환/반품 기준은 어떻게 되나요?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <p>수령 후 7일 이내 미사용 상품에 한해 교환/반품이 가능합니다. 단, 형태 잡기(오일 도포, 밴딩 등) 작업이 진행된 경우 소비자 사용으로 간주되어 교환/반품이 불가합니다. 자세한 사항은 고객센터(1588-0000)로 문의해 주세요.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="comp-code">
+      <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      <pre><span class="code-comment">/* ── 아코디언 CSS ── */</span>
+<span class="code-tag">.accordion</span>        { border: 1px solid var(--gray-300); border-radius: var(--radius-md); overflow: hidden; }
+<span class="code-tag">.accordion-item</span>   { border-bottom: 1px solid var(--gray-300); }
+<span class="code-tag">.accordion-item</span>:last-child { border-bottom: none; }
+
+<span class="code-tag">.accordion-header</span> {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 20px; background: var(--gray-100); border: none; cursor: pointer;
+  font-family: var(--font-family); font-size: 14px; font-weight: 600; text-align: left;
+  transition: background var(--transition-fast);
+}
+<span class="code-tag">.accordion-header</span>:hover { background: var(--gray-300); }
+<span class="code-tag">.accordion-item.is-open .accordion-header</span> { background: var(--color-primary); color: #fff; }
+
+<span class="code-tag">.accordion-icon</span> { font-size: 20px; transition: transform var(--transition-normal); margin-left: 12px; }
+<span class="code-tag">.accordion-item.is-open .accordion-icon</span> { transform: rotate(45deg); }
+
+<span class="code-tag">.accordion-body</span> { max-height: 0; overflow: hidden; padding: 0 20px; background: #fff; transition: max-height 0.3s ease, padding 0.3s ease; }
+<span class="code-tag">.accordion-item.is-open .accordion-body</span> { max-height: 500px; padding: 20px; }
+
+<span class="code-comment">/* ── JavaScript ── */</span>
+<span class="code-attr">function</span> <span class="code-string">toggleAccordion</span>(btn) {
+  const item = btn.closest(<span class="code-string">'.accordion-item'</span>);
+  item.classList.toggle(<span class="code-string">'is-open'</span>);
+}
+
+<span class="code-comment">/* ── HTML 예시 ── */</span>
+&lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"accordion"</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"accordion-item is-open"</span>&gt;
+    &lt;<span class="code-tag">button</span> <span class="code-attr">class</span>=<span class="code-string">"accordion-header"</span> <span class="code-attr">onclick</span>=<span class="code-string">"toggleAccordion(this)"</span>&gt;
+      &lt;<span class="code-tag">span</span>&gt;질문 내용&lt;/<span class="code-tag">span</span>&gt;
+      &lt;<span class="code-tag">span</span> <span class="code-attr">class</span>=<span class="code-string">"accordion-icon"</span>&gt;+&lt;/<span class="code-tag">span</span>&gt;
+    &lt;/<span class="code-tag">button</span>&gt;
+    &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"accordion-body"</span>&gt;&lt;<span class="code-tag">p</span>&gt;답변 내용&lt;/<span class="code-tag">p</span>&gt;&lt;/<span class="code-tag">div</span>&gt;
+  &lt;/<span class="code-tag">div</span>&gt;
+&lt;/<span class="code-tag">div</span>&gt;</pre>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       섹션 6. 섹션 제목
+  ================================================================ -->
+  <div class="comp-section" id="sec-section-title">
+    <div class="comp-section-header">
+      <h2>6. 섹션 제목</h2>
+      <p>좌측 4px accent 보더 + padding-left 16px. 제목(28px/700) + 서브텍스트(15px/gray-700).</p>
+    </div>
+    <div class="comp-demo">
+      <!-- 기본형 -->
+      <div class="section-title">
+        <div class="section-title__main">이번 주 베스트 글러브</div>
+        <div class="section-title__sub">실사용자 리뷰 기반으로 가장 많이 선택된 글러브입니다.</div>
+      </div>
+
+      <!-- 중간 크기 변형 -->
+      <div class="section-title section-title--md" style="margin-top:28px;">
+        <div class="section-title__main">배트 카테고리</div>
+        <div class="section-title__sub">알루미늄 / 복합소재 / 목배트</div>
+      </div>
+
+      <!-- 중앙 정렬 변형 -->
+      <div class="section-title section-title--center" style="margin-top:28px;">
+        <div class="section-title__main">2026 봄 신상품</div>
+        <div class="section-title__sub">새 시즌을 준비하는 장비를 먼저 만나보세요.</div>
+      </div>
+    </div>
+    <div class="comp-code">
+      <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      <pre><span class="code-comment">/* ── 섹션 제목 CSS ── */</span>
+<span class="code-tag">.section-title</span>       { border-left: 4px solid var(--color-accent); padding-left: 16px; margin-bottom: 24px; }
+<span class="code-tag">.section-title__main</span> { font-size: 28px; font-weight: 700; color: var(--gray-900); line-height: 1.3; }
+<span class="code-tag">.section-title__sub</span>  { font-size: 15px; color: var(--gray-700); margin-top: 6px; }
+
+<span class="code-comment">/* 변형 — 중간 크기 */</span>
+<span class="code-tag">.section-title--md .section-title__main</span> { font-size: 22px; }
+
+<span class="code-comment">/* 변형 — 중앙 정렬 */</span>
+<span class="code-tag">.section-title--center</span> {
+  border-left: none; padding-left: 0; text-align: center;
+  border-bottom: 2px solid var(--color-accent); padding-bottom: 12px;
+}
+
+<span class="code-comment">/* ── HTML 예시 ── */</span>
+&lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"section-title"</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"section-title__main"</span>&gt;이번 주 베스트 글러브&lt;/<span class="code-tag">div</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"section-title__sub"</span>&gt;실사용자 리뷰 기반으로 선정된 글러브입니다.&lt;/<span class="code-tag">div</span>&gt;
+&lt;/<span class="code-tag">div</span>&gt;</pre>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       섹션 7. 알림/안내 박스
+  ================================================================ -->
+  <div class="comp-section" id="sec-alert">
+    <div class="comp-section-header">
+      <h2>7. 알림/안내 박스 (4종)</h2>
+      <p>info(파랑), success(초록), warning(주황), danger(빨강) — 사용자 안내 메시지용.</p>
+    </div>
+    <div class="comp-demo" style="display:flex;flex-direction:column;gap:12px;">
+
+      <div class="alert alert-info">
+        <span class="alert-icon">i</span>
+        <div class="alert-content">
+          <div class="alert-title">배송 안내</div>
+          오후 2시 이전 주문 시 당일 출고됩니다. 도서산간 지역은 추가 2~3일이 소요될 수 있습니다.
+        </div>
+      </div>
+
+      <div class="alert alert-success">
+        <span class="alert-icon">✓</span>
+        <div class="alert-content">
+          <div class="alert-title">주문이 완료되었습니다</div>
+          주문번호 2026-0305-00123. 3~5 영업일 내 수령하실 수 있습니다.
+        </div>
+      </div>
+
+      <div class="alert alert-warning">
+        <span class="alert-icon">!</span>
+        <div class="alert-content">
+          <div class="alert-title">재고 소량 남음</div>
+          현재 2개 재고만 남아있습니다. 사이즈 선택 전 수량을 확인해주세요.
+        </div>
+      </div>
+
+      <div class="alert alert-danger">
+        <span class="alert-icon">x</span>
+        <div class="alert-content">
+          <div class="alert-title">품절 상품</div>
+          현재 선택하신 사이즈는 품절 상태입니다. 입고 알림을 신청하시면 재입고 시 연락드립니다.
+        </div>
+      </div>
+
+    </div>
+    <div class="comp-code">
+      <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      <pre><span class="code-comment">/* ── 알림 박스 CSS ── */</span>
+<span class="code-tag">.alert</span> {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 16px 20px; border-radius: var(--radius-md); border: 1px solid transparent;
+  font-size: 14px; line-height: 1.6;
+}
+<span class="code-tag">.alert-icon</span>    { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+<span class="code-tag">.alert-title</span>   { font-weight: 700; margin-bottom: 4px; }
+
+<span class="code-tag">.alert-info</span>    { background: #E3F0FF; border-color: #90BEF0; color: #0D3C78; }
+<span class="code-tag">.alert-success</span> { background: #E8F5E9; border-color: #A5D6A7; color: #1B5E20; }
+<span class="code-tag">.alert-warning</span> { background: #FFF3E0; border-color: #FFB74D; color: #7A3200; }
+<span class="code-tag">.alert-danger</span>  { background: #FFEBEE; border-color: #EF9A9A; color: #7A1212; }
+
+<span class="code-tag">.alert-info .alert-title</span>    { color: var(--color-info); }
+<span class="code-tag">.alert-success .alert-title</span> { color: var(--color-success); }
+<span class="code-tag">.alert-warning .alert-title</span> { color: var(--color-warning); }
+<span class="code-tag">.alert-danger .alert-title</span>  { color: var(--color-danger); }
+
+<span class="code-comment">/* ── HTML 예시 ── */</span>
+&lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"alert alert-info"</span>&gt;
+  &lt;<span class="code-tag">span</span> <span class="code-attr">class</span>=<span class="code-string">"alert-icon"</span>&gt;i&lt;/<span class="code-tag">span</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"alert-content"</span>&gt;
+    &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"alert-title"</span>&gt;제목&lt;/<span class="code-tag">div</span>&gt;
+    안내 내용
+  &lt;/<span class="code-tag">div</span>&gt;
+&lt;/<span class="code-tag">div</span>&gt;</pre>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       섹션 8. 가격 표시
+  ================================================================ -->
+  <div class="comp-section" id="sec-price">
+    <div class="comp-section-header">
+      <h2>8. 가격 표시</h2>
+      <p>정가(취소선+회색) + 할인가(빨강/primary 굵게) + 할인율 배지. 상품 상세 페이지 가격 영역용.</p>
+    </div>
+    <div class="comp-demo" style="display:flex;flex-wrap:wrap;gap:32px;">
+
+      <!-- 기본형 — 빨강 할인가 -->
+      <div>
+        <div class="comp-demo-label">기본형 (danger 빨강)</div>
+        <div class="price-block" style="margin-top:12px;">
+          <div class="price-original">389,000원</div>
+          <div class="price-sale-row">
+            <span class="price-sale">311,200원</span>
+            <span class="price-discount-badge">20% OFF</span>
+          </div>
+          <div class="price-note">무료배송 | 부가세 포함</div>
+        </div>
+      </div>
+
+      <!-- 변형 — Primary 색 할인가 -->
+      <div>
+        <div class="comp-demo-label">변형 (primary 네이비)</div>
+        <div class="price-block" style="margin-top:12px;">
+          <div class="price-original">298,000원</div>
+          <div class="price-sale-row">
+            <span class="price-sale price-sale--primary">238,400원</span>
+            <span class="price-discount-badge price-discount-badge--primary">20% OFF</span>
+          </div>
+          <div class="price-note">무료배송 | 부가세 포함</div>
+        </div>
+      </div>
+
+      <!-- 변형 — 할인 없는 정가 -->
+      <div>
+        <div class="comp-demo-label">정가 (할인 없음)</div>
+        <div class="price-block" style="margin-top:12px;">
+          <div class="price-sale price-sale--primary" style="font-size:24px;">149,000원</div>
+          <div class="price-note">무료배송 | 부가세 포함</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="comp-code">
+      <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      <pre><span class="code-comment">/* ── 가격 표시 CSS ── */</span>
+<span class="code-tag">.price-block</span>          { display: flex; flex-direction: column; gap: 4px; }
+<span class="code-tag">.price-original</span>       { font-size: 14px; color: var(--gray-500); text-decoration: line-through; }
+<span class="code-tag">.price-sale-row</span>       { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+<span class="code-tag">.price-sale</span>           { font-size: 28px; font-weight: 800; color: var(--color-danger); line-height: 1; }
+<span class="code-tag">.price-sale--primary</span>  { color: var(--color-primary); }
+<span class="code-tag">.price-discount-badge</span> { background: var(--color-danger); color: #fff; font-size: 14px; font-weight: 700; padding: 4px 10px; border-radius: var(--radius-sm); }
+<span class="code-tag">.price-discount-badge--primary</span> { background: var(--color-primary); }
+<span class="code-tag">.price-note</span>           { font-size: 12px; color: var(--gray-500); margin-top: 4px; }
+
+<span class="code-comment">/* ── HTML 예시 (고도몰 치환코드 포함) ── */</span>
+&lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"price-block"</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"price-original"</span>&gt;{goodsPrice}원&lt;/<span class="code-tag">div</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"price-sale-row"</span>&gt;
+    &lt;<span class="code-tag">span</span> <span class="code-attr">class</span>=<span class="code-string">"price-sale"</span>&gt;{salePrice}원&lt;/<span class="code-tag">span</span>&gt;
+    &lt;<span class="code-tag">span</span> <span class="code-attr">class</span>=<span class="code-string">"price-discount-badge"</span>&gt;{dcRatio}% OFF&lt;/<span class="code-tag">span</span>&gt;
+  &lt;/<span class="code-tag">div</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"price-note"</span>&gt;무료배송 | 부가세 포함&lt;/<span class="code-tag">div</span>&gt;
+&lt;/<span class="code-tag">div</span>&gt;</pre>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       섹션 9. 히어로 배너
+  ================================================================ -->
+  <div class="comp-section" id="sec-hero">
+    <div class="comp-section-header">
+      <h2>9. 히어로 배너</h2>
+      <p>그래디언트 배경(primary &rarr; primary-light) + 흰색 텍스트 + CTA 버튼. 반응형.</p>
+    </div>
+    <div class="comp-demo">
+      <div class="hero-banner">
+        <div class="hero-banner__content">
+          <div class="hero-banner__eyebrow">2026 스프링 컬렉션</div>
+          <h1 class="hero-banner__title">야구를 아는 사람이<br>고른 장비가 다릅니다</h1>
+          <p class="hero-banner__desc">
+            SSK, 미즈노, 로링스, 제트 — 브랜드별 신상 글러브를 짱베이스볼에서<br>
+            실사용자 리뷰와 함께 확인하세요.
+          </p>
+          <div class="hero-banner__actions">
+            <a class="btn-hero-primary" href="#">신상품 보러 가기</a>
+            <a class="btn-hero-outline" href="#">시즌 기획전</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="comp-code">
+      <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      <pre><span class="code-comment">/* ── 히어로 배너 CSS ── */</span>
+<span class="code-tag">.hero-banner</span> {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: #fff; padding: 60px 32px; border-radius: var(--radius-xl);
+  position: relative; overflow: hidden; text-align: center;
+}
+<span class="code-tag">.hero-banner</span>::before {
+  content: ''; position: absolute; top: -60px; right: -60px;
+  width: 240px; height: 240px; background: rgba(255,255,255,0.05); border-radius: 50%;
+}
+<span class="code-tag">.hero-banner</span>::after {
+  content: ''; position: absolute; bottom: -80px; left: -40px;
+  width: 300px; height: 300px; background: rgba(255,255,255,0.03); border-radius: 50%;
+}
+<span class="code-tag">.hero-banner__content</span> { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+<span class="code-tag">.hero-banner__eyebrow</span> {
+  display: inline-block; background: var(--color-accent); color: #fff;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+  padding: 5px 14px; border-radius: 100px; margin-bottom: 20px;
+}
+<span class="code-tag">.hero-banner__title</span>   { font-size: 36px; font-weight: 800; line-height: 1.25; margin-bottom: 16px; }
+<span class="code-tag">.hero-banner__desc</span>    { font-size: 16px; opacity: 0.85; line-height: 1.7; margin-bottom: 32px; }
+<span class="code-tag">.hero-banner__actions</span> { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+<span class="code-tag">.btn-hero-primary</span> {
+  background: #fff; color: var(--color-primary); border: 2px solid #fff;
+  border-radius: var(--radius-md); font-weight: 700; padding: 14px 28px;
+  cursor: pointer; transition: all var(--transition-fast); text-decoration: none; display: inline-flex;
+}
+<span class="code-tag">.btn-hero-primary</span>:hover { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+
+<span class="code-tag">.btn-hero-outline</span> {
+  background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.6);
+  border-radius: var(--radius-md); font-weight: 600; padding: 14px 28px;
+  cursor: pointer; transition: all var(--transition-fast); text-decoration: none; display: inline-flex;
+}
+<span class="code-tag">.btn-hero-outline</span>:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+@media (max-width: 600px) {
+  <span class="code-tag">.hero-banner</span>       { padding: 48px 20px; }
+  <span class="code-tag">.hero-banner__title</span> { font-size: 26px; }
+}
+
+<span class="code-comment">/* ── HTML 예시 ── */</span>
+&lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"hero-banner"</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"hero-banner__content"</span>&gt;
+    &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"hero-banner__eyebrow"</span>&gt;2026 스프링 컬렉션&lt;/<span class="code-tag">div</span>&gt;
+    &lt;<span class="code-tag">h1</span> <span class="code-attr">class</span>=<span class="code-string">"hero-banner__title"</span>&gt;제목&lt;/<span class="code-tag">h1</span>&gt;
+    &lt;<span class="code-tag">p</span> <span class="code-attr">class</span>=<span class="code-string">"hero-banner__desc"</span>&gt;설명&lt;/<span class="code-tag">p</span>&gt;
+    &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"hero-banner__actions"</span>&gt;
+      &lt;<span class="code-tag">a</span> <span class="code-attr">class</span>=<span class="code-string">"btn-hero-primary"</span> <span class="code-attr">href</span>=<span class="code-string">"#"</span>&gt;CTA 버튼&lt;/<span class="code-tag">a</span>&gt;
+      &lt;<span class="code-tag">a</span> <span class="code-attr">class</span>=<span class="code-string">"btn-hero-outline"</span> <span class="code-attr">href</span>=<span class="code-string">"#"</span>&gt;보조 버튼&lt;/<span class="code-tag">a</span>&gt;
+    &lt;/<span class="code-tag">div</span>&gt;
+  &lt;/<span class="code-tag">div</span>&gt;
+&lt;/<span class="code-tag">div</span>&gt;</pre>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       섹션 10. 탭 컴포넌트
+  ================================================================ -->
+  <div class="comp-section" id="sec-tabs">
+    <div class="comp-section-header">
+      <h2>10. 탭 컴포넌트</h2>
+      <p>가로 탭 + 활성 탭 accent 하단 보더. 상품 상세 탭(상세설명/배송/리뷰)에 주로 사용.</p>
+    </div>
+    <div class="comp-demo">
+      <div class="tabs">
+        <div class="tabs-list" role="tablist">
+          <button class="tab-btn is-active" onclick="switchTab(this, 'tab-detail')" role="tab">상품 상세</button>
+          <button class="tab-btn" onclick="switchTab(this, 'tab-spec')" role="tab">스펙 정보</button>
+          <button class="tab-btn" onclick="switchTab(this, 'tab-review')" role="tab">구매 후기 (24)</button>
+          <button class="tab-btn" onclick="switchTab(this, 'tab-delivery')" role="tab">배송/교환/반품</button>
+        </div>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel is-active" id="tab-detail">
+          <p>SSK 프로엣지 PEG144는 일본 현지 엘리트 선수들의 피드백을 반영하여 설계된 내야수 전용 글러브입니다. 11.5인치의 컴팩트한 사이즈로 빠른 공 처리와 정확한 포구를 동시에 실현합니다.</p>
+        </div>
+        <div class="tab-panel" id="tab-spec">
+          <p>포지션: 내야수용 / 크기: 11.5인치 / 소재: 스티어하이드 / 웹: I-Web / 원산지: 일본</p>
+        </div>
+        <div class="tab-panel" id="tab-review">
+          <p>구매 후기가 표시되는 영역입니다. 실사용자 24명의 리뷰를 확인할 수 있습니다.</p>
+        </div>
+        <div class="tab-panel" id="tab-delivery">
+          <p>오후 2시 이전 주문 시 당일 출고. 도서산간 지역 추가 2~3일 소요. 수령 후 7일 이내 미사용 상태로 교환/반품 가능.</p>
+        </div>
+      </div>
+    </div>
+    <div class="comp-code">
+      <button class="copy-btn" onclick="copyCode(this)">복사</button>
+      <pre><span class="code-comment">/* ── 탭 CSS ── */</span>
+<span class="code-tag">.tabs</span>     { border-bottom: 2px solid var(--gray-300); }
+<span class="code-tag">.tabs-list</span> { display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+<span class="code-tag">.tabs-list</span>::-webkit-scrollbar { display: none; }
+
+<span class="code-tag">.tab-btn</span> {
+  flex-shrink: 0; background: transparent; border: none;
+  border-bottom: 3px solid transparent; margin-bottom: -2px;
+  padding: 14px 24px; font-family: var(--font-family); font-size: 14px; font-weight: 600;
+  color: var(--gray-500); cursor: pointer; white-space: nowrap;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+<span class="code-tag">.tab-btn</span>:hover      { color: var(--gray-900); }
+<span class="code-tag">.tab-btn.is-active</span> { color: var(--color-primary); border-bottom-color: var(--color-accent); }
+
+<span class="code-tag">.tab-panels</span>           { padding: 28px 0; }
+<span class="code-tag">.tab-panel</span>            { display: none; }
+<span class="code-tag">.tab-panel.is-active</span>  { display: block; }
+
+<span class="code-comment">/* ── JavaScript ── */</span>
+<span class="code-attr">function</span> <span class="code-string">switchTab</span>(btn, targetId) {
+  btn.closest(<span class="code-string">'.tabs'</span>).querySelectorAll(<span class="code-string">'.tab-btn'</span>).forEach(b =&gt; b.classList.remove(<span class="code-string">'is-active'</span>));
+  btn.classList.add(<span class="code-string">'is-active'</span>);
+  btn.closest(<span class="code-string">'.comp-demo'</span>).querySelectorAll(<span class="code-string">'.tab-panel'</span>).forEach(p =&gt; p.classList.remove(<span class="code-string">'is-active'</span>));
+  document.getElementById(targetId).classList.add(<span class="code-string">'is-active'</span>);
+}
+
+<span class="code-comment">/* ── HTML 예시 ── */</span>
+&lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"tabs"</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"tabs-list"</span> <span class="code-attr">role</span>=<span class="code-string">"tablist"</span>&gt;
+    &lt;<span class="code-tag">button</span> <span class="code-attr">class</span>=<span class="code-string">"tab-btn is-active"</span> <span class="code-attr">onclick</span>=<span class="code-string">"switchTab(this,'tab-detail')"</span>&gt;상품 상세&lt;/<span class="code-tag">button</span>&gt;
+    &lt;<span class="code-tag">button</span> <span class="code-attr">class</span>=<span class="code-string">"tab-btn"</span> <span class="code-attr">onclick</span>=<span class="code-string">"switchTab(this,'tab-review')"</span>&gt;구매 후기&lt;/<span class="code-tag">button</span>&gt;
+    &lt;<span class="code-tag">button</span> <span class="code-attr">class</span>=<span class="code-string">"tab-btn"</span> <span class="code-attr">onclick</span>=<span class="code-string">"switchTab(this,'tab-delivery')"</span>&gt;배송/교환/반품&lt;/<span class="code-tag">button</span>&gt;
+  &lt;/<span class="code-tag">div</span>&gt;
+&lt;/<span class="code-tag">div</span>&gt;
+&lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"tab-panels"</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"tab-panel is-active"</span> <span class="code-attr">id</span>=<span class="code-string">"tab-detail"</span>&gt;상세 내용&lt;/<span class="code-tag">div</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"tab-panel"</span> <span class="code-attr">id</span>=<span class="code-string">"tab-review"</span>&gt;후기 내용&lt;/<span class="code-tag">div</span>&gt;
+  &lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-string">"tab-panel"</span> <span class="code-attr">id</span>=<span class="code-string">"tab-delivery"</span>&gt;배송 안내&lt;/<span class="code-tag">div</span>&gt;
+&lt;/<span class="code-tag">div</span>&gt;</pre>
+    </div>
+  </div>
+
+
+  <!-- 문서 하단 -->
+  <div style="text-align:center;padding:40px 0 0;color:var(--gray-500);font-size:var(--font-size-sm);">
+    짱베이스볼 CSS 컴포넌트 라이브러리 v1.0 &nbsp;&middot;&nbsp; 2026.03.05
+    &nbsp;&middot;&nbsp; <a href="#toc" style="color:var(--color-accent-dark);text-decoration:none;">목차로 돌아가기</a>
+  </div>
+
+</div><!-- /.doc-wrap -->
+
+
+<!-- ================================================================
+     인터랙션 JavaScript
+================================================================ -->
+<script>
+  /* 아코디언 토글 */
+  function toggleAccordion(btn) {
+    const item = btn.closest('.accordion-item');
+    item.classList.toggle('is-open');
+  }
+
+  /* 탭 전환 */
+  function switchTab(btn, targetId) {
+    /* 같은 .tabs 안의 탭 버튼 비활성화 */
+    btn.closest('.tabs').querySelectorAll('.tab-btn').forEach(function(b) {
+      b.classList.remove('is-active');
+    });
+    btn.classList.add('is-active');
+
+    /* 같은 .comp-demo 안의 탭 패널 비활성화 */
+    btn.closest('.comp-demo').querySelectorAll('.tab-panel').forEach(function(p) {
+      p.classList.remove('is-active');
+    });
+    document.getElementById(targetId).classList.add('is-active');
+  }
+
+  /* 코드 복사 */
+  function copyCode(btn) {
+    const codeEl = btn.parentElement.querySelector('pre');
+    /* pre 내 텍스트만 추출 (HTML 태그 제거) */
+    const text = codeEl.innerText;
+    navigator.clipboard.writeText(text).then(function() {
+      const orig = btn.textContent;
+      btn.textContent = '복사됨!';
+      btn.style.background = 'var(--color-success)';
+      setTimeout(function() {
+        btn.textContent = orig;
+        btn.style.background = '';
+      }, 1800);
+    }).catch(function() {
+      /* clipboard API 미지원 환경 대응 */
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      btn.textContent = '복사됨!';
+      setTimeout(function() { btn.textContent = '복사'; }, 1800);
+    });
+  }
+</script>
+
+</body>
+</html>

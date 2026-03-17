@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__gmail-full__create_filter",
+      "mcp__gmail-full__batch_modify_emails",
+      "mcp__gmail-full__search_emails",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "mcp__plugin_playwright_playwright__browser_network_requests",
+      "mcp__plugin_playwright_playwright__browser_snapshot",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__claude_ai_Gmail__gmail_get_profile",
+      "mcp__plugin_playwright_playwright__browser_wait_for"
+    ]
+  }
+}

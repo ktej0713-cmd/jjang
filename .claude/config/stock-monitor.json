@@ -1,0 +1,30 @@
+{
+  "_설명": "짱베이스볼 재고 모니터링 설정",
+  "_사용법": "/재고체크 명령으로 실행",
+
+  "godomall": {
+    "api_url": "https://jjangbaseball.com/api",
+    "partner_key": "JTJDJTA2UyUyOCVENCVCNSVCMyU4Mw==",
+    "secret_key": "JUIwJTFCJTEyJURFaSVCMyUxNiVBNSVGQVYxJUQwJURCJUFFJUQ5JUU4SSVDRSVCQyUxRiUyNyU1QiU4MiVCM1klMjQlODYlRTFOJUFDJTk5JUE0JUMyQiVFNjclQzElRTElMjclRERkJUE2JTg1JTVF"
+  },
+
+  "monitor_products": [
+    {
+      "goodsNo": "44023",
+      "name": "짱베이스볼 야구바지 슬림핏 유니폼바지 농군 (진한 그레이)",
+      "alert_threshold": 5
+    },
+    {
+      "goodsNo": "42908",
+      "name": "짱베이스볼 야구바지 슬림핏 유니폼바지 (진한 그레이)",
+      "alert_threshold": 5
+    }
+  ],
+
+  "email": {
+    "send_to": "self",
+    "subject_prefix": "[짱베이스볼 재고알림]"
+  },
+
+  "alert_threshold_default": 5
+}

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>네이버페이 카드사 즉시할인 - 팝업 공지</title>
+<style>
+/* ============================================
+   네이버페이 카드사 즉시할인 - 팝업 공지
+   용도: 고도몰 메인 팝업 또는 레이어 팝업
+   규격: 500 x 자동높이 (PC), 360px (모바일)
+   경로: 운영 > 팝업관리 > 팝업등록
+   기간: 2026.3.10 ~ 3.31
+   ============================================ */
+
+body { margin: 0; padding: 0; }
+
+/* 오버레이 (미리보기용) */
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.npay-popup * { margin: 0; padding: 0; box-sizing: border-box; }
+
+.npay-popup {
+  width: 500px;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+/* 닫기 */
+.npay-popup__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.2s;
+}
+.npay-popup__close:hover { background: rgba(255,255,255,0.5); }
+
+/* 헤더 */
+.npay-popup__header {
+  background: linear-gradient(145deg, #03C75A 0%, #029E47 100%);
+  padding: 36px 32px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.npay-popup__header::before {
+  content: '';
+  position: absolute;
+  left: -20px; top: -20px;
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+}
+
+.npay-popup__header::after {
+  content: '';
+  position: absolute;
+  right: -10px; bottom: -30px;
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+
+.npay-popup__logo {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.npay-popup__headline {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+.npay-popup__headline em {
+  font-style: normal;
+  color: #FFF176;
+}
+
+.npay-popup__sub {
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+  margin-top: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 혜택 영역 */
+.npay-popup__benefits {
+  padding: 24px 32px;
+}
+
+.npay-popup__benefit-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.npay-popup__benefit-row:last-child {
+  border-bottom: none;
+}
+
+.npay-popup__benefit-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.npay-popup__benefit-icon--discount {
+  background: #FFF3E0;
+}
+
+.npay-popup__benefit-icon--condition {
+  background: #E8F5E9;
+}
+
+.npay-popup__benefit-icon--period {
+  background: #E3F2FD;
+}
+
+.npay-popup__benefit-icon--tip {
+  background: #FCE4EC;
+}
+
+.npay-popup__benefit-text {
+  flex: 1;
+}
+
+.npay-popup__benefit-label {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.npay-popup__benefit-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  letter-spacing: -0.3px;
+}
+
+.npay-popup__benefit-value strong {
+  color: #E53935;
+}
+
+/* 예시 박스 */
+.npay-popup__example {
+  margin: 0 32px;
+  background: #F8FAF8;
+  border: 1px dashed #03C75A;
+  border-radius: 10px;
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.npay-popup__example-title {
+  font-size: 12px;
+  color: #03C75A;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.npay-popup__example-calc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.npay-popup__example-calc em {
+  font-style: normal;
+  color: #E53935;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* 하단 CTA */
+.npay-popup__footer {
+  padding: 20px 32px 24px;
+  text-align: center;
+}
+
+.npay-popup__cta {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #1B2A4A 0%, #2C3E6B 100%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: -0.3px;
+}
+
+.npay-popup__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(27,42,74,0.3);
+}
+
+.npay-popup__notice {
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* 오늘 하루 안보기 */
+.npay-popup__today-close {
+  padding: 0 32px 20px;
+  text-align: center;
+}
+
+.npay-popup__today-close label {
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.npay-popup__today-close input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #03C75A;
+}
+
+/* 반응형 */
+@media (max-width: 520px) {
+  .npay-popup { width: 360px; }
+  .npay-popup__header { padding: 28px 24px 22px; }
+  .npay-popup__headline { font-size: 22px; }
+  .npay-popup__benefits { padding: 20px 24px; }
+  .npay-popup__example { margin: 0 24px; }
+  .npay-popup__footer { padding: 16px 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- =============================================
+     [사용법]
+     고도몰 팝업으로 등록
+     경로: 운영 > 회원/주문/게시판 관리 > 팝업관리 > 팝업등록
+     - 팝업 종류: 레이어 팝업
+     - 팝업 크기: 500 x 자동
+     - 노출 기간: 2026-03-10 ~ 2026-03-31
+
+     또는 .popup-overlay 포함하여 전체 페이지에 스크립트로 삽입
+     ============================================= -->
+
+<div class="popup-overlay" onclick="if(event.target===this) this.style.display='none'">
+  <div class="npay-popup">
+    <button class="npay-popup__close" onclick="this.closest('.popup-overlay').style.display='none'" aria-label="닫기">✕</button>
+
+    <!-- 헤더 -->
+    <div class="npay-popup__header">
+      <div class="npay-popup__logo">네이버페이 × 카드사</div>
+      <div class="npay-popup__headline">
+        결제만 해도<br><em>6% 즉시할인!</em>
+      </div>
+      <div class="npay-popup__sub">네이버페이 카드 간편결제 혜택</div>
+    </div>
+
+    <!-- 혜택 정보 -->
+    <div class="npay-popup__benefits">
+      <div class="npay-popup__benefit-row">
+        <div class="npay-popup__benefit-icon npay-popup__benefit-icon--discount">🏷️</div>
+        <div class="npay-popup__benefit-text">
+          <div class="npay-popup__benefit-label">할인 혜택</div>
+          <div class="npay-popup__benefit-value"><strong>6% 즉시할인</strong> · 최대 8,000원</div>
+        </div>
+      </div>
+      <div class="npay-popup__benefit-row">
+        <div class="npay-popup__benefit-icon npay-popup__benefit-icon--condition">💰</div>
+        <div class="npay-popup__benefit-text">
+          <div class="npay-popup__benefit-label">적용 조건</div>
+          <div class="npay-popup__benefit-value">6만원 이상 결제 시 자동 적용</div>
+        </div>
+      </div>
+      <div class="npay-popup__benefit-row">
+        <div class="npay-popup__benefit-icon npay-popup__benefit-icon--period">📅</div>
+        <div class="npay-popup__benefit-text">
+          <div class="npay-popup__benefit-label">이벤트 기간</div>
+          <div class="npay-popup__benefit-value">3.10(월) ~ 3.31(월) · 비용 소진 시 종료</div>
+        </div>
+      </div>
+      <div class="npay-popup__benefit-row">
+        <div class="npay-popup__benefit-icon npay-popup__benefit-icon--tip">⚾</div>
+        <div class="npay-popup__benefit-text">
+          <div class="npay-popup__benefit-label">짱베이스볼 TIP</div>
+          <div class="npay-popup__benefit-value">개막 시즌, 장비 구매할 때 꼭 챙기세요</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 예시 -->
+    <div class="npay-popup__example">
+      <div class="npay-popup__example-title">💡 이렇게 할인돼요</div>
+      <div class="npay-popup__example-calc">
+        배트 120,000원 결제 →  <em>-7,200원</em> 할인<br>
+        실결제 <em>112,800원</em>으로 구매!
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="npay-popup__footer">
+      <button class="npay-popup__cta" onclick="this.closest('.popup-overlay').style.display='none'">
+        쇼핑하러 가기
+      </button>
+      <div class="npay-popup__notice">
+        · 네이버페이 카드 간편결제 전용<br>
+        · 1인 1일 5회 · 무이자할부 중복 가능
+      </div>
+    </div>
+
+    <!-- 오늘 하루 안보기 -->
+    <div class="npay-popup__today-close">
+      <label>
+        <input type="checkbox" id="npay-today-close">
+        오늘 하루 보지 않기
+      </label>
+    </div>
+  </div>
+</div>
+
+<script>
+/* 오늘 하루 안보기 기능 */
+(function() {
+  var key = 'npay_promo_popup_close';
+  var today = new Date().toISOString().slice(0, 10);
+
+  // 이미 닫기 선택한 날짜면 팝업 숨김
+  if (localStorage.getItem(key) === today) {
+    var overlay = document.querySelector('.popup-overlay');
+    if (overlay) overlay.style.display = 'none';
+  }
+
+  // 체크박스 이벤트
+  var checkbox = document.getElementById('npay-today-close');
+  if (checkbox) {
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        localStorage.setItem(key, today);
+        var overlay = this.closest('.popup-overlay');
+        if (overlay) overlay.style.display = 'none';
+      }
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
