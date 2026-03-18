@@ -3,16 +3,16 @@
     "name": "auto-enhance",
     "description": "세션 로그와 패턴을 분석하여 스킬/훅 개선을 자동으로 제안하고 적용합니다. 자동화 시스템의 자기 강화 엔진.",
     "keywords": [
-      "자기",
-      "스킬",
-      "분석하여",
-      "패턴을",
       "엔진",
-      "자동화",
-      "자동으로",
+      "분석하여",
+      "적용합니다",
+      "자기",
       "로그와",
+      "시스템의",
+      "패턴을",
+      "제안하고",
       "개선을",
-      "강화"
+      "자동으로"
     ],
     "argument_hint": "[분석만|적용|전체]",
     "path": "C:\\Users\\jj1/.claude\\skills\\auto-enhance\\SKILL.md"
@@ -21,16 +21,16 @@
     "name": "merge-worktree",
     "description": "현재 워크트리 브랜치를 메인 브랜치에 squash-merge합니다. git 히스토리와 소스를 분석하여 구조화된 커밋 메시지를 작성합니다.",
     "keywords": [
+      "소스를",
+      "squash",
       "브랜치에",
       "분석하여",
-      "브랜치를",
-      "워크트리",
-      "squash",
-      "소스를",
+      "git",
+      "작성합니다",
+      "merge",
+      "구조화된",
       "현재",
-      "합니다",
-      "메인",
-      "작성합니다"
+      "합니다"
     ],
     "argument_hint": "[대상 브랜치]",
     "path": "C:\\Users\\jj1/.claude\\skills\\merge-worktree\\SKILL.md"
@@ -39,16 +39,16 @@
     "name": "price-check",
     "description": "상품의 시장 가격을 조사하여 비교표를 생성합니다. 네이버 쇼핑, 쿠팡, 11번가 등 주요 오픈마켓 대상.",
     "keywords": [
-      "시장",
-      "가격을",
-      "쇼핑",
-      "생성합니다",
-      "쿠팡",
-      "대상",
       "번가",
+      "네이버",
+      "시장",
       "조사하여",
+      "쇼핑",
+      "쿠팡",
+      "가격을",
       "주요",
-      "비교표를"
+      "비교표를",
+      "대상"
     ],
     "argument_hint": "<상품명 또는 브랜드+모델명>",
     "path": "C:\\Users\\jj1/.claude\\skills\\price-check\\SKILL.md"
@@ -148,16 +148,16 @@
     "name": "verify-html",
     "description": "상세페이지/기획전 HTML 결과물을 고도몰 호환성, 디자인 시스템, SEO 기준으로 검증합니다.",
     "keywords": [
-      "호환성",
-      "결과물을",
-      "시스템",
-      "고도몰",
-      "기준으로",
-      "상세페이지",
       "seo",
-      "검증합니다",
+      "기준으로",
+      "고도몰",
+      "상세페이지",
+      "디자인",
+      "호환성",
       "기획전",
-      "디자인"
+      "검증합니다",
+      "결과물을",
+      "html"
     ],
     "argument_hint": "[HTML 파일 경로]",
     "path": "C:\\Users\\jj1/.claude\\skills\\verify-html\\SKILL.md"
@@ -166,16 +166,16 @@
     "name": "youtube-research",
     "description": "YouTube 영상의 자막/내용을 추출하여 분석합니다. 영상 URL을 입력하면 자막 기반으로 핵심 내용을 정리합니다.",
     "keywords": [
-      "핵심",
+      "url",
+      "기반으로",
+      "분석합니다",
+      "영상의",
+      "영상",
       "입력하면",
+      "추출하여",
       "정리합니다",
       "자막",
-      "youtube",
-      "영상",
-      "영상의",
-      "기반으로",
-      "url",
-      "내용을"
+      "youtube"
     ],
     "argument_hint": "<YouTube URL> [분석 관점]",
     "path": "C:\\Users\\jj1/.claude\\skills\\youtube-research\\SKILL.md"
