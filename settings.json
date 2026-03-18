@@ -164,4 +164,11 @@
     },
     "cli-anything": {
       "source": {
-   
+        "source": "github",
+        "repo": "HKUDS/CLI-Anything"
+      }
+    }
+  },
+  "autoUpdatesChannel": "latest",
+  "skipDangerousModePermissionPrompt": true
+}
