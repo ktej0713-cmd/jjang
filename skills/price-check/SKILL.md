@@ -1,6 +1,6 @@
 ---
 name: price-check
-description: 상품의 경쟁사 가격을 조사하여 비교표를 생성합니다. 네이버 쇼핑, 야구야닷컴, 베이스볼파크 등 주요 채널 대상.
+description: 상품의 시장 가격을 조사하여 비교표를 생성합니다. 네이버 쇼핑, 쿠팡, 11번가 등 주요 오픈마켓 대상.
 argument-hint: "<상품명 또는 브랜드+모델명>"
 ---
 
@@ -23,14 +23,14 @@ argument-hint: "<상품명 또는 브랜드+모델명>"
 WebSearch: "상품명 사이트:shopping.naver.com"
 ```
 
-**주요 야구용품몰:**
+**오픈마켓:**
 ```
-WebSearch: "상품명 site:yaguyacom.co.kr OR site:baseballpark.co.kr OR site:jjangbaseball.com"
+WebSearch: "상품명 site:coupang.com OR site:11st.co.kr OR site:gmarket.co.kr"
 ```
 
-**쿠팡/11번가:**
+**스포츠 전문몰:**
 ```
-WebSearch: "상품명 site:coupang.com OR site:11st.co.kr"
+WebSearch: "상품명 야구 가격"
 ```
 
 ### Step 3: 가격 비교표 생성
@@ -46,9 +46,9 @@ WebSearch: "상품명 site:coupang.com OR site:11st.co.kr"
 |------|------|--------|---------|------|
 | 짱베이스볼 | - | - | - | 현재 미등록/등록가 |
 | 네이버 최저가 | - | - | - | |
-| 야구야닷컴 | - | - | - | |
-| 베이스볼파크 | - | - | - | |
 | 쿠팡 | - | - | - | |
+| 11번가 | - | - | - | |
+| 지마켓 | - | - | - | |
 
 ### 가격 분석
 - **시장 평균가:**
