@@ -13,8 +13,10 @@ if [ ! -d "$SKILLS_DIR" ]; then
   exit 0
 fi
 
-python3 -c "
-import os, json, re, glob
+PYTHONIOENCODING=utf-8 python3 -c "
+import os, json, re, glob, sys, io
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 skills_dir = '$SKILLS_DIR'
 registry = {}
