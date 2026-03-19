@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1254">
+<title>배너 PC - 2026 시즌 개막전</title>
+<style>
+  :root {
+    --primary: #1B2A4A;
+    --primary-light: #2C3E6B;
+    --primary-dark: #0F1A30;
+    --accent: #D4A843;
+    --accent-light: #E8C876;
+    --accent-dark: #B8922E;
+    --white: #FFFFFF;
+    --gray-300: #CCCCCC;
+    --gray-500: #888888;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 1254px;
+    height: 484px;
+    overflow: hidden;
+    font-family: 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', '돋움', Dotum, sans-serif;
+  }
+
+  /* 배너 전체 */
+  .banner {
+    width: 1254px;
+    height: 484px;
+    background-color: var(--primary);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+  }
+
+  /* 좌측 텍스트 영역 */
+  .left-area {
+    flex: 0 0 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 70px 0 80px;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* 우측 포인트 영역 */
+  .right-area {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 50px;
+    border-left: 1px solid rgba(212, 168, 67, 0.2);
+  }
+
+  /* 우측 배경 장식 텍스트 */
+  .bg-deco {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 200px;
+    font-weight: 900;
+    color: var(--primary-light);
+    letter-spacing: -8px;
+    line-height: 1;
+    white-space: nowrap;
+    user-select: none;
+    opacity: 0.3;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  /* 좌측 세로 골드 강조선 */
+  .left-accent-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--accent);
+  }
+
+  /* 상단 시즌 태그 */
+  .season-tag {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--primary-dark);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 6px 18px;
+    margin-bottom: 24px;
+    width: fit-content;
+  }
+
+  /* 메인 제목 */
+  .main-title {
+    font-size: 72px;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: -2px;
+    line-height: 1.05;
+    margin-bottom: 10px;
+  }
+
+  .main-title .year {
+    color: var(--accent);
+  }
+
+  /* 부제목 */
+  .sub-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--accent-light);
+    letter-spacing: 0.5px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  /* 골드 구분선 */
+  .divider {
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent);
+    margin-bottom: 28px;
+  }
+
+  /* 카테고리 나열 */
+  .category-list {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: nowrap;
+  }
+
+  .category-item {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--white);
+    opacity: 0.88;
+  }
+
+  .category-dot {
+    font-size: 14px;
+    color: var(--accent);
+    margin: 0 14px;
+    opacity: 0.8;
+  }
+
+  /* 우측 PLAY BALL 영문 포인트 */
+  .play-ball {
+    font-size: 88px;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: -3px;
+    line-height: 0.9;
+    opacity: 0.08;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    user-select: none;
+    writing-mode: vertical-rl;
+  }
+
+  /* 우측 실제 텍스트 */
+  .right-content {
+    position: relative;
+    z-index: 10;
+  }
+
+  .right-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+    opacity: 0.8;
+  }
+
+  .right-big {
+    font-size: 58px;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 14px;
+    opacity: 0.15;
+  }
+
+  /* 우측 수직 텍스트 장식 */
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 120px;
+    font-weight: 900;
+    color: var(--primary-light);
+    letter-spacing: -5px;
+    line-height: 1;
+    opacity: 0.5;
+    user-select: none;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* 로고 */
+  .logo-area {
+    position: absolute;
+    bottom: 32px;
+    right: 50px;
+    z-index: 10;
+    text-align: right;
+  }
+
+  .logo-text {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 2px;
+  }
+
+  .logo-sub {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--gray-500);
+    letter-spacing: 3px;
+    margin-top: 2px;
+  }
+
+  /* 연도 배지 - 우측 상단 */
+  .year-badge {
+    position: absolute;
+    top: 32px;
+    right: 50px;
+    z-index: 10;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gray-300);
+    letter-spacing: 2px;
+    opacity: 0.6;
+  }
+
+  /* 하단 골드 라인 */
+  .bottom-gold-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent);
+    opacity: 0.5;
+  }
+
+</style>
+</head>
+<body>
+<div class="banner">
+
+  <!-- 하단 골드 라인 -->
+  <div class="bottom-gold-line"></div>
+
+  <!-- 좌측 텍스트 영역 -->
+  <div class="left-area">
+    <!-- 좌측 강조 세로선 -->
+    <div class="left-accent-bar"></div>
+
+    <!-- 시즌 태그 -->
+    <div class="season-tag">2026 KBO &amp; 사회인야구 개막</div>
+
+    <!-- 메인 제목 -->
+    <div class="main-title">
+      <span class="year">시즌</span> 개막전
+    </div>
+
+    <!-- 부제목 -->
+    <div class="sub-title">
+      야구 시즌이 돌아왔다 &mdash; 개막맞이 특가
+    </div>
+
+    <!-- 골드 구분선 -->
+    <div class="divider"></div>
+
+    <!-- 카테고리 나열 -->
+    <div class="category-list">
+      <span class="category-item">글러브</span>
+      <span class="category-dot">&#183;</span>
+      <span class="category-item">배트</span>
+      <span class="category-dot">&#183;</span>
+      <span class="category-item">야구화</span>
+      <span class="category-dot">&#183;</span>
+      <span class="category-item">장갑</span>
+    </div>
+
+  </div>
+
+  <!-- 우측 포인트 영역 -->
+  <div class="right-area">
+
+    <!-- 배경 수직 텍스트 장식 -->
+    <div class="vertical-text">PLAY</div>
+
+    <!-- 우측 콘텐츠 -->
+    <div class="right-content">
+      <div class="right-label">OPENING SPECIAL</div>
+      <div style="
+        font-size: 52px;
+        font-weight: 900;
+        color: var(--white);
+        letter-spacing: -2px;
+        line-height: 1;
+        margin-bottom: 8px;
+      ">PLAY</div>
+      <div style="
+        font-size: 52px;
+        font-weight: 900;
+        color: var(--accent);
+        letter-spacing: -2px;
+        line-height: 1;
+        margin-bottom: 20px;
+      ">BALL</div>
+      <div style="
+        font-size: 13px;
+        font-weight: 400;
+        color: var(--gray-300);
+        letter-spacing: 2px;
+        opacity: 0.7;
+        line-height: 1.8;
+      ">
+        3월 개막 시즌<br>
+        야구용품 전문몰
+      </div>
+    </div>
+
+    <!-- 연도 배지 -->
+    <div class="year-badge">2026 SEASON</div>
+
+    <!-- 로고 -->
+    <div class="logo-area">
+      <div class="logo-text">짱베이스볼</div>
+      <div class="logo-sub">JJANG BASEBALL</div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

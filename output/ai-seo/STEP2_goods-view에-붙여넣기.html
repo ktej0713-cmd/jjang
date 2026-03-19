@@ -1,0 +1,149 @@
+<!--
+==========================================================
+[짱베이스볼 AI SEO] goods/goods_view.html 에 붙여넣을 코드
+==========================================================
+적용 방법:
+  1. 고도몰 관리자 > 디자인 > 디자인 스킨 설정 > 스킨 편집
+  2. 좌측 파일 목록에서 goods/goods_view.html 선택
+  3. 파일 맨 아래 (마지막 줄) 에 이 코드 전체를 복사-붙여넣기
+  4. 저장
+
+  ※ 기존 코드는 건드리지 마세요. 맨 아래에 추가만 하면 됩니다.
+==========================================================
+-->
+
+<!-- [짱베이스볼 SEO] 상품 데이터 수집용 (화면에 표시되지 않음) -->
+<div id="jjang-seo-data" style="display:none !important;"
+  data-name="{=gd_htmlspecialchars(goodsView['goodsNm'])}"
+  data-price="{=gd_isset(goodsView['goodsPrice'],0)}"
+  data-fixed-price="{=gd_isset(goodsView['fixedPrice'],0)}"
+  data-brand="{=gd_htmlspecialchars(gd_isset(goodsView['brandNm'],''))}"
+  data-image="{=goodsView['magnifyImageSrc']}"
+  data-description="{=gd_htmlspecialchars(gd_isset(goodsView['shortDescription'],''))}"
+  data-goods-no="{=goodsView['goodsNo']}"
+  data-goods-cd="{=gd_isset(goodsView['goodsCd'],'')}"
+  data-origin="{=gd_isset(goodsView['originNm'],'')}"
+  data-maker="{=gd_isset(goodsView['makerNm'],'')}"
+  data-order-possible="{=gd_isset(goodsView['orderPossible'],'y')}"
+></div>
+
+<!-- [짱베이스볼 SEO] 상품 JSON-LD + 메타 태그 동적 생성 -->
+<script>
+(function() {
+  var el = document.getElementById('jjang-seo-data');
+  if (!el) return;
+
+  /* 데이터 수집 */
+  var name = el.getAttribute('data-name') || '';
+  var price = el.getAttribute('data-price') || '0';
+  var fixedPrice = el.getAttribute('data-fixed-price') || '0';
+  var brand = el.getAttribute('data-brand') || '';
+  var image = el.getAttribute('data-image') || '';
+  var description = el.getAttribute('data-description') || '';
+  var goodsNo = el.getAttribute('data-goods-no') || '';
+  var goodsCd = el.getAttribute('data-goods-cd') || '';
+  var origin = el.getAttribute('data-origin') || '';
+  var maker = el.getAttribute('data-maker') || '';
+  var orderPossible = el.getAttribute('data-order-possible') || 'y';
+
+  /* 가격 숫자만 추출 */
+  price = price.replace(/[^0-9]/g, '');
+  fixedPrice = fixedPrice.replace(/[^0-9]/g, '');
+
+  /* 이미지 절대경로 */
+  if (image && image.indexOf('http') !== 0) {
+    image = 'https://www.jjangbaseball.com' + image;
+  }
+
+  var url = 'https://www.jjangbaseball.com/goods/goods_view.php?goodsNo=' + goodsNo;
+  var availability = (orderPossible === 'y') ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock';
+  var brandName = brand || maker || '';
+
+  /* ============ 1. Product JSON-LD 생성 ============ */
+  var jsonLD = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    'name': name,
+    'image': image,
+    'description': description || name,
+    'url': url,
+    'brand': { '@type': 'Brand', 'name': brandName },
+    'offers': {
+      '@type': 'Offer',
+      'url': url,
+      'priceCurrency': 'KRW',
+      'price': price,
+      'availability': availability,
+      'seller': { '@type': 'Organization', 'name': '짱베이스볼' },
+      'shippingDetails': {
+        '@type': 'OfferShippingDetails',
+        'shippingRate': { '@type': 'MonetaryAmount', 'value': '0', 'currency': 'KRW' },
+        'shippingDestination': { '@type': 'DefinedRegion', 'addressCountry': 'KR' },
+        'deliveryTime': {
+          '@type': 'ShippingDeliveryTime',
+          'handlingTime': { '@type': 'QuantitativeValue', 'minValue': 1, 'maxValue': 3, 'unitCode': 'DAY' },
+          'transitTime': { '@type': 'QuantitativeValue', 'minValue': 1, 'maxValue': 2, 'unitCode': 'DAY' }
+        }
+      }
+    }
+  };
+
+  if (goodsCd) jsonLD['sku'] = goodsCd;
+  if (origin) jsonLD['countryOfOrigin'] = { '@type': 'Country', 'name': origin };
+
+  var script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(jsonLD);
+  document.head.appendChild(script);
+
+  /* ============ 2. 메타 태그 + OG 태그 생성 ============ */
+  var metaDesc = description
+    ? (brandName ? brandName + ' ' : '') + name + ' - ' + description + ' | 짱베이스볼'
+    : (brandName ? brandName + ' ' : '') + name + ' - 야구용품 전문 쇼핑몰 짱베이스볼에서 정품 구매';
+
+  if (metaDesc.length > 150) metaDesc = metaDesc.substring(0, 147) + '...';
+
+  /* 페이지 타이틀 */
+  document.title = name + ' - 짱베이스볼';
+
+  function setMeta(attr, key, value) {
+    var existing = document.querySelector('meta[' + attr + '="' + key + '"]');
+    if (existing) { existing.setAttribute('content', value); }
+    else {
+      var m = document.createElement('meta');
+      m.setAttribute(attr, key);
+      m.setAttribute('content', value);
+      document.head.appendChild(m);
+    }
+  }
+
+  setMeta('name', 'description', metaDesc);
+  setMeta('property', 'og:title', name + ' | 짱베이스볼');
+  setMeta('property', 'og:description', metaDesc);
+  setMeta('property', 'og:image', image);
+  setMeta('property', 'og:url', url);
+  setMeta('property', 'og:type', 'product');
+  setMeta('property', 'og:locale', 'ko_KR');
+  setMeta('property', 'og:site_name', '짱베이스볼');
+  setMeta('property', 'product:price:amount', price);
+  setMeta('property', 'product:price:currency', 'KRW');
+  setMeta('name', 'twitter:title', name + ' | 짱베이스볼');
+  setMeta('name', 'twitter:description', metaDesc);
+  setMeta('name', 'twitter:image', image);
+
+  /* ============ 3. BreadcrumbList 생성 ============ */
+  var breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      { '@type': 'ListItem', 'position': 1, 'name': '홈', 'item': 'https://www.jjangbaseball.com' },
+      { '@type': 'ListItem', 'position': 2, 'name': name, 'item': url }
+    ]
+  };
+
+  var bScript = document.createElement('script');
+  bScript.type = 'application/ld+json';
+  bScript.textContent = JSON.stringify(breadcrumb);
+  document.head.appendChild(bScript);
+})();
+</script>

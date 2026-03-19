@@ -30,5 +30,15 @@ ide/
 *.lock
 tasks/**/*.lock
 
+# 기기별 로컬 설정 (MCP 경로 등 PC마다 다름)
+settings.local.json
+
+# Chrome 프로필 (100MB+ 대용량, 기기별 독립)
+chrome-naver-profile/
+
+# node_modules (절대 커밋 금지)
+node_modules/
+**/node_modules/
+
 # 플랜 파일 (선택: 공유하려면 이 줄 삭제)
 # plans/

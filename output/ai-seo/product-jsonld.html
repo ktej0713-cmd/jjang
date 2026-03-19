@@ -1,0 +1,136 @@
+<!--
+========================================
+짱베이스볼 - 상품 상세 페이지용 JSON-LD 구조화 데이터
+========================================
+적용 위치: 고도몰 관리자 > 디자인 > 스킨 편집 > goods/goods_view.html
+삽입 위치: </body> 바로 위 또는 { # footer } 아래
+
+[원리]
+고도몰 치환코드는 <script> 태그 내부에서 동작하지 않으므로,
+1단계: hidden div에 치환코드로 상품 데이터를 출력
+2단계: JavaScript가 이를 읽어 JSON-LD를 동적으로 생성
+========================================
+-->
+
+<!-- 1단계: 상품 데이터를 hidden 요소에 출력 (치환코드 사용) -->
+<div id="jjang-seo-data" style="display:none !important;"
+  data-name="{=gd_htmlspecialchars(goodsView['goodsNm'])}"
+  data-price="{=gd_isset(goodsView['goodsPrice'],0)}"
+  data-fixed-price="{=gd_isset(goodsView['fixedPrice'],0)}"
+  data-brand="{=gd_htmlspecialchars(gd_isset(goodsView['brandNm'],''))}"
+  data-image="{=goodsView['magnifyImageSrc']}"
+  data-description="{=gd_htmlspecialchars(gd_isset(goodsView['shortDescription'],''))}"
+  data-goods-no="{=goodsView['goodsNo']}"
+  data-goods-cd="{=gd_isset(goodsView['goodsCd'],'')}"
+  data-origin="{=gd_isset(goodsView['originNm'],'')}"
+  data-maker="{=gd_isset(goodsView['makerNm'],'')}"
+  data-order-possible="{=gd_isset(goodsView['orderPossible'],'y')}"
+></div>
+
+<!-- 2단계: JavaScript로 JSON-LD 동적 생성 -->
+<script>
+(function() {
+  var el = document.getElementById('jjang-seo-data');
+  if (!el) return;
+
+  var name = el.getAttribute('data-name') || '';
+  var price = el.getAttribute('data-price') || '0';
+  var fixedPrice = el.getAttribute('data-fixed-price') || '0';
+  var brand = el.getAttribute('data-brand') || '';
+  var image = el.getAttribute('data-image') || '';
+  var description = el.getAttribute('data-description') || '';
+  var goodsNo = el.getAttribute('data-goods-no') || '';
+  var goodsCd = el.getAttribute('data-goods-cd') || '';
+  var origin = el.getAttribute('data-origin') || '';
+  var maker = el.getAttribute('data-maker') || '';
+  var orderPossible = el.getAttribute('data-order-possible') || 'y';
+
+  /* 가격에서 쉼표 제거 (숫자만 남기기) */
+  price = price.replace(/[^0-9]/g, '');
+  fixedPrice = fixedPrice.replace(/[^0-9]/g, '');
+
+  /* 이미지 URL 절대경로 변환 */
+  if (image && image.indexOf('http') !== 0) {
+    image = 'https://www.jjangbaseball.com' + image;
+  }
+
+  /* 상품 URL */
+  var url = 'https://www.jjangbaseball.com/goods/goods_view.php?goodsNo=' + goodsNo;
+
+  /* 재고 상태 */
+  var availability = (orderPossible === 'y')
+    ? 'https://schema.org/InStock'
+    : 'https://schema.org/OutOfStock';
+
+  /* JSON-LD 구조 생성 */
+  var jsonLD = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    'name': name,
+    'image': image,
+    'description': description || name,
+    'url': url,
+    'brand': {
+      '@type': 'Brand',
+      'name': brand || maker || ''
+    },
+    'offers': {
+      '@type': 'Offer',
+      'url': url,
+      'priceCurrency': 'KRW',
+      'price': price,
+      'availability': availability,
+      'seller': {
+        '@type': 'Organization',
+        'name': '짱베이스볼'
+      },
+      'shippingDetails': {
+        '@type': 'OfferShippingDetails',
+        'shippingRate': {
+          '@type': 'MonetaryAmount',
+          'value': '0',
+          'currency': 'KRW'
+        },
+        'shippingDestination': {
+          '@type': 'DefinedRegion',
+          'addressCountry': 'KR'
+        },
+        'deliveryTime': {
+          '@type': 'ShippingDeliveryTime',
+          'handlingTime': {
+            '@type': 'QuantitativeValue',
+            'minValue': 1,
+            'maxValue': 3,
+            'unitCode': 'DAY'
+          },
+          'transitTime': {
+            '@type': 'QuantitativeValue',
+            'minValue': 1,
+            'maxValue': 2,
+            'unitCode': 'DAY'
+          }
+        }
+      }
+    }
+  };
+
+  /* SKU가 있으면 추가 */
+  if (goodsCd) {
+    jsonLD['sku'] = goodsCd;
+  }
+
+  /* 원산지가 있으면 추가 */
+  if (origin) {
+    jsonLD['countryOfOrigin'] = {
+      '@type': 'Country',
+      'name': origin
+    };
+  }
+
+  /* script 태그 삽입 */
+  var script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(jsonLD);
+  document.head.appendChild(script);
+})();
+</script>

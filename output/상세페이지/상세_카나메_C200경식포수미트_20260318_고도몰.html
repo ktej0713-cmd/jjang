@@ -1,0 +1,617 @@
+<!-- JSON-LD: 고도몰 사용 시 <head>에 별도 삽입
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"KANAME 카나메 재팬 경식 포수미트 C200","alternateName":"카나메 C200 블랙/핑크 신형로고","description":"일본산 와규 레더(Japan Steerhide)를 사용한 경식 포수미트. 약지고리와 검지쿠션으로 포구 안정성을 높인 세로형 소형 패턴 미트입니다.","brand":{"@type":"Brand","name":"KANAME"},"sku":"51324","material":"Japan Steerhide (와규 레더)","color":"블랙/핑크","category":"스포츠용품 > 야구 > 글러브 > 포수미트","offers":{"@type":"Offer","priceCurrency":"KRW","price":580000,"availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"짱베이스볼"},"url":"https://jjangbaseball.com/goods/goods_view.php?goodsNo=51324"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"카나메 C200 포수미트는 어떤 레더를 사용하나요?","acceptedAnswer":{"@type":"Answer","text":"일본산 와규 레더(Japan Steerhide)를 사용합니다. 와규 레더는 결이 촘촘하고 내구성이 뛰어나며, 길들이기 후 포켓 형성이 안정적입니다."}},{"@type":"Question","name":"길들이기 작업을 신청하면 얼마나 걸리나요?","acceptedAnswer":{"@type":"Answer","text":"기본 길각작업(30~40%)은 배송 시 함께 처리됩니다. 수타 길들이기(70~80%)나 물형부 길들이기(80~90%) 신청 시 추가로 약 1주일 소요됩니다."}},{"@type":"Question","name":"카나메 C200은 연식(고무공)에도 사용할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"경식(硬式) 전용 미트입니다. 경식 가죽은 연식용보다 두껍고 단단하여 경식공의 충격을 버틸 수 있도록 설계되어 있습니다."}},{"@type":"Question","name":"좌투용은 없나요?","acceptedAnswer":{"@type":"Answer","text":"현재 C200 모델은 우투(왼손 착용) 전용으로 생산됩니다. 좌투 포수미트는 수요가 적어 대부분의 브랜드에서 별도 오더로만 제작합니다."}}]}
+</script>
+-->
+
+<style>
+#jjang-detail {
+  max-width: 860px;
+  margin: 0 auto;
+  font-family: '맑은 고딕','Malgun Gothic','Apple SD Gothic Neo','돋움',Dotum,sans-serif;
+  color: #222;
+  line-height: 1.7;
+  letter-spacing: -0.02em;
+  -webkit-text-size-adjust: 100%;
+}
+#jjang-detail * {
+  box-sizing: border-box;
+}
+#jjang-detail img {
+  max-width: 100%;
+  height: auto;
+}
+#jjang-detail table {
+  border-collapse: collapse;
+}
+
+/* 섹션 공통 */
+#jjang-detail .jjang-section {
+  padding: 40px 20px;
+}
+#jjang-detail .jjang-section-alt {
+  padding: 40px 20px;
+  background: #F5F5F5;
+}
+#jjang-detail .jjang-section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1B2A4A;
+  border-left: 4px solid #D4A843;
+  padding-left: 16px;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+#jjang-detail .jjang-section-sub {
+  font-size: 17px;
+  color: #555;
+  margin: 0 0 28px 0;
+}
+
+/* 히어로 */
+#jjang-detail .jjang-hero {
+  background: #1B2A4A;
+  padding: 0;
+  text-align: center;
+}
+#jjang-detail .jjang-hero-img {
+  width: 100%;
+  max-width: 860px;
+  height: 420px;
+  background: #2C3E6B;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #D4A843;
+  font-size: 18px;
+  font-weight: 600;
+}
+#jjang-detail .jjang-hero-text {
+  padding: 32px 20px 36px;
+}
+#jjang-detail .jjang-hero-copy {
+  font-size: 40px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+#jjang-detail .jjang-hero-brand {
+  display: inline-block;
+  background: #D4A843;
+  color: #0F1A30;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 14px;
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+#jjang-detail .jjang-hero-price {
+  font-size: 36px;
+  font-weight: 800;
+  color: #D4A843;
+  margin: 16px 0 0 0;
+}
+#jjang-detail .jjang-hero-price span {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.6);
+}
+
+/* 정의 문장 */
+#jjang-detail .jjang-definition {
+  background: #fff;
+  padding: 24px 20px;
+  border-bottom: 1px solid #eee;
+}
+#jjang-detail .jjang-definition p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.8;
+  margin: 0;
+}
+#jjang-detail .jjang-definition strong {
+  color: #1B2A4A;
+}
+
+/* 필요상황 리스트 */
+#jjang-detail .jjang-need-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#jjang-detail .jjang-need-list li {
+  padding: 16px 16px 16px 20px;
+  margin-bottom: 12px;
+  background: #fff;
+  border-left: 3px solid #D4A843;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+#jjang-detail .jjang-need-list li strong {
+  display: block;
+  font-size: 20px;
+  color: #1B2A4A;
+  margin-bottom: 4px;
+}
+
+/* 스펙 테이블 */
+#jjang-detail .jjang-spec-table {
+  width: 100%;
+  font-size: 16px;
+}
+#jjang-detail .jjang-spec-table th {
+  background: #1B2A4A;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 16px;
+  text-align: left;
+  width: 140px;
+  vertical-align: top;
+  border-bottom: 1px solid #2C3E6B;
+}
+#jjang-detail .jjang-spec-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  background: #fff;
+  line-height: 1.6;
+}
+#jjang-detail .jjang-spec-table tr.jjang-row-alt td {
+  background: #FAFAFA;
+}
+
+/* 체감설명 */
+#jjang-detail .jjang-feel-block {
+  margin-bottom: 24px;
+}
+#jjang-detail .jjang-feel-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1B2A4A;
+  margin: 0 0 8px 0;
+}
+#jjang-detail .jjang-feel-desc {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* 포지션 카드 - table 기반 */
+#jjang-detail .jjang-position-table {
+  width: 100%;
+}
+#jjang-detail .jjang-position-table td {
+  width: 50%;
+  vertical-align: top;
+  padding: 8px;
+}
+#jjang-detail .jjang-position-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+}
+#jjang-detail .jjang-position-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1B2A4A;
+  margin: 0 0 4px 0;
+}
+#jjang-detail .jjang-position-card-fit {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+#jjang-detail .jjang-fit-high {
+  background: #1B2A4A;
+  color: #D4A843;
+}
+#jjang-detail .jjang-fit-mid {
+  background: #F5F5F5;
+  color: #555;
+}
+#jjang-detail .jjang-position-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 사이즈 */
+#jjang-detail .jjang-size-guide {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+#jjang-detail .jjang-size-table {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+}
+#jjang-detail .jjang-size-table th {
+  background: #1B2A4A;
+  color: #fff;
+  padding: 10px 12px;
+  font-weight: 600;
+}
+#jjang-detail .jjang-size-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+#jjang-detail .jjang-size-table tr.jjang-row-alt td {
+  background: #FAFAFA;
+}
+#jjang-detail .jjang-size-note {
+  font-size: 13px;
+  color: #888;
+  margin-top: 12px;
+}
+
+/* FAQ */
+#jjang-detail .jjang-faq-item {
+  border: 1px solid #eee;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+#jjang-detail .jjang-faq-q {
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1B2A4A;
+  background: #FAFAFA;
+  line-height: 1.5;
+}
+#jjang-detail .jjang-faq-q span {
+  color: #D4A843;
+  margin-right: 8px;
+  font-weight: 700;
+}
+#jjang-detail .jjang-faq-answer {
+  padding: 16px 20px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  border-top: 1px solid #eee;
+}
+
+/* 추천포인트 */
+#jjang-detail .jjang-recommend-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#jjang-detail .jjang-recommend-list li {
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+#jjang-detail .jjang-recommend-list li strong {
+  color: #1B2A4A;
+}
+#jjang-detail .jjang-not-for {
+  margin-top: 20px;
+  padding: 16px 20px;
+  background: #FAFAFA;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+#jjang-detail .jjang-not-for-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #888;
+  margin: 0 0 8px 0;
+}
+#jjang-detail .jjang-not-for p {
+  font-size: 16px;
+  color: #888;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* 반응형 */
+@media (max-width: 767px) {
+  #jjang-detail .jjang-section,
+  #jjang-detail .jjang-section-alt {
+    padding: 32px 16px;
+  }
+  #jjang-detail .jjang-hero-copy {
+    font-size: 30px;
+  }
+  #jjang-detail .jjang-hero-price {
+    font-size: 28px;
+  }
+  #jjang-detail .jjang-hero-img {
+    height: 280px;
+    font-size: 15px;
+  }
+  #jjang-detail .jjang-section-title {
+    font-size: 26px;
+  }
+  #jjang-detail .jjang-spec-table th {
+    width: 110px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  #jjang-detail .jjang-spec-table td {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  #jjang-detail .jjang-position-table td {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+  }
+}
+</style>
+
+<div id="jjang-detail">
+
+<!-- [SEC:히어로] -->
+<div class="jjang-hero">
+  <img src="https://chj1013.hgodo.com/data/image/goods/editor/260318/7fbecbba69d553827404cf44319fc83b_175338.jpg" alt="KANAME 카나메 C200 경식 포수미트 블랙/핑크 신형로고" style="width:100%;max-width:860px;display:block;">
+  <div class="jjang-hero-text">
+    <div class="jjang-hero-brand">KANAME &#183; JAPAN</div>
+    <h1 class="jjang-hero-copy">포수미트만 만드는 브랜드의<br>경식 포수미트 C200</h1>
+    <div class="jjang-hero-price">580,000<span>원</span></div>
+  </div>
+</div>
+<div class="jjang-definition">
+  <p><strong>KANAME C200</strong>은 포수미트 전문 브랜드 카나메가 일본산 와규 레더(Japan Steerhide)로 제작한 경식 포수미트입니다. 약지고리와 검지쿠션을 적용해 포구 안정성을 높였으며, 깊은 포켓의 세로형 소형 패턴으로 빠른 송구 전환에 유리한 설계입니다.</p>
+</div>
+<!-- [/SEC:히어로] -->
+
+<!-- [SEC:필요상황] -->
+<div class="jjang-section-alt">
+  <h2 class="jjang-section-title">이런 분께 맞는 미트입니다</h2>
+  <p class="jjang-section-sub">경식 포수미트, 아무거나 쓸 수 없습니다</p>
+  <ul class="jjang-need-list">
+    <li>
+      <strong>경식공 포구 시 손이 많이 아픈 포수</strong>
+      약지고리 + 검지쿠션 구조가 충격을 분산시켜 장시간 포구에도 손 부담이 줄어듭니다.
+    </li>
+    <li>
+      <strong>송구 전환 속도가 중요한 포수</strong>
+      세로형 소형 패턴은 공을 잡는 즉시 꺼내기 좋은 형태입니다. 도루 저지 상황에서 0.1초가 차이를 만듭니다.
+    </li>
+    <li>
+      <strong>포수미트 전문 브랜드를 찾는 분</strong>
+      카나메는 포수미트만 집중 제작하는 브랜드입니다. 범용 글러브 메이커와는 설계 접근이 다릅니다.
+    </li>
+    <li>
+      <strong>기존 미트의 가죽 내구성에 불만이 있던 분</strong>
+      일본산 와규 레더는 결이 촘촘하고 내구성이 높아 시즌 내내 포켓 형태가 유지됩니다.
+    </li>
+  </ul>
+</div>
+<!-- [/SEC:필요상황] -->
+
+<!-- [SEC:스펙] -->
+<div class="jjang-section">
+  <h2 class="jjang-section-title">상품 사양</h2>
+  <p class="jjang-section-sub">KANAME C200 주요 스펙</p>
+  <table class="jjang-spec-table">
+    <tr>
+      <th>브랜드</th>
+      <td>KANAME (카나메)</td>
+    </tr>
+    <tr class="jjang-row-alt">
+      <th>모델명</th>
+      <td>C200</td>
+    </tr>
+    <tr>
+      <th>용도</th>
+      <td>경식(硬式) 포수미트</td>
+    </tr>
+    <tr class="jjang-row-alt">
+      <th>소재</th>
+      <td>Japan Steerhide (일본산 와규 레더)</td>
+    </tr>
+    <tr>
+      <th>패턴</th>
+      <td>세로형 소형 패턴 &#183; 깊은 포켓</td>
+    </tr>
+    <tr class="jjang-row-alt">
+      <th>구조</th>
+      <td>약지고리 &#183; 검지쿠션 &#183; 얇은 손가락 심 하이브리드</td>
+    </tr>
+    <tr>
+      <th>손등 디자인</th>
+      <td>X자 끈 결합 구조 (카나메 독자 설계)</td>
+    </tr>
+    <tr class="jjang-row-alt">
+      <th>컬러</th>
+      <td>블랙 / 핑크 (신형 로고)</td>
+    </tr>
+    <tr>
+      <th>좌우</th>
+      <td>우투용 (왼손 착용)</td>
+    </tr>
+    <tr class="jjang-row-alt">
+      <th>원산지</th>
+      <td>일본</td>
+    </tr>
+    <tr>
+      <th>가격</th>
+      <td>580,000원</td>
+    </tr>
+  </table>
+</div>
+<!-- [/SEC:스펙] -->
+
+<!-- [SEC:체감설명] -->
+<div class="jjang-section-alt">
+  <h2 class="jjang-section-title">실제로 써보면 이렇습니다</h2>
+  <p class="jjang-section-sub">스펙 너머의 체감</p>
+
+  <div class="jjang-feel-block">
+    <h3 class="jjang-feel-title">와규 레더의 첫인상</h3>
+    <p class="jjang-feel-desc">처음 꺼냈을 때 일반 스티어하이드보다 표면 결이 더 고르다는 게 느껴집니다. 새 미트 특유의 뻣뻣함은 있지만, 길들이기를 시작하면 가죽이 손에 맞게 눌리는 속도가 빠른 편입니다. 와규 레더가 결이 촘촘한 만큼, 포켓이 한번 잡히면 형태가 잘 흐트러지지 않습니다.</p>
+  </div>
+
+  <div class="jjang-feel-block">
+    <h3 class="jjang-feel-title">약지고리 + 검지쿠션의 차이</h3>
+    <p class="jjang-feel-desc">경식공을 100구 이상 받다 보면 손바닥과 검지에 충격이 누적됩니다. 약지고리가 미트를 손에 고정시켜주기 때문에 포구 시 미트가 밀리는 느낌이 줄고, 검지쿠션은 검지 끝에 전달되는 직접 충격을 완화합니다. 특히 150km/h 이상 투수를 받는 포수에게 체감 차이가 큽니다.</p>
+  </div>
+
+  <div class="jjang-feel-block">
+    <h3 class="jjang-feel-title">세로형 소형 패턴의 송구 전환</h3>
+    <p class="jjang-feel-desc">포켓이 세로로 깊게 형성되면 공이 미트 안에서 움직이는 범위가 줄어듭니다. 포구 후 오른손으로 공을 꺼내는 동작이 짧아지고, 도루 상황에서 캐칭부터 스로잉까지의 시간을 줄이는 데 실질적으로 도움이 됩니다.</p>
+  </div>
+
+  <div class="jjang-feel-block">
+    <h3 class="jjang-feel-title">X자 끈 결합 구조</h3>
+    <p class="jjang-feel-desc">손등 부분의 X자 끈 결합은 카나메만의 설계입니다. 미트를 쥐었을 때 손등 전체에 힘이 고르게 분산되어 한 곳에 압력이 집중되지 않습니다. 장시간 포구 훈련에서 손등 피로도가 다른 미트 대비 적은 편입니다.</p>
+  </div>
+</div>
+<!-- [/SEC:체감설명] -->
+
+<!-- [SEC:포지션] -->
+<div class="jjang-section">
+  <h2 class="jjang-section-title">타겟별 적합도</h2>
+  <p class="jjang-section-sub">누구에게 맞는 미트인지 정리했습니다</p>
+  <table class="jjang-position-table" cellspacing="0" cellpadding="0">
+    <tr>
+      <td>
+        <div class="jjang-position-card">
+          <h3 class="jjang-position-card-title">엘리트 경식 포수</h3>
+          <span class="jjang-position-card-fit jjang-fit-high">적합도 높음</span>
+          <p>고교/대학/실업 경식 포수가 메인 타겟입니다. 150km/h급 투수를 받는 환경에서 포구 안정성과 송구 전환 속도가 모두 필요한 포수에게 맞습니다.</p>
+        </div>
+      </td>
+      <td>
+        <div class="jjang-position-card">
+          <h3 class="jjang-position-card-title">사회인 경식 포수</h3>
+          <span class="jjang-position-card-fit jjang-fit-high">적합도 높음</span>
+          <p>사회인 경식 리그에서 주전 포수를 맡고 있다면 충분한 투자 가치가 있습니다. 내구성이 높아 관리만 잘 하면 2~3시즌 이상 사용 가능합니다.</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="jjang-position-card">
+          <h3 class="jjang-position-card-title">연식(고무공) 포수</h3>
+          <span class="jjang-position-card-fit jjang-fit-mid">보통</span>
+          <p>사용은 가능하지만 경식 미트 특유의 무게감이 있습니다. 연식 전용 미트가 더 가볍고 핸들링이 좋으므로, 연식 전용이라면 다른 선택이 효율적입니다.</p>
+        </div>
+      </td>
+      <td>
+        <div class="jjang-position-card">
+          <h3 class="jjang-position-card-title">입문/유소년 포수</h3>
+          <span class="jjang-position-card-fit jjang-fit-mid">비추천</span>
+          <p>58만원대 프리미엄 미트는 입문 단계에서 과투자입니다. 본인의 포수 스타일과 선호 포켓이 확립된 후 선택하는 것을 권장합니다.</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<!-- [/SEC:포지션] -->
+
+<!-- [SEC:사이즈] -->
+<div class="jjang-section-alt">
+  <h2 class="jjang-section-title">사이즈 선택 기준</h2>
+  <p class="jjang-section-sub">경식 포수미트 사이즈 참고</p>
+  <div class="jjang-size-guide">
+    카나메 C200은 소형 패턴 미트입니다. 일반적인 경식 포수미트(약 33인치 전후)보다 약간 작은 사이즈감으로, 빠른 송구 전환을 중시하는 포수에게 맞습니다. 포켓이 넓고 깊은 미트를 선호하는 분은 사전에 확인이 필요합니다.
+  </div>
+  <table class="jjang-size-table">
+    <tr>
+      <th>구분</th>
+      <th>소형 패턴 (C200)</th>
+      <th>일반 패턴</th>
+    </tr>
+    <tr>
+      <td>포켓 방향</td>
+      <td>세로형 (깊음)</td>
+      <td>가로형 (넓음)</td>
+    </tr>
+    <tr class="jjang-row-alt">
+      <td>송구 전환</td>
+      <td>빠름</td>
+      <td>보통</td>
+    </tr>
+    <tr>
+      <td>포구 범위</td>
+      <td>보통</td>
+      <td>넓음</td>
+    </tr>
+    <tr class="jjang-row-alt">
+      <td>추천 스타일</td>
+      <td>도루 저지, 빠른 핸들링</td>
+      <td>프레이밍, 안정적 포구</td>
+    </tr>
+  </table>
+  <p class="jjang-size-note">* 포수미트 사이즈는 개인 손 크기와 포구 스타일에 따라 체감이 다릅니다. 길들이기 방식에 따라 포켓 크기도 달라질 수 있습니다.</p>
+</div>
+<!-- [/SEC:사이즈] -->
+
+<!-- [SEC:FAQ] -->
+<div class="jjang-section">
+  <h2 class="jjang-section-title">자주 묻는 질문</h2>
+  <p class="jjang-section-sub">구매 전 확인하세요</p>
+
+  <div class="jjang-faq-item">
+    <div class="jjang-faq-q"><span>Q.</span>카나메 C200은 어떤 레더를 사용하나요?</div>
+    <div class="jjang-faq-answer">
+      일본산 와규 레더(Japan Steerhide)를 사용합니다. 와규 레더는 가죽 결이 촘촘하고 내구성이 뛰어납니다. 길들이기 후 포켓 형성이 안정적이며, 시즌 내내 형태 유지력이 좋습니다.
+    </div>
+  </div>
+
+  <div class="jjang-faq-item">
+    <div class="jjang-faq-q"><span>Q.</span>길들이기 작업을 신청하면 얼마나 걸리나요?</div>
+    <div class="jjang-faq-answer">
+      기본 길각작업(30~40%)은 출고 시 함께 처리됩니다. 수타 길들이기(70~80%)나 물형부 길들이기(80~90%)를 신청하면 약 1주일이 추가 소요됩니다. 길들이기 신청 상품은 교환/반품이 불가하니 신중하게 선택해 주세요.
+    </div>
+  </div>
+
+  <div class="jjang-faq-item">
+    <div class="jjang-faq-q"><span>Q.</span>연식(고무공)에도 사용할 수 있나요?</div>
+    <div class="jjang-faq-answer">
+      경식(硬式) 전용 미트입니다. 물리적으로 연식 사용이 가능하지만, 경식 가죽은 연식용보다 두껍고 무겁습니다. 연식 전용이라면 연식 미트를 별도로 선택하는 것이 효율적입니다.
+    </div>
+  </div>
+
+  <div class="jjang-faq-item">
+    <div class="jjang-faq-q"><span>Q.</span>좌투용은 없나요?</div>
+    <div class="jjang-faq-answer">
+      현재 C200 모델은 우투(왼손 착용) 전용입니다. 좌투 포수미트는 수요가 적어 대부분의 브랜드에서 별도 오더로만 제작합니다. 좌투용이 필요하시면 짱베이스볼로 문의해 주세요.
+    </div>
+  </div>
+</div>
+<!-- [/SEC:FAQ] -->
+
+<!-- [SEC:추천포인트] -->
+<div class="jjang-section-alt">
+  <h2 class="jjang-section-title">추천 정리</h2>
+  <p class="jjang-section-sub">이 미트가 맞는 분, 안 맞는 분</p>
+  <ul class="jjang-recommend-list">
+    <li><strong>포수미트 전문 브랜드</strong>를 원하는 경식 포수 &#8594; 카나메는 포수미트만 만듭니다</li>
+    <li><strong>송구 전환 속도</strong>가 중요한 포수 &#8594; 세로형 소형 패턴으로 빠른 공 꺼내기 가능</li>
+    <li><strong>장시간 포구에 손이 아픈</strong> 포수 &#8594; 약지고리 + 검지쿠션으로 충격 분산</li>
+    <li><strong>내구성 좋은 가죽</strong>을 원하는 포수 &#8594; 일본산 와규 레더, 포켓 형태 유지력 우수</li>
+  </ul>
+  <div class="jjang-not-for">
+    <h3 class="jjang-not-for-title">이런 분은 다른 선택을 권장합니다</h3>
+    <p>연식 전용 포수 &#8594; 연식 미트가 더 가볍고 효율적<br>넓은 포켓 + 프레이밍 위주 포수 &#8594; 가로형 대형 패턴 미트가 적합<br>입문 단계 포수 &#8594; 10~20만원대에서 본인 스타일 파악 후 업그레이드 권장</p>
+  </div>
+</div>
+<!-- [/SEC:추천포인트] -->
+
+</div>

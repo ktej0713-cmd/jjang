@@ -1,0 +1,32 @@
+# Session: 2026-03-20
+**Date:** 2026-03-20
+**Started:** 00:09
+**Last Updated:** 00:09
+**Project:** claude-config
+**Branch:** main
+**Worktree:** C:\Users\NO\내 드라이브\claude-config
+
+---
+<!-- ECC:SUMMARY:START -->
+## Session Summary
+
+### Tasks
+- 정리 홈PC에서 다음 세션을 시작하면 이렇게 자동 실행됩니다:  sync-repo.sh가 로컬 브랜치가 master인지 감지 자동으로 master → main 이름 변경 원격 main 추적 설정 git pull origin main으로 최신 변경사항 수신 홈PC에서 아무것도 안 해도 다음 Claude Code 세션 시작 시 자동으로 브랜치가 통일되고 동기화
+- 정리 홈PC에서 다음 세션을 시작하면 이렇게 자동 실행됩니다:  sync-repo.sh가 로컬 브랜치가 master인지 감지 자동으로 master → main 이름 변경 원격 main 추적 설정 git pull origin main으로 최신 변경사항 수신 홈PC에서 아무것도 안 해도 다음 Claude Code 세션 시작 시 자동으로 브랜치가 통일되고 동기화
+- 여기가 홈pc야
+- 아냐 있을거야 구글드라이버 쪽 잘 찾아봐
+
+### Tools Used
+Bash, Glob, Read, Agent
+
+### Stats
+- Total user messages: 4
+<!-- ECC:SUMMARY:END -->
+
+### Notes for Next Session
+-
+
+### Context to Load
+```
+[relevant files]
+```
