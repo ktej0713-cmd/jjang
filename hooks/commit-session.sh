@@ -55,4 +55,4 @@ fi
 echo "$COMMIT_MSG" | git commit -F - --no-verify 2>/dev/null || true
 
 # push (백그라운드)
-git push origin master 2>/dev/null || git push origin main 2>/dev/null || true
+git push origin main 2>/dev/null || true
