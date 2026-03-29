@@ -42,3 +42,4 @@ node_modules/
 
 # 플랜 파일 (선택: 공유하려면 이 줄 삭제)
 # plans/
+channels/discord/.env
