@@ -1,0 +1,402 @@
+[
+  {
+    "goodsNo": "48237",
+    "goodsNm": "언더아머 유니섹스 UA 트레이닝 코튼 크루 삭스 3켤레 1386311-001 블랙",
+    "modelNo": "1386311-001",
+    "maker": "언더아머",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48236",
+    "goodsNm": "언더아머 유니섹스 UA 트레이닝 코튼 크루 삭스 3켤레 1386311-100 화이트",
+    "modelNo": "1386311-100",
+    "maker": "언더아머",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48235",
+    "goodsNm": "언더아머 유니섹스 코튼 쿼터 삭스 3켤레 1386372-001 블랙",
+    "modelNo": "1386372-001",
+    "maker": "언더아머",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48234",
+    "goodsNm": "언더아머 유니섹스 코튼 쿼터 삭스 3켤레 1386372-100 화이트",
+    "modelNo": "1386372-100",
+    "maker": "언더아머",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48233",
+    "goodsNm": "맥스 MAX 레볼루션 메이플 우드 나무 배트 채은성 선수 모델 블랙 S9006",
+    "modelNo": "S9006",
+    "maker": "맥스(MAX)",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48232",
+    "goodsNm": "맥스 MAX 레볼루션 메이플 우드 나무 배트 이진영 선수 모델 네츄럴 S9006",
+    "modelNo": "S9006",
+    "maker": "맥스(MAX)",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48222",
+    "goodsNm": "미즈노 쿠션 레보 포인트화 252501 화이트",
+    "modelNo": "11GP252501WT",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48220",
+    "goodsNm": "미즈노 쿠션 레보 포인트화 252562 화이트/레드",
+    "modelNo": "11GP252562WR",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48219",
+    "goodsNm": "미즈노 프로 쿠션 레보 프로 트레이너 인조잔디화 250001 화이트",
+    "modelNo": "11GT250001WT",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48218",
+    "goodsNm": "미즈노 프로 쿠션 레보 프로 트레이너 인조잔디화 250114 네이비/화이트",
+    "modelNo": "11GT250114WN",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48217",
+    "goodsNm": "미즈노 유소년 쿠션 레보 인조잔디화 252714 화이트/네이비",
+    "modelNo": "11GT252714WN",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48216",
+    "goodsNm": "미즈노 신발 글러브 건조기 232300",
+    "modelNo": "11GZ232300WT",
+    "maker": "미즈노",
+    "cateCd": "002005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48215",
+    "goodsNm": "미즈노 심장 보호대 10109 / 10009 블랙",
+    "modelNo": "1DJYB10109BK",
+    "maker": "미즈노",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48214",
+    "goodsNm": "미즈노 로진백 30100 65g",
+    "modelNo": "1GJYA30100WT",
+    "maker": "미즈노",
+    "cateCd": "048009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48212",
+    "goodsNm": "YGS 경식 내야 글러브 아이보리 (중고)",
+    "modelNo": "",
+    "maker": "",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "48209",
+    "goodsNm": "스톰 프리미엄 지투 유소년 야구백팩 블랙",
+    "modelNo": "백팩",
+    "maker": "스톰(ST)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48208",
+    "goodsNm": "스톰 프리미엄 지투 유소년 야구백팩 네이비",
+    "modelNo": "백팩",
+    "maker": "스톰(ST)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48207",
+    "goodsNm": "스톰 프리미엄 지투 야구백팩 블랙",
+    "modelNo": "백팩",
+    "maker": "스톰(ST)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48206",
+    "goodsNm": "스톰 프리미엄 지투 야구백팩 네이비",
+    "modelNo": "백팩",
+    "maker": "스톰(ST)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48188",
+    "goodsNm": "하타케야마 암가드 AG-550 NWG 네이비",
+    "modelNo": "AG-550 NWG",
+    "maker": "하타케야마",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48187",
+    "goodsNm": "하타케야마 좌우겸용 풋가드 FG-850 NWG 네이비",
+    "modelNo": "FG-850 NWG",
+    "maker": "하타케야마",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48186",
+    "goodsNm": "하타케야마 암가드 AG-550 BSR 블랙",
+    "modelNo": "AG-550 BSR",
+    "maker": "하타케야마",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48179",
+    "goodsNm": "하타케야마 좌우겸용 풋가드 FG-850 BSR 블랙",
+    "modelNo": "FG-850 BSR",
+    "maker": "하타케야마",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48177",
+    "goodsNm": "하타케야마 암가드 AG-550 RWB 레드",
+    "modelNo": "AG-550 RWB",
+    "maker": "하타케야마",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48175",
+    "goodsNm": "하타케야마 좌우겸용 풋가드 FG-850 RWB 레드",
+    "modelNo": "FG-850 RWB",
+    "maker": "하타케야마",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48173",
+    "goodsNm": "하타케야마 암가드 AG-550 SBR 실버",
+    "modelNo": "AG-550 SBR",
+    "maker": "하타케야마",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48171",
+    "goodsNm": "하타케야마 좌우겸용 풋가드 FG-850 SBR 실버",
+    "modelNo": "풋가드",
+    "maker": "하타케야마",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48165",
+    "goodsNm": "다비드 이노스트 내야 글러브 11.75인치 IN iF-43(MC/CM)25",
+    "modelNo": "IN iF-43(MC/CM)25",
+    "maker": "다비드",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48164",
+    "goodsNm": "다비드 이노스트 내야 글러브 11.5인치 IN IF-22(PP/PK)25",
+    "modelNo": "IN IF-22(PP/PK)25",
+    "maker": "다비드",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48160",
+    "goodsNm": "다비드 이노스트 내야 글러브 11.85인치 IN IF-45(BK/WT)25",
+    "modelNo": "IN IF-45(BK/WT)25",
+    "maker": "다비드",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48157",
+    "goodsNm": "프랭클린 SHOK-SORB 시리즈 배팅장갑 화이트네이비 20925",
+    "modelNo": "20925",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48155",
+    "goodsNm": "프랭클린 SHOK-SORB 시리즈 배팅장갑 화이트레드 20926",
+    "modelNo": "20926",
+    "maker": "프랭클린(Franklin)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48154",
+    "goodsNm": "프랭클린 FASTPITCH 시리즈 10.5인치 글러브(22483)",
+    "modelNo": "22483",
+    "maker": "프랭클린",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48145",
+    "goodsNm": "나이키 드라이 핏 아카데미25 쇼츠 반바지 (FZ9776010) 블랙",
+    "modelNo": "FZ9776010",
+    "maker": "나이키",
+    "cateCd": "007039005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48144",
+    "goodsNm": "제트 벨크로형 메쉬 인조잔디화 와이드 모델 BSR-8825K 2700 블루",
+    "modelNo": "BSR-8825K 2700",
+    "maker": "제트(ZETT)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48143",
+    "goodsNm": "제트 벨크로형 메쉬 인조잔디화 와이드 모델 BSR-8825K 2900 네이비",
+    "modelNo": "BSR-8825K 6400",
+    "maker": "제트(ZETT)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48142",
+    "goodsNm": "제트 벨크로형 메쉬 인조잔디화 와이드 모델 BSR-8825K 6400 레드",
+    "modelNo": "BSR-8825K 6400",
+    "maker": "제트(ZETT)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48140",
+    "goodsNm": "44 스페셜오더 BG 04 양가죽 배팅장갑 [엔젤윙]",
+    "modelNo": "BG 04",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48139",
+    "goodsNm": "44 스페셜오더 BG 02 양가죽 배팅장갑 [클리블랜드]",
+    "modelNo": "BG 02",
+    "maker": "44 pro",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48138",
+    "goodsNm": "44 스페셜오더 BG 01 양가죽 배팅장갑 [수퍼빌런]",
+    "modelNo": "BG 01",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48137",
+    "goodsNm": "44 스페셜오더 BG 05 양가죽 배팅장갑 [파이어윙]",
+    "modelNo": "BG 05",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48136",
+    "goodsNm": "44 스페셜오더 BG 06 양가죽 배팅장갑 [블랙윙]",
+    "modelNo": "BG 06",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48135",
+    "goodsNm": "44 스페셜오더 BG 07 양가죽 배팅장갑 [NC 노스 캐롤라이나]",
+    "modelNo": "BG 07",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48134",
+    "goodsNm": "44 스페셜오더 BG 15 양가죽 배팅장갑 [블루블러드]",
+    "modelNo": "BG 15",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48133",
+    "goodsNm": "44 스페셜오더 BG 22 양가죽 배팅장갑 [국대2]",
+    "modelNo": "BG 22",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48132",
+    "goodsNm": "44 스페셜오더 BG 26 양가죽 배팅장갑 [네이비씰]",
+    "modelNo": "BG 26",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48131",
+    "goodsNm": "44 스페셜오더 BG 25 양가죽 배팅장갑 [블랙팬서]",
+    "modelNo": "BG 25",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48126",
+    "goodsNm": "슈퍼스킨 유소년 글래디에이터 싱글 암가드 9종 색상",
+    "modelNo": "글래디에이터",
+    "maker": "비스코랩",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48117",
+    "goodsNm": "골드이스트 플래쉬 아미 일체형 징스파이크 야구화 화이트",
+    "modelNo": "징스파이크",
+    "maker": "골드이스트",
+    "cateCd": "002002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48116",
+    "goodsNm": "스톰 프리미엄 지투 유소년 암가드 블랙/골드",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  }
+]

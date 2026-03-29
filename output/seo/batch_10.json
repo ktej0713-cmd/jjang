@@ -1,0 +1,402 @@
+[
+  {
+    "goodsNo": "48545",
+    "goodsNm": "닥터체크 슬림X형 테이핑 손목보호대 1개입 (장갑형)",
+    "modelNo": "슬림X형",
+    "maker": "닥터체크",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48544",
+    "goodsNm": "닥터체크 슬림X형 테이핑 종아리보호대 1개입",
+    "modelNo": "슬림X형",
+    "maker": "닥터체크",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48543",
+    "goodsNm": "닥터체크 슬림X형 테이핑 손목보호대 2개입 (아대형)",
+    "modelNo": "슬림X형",
+    "maker": "닥터체크",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48542",
+    "goodsNm": "닥터체크 슬림X형 테이핑 무릎보호대 1개입",
+    "modelNo": "슬림X형",
+    "maker": "닥터체크",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48541",
+    "goodsNm": "닥터체크 슬림X형 테이핑 발목보호대 1개입",
+    "modelNo": "슬림X형",
+    "maker": "닥터체크",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48540",
+    "goodsNm": "닥터체크 슬림X형 테이핑 팔꿈치보호대 1개입",
+    "modelNo": "슬림X형",
+    "maker": "닥터체크",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48515",
+    "goodsNm": "러펠스 루즈핏 쿨매쉬 반팔 라운드 언더셔츠",
+    "modelNo": "루즈핏 쿨매쉬",
+    "maker": "러펠스",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48514",
+    "goodsNm": "러펠스 베이직 루즈핏 긴팔 라운드 언더셔츠 (스판 언더티,언더웨어)",
+    "modelNo": "루즈핏 긴팔",
+    "maker": "러펠스",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48513",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 블루/네이비",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48512",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 블랙/오렌지",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48511",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 핑크/블랙",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48509",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 스카이블루/옐로우/화이트",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48508",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 네이비/골드",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48507",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 레드/화이트",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48506",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 네이비/화이트/레드",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48505",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 블랙/화이트/레드",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48503",
+    "goodsNm": "뉴발란스 프레쉬폼 포인트화 야구화 PL3000 H7 네이비",
+    "modelNo": "PL3000 H7",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48501",
+    "goodsNm": "브렛 프로선수용 엄지 울림방지 보호대 블랙",
+    "modelNo": "엄지 울림방지",
+    "maker": "브렛(BRETT)",
+    "cateCd": "003004005",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "48500",
+    "goodsNm": "브렛 프로선수용 엄지 울림방지 보호대 핑크",
+    "modelNo": "엄지 울림방지",
+    "maker": "브렛(BRETT)",
+    "cateCd": "003004005",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "48489",
+    "goodsNm": "크라운 파워젤 에너지젤 (낱개)",
+    "modelNo": "에너지젤",
+    "maker": "크라운(CROWN)",
+    "cateCd": "048010",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48488",
+    "goodsNm": "미즈노 헤어밴드 화이트",
+    "modelNo": "헤어밴드",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "048006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48487",
+    "goodsNm": "미즈노 6CM 손목밴드 (2개입)",
+    "modelNo": "손목밴드",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48454",
+    "goodsNm": "다비드 이노스트 34인치 포수미트 IN CM-OP M(MC/CM)25",
+    "modelNo": "IN CM-OP M(MC/CM)25",
+    "maker": "다비드",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48453",
+    "goodsNm": "다비드 프로슈트 포수미트 34인치 PS CM-TF M(CM/RD)25",
+    "modelNo": "PS CM-TF M(CM/RD)25",
+    "maker": "다비드",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48452",
+    "goodsNm": "하타케야마 포수 수비장갑 CT-RW 레드 화이트",
+    "modelNo": "수비장갑",
+    "maker": "하타케야마",
+    "cateCd": "006002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48444",
+    "goodsNm": "하이골드 웨이브 터프화 인조잔디화 HL252UBSTR001 (화이트)",
+    "modelNo": "HL252UBSTR001",
+    "maker": "하이골드(HI-GOLD)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48443",
+    "goodsNm": "하이골드 웨이브 터프화 인조잔디화 HL252UBSTR001 (블랙)",
+    "modelNo": "HL252UBSTR001",
+    "maker": "하이골드(HI-GOLD)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48434",
+    "goodsNm": "아식스 이지오더 샵오더 교체형 징스파이크 화이트/블랙/레드",
+    "modelNo": "이지오더",
+    "maker": "아식스",
+    "cateCd": "002002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48384",
+    "goodsNm": "윌비플레이 야구 손목밴드 스포츠 아대 보호대 2개입 블랙 L BH50",
+    "modelNo": "BH50",
+    "maker": "윌비플레이",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48383",
+    "goodsNm": "윌비플레이 야구 손목밴드 스포츠 아대 보호대 2개입 화이트 L BH50",
+    "modelNo": "BH50",
+    "maker": "윌비플레이",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48382",
+    "goodsNm": "윌비플레이 야구 손목밴드 스포츠 아대 보호대 2개입 블랙 S BH50",
+    "modelNo": "BH50",
+    "maker": "윌비플레이",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48381",
+    "goodsNm": "윌비플레이 야구 손목밴드 스포츠 아대 보호대 2개입 화이트 S BH50",
+    "modelNo": "BH50",
+    "maker": "윌비플레이",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48375",
+    "goodsNm": "아이피 셀렉트 12인치 투수 글러브 블랙/레드 (중고)",
+    "modelNo": "오더",
+    "maker": "아이피셀렉트",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "48369",
+    "goodsNm": "제트 노크배트 펑고배트 BKT1401K 화이트/네이비 94cm 37인치",
+    "modelNo": "BKT1401K",
+    "maker": "제트(ZETT)",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48368",
+    "goodsNm": "제트 노크배트 펑고배트 BKT1401K 화이트/네이비 98cm 38.6인치",
+    "modelNo": "BKT1401K",
+    "maker": "제트(ZETT)",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48367",
+    "goodsNm": "제트 노크배트 펑고배트 BKT1401K 화이트/네이비 102cm 40인치",
+    "modelNo": "BKT1401K",
+    "maker": "제트(ZETT)",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48366",
+    "goodsNm": "원에이티 이지핏 프로 포수 니쿠션 니세이버",
+    "modelNo": "니쿠션",
+    "maker": "원에이티",
+    "cateCd": "044006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48342",
+    "goodsNm": "나이키 에어 줌 다이아몬드 엘리트 터프 야구화 인조잔디화 DZ0503 104 화이트/블랙",
+    "modelNo": "DZ0503 104",
+    "maker": "나이키",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48340",
+    "goodsNm": "골드 플래티넘 리미티드 김재호 은퇴기념 글러브",
+    "modelNo": "플래티넘 리미티드 김재호",
+    "maker": "골드(GOLD)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48334",
+    "goodsNm": "볼플레이어스 글러브 컨디셔너 오일",
+    "modelNo": "컨디셔너",
+    "maker": "볼플레이어스",
+    "cateCd": "001007002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48331",
+    "goodsNm": "SSK New 글러브 밴드",
+    "modelNo": "글러브 밴드",
+    "maker": "SSK",
+    "cateCd": "001007007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48329",
+    "goodsNm": "44 라이즈 유소년 올라운드 글러브 11.5인치 스카이블루",
+    "modelNo": "라이즈",
+    "maker": "44 pro",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48328",
+    "goodsNm": "44 라이즈 유소년 올라운드 글러브 11.5인치 레드",
+    "modelNo": "라이즈",
+    "maker": "44",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48327",
+    "goodsNm": "44 라이즈 유소년 올라운드 글러브 11.5인치 블론드",
+    "modelNo": "라이즈",
+    "maker": "44",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48326",
+    "goodsNm": "44 라이즈 유소년 올라운드 글러브 11.5인치 블랙",
+    "modelNo": "라이즈",
+    "maker": "44",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48324",
+    "goodsNm": "브렛 메이플 압축 보아그립 고본배트 271모델 33.5인치 블랙/내추럴",
+    "modelNo": "271모델",
+    "maker": "브렛",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48323",
+    "goodsNm": "브렛 메이플 압축 보아그립 고본배트 271모델 33인치 블랙/내추럴",
+    "modelNo": "271모델",
+    "maker": "브렛",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48322",
+    "goodsNm": "브렛 메이플 압축 보아그립 고본배트 243모델 33.5인치 블랙/내추럴",
+    "modelNo": "243 모델",
+    "maker": "브렛",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48321",
+    "goodsNm": "브렛 메이플 압축 보아그립 고본배트 243모델 33인치 블랙/내추럴",
+    "modelNo": "243 모델",
+    "maker": "브렛",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48320",
+    "goodsNm": "브렛 아동용 수비용 안면 보호대",
+    "modelNo": "안면 보호대",
+    "maker": "브렛",
+    "cateCd": "005007",
+    "sellFl": "y"
+  }
+]

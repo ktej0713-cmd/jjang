@@ -78,7 +78,7 @@
   --bg-card: #FFFFFF;
 
   /* 타이포그래피 */
-  --font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-size-xs: 12px;
   --font-size-sm: 13px;
   --font-size-base: 15px;
@@ -125,9 +125,17 @@
 ## 타이포그래피
 
 ### 폰트 패밀리
-- 기본: `Pretendard` (한글 최적화, 가변 웨이트 지원)
+- 기본: `Noto Sans KR` (Google Fonts CDN, 한글 최적화)
+- 로드: `<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">`
 - 폴백: `-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`
-- 가격/숫자 강조: `'Pretendard'` 동일 (별도 숫자 폰트 불필요)
+- 가격/숫자 강조: `'Noto Sans KR'` 동일 (별도 숫자 폰트 불필요)
+
+### 스마트스토어/고도몰 인라인 스타일 기준값
+CSS 변수는 고도몰 스킨에서만 사용. 상세페이지/기획전 HTML은 반드시 인라인 스타일:
+- `font-family: 'Noto Sans KR', -apple-system, sans-serif`
+- primary: `#1B2A4A` / accent: `#D4A843`
+- 본문: `font-size:15px; color:#222222; line-height:1.7`
+- 섹션 제목: `font-size:22px; font-weight:700; color:#1B2A4A; border-left:4px solid #D4A843; padding-left:12px`
 
 ### 폰트 크기 스케일
 | 용도 | 크기 | 굵기 | 행간 |

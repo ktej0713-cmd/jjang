@@ -1,0 +1,402 @@
+[
+  {
+    "goodsNo": "47385",
+    "goodsNm": "러펠스 프로페셔널 우드 메이플 펑고배트 36인치",
+    "modelNo": "러펠스 프로페셔널 우드 메이플 펑고배트 36인치",
+    "maker": "러펠스",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47384",
+    "goodsNm": "ZETT 제트 선수지급용 암가드 (고종욱) 일본산",
+    "modelNo": "오더 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47382",
+    "goodsNm": "ZETT 제트 선수지급용 좌타자용 풋가드 (고종욱선수지급용) 일본산",
+    "modelNo": "오더 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47381",
+    "goodsNm": "프랭클린 CFX 슬라이딩 주루 장갑 23555 편수 (네이비)",
+    "modelNo": "23555",
+    "maker": "프랭클린",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47380",
+    "goodsNm": "프랭클린 CFX 슬라이딩 주루 장갑 23555C9 편수 (핑크)",
+    "modelNo": "23555C9",
+    "maker": "프랭클린",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47364",
+    "goodsNm": "ZETT 제트 어센틱 풋가드 (김인태 2 모델)",
+    "modelNo": "어센틱 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47363",
+    "goodsNm": "ZETT 제트 어센틱 암가드 (김인태 2 모델)",
+    "modelNo": "어센틱 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47362",
+    "goodsNm": "ZETT 제트 어센틱 손등가드 (김인태 2 모델)",
+    "modelNo": "어센틱 손등가드",
+    "maker": "제트",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47359",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 80057087",
+    "modelNo": "80057087",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47358",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 99799186",
+    "modelNo": "99799186",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47357",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 63501080",
+    "modelNo": "p501518",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47356",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 84554931",
+    "modelNo": "84554931",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47355",
+    "goodsNm": "러펠스 RBG-241 양가죽 양피 배팅장갑",
+    "modelNo": "RBG-241",
+    "maker": "러펠스",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47354",
+    "goodsNm": "러펠스 방한 니트 장갑 (스마트폰 터치,미끄럼 방지)",
+    "modelNo": "러펠스 방한 니트 장갑",
+    "maker": "러펠스",
+    "cateCd": "039003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47353",
+    "goodsNm": "러펠스 다이나믹 야구가방 야구백팩 성인 유소년 겸용 (블랙/레드라인)",
+    "modelNo": "러펠스 다이나믹 야구가방 야구백팩 성인 유소년 겸용",
+    "maker": "러펠스",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47352",
+    "goodsNm": "러펠스 다이나믹 야구가방 야구백팩 성인 유소년 겸용 (네이비/레드라인)",
+    "modelNo": "러펠스 다이나믹 야구가방 야구백팩 성인 유소년 겸용",
+    "maker": "러펠스",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47351",
+    "goodsNm": "러펠스 다이나믹 야구가방 야구백팩 성인 유소년 겸용 (블루/골드)",
+    "modelNo": "러펠스 다이나믹 야구가방 야구백팩 성인 유소년 겸용",
+    "maker": "러펠스",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47350",
+    "goodsNm": "러펠스 더플백 스포츠 장비가방 (포수장비,팀장비)",
+    "modelNo": "러펠스 더플백 스포츠 장비가방 (포수장비,팀장비)",
+    "maker": "러펠스",
+    "cateCd": "004012",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47349",
+    "goodsNm": "러펠스 쿨메쉬 투톤 7부 라운드 언더셔츠 (스판 언더티,언더웨어)",
+    "modelNo": "러펠스 쿨메쉬 투톤 7부 라운드 언더셔츠 (스판 언더티",
+    "maker": "러펠스",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47348",
+    "goodsNm": "러펠스 베이직 쿨에어 컴프레션 암슬리브 (2개 1SET)",
+    "modelNo": "러펠스 베이직 쿨에어 컴프레션 암슬리브 (2개 1SET",
+    "maker": "러펠스",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47347",
+    "goodsNm": "러펠스 큐브 아이싱 티셔츠 오버핏 반팔티 블랙",
+    "modelNo": "아이싱",
+    "maker": "러펠스(RUPPELLS)",
+    "cateCd": "007038001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47346",
+    "goodsNm": "러펠스 솔리드 야구 양말 스타킹 성인/유소년용",
+    "modelNo": "양말",
+    "maker": "러펠스(RUPPELLS)",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47345",
+    "goodsNm": "러펠스 베이직 긴팔 라운드 언더셔츠 (스판 언더티,언더웨어)",
+    "modelNo": "러펠스 베이직 긴팔 라운드 언더셔츠 (스판 언더티,언더",
+    "maker": "러펠스",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47344",
+    "goodsNm": "러펠스 베이직 하이터틀넥 기모 언더셔츠",
+    "modelNo": "러펠스 베이직 하이터틀넥 기모 언더셔츠",
+    "maker": "러펠스",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47343",
+    "goodsNm": "러펠스 베이직 쿨스판 타이즈 레깅스 (4계절용)",
+    "modelNo": "러펠스 베이직 쿨스판 타이즈 (4계절용)",
+    "maker": "러펠스(RUPPELLS)",
+    "cateCd": "007039001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47342",
+    "goodsNm": "러펠스 컴프레션 파워팬츠 (슬라이딩팬츠,태클팬츠,5부 타이즈)",
+    "modelNo": "파워팬츠",
+    "maker": "러펠스",
+    "cateCd": "007039003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47341",
+    "goodsNm": "러펠스 베이직 기모 언더셔츠 (겨울용,언더웨어)",
+    "modelNo": "러펠스 베이직 기모 언더셔츠 (겨울용,언더웨어)",
+    "maker": "러펠스",
+    "cateCd": "039007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47340",
+    "goodsNm": "러펠스 베이직 기모 타이즈 (겨울용,레깅스)",
+    "modelNo": "러펠스 베이직 기모 타이즈 (겨울용,레깅스)",
+    "maker": "러펠스(RUPPELLS)",
+    "cateCd": "039007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47339",
+    "goodsNm": "러펠스 쿨매쉬 반팔 언더셔츠 (블랙,네이비)",
+    "modelNo": "러펠스 쿨매쉬 반팔 언더셔츠 (블랙,네이비)",
+    "maker": "러펠스",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47338",
+    "goodsNm": "프랭클린 PRT 시리즈 렉가드 풋가드 23568C9 (핑크에디션)",
+    "modelNo": "23568C9",
+    "maker": "프랭클린",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47337",
+    "goodsNm": "프랭클린 PRT 시리즈 엘보우가드 암가드 23567C9 (핑크에디션)",
+    "modelNo": "23567C9",
+    "maker": "프랭클린",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47336",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (포커스 블루)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (포커스 블루)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47335",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (포커스 그레이)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (포커스 그레이",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47334",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (포커스 레드)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (포커스 레드)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47332",
+    "goodsNm": "러펠스 아이스크림 유소년 어린이용 야구 배트 민트",
+    "modelNo": "아이스크림 배트",
+    "maker": "러펠스(RUPPELLS)",
+    "cateCd": "003001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47330",
+    "goodsNm": "TEPPEN 테펜 경식 오더 내야 글러브 MIE-L 블랙",
+    "modelNo": "MIE-L",
+    "maker": "TEPPEN 테펜",
+    "cateCd": "001017",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47329",
+    "goodsNm": "TEPPEN 테펜 경식 오더 셀렉트 모델 투수 글러브 SW1 블랙핑크",
+    "modelNo": "SW1",
+    "maker": "TEPPEN 테펜",
+    "cateCd": "001001",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47328",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 김헌곤 모델 14219287",
+    "modelNo": "14219287",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47327",
+    "goodsNm": "제트 선수 레플리카 투수 글러브 (김택연 5 모델)",
+    "modelNo": "레플리카",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47325",
+    "goodsNm": "B45 25시즌 프로 버치 우드 배트 YK 이용규 모델 (우드/M블랙)",
+    "modelNo": "YK",
+    "maker": "B45",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47323",
+    "goodsNm": "B45 25시즌 프로 버치 우드 배트 JJ8 전준우 모델 (무광 오렌지)",
+    "modelNo": "JJ8",
+    "maker": "B45",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47322",
+    "goodsNm": "BMC 2025 TRD-PRO K11 올라운드 글러브 오가웹 유소년 겸용 내추럴/탄",
+    "modelNo": "TRD-PRO K11",
+    "maker": "BMC",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47321",
+    "goodsNm": "BMC 2025 TRD-PRO K11 올라운드 글러브 오가웹 유소년 겸용 레드/탄",
+    "modelNo": "TRD-PRO K11",
+    "maker": "BMC",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47320",
+    "goodsNm": "BMC 2025 TRD-PRO K11 올라운드 글러브 오가웹 유소년 겸용 블루/탄",
+    "modelNo": "TRD-PRO K11",
+    "maker": "BMC",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47319",
+    "goodsNm": "BMC 2025 TRD-PRO K11 올라운드 글러브 오가웹 유소년 겸용 블랙/탄",
+    "modelNo": "TRD-PRO K11",
+    "maker": "BMC",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47317",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (옐로우)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (옐로우)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47316",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (핑크)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (핑크)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47315",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (스카이 블루)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (스카이 블루)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47314",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (화이트)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (화이트)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47313",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (레드)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (레드)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  }
+]

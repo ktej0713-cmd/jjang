@@ -12,7 +12,22 @@
       "mcp__plugin_playwright_playwright__browser_snapshot",
       "mcp__plugin_playwright_playwright__browser_click",
       "mcp__claude_ai_Gmail__gmail_get_profile",
-      "mcp__plugin_playwright_playwright__browser_wait_for"
+      "mcp__plugin_playwright_playwright__browser_wait_for",
+      "Skill(telegram:configure)",
+      "Skill(telegram:configure:*)",
+      "Skill(telegram:access)",
+      "Skill(telegram:access:*)",
+      "mcp__telegram__reply",
+      "Skill(discord:configure)",
+      "mcp__plugin_discord_discord__reply",
+      "mcp__plugin_discord_discord__fetch_messages",
+      "mcp__plugin_discord_discord__edit_message",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "mcp__plugin_context-mode_context-mode__ctx_upgrade"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\NO\\OneDrive\\.claude\\.git"
     ]
   }
 }

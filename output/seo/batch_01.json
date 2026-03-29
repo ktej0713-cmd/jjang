@@ -1,0 +1,402 @@
+[
+  {
+    "goodsNo": "50727",
+    "goodsNm": "제트 ZETT 일본산 암가드 BLL380C 6411(레드)",
+    "modelNo": "BLL380C",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50725",
+    "goodsNm": "ZETT 제트 선수지급용 가드세트 (고종욱) 일본산",
+    "modelNo": "오더 가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "012007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50711",
+    "goodsNm": "아디다스 아디제로 일렉트릭+ TPU 포인트화 야구화 IF8487 핑크",
+    "modelNo": "IF8487",
+    "maker": "아디다스(adidas)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50710",
+    "goodsNm": "아디다스 아디제로 일렉트릭+ TPU 포인트화 야구화 IF8488 화이트/핑크",
+    "modelNo": "IF8488",
+    "maker": "아디다스(adidas)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50687",
+    "goodsNm": "미즈노 Gachi 수비장갑 33001 33101 (화이트/블랙)",
+    "modelNo": "1EJED33001,1EJED33101",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50576",
+    "goodsNm": "아식스 이지오더 샵오더 교체형 징스파이크 블루/화이트/오렌지",
+    "modelNo": "이지오더",
+    "maker": "아식스",
+    "cateCd": "002002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50541",
+    "goodsNm": "SSK 인조잔디화 SSF5200 화이트/레드",
+    "modelNo": "SSF5200",
+    "maker": "사사키(SSK)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50540",
+    "goodsNm": "아디다스 아디제로 임팩트+ TPU 포인트화 야구화 IF8493 화이트",
+    "modelNo": "IF8493",
+    "maker": "아디다스(adidas)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50534",
+    "goodsNm": "유락 ULAC 비저널 초경량 미러 변색 고글 선글라스",
+    "modelNo": "비저널",
+    "maker": "유락(ULAC)",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50533",
+    "goodsNm": "유락 ULAC 오타쿠 미러 변색 고글 선글라스",
+    "modelNo": "오타쿠",
+    "maker": "유락(ULAC)",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50532",
+    "goodsNm": "유락 ULAC 호코 미러 변색 고글 선글라스",
+    "modelNo": "호코",
+    "maker": "유락(ULAC)",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50531",
+    "goodsNm": "유락 ULAC 루프트 미러 고글 선글라스",
+    "modelNo": "루프트",
+    "maker": "유락(ULAC)",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50509",
+    "goodsNm": "언더아머 APAC 스포츠스타일 우븐 아노락 6007565-014 그레이 반팔 바람막이",
+    "modelNo": "6007565-014",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50483",
+    "goodsNm": "롤링스 경식 게이머 트레이닝 글러브 10인치 GH5GTK4T-CAM/SHERRY",
+    "modelNo": "GH5GTK4T-CAM/SHERRY",
+    "maker": "롤링스(Rawlings)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50482",
+    "goodsNm": "롤링스 경식 게이머 트레이닝 글러브 10인치 GH5GTK4T-B/SX",
+    "modelNo": "GH5GTK4T-B/SX",
+    "maker": "롤링스(Rawlings)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50481",
+    "goodsNm": "롤링스 경식 게이머 트레이닝 글러브 10인치 GH5GTK4T-B",
+    "modelNo": "GH5GTK4T-B",
+    "maker": "롤링스(Rawlings)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50456",
+    "goodsNm": "미츠와타이거 경식 포수미트 33인치 HGT20FWHC 레드",
+    "modelNo": "HGT20FWHC",
+    "maker": "미츠와타이거",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50455",
+    "goodsNm": "미츠와타이거 경식 포수미트 33인치 HGT20FWHC 블랙",
+    "modelNo": "HGT20FWHC",
+    "maker": "미츠와타이거",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50453",
+    "goodsNm": "골드 야구바지 일반 긴바지 스트라이프 2선",
+    "modelNo": "야구바지",
+    "maker": "골드(GOLD)",
+    "cateCd": "007040",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50452",
+    "goodsNm": "골드 야구바지 일반 긴바지 스트라이프",
+    "modelNo": "야구바지",
+    "maker": "골드(GOLD)",
+    "cateCd": "007040",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50451",
+    "goodsNm": "골드 야구바지 농군 스트라이프 2선",
+    "modelNo": "야구바지",
+    "maker": "골드(GOLD)",
+    "cateCd": "007040",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50450",
+    "goodsNm": "골드 야구바지 농군 스트라이프",
+    "modelNo": "야구바지",
+    "maker": "골드(GOLD)",
+    "cateCd": "007040",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50433",
+    "goodsNm": "웨이트레이드 어뢰 불도끼 알로이 토피도 야구배트",
+    "modelNo": "어뢰 불도끼",
+    "maker": "웨이트레이드",
+    "cateCd": "003001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50426",
+    "goodsNm": "골드 2026 G-SHIELD 프로 검투사 각도 조절형 양귀 타자헬멧 (무광 블랙)",
+    "modelNo": "골드 헬멧",
+    "maker": "골드(GOLD)",
+    "cateCd": "005001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50425",
+    "goodsNm": "골드 2026 G-SHIELD 프로 검투사 각도 조절형 양귀 타자헬멧 (유광 블랙)",
+    "modelNo": "골드 헬멧",
+    "maker": "골드(GOLD)",
+    "cateCd": "005001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50421",
+    "goodsNm": "골드 2026 G-SHIELD 프로 검투사 각도 조절형 외귀 타자헬멧 (유광 블랙)",
+    "modelNo": "골드 헬멧",
+    "maker": "골드(GOLD)",
+    "cateCd": "005001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50419",
+    "goodsNm": "SSK 프로엣지 초경량 AG 징스파이크 야구화 ESF3251FLB 스카이블루/화이트",
+    "modelNo": "ESF3251FLB",
+    "maker": "사사키(SSK)",
+    "cateCd": "002002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50393",
+    "goodsNm": "미즈노 스트레이트 야구벨트 N0562 레드 (125cm)",
+    "modelNo": "12JYAV0562NRD",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "007007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50367",
+    "goodsNm": "아디다스 아디제로 임팩트 TPU 포인트화 야구화 IF3355 화이트/블랙/그레이",
+    "modelNo": "IF3355",
+    "maker": "아디다스(adidas)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50366",
+    "goodsNm": "아디다스 아디제로 애프터버너 9 포인트화 야구화 IE8545 화이트",
+    "modelNo": "IE8545",
+    "maker": "아디다스(adidas)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50363",
+    "goodsNm": "SSK 일본산 글러브 레이스 글러브끈 바늘 포함 YF107 (200cm)",
+    "modelNo": "YF107",
+    "maker": "사사키(SSK)",
+    "cateCd": "001007001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50362",
+    "goodsNm": "SSK 일본산 글러브 레이스 글러브끈 바늘 포함 YF107 (180cm)",
+    "modelNo": "YF107",
+    "maker": "사사키(SSK)",
+    "cateCd": "001007001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50326",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 함수호1 선수모델 스카이/옐로우",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50325",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 함수호1 선수모델 스카이/옐로우",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50324",
+    "goodsNm": "프로스펙스 포프로 암가드 함수호1 선수모델 스카이/옐로우",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50322",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 여동욱1 선수모델 핑크/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50321",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 여동욱1 선수모델 핑크/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50320",
+    "goodsNm": "프로스펙스 포프로 암가드 여동욱1 선수모델 핑크/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50318",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 김대한1 선수모델 네이비/골드",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50317",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 김대한1 선수모델 네이비/골드",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50316",
+    "goodsNm": "프로스펙스 포프로 암가드 김대한1 선수모델 네이비/골드",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50314",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 윤정빈1 선수모델 블랙/블루",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50313",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 윤정빈1 선수모델 블랙/블루",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50312",
+    "goodsNm": "프로스펙스 포프로 암가드 윤정빈1 선수모델 블랙/블루",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50310",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 천성호1 선수모델 레드/옐로우/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50309",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 천성호1 선수모델 레드/옐로우/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50308",
+    "goodsNm": "프로스펙스 포프로 암가드 천성호1 선수모델 레드/옐로우/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50306",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 정수빈1 선수모델 옐로우/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50302",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 심우준2 선수모델 실버/오렌지",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50301",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 심우준2 선수모델 실버/오렌지",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  }
+]

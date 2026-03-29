@@ -1,0 +1,74 @@
+{
+  "상품번호": "51360",
+  "상품명": "유니 Yooni 엔트리 모델 내야 글러브 YN06 11.6인치 블랙/옐로우 (세토스티어)",
+  "브랜드": "유니 (Yooni)",
+  "모델번호": "YN06",
+  "생성일": "2026-03-26",
+
+  "검색키워드": "유니글러브, Yooni글러브, YN06, 내야글러브, 내야수글러브, 11.6인치글러브, 사회인야구글러브, 유소년글러브, 입문글러브, 보급형글러브, 엔트리글러브, 세토스티어글러브, 스티어하이드글러브, 블랙글러브, 야구글러브, 내야수장갑, 유니야구, 성인내야글러브, 야구입문, 저가글러브",
+
+  "SEO태그": {
+    "meta_title": "유니 YN06 내야글러브 11.6인치 | 짱베이스볼",
+    "meta_description": "유니 Yooni YN06 엔트리 내야글러브. 11.6인치 세토스티어 가죽, 블랙/옐로우. 사회인·유소년 입문자에게 적합한 가성비 내야수 글러브.",
+    "meta_keywords": "유니글러브, YN06, 내야글러브, 11.6인치, 세토스티어, 사회인야구, 유소년야구, 엔트리글러브, Yooni",
+    "og_title": "유니 YN06 내야글러브 | 짱베이스볼",
+    "og_description": "유니 YN06 11.6인치 세토스티어 내야글러브. 입문·보급형 추천.",
+    "og_image": "https://jjangbaseball.com/goods/goods_img/51360_main.jpg",
+    "canonical": "https://jjangbaseball.com/goods/51360"
+  },
+
+  "네이버EP": {
+    "EP_상품명": "유니 Yooni YN06 내야 글러브 11.6인치 블랙 옐로우 세토스티어 사회인 유소년",
+    "네이버카테고리명": "스포츠/레저 > 야구 > 글러브",
+    "네이버카테고리코드": "50001855",
+    "제조사": "유니 (Yooni)",
+    "브랜드": "유니 (Yooni)",
+    "모델명": "YN06",
+    "상품속성": "색상: 블랙/옐로우|사이즈: 11.6인치|소재: 세토스티어(Steer Hide)|포지션: 내야수|등급: 엔트리(입문)",
+    "검색태그": "내야글러브|유니글러브|YN06|11.6인치글러브|사회인야구글러브|유소년글러브|세토스티어|입문글러브|보급형글러브|엔트리글러브"
+  },
+
+  "JSON_LD": {
+    "@context": "https://schema.org/",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "유니 Yooni 엔트리 모델 내야 글러브 YN06 11.6인치 블랙/옐로우 (세토스티어)",
+        "description": "유니 Yooni YN06 엔트리 내야글러브. 11.6인치 세토스티어 가죽, 블랙/옐로우 컬러. 사회인야구·유소년야구 입문자를 위한 보급형 내야수 글러브.",
+        "sku": "YN06",
+        "mpn": "YN06",
+        "brand": {
+          "@type": "Brand",
+          "name": "유니 (Yooni)"
+        },
+        "image": "https://jjangbaseball.com/goods/goods_img/51360_main.jpg",
+        "url": "https://jjangbaseball.com/goods/51360",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://jjangbaseball.com/goods/51360",
+          "priceCurrency": "KRW",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "Organization",
+            "name": "짱베이스볼"
+          }
+        },
+        "additionalProperty": [
+          { "@type": "PropertyValue", "name": "사이즈", "value": "11.6인치" },
+          { "@type": "PropertyValue", "name": "색상", "value": "블랙/옐로우" },
+          { "@type": "PropertyValue", "name": "소재", "value": "세토스티어 (Steer Hide)" },
+          { "@type": "PropertyValue", "name": "포지션", "value": "내야수" }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://jjangbaseball.com" },
+          { "@type": "ListItem", "position": 2, "name": "글러브", "item": "https://jjangbaseball.com/category/glove" },
+          { "@type": "ListItem", "position": 3, "name": "내야수용", "item": "https://jjangbaseball.com/category/glove/infield" },
+          { "@type": "ListItem", "position": 4, "name": "유니 YN06 내야글러브", "item": "https://jjangbaseball.com/goods/51360" }
+        ]
+      }
+    ]
+  }
+}

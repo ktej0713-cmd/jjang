@@ -1,0 +1,402 @@
+[
+  {
+    "goodsNo": "50300",
+    "goodsNm": "프로스펙스 포프로 암가드 심우준2 선수모델 실버/오렌지",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50298",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 심우준1 선수모델 화이트/오렌지",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50297",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 심우준1 선수모델 화이트/오렌지",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50296",
+    "goodsNm": "프로스펙스 포프로 암가드 심우준1 선수모델 화이트/오렌지",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50295",
+    "goodsNm": "제트 슈즈픽스 야구화 보호 BX432 투명",
+    "modelNo": "BX432",
+    "maker": "제트(ZETT)",
+    "cateCd": "002005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50292",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 나승엽2 선수모델 화이트/네이비",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50288",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 나승엽1 선수모델 네이비/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50287",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 나승엽1 선수모델 네이비/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50286",
+    "goodsNm": "프로스펙스 포프로 암가드 나승엽1 선수모델 네이비/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50284",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 오지환2 선수모델 레드/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50283",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 오지환2 선수모델 레드/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50282",
+    "goodsNm": "프로스펙스 포프로 암가드 오지환2 선수모델 레드/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50280",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 오지환1 선수모델 블랙/레드",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50279",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 오지환1 선수모델 블랙/레드",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50278",
+    "goodsNm": "프로스펙스 포프로 암가드 오지환1 선수모델 블랙/레드",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50276",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 채은성3 선수모델 골드/화이트/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50275",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 채은성3 선수모델 골드/화이트/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50274",
+    "goodsNm": "프로스펙스 포프로 암가드 채은성3 선수모델 골드/화이트/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50272",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 채은성2 선수모델 실버/네이비",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50271",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 채은성2 선수모델 실버/네이비",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50270",
+    "goodsNm": "프로스펙스 포프로 암가드 채은성2 선수모델 실버/네이비",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50268",
+    "goodsNm": "프로스펙스 포프로 암가드 채은성1 선수모델 오렌지/화이트/옐로우",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50267",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 채은성1 선수모델 오렌지/화이트/옐로우",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50266",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 채은성1 선수모델 오렌지/화이트/옐로우",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50263",
+    "goodsNm": "1:1 개인오더 맞춤 유니폼 주문제작 야구바지 (동계용 기모원단)",
+    "modelNo": "주문제작 야구바지",
+    "maker": "짱베이스볼",
+    "cateCd": "035010001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50257",
+    "goodsNm": "언더아머 HeatGear OG 컴프레션 반팔 스판언더티 1390098-001 블랙",
+    "modelNo": "1390098-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50256",
+    "goodsNm": "언더아머 HeatGear OG 컴프레션 긴팔 스판언더티 1387696-001 블랙",
+    "modelNo": "1387696-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50247",
+    "goodsNm": "미즈노 6CM 원톤 손목밴드 (2개입)",
+    "modelNo": "손목밴드",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50246",
+    "goodsNm": "미즈노 15CM 원톤 손목밴드 (1개입)",
+    "modelNo": "손목밴드",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50243",
+    "goodsNm": "뉴발란스 퓨어셀 인조잔디화 터프화 T4040 PP8 화이트/골드",
+    "modelNo": "T4040 PP8",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50116",
+    "goodsNm": "인코자바 글러브 쉐이퍼 (이태리 고급가구용 목재)",
+    "modelNo": "쉐이퍼",
+    "maker": "인코자바",
+    "cateCd": "001007009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50106",
+    "goodsNm": "NOXX 녹스 올인원 멀티 백팩",
+    "modelNo": "멀티 백팩",
+    "maker": "녹스(NOXX)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50104",
+    "goodsNm": "히트X나인스타즈 트레이닝 직각배트 플랫배트 (스윙 교정) (양면)",
+    "modelNo": "",
+    "maker": "",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50087",
+    "goodsNm": "캐럿 오일 독일제 가죽관리 (37ml)",
+    "modelNo": "캐럿 오일",
+    "maker": "HERRMANN&GOEPFERT GB",
+    "cateCd": "001007002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50086",
+    "goodsNm": "얀테로븐 자전거 러닝 고글 선글라스 미러변색",
+    "modelNo": "미러변색",
+    "maker": "얀테로븐",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50084",
+    "goodsNm": "얀테로븐 보데 경량 러닝 자전거 고글 스포츠 선글라스",
+    "modelNo": "보데",
+    "maker": "얀테로븐",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50083",
+    "goodsNm": "얀테로븐 옷타 안경위에쓰는 고글 선글라스 오버글라스",
+    "modelNo": "오버글라스",
+    "maker": "얀테로븐",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50077",
+    "goodsNm": "나이키 아카데미 드라이 핏 넥워머 HF0787-011 블랙/형광",
+    "modelNo": "HF0787-011",
+    "maker": "나이키(Nike)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50076",
+    "goodsNm": "나이키 아카데미 드라이 핏 넥워머 HF0787-012 블랙/오렌지",
+    "modelNo": "HF0787-012",
+    "maker": "나이키(Nike)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50075",
+    "goodsNm": "브루스볼트 스탠다드 스냅백 모자 블랙",
+    "modelNo": "모자",
+    "maker": "⚡브루스볼트",
+    "cateCd": "007009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50074",
+    "goodsNm": "브루스볼트 프리미엄 프로 엘보우 암가드 해리슨 베이더 베이비 블루",
+    "modelNo": "암가드",
+    "maker": "⚡브루스볼트",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50073",
+    "goodsNm": "브루스볼트 프리미엄 프로 엘보우 암가드 화이트",
+    "modelNo": "암가드",
+    "maker": "⚡브루스볼트",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50072",
+    "goodsNm": "브루스볼트 프리미엄 프로 엘보우 암가드 네이비",
+    "modelNo": "암가드",
+    "maker": "⚡브루스볼트",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50071",
+    "goodsNm": "브루스볼트 프리미엄 프로 엘보우 암가드 블랙",
+    "modelNo": "암가드",
+    "maker": "⚡브루스볼트",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50070",
+    "goodsNm": "⚡브루스볼트 시그니처 시리즈 브라이스 라이너 숏커프 배팅장갑 아이보리",
+    "modelNo": "시그니처 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50069",
+    "goodsNm": "⚡브루스볼트 시그니처 시리즈 라스 눗바 숏커프 배팅장갑 옐로우",
+    "modelNo": "시그니처 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50068",
+    "goodsNm": "⚡브루스볼트 시그니처 시리즈 케텔 마르테 숏커프 배팅장갑 틸",
+    "modelNo": "시그니처 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50067",
+    "goodsNm": "⚡브루스볼트 크리에이터 시리즈 Coach RAC 숏커프 배팅장갑 옐로우",
+    "modelNo": "크리에이터 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50066",
+    "goodsNm": "⚡브루스볼트 크리에이터 시리즈 King of JUCO 숏커프 배팅장갑 민트/블랙",
+    "modelNo": "크리에이터 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50065",
+    "goodsNm": "⚡브루스볼트 베어 시리즈 숏커프 일본특별판 배팅장갑 화이트아웃",
+    "modelNo": "베어 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  }
+]

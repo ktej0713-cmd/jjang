@@ -1,0 +1,8002 @@
+[
+  {
+    "goodsNo": "50727",
+    "goodsNm": "제트 ZETT 일본산 암가드 BLL380C 6411(레드)",
+    "modelNo": "BLL380C",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50725",
+    "goodsNm": "ZETT 제트 선수지급용 가드세트 (고종욱) 일본산",
+    "modelNo": "오더 가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "012007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50711",
+    "goodsNm": "아디다스 아디제로 일렉트릭+ TPU 포인트화 야구화 IF8487 핑크",
+    "modelNo": "IF8487",
+    "maker": "아디다스(adidas)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50710",
+    "goodsNm": "아디다스 아디제로 일렉트릭+ TPU 포인트화 야구화 IF8488 화이트/핑크",
+    "modelNo": "IF8488",
+    "maker": "아디다스(adidas)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50687",
+    "goodsNm": "미즈노 Gachi 수비장갑 33001 33101 (화이트/블랙)",
+    "modelNo": "1EJED33001,1EJED33101",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50576",
+    "goodsNm": "아식스 이지오더 샵오더 교체형 징스파이크 블루/화이트/오렌지",
+    "modelNo": "이지오더",
+    "maker": "아식스",
+    "cateCd": "002002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50541",
+    "goodsNm": "SSK 인조잔디화 SSF5200 화이트/레드",
+    "modelNo": "SSF5200",
+    "maker": "사사키(SSK)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50540",
+    "goodsNm": "아디다스 아디제로 임팩트+ TPU 포인트화 야구화 IF8493 화이트",
+    "modelNo": "IF8493",
+    "maker": "아디다스(adidas)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50534",
+    "goodsNm": "유락 ULAC 비저널 초경량 미러 변색 고글 선글라스",
+    "modelNo": "비저널",
+    "maker": "유락(ULAC)",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50533",
+    "goodsNm": "유락 ULAC 오타쿠 미러 변색 고글 선글라스",
+    "modelNo": "오타쿠",
+    "maker": "유락(ULAC)",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50532",
+    "goodsNm": "유락 ULAC 호코 미러 변색 고글 선글라스",
+    "modelNo": "호코",
+    "maker": "유락(ULAC)",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50531",
+    "goodsNm": "유락 ULAC 루프트 미러 고글 선글라스",
+    "modelNo": "루프트",
+    "maker": "유락(ULAC)",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50509",
+    "goodsNm": "언더아머 APAC 스포츠스타일 우븐 아노락 6007565-014 그레이 반팔 바람막이",
+    "modelNo": "6007565-014",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50483",
+    "goodsNm": "롤링스 경식 게이머 트레이닝 글러브 10인치 GH5GTK4T-CAM/SHERRY",
+    "modelNo": "GH5GTK4T-CAM/SHERRY",
+    "maker": "롤링스(Rawlings)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50482",
+    "goodsNm": "롤링스 경식 게이머 트레이닝 글러브 10인치 GH5GTK4T-B/SX",
+    "modelNo": "GH5GTK4T-B/SX",
+    "maker": "롤링스(Rawlings)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50481",
+    "goodsNm": "롤링스 경식 게이머 트레이닝 글러브 10인치 GH5GTK4T-B",
+    "modelNo": "GH5GTK4T-B",
+    "maker": "롤링스(Rawlings)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50456",
+    "goodsNm": "미츠와타이거 경식 포수미트 33인치 HGT20FWHC 레드",
+    "modelNo": "HGT20FWHC",
+    "maker": "미츠와타이거",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50455",
+    "goodsNm": "미츠와타이거 경식 포수미트 33인치 HGT20FWHC 블랙",
+    "modelNo": "HGT20FWHC",
+    "maker": "미츠와타이거",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50453",
+    "goodsNm": "골드 야구바지 일반 긴바지 스트라이프 2선",
+    "modelNo": "야구바지",
+    "maker": "골드(GOLD)",
+    "cateCd": "007040",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50452",
+    "goodsNm": "골드 야구바지 일반 긴바지 스트라이프",
+    "modelNo": "야구바지",
+    "maker": "골드(GOLD)",
+    "cateCd": "007040",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50451",
+    "goodsNm": "골드 야구바지 농군 스트라이프 2선",
+    "modelNo": "야구바지",
+    "maker": "골드(GOLD)",
+    "cateCd": "007040",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50450",
+    "goodsNm": "골드 야구바지 농군 스트라이프",
+    "modelNo": "야구바지",
+    "maker": "골드(GOLD)",
+    "cateCd": "007040",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50433",
+    "goodsNm": "웨이트레이드 어뢰 불도끼 알로이 토피도 야구배트",
+    "modelNo": "어뢰 불도끼",
+    "maker": "웨이트레이드",
+    "cateCd": "003001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50426",
+    "goodsNm": "골드 2026 G-SHIELD 프로 검투사 각도 조절형 양귀 타자헬멧 (무광 블랙)",
+    "modelNo": "골드 헬멧",
+    "maker": "골드(GOLD)",
+    "cateCd": "005001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50425",
+    "goodsNm": "골드 2026 G-SHIELD 프로 검투사 각도 조절형 양귀 타자헬멧 (유광 블랙)",
+    "modelNo": "골드 헬멧",
+    "maker": "골드(GOLD)",
+    "cateCd": "005001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50421",
+    "goodsNm": "골드 2026 G-SHIELD 프로 검투사 각도 조절형 외귀 타자헬멧 (유광 블랙)",
+    "modelNo": "골드 헬멧",
+    "maker": "골드(GOLD)",
+    "cateCd": "005001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50419",
+    "goodsNm": "SSK 프로엣지 초경량 AG 징스파이크 야구화 ESF3251FLB 스카이블루/화이트",
+    "modelNo": "ESF3251FLB",
+    "maker": "사사키(SSK)",
+    "cateCd": "002002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50393",
+    "goodsNm": "미즈노 스트레이트 야구벨트 N0562 레드 (125cm)",
+    "modelNo": "12JYAV0562NRD",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "007007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50367",
+    "goodsNm": "아디다스 아디제로 임팩트 TPU 포인트화 야구화 IF3355 화이트/블랙/그레이",
+    "modelNo": "IF3355",
+    "maker": "아디다스(adidas)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50366",
+    "goodsNm": "아디다스 아디제로 애프터버너 9 포인트화 야구화 IE8545 화이트",
+    "modelNo": "IE8545",
+    "maker": "아디다스(adidas)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50363",
+    "goodsNm": "SSK 일본산 글러브 레이스 글러브끈 바늘 포함 YF107 (200cm)",
+    "modelNo": "YF107",
+    "maker": "사사키(SSK)",
+    "cateCd": "001007001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50362",
+    "goodsNm": "SSK 일본산 글러브 레이스 글러브끈 바늘 포함 YF107 (180cm)",
+    "modelNo": "YF107",
+    "maker": "사사키(SSK)",
+    "cateCd": "001007001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50326",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 함수호1 선수모델 스카이/옐로우",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50325",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 함수호1 선수모델 스카이/옐로우",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50324",
+    "goodsNm": "프로스펙스 포프로 암가드 함수호1 선수모델 스카이/옐로우",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50322",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 여동욱1 선수모델 핑크/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50321",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 여동욱1 선수모델 핑크/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50320",
+    "goodsNm": "프로스펙스 포프로 암가드 여동욱1 선수모델 핑크/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50318",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 김대한1 선수모델 네이비/골드",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50317",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 김대한1 선수모델 네이비/골드",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50316",
+    "goodsNm": "프로스펙스 포프로 암가드 김대한1 선수모델 네이비/골드",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50314",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 윤정빈1 선수모델 블랙/블루",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50313",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 윤정빈1 선수모델 블랙/블루",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50312",
+    "goodsNm": "프로스펙스 포프로 암가드 윤정빈1 선수모델 블랙/블루",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50310",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 천성호1 선수모델 레드/옐로우/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50309",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 천성호1 선수모델 레드/옐로우/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50308",
+    "goodsNm": "프로스펙스 포프로 암가드 천성호1 선수모델 레드/옐로우/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50306",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 정수빈1 선수모델 옐로우/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50302",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 심우준2 선수모델 실버/오렌지",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50301",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 심우준2 선수모델 실버/오렌지",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50300",
+    "goodsNm": "프로스펙스 포프로 암가드 심우준2 선수모델 실버/오렌지",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50298",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 심우준1 선수모델 화이트/오렌지",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50297",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 심우준1 선수모델 화이트/오렌지",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50296",
+    "goodsNm": "프로스펙스 포프로 암가드 심우준1 선수모델 화이트/오렌지",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50295",
+    "goodsNm": "제트 슈즈픽스 야구화 보호 BX432 투명",
+    "modelNo": "BX432",
+    "maker": "제트(ZETT)",
+    "cateCd": "002005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50292",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 나승엽2 선수모델 화이트/네이비",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50288",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 나승엽1 선수모델 네이비/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50287",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 나승엽1 선수모델 네이비/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50286",
+    "goodsNm": "프로스펙스 포프로 암가드 나승엽1 선수모델 네이비/화이트",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50284",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 오지환2 선수모델 레드/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50283",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 오지환2 선수모델 레드/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50282",
+    "goodsNm": "프로스펙스 포프로 암가드 오지환2 선수모델 레드/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50280",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 오지환1 선수모델 블랙/레드",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50279",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 오지환1 선수모델 블랙/레드",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50278",
+    "goodsNm": "프로스펙스 포프로 암가드 오지환1 선수모델 블랙/레드",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50276",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 채은성3 선수모델 골드/화이트/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50275",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 채은성3 선수모델 골드/화이트/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50274",
+    "goodsNm": "프로스펙스 포프로 암가드 채은성3 선수모델 골드/화이트/블랙",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50272",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 채은성2 선수모델 실버/네이비",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50271",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 채은성2 선수모델 실버/네이비",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50270",
+    "goodsNm": "프로스펙스 포프로 암가드 채은성2 선수모델 실버/네이비",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50268",
+    "goodsNm": "프로스펙스 포프로 암가드 채은성1 선수모델 오렌지/화이트/옐로우",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50267",
+    "goodsNm": "프로스펙스 포프로 슬라이딩 주루장갑 채은성1 선수모델 오렌지/화이트/옐로우",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50266",
+    "goodsNm": "프로스펙스 포프로 풋가드 롱타입 채은성1 선수모델 오렌지/화이트/옐로우",
+    "modelNo": "포프로",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50263",
+    "goodsNm": "1:1 개인오더 맞춤 유니폼 주문제작 야구바지 (동계용 기모원단)",
+    "modelNo": "주문제작 야구바지",
+    "maker": "짱베이스볼",
+    "cateCd": "035010001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50257",
+    "goodsNm": "언더아머 HeatGear OG 컴프레션 반팔 스판언더티 1390098-001 블랙",
+    "modelNo": "1390098-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50256",
+    "goodsNm": "언더아머 HeatGear OG 컴프레션 긴팔 스판언더티 1387696-001 블랙",
+    "modelNo": "1387696-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50247",
+    "goodsNm": "미즈노 6CM 원톤 손목밴드 (2개입)",
+    "modelNo": "손목밴드",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50246",
+    "goodsNm": "미즈노 15CM 원톤 손목밴드 (1개입)",
+    "modelNo": "손목밴드",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50243",
+    "goodsNm": "뉴발란스 퓨어셀 인조잔디화 터프화 T4040 PP8 화이트/골드",
+    "modelNo": "T4040 PP8",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50116",
+    "goodsNm": "인코자바 글러브 쉐이퍼 (이태리 고급가구용 목재)",
+    "modelNo": "쉐이퍼",
+    "maker": "인코자바",
+    "cateCd": "001007009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50106",
+    "goodsNm": "NOXX 녹스 올인원 멀티 백팩",
+    "modelNo": "멀티 백팩",
+    "maker": "녹스(NOXX)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50104",
+    "goodsNm": "히트X나인스타즈 트레이닝 직각배트 플랫배트 (스윙 교정) (양면)",
+    "modelNo": "",
+    "maker": "",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50087",
+    "goodsNm": "캐럿 오일 독일제 가죽관리 (37ml)",
+    "modelNo": "캐럿 오일",
+    "maker": "HERRMANN&GOEPFERT GB",
+    "cateCd": "001007002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50086",
+    "goodsNm": "얀테로븐 자전거 러닝 고글 선글라스 미러변색",
+    "modelNo": "미러변색",
+    "maker": "얀테로븐",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50084",
+    "goodsNm": "얀테로븐 보데 경량 러닝 자전거 고글 스포츠 선글라스",
+    "modelNo": "보데",
+    "maker": "얀테로븐",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50083",
+    "goodsNm": "얀테로븐 옷타 안경위에쓰는 고글 선글라스 오버글라스",
+    "modelNo": "오버글라스",
+    "maker": "얀테로븐",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50077",
+    "goodsNm": "나이키 아카데미 드라이 핏 넥워머 HF0787-011 블랙/형광",
+    "modelNo": "HF0787-011",
+    "maker": "나이키(Nike)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50076",
+    "goodsNm": "나이키 아카데미 드라이 핏 넥워머 HF0787-012 블랙/오렌지",
+    "modelNo": "HF0787-012",
+    "maker": "나이키(Nike)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50075",
+    "goodsNm": "브루스볼트 스탠다드 스냅백 모자 블랙",
+    "modelNo": "모자",
+    "maker": "⚡브루스볼트",
+    "cateCd": "007009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50074",
+    "goodsNm": "브루스볼트 프리미엄 프로 엘보우 암가드 해리슨 베이더 베이비 블루",
+    "modelNo": "암가드",
+    "maker": "⚡브루스볼트",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50073",
+    "goodsNm": "브루스볼트 프리미엄 프로 엘보우 암가드 화이트",
+    "modelNo": "암가드",
+    "maker": "⚡브루스볼트",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50072",
+    "goodsNm": "브루스볼트 프리미엄 프로 엘보우 암가드 네이비",
+    "modelNo": "암가드",
+    "maker": "⚡브루스볼트",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50071",
+    "goodsNm": "브루스볼트 프리미엄 프로 엘보우 암가드 블랙",
+    "modelNo": "암가드",
+    "maker": "⚡브루스볼트",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50070",
+    "goodsNm": "⚡브루스볼트 시그니처 시리즈 브라이스 라이너 숏커프 배팅장갑 아이보리",
+    "modelNo": "시그니처 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50069",
+    "goodsNm": "⚡브루스볼트 시그니처 시리즈 라스 눗바 숏커프 배팅장갑 옐로우",
+    "modelNo": "시그니처 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50068",
+    "goodsNm": "⚡브루스볼트 시그니처 시리즈 케텔 마르테 숏커프 배팅장갑 틸",
+    "modelNo": "시그니처 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50067",
+    "goodsNm": "⚡브루스볼트 크리에이터 시리즈 Coach RAC 숏커프 배팅장갑 옐로우",
+    "modelNo": "크리에이터 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50066",
+    "goodsNm": "⚡브루스볼트 크리에이터 시리즈 King of JUCO 숏커프 배팅장갑 민트/블랙",
+    "modelNo": "크리에이터 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50065",
+    "goodsNm": "⚡브루스볼트 베어 시리즈 숏커프 일본특별판 배팅장갑 화이트아웃",
+    "modelNo": "베어 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50064",
+    "goodsNm": "⚡브루스볼트 베어 시리즈 숏커프 일본특별판 배팅장갑 블랙아웃",
+    "modelNo": "베어 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50063",
+    "goodsNm": "⚡브루스볼트 시그니처 시리즈 맥스 클라크 숏커프 배팅장갑 핑크/틸",
+    "modelNo": "시그니처 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50062",
+    "goodsNm": "⚡브루스볼트 시그니처 시리즈 자렌 듀란 숏커프 배팅장갑 블랙",
+    "modelNo": "시그니처 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50061",
+    "goodsNm": "⚡브루스볼트 시그니처 시리즈 라스 눗바 숏커프 배팅장갑 레드",
+    "modelNo": "시그니처 시리즈",
+    "maker": "⚡브루스볼트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50044",
+    "goodsNm": "아디다스 티로 23 컴피티션 넥워머 HS9759 블랙",
+    "modelNo": "HS9759",
+    "maker": "아디다스(adidas)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50041",
+    "goodsNm": "롤링스 기모양털 방한장갑(EAC14F06)B/RD",
+    "modelNo": "EAC14F06",
+    "maker": "롤링스(Rawlings)",
+    "cateCd": "039003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50018",
+    "goodsNm": "미즈노 유소년 사무라이렉가드 380383 블랙",
+    "modelNo": "",
+    "maker": "",
+    "cateCd": "021005007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50017",
+    "goodsNm": "미즈노 유소년 사무라이렉가드 380383 블랙레드",
+    "modelNo": "",
+    "maker": "",
+    "cateCd": "021005007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50016",
+    "goodsNm": "미즈노 유소년 사무라이 렉가드 380383 블랙블루",
+    "modelNo": "",
+    "maker": "",
+    "cateCd": "021005007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50005",
+    "goodsNm": "골드이스트 프리미엄 올쉽 양가죽 배팅장갑 화이트/블루",
+    "modelNo": "배팅장갑",
+    "maker": "골드이스트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50004",
+    "goodsNm": "골드이스트 프리미엄 올쉽 양가죽 배팅장갑 화이트/레드",
+    "modelNo": "배팅장갑",
+    "maker": "골드이스트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50003",
+    "goodsNm": "도쿠마 PRO MODEL 신형 메쉬 배팅장갑 오렌지",
+    "modelNo": "배팅장갑",
+    "maker": "도쿠마(TOHKOMA)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "50002",
+    "goodsNm": "[2장 구매시 1장 증정] 도쿠마 PRO MODEL 신형 메쉬 배팅장갑 오렌지",
+    "modelNo": "배팅장갑",
+    "maker": "도쿠마(TOHKOMA)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49963",
+    "goodsNm": "미즈노 쿠션 레보 다이아 유소년 포인트화 252701 화이트",
+    "modelNo": "11GP252701WT",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49959",
+    "goodsNm": "미즈노 유소년 윌드라이브 레드 배팅장갑 56314 (네이비)",
+    "modelNo": "1EJEY56314",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49958",
+    "goodsNm": "미즈노 유소년 윌드라이브 레드 배팅장갑 56354 (그레이/오렌지)",
+    "modelNo": "1EJEY56354",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49956",
+    "goodsNm": "미즈노 유소년 윌드라이브 레드 배팅장갑 56305 (그레이/블루)",
+    "modelNo": "1EJEY56354",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49955",
+    "goodsNm": "미즈노 유소년 윌드라이브 레드 배팅장갑 56301 (화이트/레드)",
+    "modelNo": "1EJEY56301",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49954",
+    "goodsNm": "미즈노 유소년 윌드라이브 레드 배팅장갑 56327 (블루/레드)",
+    "modelNo": "1EJEY56327",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49953",
+    "goodsNm": "미즈노 프로 수비장갑 심리스 한정 컬러 09005 그레이/골드",
+    "modelNo": "1EJED09005ARGG",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49952",
+    "goodsNm": "미즈노 프로 수비장갑 심리스 한정 컬러 09001 화이트/라임",
+    "modelNo": "1EJED09001ARWR",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49947",
+    "goodsNm": "미즈노 넥워머 방풍 그래픽 프린트 5009 블랙",
+    "modelNo": "12JYCB5009",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49946",
+    "goodsNm": "미즈노 넥워머 방풍 그래픽 프린트 5014 네이비",
+    "modelNo": "12JYCB5014",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49945",
+    "goodsNm": "미즈노 넥워머 방풍 그래픽 프린트 5062 레드",
+    "modelNo": "12JYCB5062",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49944",
+    "goodsNm": "미즈노 넥워머 방풍 그래픽 프린트 5016 파스텔네이비",
+    "modelNo": "12JYCB5016",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49943",
+    "goodsNm": "미즈노 유소년 넥워머 5109 블랙",
+    "modelNo": "12JYCB5109",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49942",
+    "goodsNm": "미즈노 유소년 넥워머 5114 네이비",
+    "modelNo": "12JYCB5114",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49941",
+    "goodsNm": "미즈노 유소년 넥워머 5162 레드",
+    "modelNo": "12JYCB5162",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49940",
+    "goodsNm": "미즈노 유소년 넥워머 5116 파스텔네이비",
+    "modelNo": "미즈노 넥워머 12JYBB51",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49880",
+    "goodsNm": "언더아머 하프타임 커프 비니 1373155-001 블랙",
+    "modelNo": "1373155-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49879",
+    "goodsNm": "언더아머 동계 니트 장갑 1373157-003 블랙",
+    "modelNo": "1373157-003",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "039003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49870",
+    "goodsNm": "언더아머 UA 리드오프 아이콘 RM 포인트화 6010138-400 (블루)",
+    "modelNo": "6010138-400",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49869",
+    "goodsNm": "언더아머 UA 리드오프 아이콘 RM 포인트화 6010138-075 (그레이)",
+    "modelNo": "6010138-075",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49868",
+    "goodsNm": "언더아머 UA 리드오프 아이콘 RM 포인트화 6010138-600 (레드)",
+    "modelNo": "6010138-600",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49838",
+    "goodsNm": "ILB 안전구 터프공 야구공",
+    "modelNo": "안전구",
+    "maker": "아이엘비(ILB)",
+    "cateCd": "047003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49819",
+    "goodsNm": "제트 ZETT 야구 백팩 BAK-454B (네이비)",
+    "modelNo": "BAK-454B",
+    "maker": "제트(ZETT)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49818",
+    "goodsNm": "제트 ZETT 야구 백팩 BAK-454B (블랙)",
+    "modelNo": "BAK-454B",
+    "maker": "제트(ZETT)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49815",
+    "goodsNm": "프로스펙스 에센셜 동계 넥워머(블랙)",
+    "modelNo": "PROESSNWBK",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49814",
+    "goodsNm": "아디다스 로고 클래식 비니 블랙 (IB2651)",
+    "modelNo": "IB2651",
+    "maker": "아디다스(adidas)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49715",
+    "goodsNm": "도쿠마 수비 연습용 트레이닝 글러브 10인치 레드/탄",
+    "modelNo": "트레이닝 글러브",
+    "maker": "도쿠마(TOHKOMA)",
+    "cateCd": "001009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49644",
+    "goodsNm": "브루스볼트 SuperSoft 숏 슬리브 티셔츠 그레이",
+    "modelNo": "티셔츠",
+    "maker": "⚡브루스볼트",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49643",
+    "goodsNm": "브루스볼트 SuperSoft 숏 슬리브 티셔츠 차콜",
+    "modelNo": "티셔츠",
+    "maker": "⚡브루스볼트",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49621",
+    "goodsNm": "하타케야마 야구 포수장비세트 블랙/실버/레드 HK-CG BSR",
+    "modelNo": "포수장비세트",
+    "maker": "하타케야마(hatakeyama)",
+    "cateCd": "044001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49620",
+    "goodsNm": "하타케야마 야구 포수장비세트 레드/블랙/화이트 HK-CG RBW",
+    "modelNo": "포수장비세트",
+    "maker": "하타케야마(hatakeyama)",
+    "cateCd": "044001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49612",
+    "goodsNm": "미즈노 Gachi 수비장갑 33009 33109 (블랙/레드)",
+    "modelNo": "1EJED33009,1EJED33109",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49588",
+    "goodsNm": "골드 슈프림 어센틱 박건우 선수모델 13인치 외야 글러브 PRO-085 블랙/그레이",
+    "modelNo": "GBG-PRO 085",
+    "maker": "골드(GOLD)",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49577",
+    "goodsNm": "BMC 우드 헤비 트레이닝 배트 33.5인치 40온스 그레이",
+    "modelNo": "헤비 트레이닝 배트",
+    "maker": "BMC",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49550",
+    "goodsNm": "ZETT 제트 어센틱 암가드 BAGK-47 (박세혁 모델)",
+    "modelNo": "BAGK-47",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49546",
+    "goodsNm": "제트 ZETT 야구 대형 백팩 BAK-434 (블루)",
+    "modelNo": "BAK-434",
+    "maker": "제트(ZETT)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49531",
+    "goodsNm": "언더아머 UA 리드오프 아이콘 RM 포인트화 6010138-001 (블랙)",
+    "modelNo": "6010138-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49529",
+    "goodsNm": "제트 글러브 오일 ZOK49 (1001) 투명 비누향",
+    "modelNo": "ZOK49 (1001)",
+    "maker": "제트(ZETT)",
+    "cateCd": "001007002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49527",
+    "goodsNm": "제트 ZETT 야구 백팩 BAK-454A (블랙)",
+    "modelNo": "BAK-454A",
+    "maker": "제트(ZETT)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49526",
+    "goodsNm": "제트 ZETT 야구 백팩 BAK-454A (네이비)",
+    "modelNo": "BAK-454A",
+    "maker": "제트(ZETT)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49525",
+    "goodsNm": "제트 ZETT 야구 대형 백팩 BAK-434 (블랙)",
+    "modelNo": "BAK-434",
+    "maker": "제트(ZETT)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49524",
+    "goodsNm": "제트 ZETT 야구 대형 백팩 BAK-434 (네이비)",
+    "modelNo": "BAK-434",
+    "maker": "제트(ZETT)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49499",
+    "goodsNm": "제트 유소년 풋가드 BAGK-70J (옐로우)",
+    "modelNo": "BAGK-70J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49498",
+    "goodsNm": "제트 유소년 풋가드 BAGK-70J (핑크)",
+    "modelNo": "BAGK-70J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49497",
+    "goodsNm": "제트 유소년 풋가드 BAGK-70J (핑크 패턴)",
+    "modelNo": "BAGK-70J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49495",
+    "goodsNm": "제트 유소년 풋가드 BAGK-70J (옐로우 패턴)",
+    "modelNo": "BAGK-70J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49494",
+    "goodsNm": "제트 유소년 암가드 BAGK-47J (옐로우)",
+    "modelNo": "BAGK-47J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49493",
+    "goodsNm": "제트 유소년 암가드 BAGK-47J (핑크)",
+    "modelNo": "BAGK-47J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49492",
+    "goodsNm": "제트 유소년 암가드 BAGK-47J (옐로우 패턴)",
+    "modelNo": "BAGK-47J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49491",
+    "goodsNm": "제트 유소년 암가드 BAGK-47J (핑크 패턴)",
+    "modelNo": "BAGK-47J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49490",
+    "goodsNm": "스톰 NEW 프리미엄 스톰핏 폭풍 반팔 티셔츠 (블랙)",
+    "modelNo": "폭풍 반팔 티셔츠",
+    "maker": "스톰(STORM)",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49489",
+    "goodsNm": "스톰 NEW 프리미엄 스톰핏 폭풍 반팔 티셔츠 (화이트)",
+    "modelNo": "폭풍 반팔 티셔츠",
+    "maker": "스톰(STORM)",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49488",
+    "goodsNm": "스톰 NEW 프리미엄 스톰핏 폭풍 반팔 티셔츠 (네이비)",
+    "modelNo": "폭풍 반팔 티셔츠",
+    "maker": "스톰(STORM)",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49487",
+    "goodsNm": "스톰 NEW 프리미엄 스톰핏 폭풍 반팔 티셔츠 (그레이)",
+    "modelNo": "폭풍 반팔 티셔츠",
+    "maker": "스톰(STORM)",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49486",
+    "goodsNm": "리복 반팔 아노락 바람막이 REJU5FKN8BK (블랙)",
+    "modelNo": "REJU5FKN8BK",
+    "maker": "리복(Reebok)",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49485",
+    "goodsNm": "리복 반팔 아노락 바람막이 REJU5FKN8G2 (그레이)",
+    "modelNo": "REJU5FKN8G2",
+    "maker": "리복(Reebok)",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49484",
+    "goodsNm": "리복 반팔 아노락 바람막이 REJU5FKN8N2 (네이비)",
+    "modelNo": "REJU5FKN8N2",
+    "maker": "리복(Reebok)",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49474",
+    "goodsNm": "녹스 워리어 유소년 알루미늄배트 (-10드롭) 대한유소년연맹 공인배트",
+    "modelNo": "녹스 워리어",
+    "maker": "녹스(NOXX)",
+    "cateCd": "003001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49471",
+    "goodsNm": "미즈노 Gachi 유소년 수비장갑 33001 33101 (화이트/블랙)",
+    "modelNo": "1EJEY33001,1EJEY33101",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49470",
+    "goodsNm": "미즈노 Gachi 유소년 수비장갑 33009 33109 (블랙/레드)",
+    "modelNo": "1EJEY33009,1EJEY33109",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49469",
+    "goodsNm": "미즈노 윌드라이브 레드 배팅장갑 56354 (그레이/오렌지)",
+    "modelNo": "1EJEA56354",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49468",
+    "goodsNm": "미즈노 윌드라이브 레드 배팅장갑 56327 (블루/레드)",
+    "modelNo": "1EJEA56327",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49467",
+    "goodsNm": "미즈노 윌드라이브 레드 배팅장갑 56314 (네이비/그레이)",
+    "modelNo": "1EJEA56314",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49466",
+    "goodsNm": "미즈노 윌드라이브 레드 배팅장갑 56305 (그레이/블루)",
+    "modelNo": "1EJEA56305",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49465",
+    "goodsNm": "미즈노 윌드라이브 레드 배팅장갑 56301 (화이트/레드)",
+    "modelNo": "1EJEA56301",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49454",
+    "goodsNm": "러펠스 아이스크림 유소년 어린이용 야구 배트 스카이블루",
+    "modelNo": "아이스크림 배트",
+    "maker": "러펠스(RUPPELLS)",
+    "cateCd": "003001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49416",
+    "goodsNm": "비바 글러브형 벨크로 캐치볼 세트 어린이 가족 놀이 야외 스포츠 장난감 선물",
+    "modelNo": "벨크로 캐치볼 세트",
+    "maker": "비바(VIVA)",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49415",
+    "goodsNm": "언더아머 UA 인피니트 러닝화 3027524-106 (화이트/네온)",
+    "modelNo": "3027524-106",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "002006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49414",
+    "goodsNm": "언더아머 남성 UA HOVR 소닉 7 러닝화 3028002-003 (블랙)",
+    "modelNo": "3028002-003",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "002006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49407",
+    "goodsNm": "하이골드 HI GOLD 베이스볼 야구 벨트",
+    "modelNo": "야구벨트",
+    "maker": "하이골드(HI-GOLD)",
+    "cateCd": "007007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49406",
+    "goodsNm": "아디다스 아디제로 에프터버너 야구 인조잔디화 IG2324 (블루)",
+    "modelNo": "IG2324",
+    "maker": "아디다스(adidas)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49397",
+    "goodsNm": "미즈노 프로 크래프티드에디션 경식 외야 글러브 13.2인치 눗바모델 1AJGH33017",
+    "modelNo": "1AJGH33017 47H",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "012009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49395",
+    "goodsNm": "미즈노 프로 크래프티드에디션 경식 내야 글러브 11.4인치 코타로 모델 1AJGH33023",
+    "modelNo": "1AJGH33023 6880",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "012009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49392",
+    "goodsNm": "미즈노 프로 크래프티드에디션 경식 외야 글러브 12.8인치 니시카와모델 1AJGH33007",
+    "modelNo": "1AJGH33007 09H",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49391",
+    "goodsNm": "미즈노 프로 크래프티드에디션 경식 투수 글러브 11.8인치 이토 모델 1AJGH33001",
+    "modelNo": "1AJGH33001 80H",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "012009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49371",
+    "goodsNm": "비바 셀프 탁구연습세트 어린이 가족 놀이 야외 스포츠 장난감 선물",
+    "modelNo": "셀프 탁구연습세트",
+    "maker": "비바(VIVA)",
+    "cateCd": "048010",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49364",
+    "goodsNm": "잠스트 종아리보호대 카프 슬리브 프레시오네 러닝 런닝 (2개입)",
+    "modelNo": "종아리보호대",
+    "maker": "잠스트(ZAMST)",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49360",
+    "goodsNm": "러펠스 프로 라이트라인 포켓 오버핏 티셔츠 아이싱티",
+    "modelNo": "아이싱티",
+    "maker": "러펠스(RUPPELLS)",
+    "cateCd": "007038001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49359",
+    "goodsNm": "수파카즈 자전거 바 테이프 수아브 (클래식)",
+    "modelNo": "수아브 바테잎",
+    "maker": "수파카즈(SUPACAZ)",
+    "cateCd": "048010008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49358",
+    "goodsNm": "수파카즈 자전거 바 테이프 슈퍼 스티키 쿠쉬 (스타페이드)",
+    "modelNo": "스타페이드 바테잎",
+    "maker": "수파카즈(SUPACAZ)",
+    "cateCd": "048010008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49343",
+    "goodsNm": "ANBD 야구 스파이크 흙갈개 (흰색)",
+    "modelNo": "BEEE003",
+    "maker": "ANBD",
+    "cateCd": "046",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49341",
+    "goodsNm": "프랭클린 MLB 메이저리그 폼배트 샌프란시스코 (15120F26)",
+    "modelNo": "15120F26",
+    "maker": "프랭클린(Franklin)",
+    "cateCd": "021003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49340",
+    "goodsNm": "제트 11.5인치 돈피 올라운드 글러브 레드 BPGK-PRD115",
+    "modelNo": "BPGK-PRD115",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49327",
+    "goodsNm": "하이골드 동계 기모 롱타이즈 레깅스 HL205MBAIP002 블랙",
+    "modelNo": "HL205MBAIP002",
+    "maker": "하이골드(HI-GOLD)",
+    "cateCd": "007039001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49325",
+    "goodsNm": "데상트 양가죽 야구 배팅장갑 SO123WGL22 (화이트/레드)",
+    "modelNo": "SO123WGL22",
+    "maker": "데상트(DESCENTE)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49324",
+    "goodsNm": "데상트 양가죽 야구 배팅장갑 SO123WGL20 (블랙)",
+    "modelNo": "SO123WGL20",
+    "maker": "데상트(DESCENTE)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49323",
+    "goodsNm": "뉴발란스 베이스볼 하프 집업 바람막이 NBD4EB1118 블랙",
+    "modelNo": "NBD4EB1118",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49322",
+    "goodsNm": "뉴발란스 베이스볼 하프 집업 바람막이 NBD4EB1118 그레이",
+    "modelNo": "NBD4EB1118",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49321",
+    "goodsNm": "뉴발란스 베이스볼 반바지 베이직 코튼 하프 팬츠 NBD4EB1112 블랙",
+    "modelNo": "NBD4EB1112",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "007039005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49320",
+    "goodsNm": "뉴발란스 베이스볼 반바지 베이직 코튼 하프 팬츠 NBD4EB1112 그레이",
+    "modelNo": "NBD4EB1112",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "007039005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49319",
+    "goodsNm": "뉴발란스 베이스볼 반팔 후드티 트레이닝 상의 NBD4EB1097 블랙",
+    "modelNo": "NBD4EB1097",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "007038006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49318",
+    "goodsNm": "뉴발란스 베이스볼 후드티 트레이닝 상의 NBD4EB1122 그레이",
+    "modelNo": "NBD4EB1122",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "007038006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49317",
+    "goodsNm": "뉴발란스 베이스볼 후드티 트레이닝 상의 NBD4EB1122 블랙",
+    "modelNo": "NBD4EB1122",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "007038006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49316",
+    "goodsNm": "미즈노 외귀 타자 헬멧 좌타자용 217 블랙",
+    "modelNo": "1DJHH21709BK",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "005001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49315",
+    "goodsNm": "미즈노 외귀 타자 헬멧 좌타자용 217 네이비",
+    "modelNo": "1DJHH21714NV",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "005001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49312",
+    "goodsNm": "뉴발란스 베이스볼 트레이닝 상의 베이직 맨투맨 NBD4EB1123 그레이",
+    "modelNo": "NBD4EB1123",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "007038006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49311",
+    "goodsNm": "뉴발란스 베이스볼 트레이닝 상의 베이직 맨투맨 NBD4EB1123 블랙",
+    "modelNo": "NBD4EB1123",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "007038006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49310",
+    "goodsNm": "뉴발란스 베이스볼 트레이닝 하의 팬츠 NBD4EB1121 그레이",
+    "modelNo": "NBD4EB1121",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "007039004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49309",
+    "goodsNm": "뉴발란스 베이스볼 트레이닝 하의 팬츠 NBD4EB1121 블랙",
+    "modelNo": "NBD4EB1121",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "007039004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49299",
+    "goodsNm": "하타케야마 M2 경식 오더 포수미트 U백 (양의지 선수패턴) I블랙/K블루",
+    "modelNo": "오더 포수미트",
+    "maker": "하타케야마(hatakeyama)",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49298",
+    "goodsNm": "언더아머 동계 기모 콜드기어 롱 레깅스 1366075-001 블랙",
+    "modelNo": "1366075-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "039007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49284",
+    "goodsNm": "비바 윈드스피드 허리케인 배드민턴세트 화이트/블랙",
+    "modelNo": "윈드스피드 허리케인",
+    "maker": "비바(VIVA)",
+    "cateCd": "048010006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49281",
+    "goodsNm": "SSK 50L 야구 백팩 장비가방 X1 블루",
+    "modelNo": "50L 백팩 X1 Blue",
+    "maker": "사사키(SSK)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49275",
+    "goodsNm": "언더아머 UA 퍼포먼스 스포츠 타월 1383490-025",
+    "modelNo": "1383490-025",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "020038",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49274",
+    "goodsNm": "리복 에센셜 양말 3켤레 세트 (멀티컬러)",
+    "modelNo": "RESS5FKN2BA",
+    "maker": "리복(Reebok)",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49273",
+    "goodsNm": "리복 에센셜 양말 3켤레 세트 (블랙)",
+    "modelNo": "RESS5FKN2G2",
+    "maker": "리복(Reebok)",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49272",
+    "goodsNm": "리복 에센셜 양말 3켤레 세트 (그레이)",
+    "modelNo": "RESS5FKN2BK",
+    "maker": "리복(Reebok)",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49271",
+    "goodsNm": "리복 에센셜 양말 3켤레 세트 (화이트)",
+    "modelNo": "RESS5FKN2WT",
+    "maker": "리복(Reebok)",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49270",
+    "goodsNm": "리복 액티브 양말 3켤레 세트 (멀티컬러)",
+    "modelNo": "RESS5FKN1BA",
+    "maker": "리복(Reebok)",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49269",
+    "goodsNm": "리복 액티브 양말 3켤레 세트 (블랙)",
+    "modelNo": "RESS5FKN1BK",
+    "maker": "리복(Reebok)",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49268",
+    "goodsNm": "리복 액티브 양말 3켤레 세트 (그레이)",
+    "modelNo": "RESS5FKN1G2",
+    "maker": "리복(Reebok)",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49267",
+    "goodsNm": "리복 액티브 양말 3켤레 세트 (화이트)",
+    "modelNo": "RESS5FKN1WT",
+    "maker": "리복(Reebok)",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49265",
+    "goodsNm": "마스터 7777 트레이닝 배트 33.5인치 950g (블랙/브라운)",
+    "modelNo": "트레이닝 배트",
+    "maker": "마스터",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49189",
+    "goodsNm": "골드 2025 G쉴드 어센틱 손호영 선수모델 손등가드 핸드가드 화이트/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49188",
+    "goodsNm": "골드 2025 G쉴드 어센틱 손호영 선수모델 풋가드 화이트/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49187",
+    "goodsNm": "골드 2025 G쉴드 어센틱 손호영 선수모델 암가드 화이트/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49185",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김형준 선수모델 풋가드 화이트/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49183",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김형준 선수모델 암가드 화이트/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49182",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김휘집 선수모델 손등가드 핸드가드 화이트/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49181",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김휘집 선수모델 풋가드 화이트/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49180",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김휘집 선수모델 암가드 화이트/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49179",
+    "goodsNm": "골드 2025 G쉴드 어센틱 류지혁 선수모델 손등가드 핸드가드 실버/화이트",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49178",
+    "goodsNm": "골드 2025 G쉴드 어센틱 류지혁 선수모델 풋가드 화이트/실버",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49177",
+    "goodsNm": "골드 2025 G쉴드 어센틱 류지혁 선수모델 암가드 화이트/실버",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49175",
+    "goodsNm": "골드 2025 G쉴드 어센틱 최주환 선수모델 풋가드 화이트/핑크",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49174",
+    "goodsNm": "골드 2025 G쉴드 어센틱 최주환 선수모델 암가드 화이트/핑크",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49173",
+    "goodsNm": "골드 2025 G쉴드 어센틱 임종찬 선수모델 풋가드 네이비/블루",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49172",
+    "goodsNm": "골드 2025 G쉴드 어센틱 임종찬 선수모델 암가드 네이비/블루",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49171",
+    "goodsNm": "골드 2025 G쉴드 어센틱 강민성 선수모델 풋가드 블랙/실버",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49170",
+    "goodsNm": "골드 2025 G쉴드 어센틱 강민성 선수모델 암가드 블랙/실버",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49169",
+    "goodsNm": "골드 2025 G쉴드 어센틱 윤도현 선수모델 풋가드 블랙",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49167",
+    "goodsNm": "골드 2025 G쉴드 어센틱 윤도현 선수모델 암가드 블랙",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49166",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김한별 선수모델 손등가드 핸드가드 화이트/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49165",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김한별 선수모델 풋가드 네이비/화이트",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49164",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김한별 선수모델 싱글 암가드 네이비/화이트",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49163",
+    "goodsNm": "골드 2025 G쉴드 어센틱 고승민 선수모델 손등가드 핸드가드 화이트/블랙",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49162",
+    "goodsNm": "골드 2025 G쉴드 어센틱 고승민 선수모델 풋가드 블랙/화이트",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49161",
+    "goodsNm": "골드 2025 G쉴드 어센틱 고승민 선수모델 암가드 화이트/블랙",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49160",
+    "goodsNm": "골드 2025 G쉴드 어센틱 레이예스 선수모델 손등가드 핸드가드 레드/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49159",
+    "goodsNm": "골드 2025 G쉴드 어센틱 레이예스 선수모델 풋가드 레드/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49158",
+    "goodsNm": "골드 2025 G쉴드 어센틱 레이예스 선수모델 암가드 네이비/레드",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49157",
+    "goodsNm": "골드 2025 G쉴드 어센틱 윤도현 김태진 선수모델 손등가드 핸드가드 블랙",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49156",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김태진 선수모델 풋가드 블랙/화이트",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49155",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김태진 선수모델 암가드 블랙/화이트",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49154",
+    "goodsNm": "골드 2025 G쉴드 어센틱 황성빈 선수모델 손등가드 핸드가드 블랙",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49153",
+    "goodsNm": "골드 2025 G쉴드 어센틱 황성빈 선수모델 풋가드 블랙",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49152",
+    "goodsNm": "골드 2025 G쉴드 어센틱 황성빈 선수모델 암가드 블랙",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49151",
+    "goodsNm": "골드 2025 G쉴드 어센틱 오스틴 선수모델 손등가드 핸드가드 레드",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49150",
+    "goodsNm": "골드 2025 G쉴드 어센틱 오스틴 선수모델 풋가드 레드/골드",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49149",
+    "goodsNm": "골드 2025 G쉴드 어센틱 오스틴 선수모델 암가드 레드/골드",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49148",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김도영 선수모델 손등가드 핸드가드 화이트/레드",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49147",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김도영 선수모델 풋가드 화이트/레드",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49146",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김도영 선수모델 싱글 암가드 화이트/레드",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49144",
+    "goodsNm": "골드 2025 G쉴드 어센틱 노시환 선수모델 풋가드 화이트/그레이",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49143",
+    "goodsNm": "골드 2025 G쉴드 어센틱 노시환 선수모델 암가드 화이트/그레이",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49142",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김태연 선수모델 손등가드 핸드가드 오렌지/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49141",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김태연 선수모델 풋가드 오렌지/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49140",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김태연 선수모델 암가드 오렌지/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49139",
+    "goodsNm": "골드 2025 G쉴드 어센틱 데이비슨 김형준 선수모델 손등가드 핸드가드 화이트/네이비",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49138",
+    "goodsNm": "골드 2025 G쉴드 어센틱 데이비슨 선수모델 풋가드 화이트",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49137",
+    "goodsNm": "골드 2025 G쉴드 어센틱 데이비슨 선수모델 암가드 화이트",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49136",
+    "goodsNm": "골드 2025 G쉴드 어센틱 박건우 선수모델 손등가드 핸드가드 블랙",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49135",
+    "goodsNm": "골드 2025 G쉴드 어센틱 박건우 선수모델 풋가드 블랙/실버",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49134",
+    "goodsNm": "골드 2025 G쉴드 어센틱 박건우 선수모델 암가드 블랙/실버",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49133",
+    "goodsNm": "골드 2025 G쉴드 어센틱 최주환 이도윤 선수모델 손등가드 핸드가드 화이트",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49132",
+    "goodsNm": "골드 2025 G쉴드 어센틱 이도윤 선수모델 풋가드 화이트/오렌지",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49131",
+    "goodsNm": "골드 2025 G쉴드 어센틱 이도윤 선수모델 암가드 화이트/오렌지",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49130",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김재성 선수모델 손등가드 핸드가드 블루/화이트",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49129",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김재성 선수모델 풋가드 블루/실버",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49128",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김재성 선수모델 암가드 블루/실버",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49127",
+    "goodsNm": "골드 2025 G쉴드 어센틱 안치홍 선수모델 손등가드 핸드가드 화이트/블랙",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49126",
+    "goodsNm": "골드 2025 G쉴드 어센틱 안치홍 선수모델 풋가드 화이트/블랙",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49125",
+    "goodsNm": "골드 2025 G쉴드 어센틱 안치홍 선수모델 암가드 화이트/블랙",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49124",
+    "goodsNm": "골드 2025 G쉴드 어센틱 노시환 배정대 선수모델 손등가드 핸드가드 화이트",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49123",
+    "goodsNm": "골드 2025 G쉴드 어센틱 배정대 선수모델 풋가드 화이트",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49122",
+    "goodsNm": "골드 2025 G쉴드 어센틱 배정대 선수모델 암가드 화이트",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49121",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김도영 선수모델 손등가드 핸드가드 블랙/레드",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49120",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김도영 선수모델 풋가드 블랙/레드",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49119",
+    "goodsNm": "골드 2025 G쉴드 어센틱 김도영 선수모델 싱글 암가드 블랙/레드",
+    "modelNo": "G쉴드",
+    "maker": "골드(GOLD)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49118",
+    "goodsNm": "SSK 동계 기모 경량 트레이닝 바지 팬츠 DRF025P 블랙",
+    "modelNo": "DRF025P",
+    "maker": "사사키(SSK)",
+    "cateCd": "039022002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49117",
+    "goodsNm": "SSK 동계 기모 경량 풀집업 후드 트레이닝 자켓 DRF024 네이비",
+    "modelNo": "DRF024",
+    "maker": "사사키(SSK)",
+    "cateCd": "039022002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49116",
+    "goodsNm": "SSK 동계 기모 경량 풀집업 후드 트레이닝 자켓 DRF024 그레이",
+    "modelNo": "DRF024",
+    "maker": "사사키(SSK)",
+    "cateCd": "039022002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49115",
+    "goodsNm": "SSK 동계 기모 경량 풀집업 후드 트레이닝 자켓 DRF024 블랙",
+    "modelNo": "DRF024",
+    "maker": "사사키(SSK)",
+    "cateCd": "039022002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49106",
+    "goodsNm": "미즈노 유소년 야구 수비장갑 21062 레드/블랙 우투용",
+    "modelNo": "1EJEY21062",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49105",
+    "goodsNm": "미즈노 유소년 야구 수비장갑 21014 네이비/화이트 우투용",
+    "modelNo": "1EJEY21014NW",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "006002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49073",
+    "goodsNm": "미즈노 아동용 연식 와일드 키즈 올라운드 글러브 9인치 5S 33900 블랙",
+    "modelNo": "1AJGY3390009ARBK",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49070",
+    "goodsNm": "미즈노 아동용 연식 와일드 키즈 올라운드 글러브 9인치 5S 33900 오렌지",
+    "modelNo": "1AJGY339005109ARBK",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49069",
+    "goodsNm": "미즈노 프로 긴팔 바람막이 스트레치 트레이닝 재킷 7009 블랙",
+    "modelNo": "12XECJ7009BK",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "007038006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49068",
+    "goodsNm": "미즈노 프로 반팔 바람막이 스트레치 트레이닝 재킷 7409 블랙",
+    "modelNo": "12XECJ7409BK",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "007038006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49066",
+    "goodsNm": "미즈노 프로 스트레치 방풍 테크 쉴드 팬츠 7709 블랙",
+    "modelNo": "12XFCW7709BK",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "007039004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49063",
+    "goodsNm": "미즈노 글로벌엘리트 소프트볼 나무 트레이닝 배트 25284 화이트/골드",
+    "modelNo": "1CJWT2528401WG",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49062",
+    "goodsNm": "미즈노 유소년 연식 나무 트레이닝 배트 25478 코랄/블랙",
+    "modelNo": "1CJWT25478SN6BG",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49061",
+    "goodsNm": "미즈노 유소년 연식 나무 트레이닝 배트 25480 블랙/코랄",
+    "modelNo": "1CJWT25480MM55FBC",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49058",
+    "goodsNm": "미즈노 프로 경식 경량형 기성 풋가드 51090 51190 블랙/화이트",
+    "modelNo": "1DJLG51090BK",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49057",
+    "goodsNm": "미즈노 프로 경식 경량형 기성 풋가드 51010 51110 화이트/그레이",
+    "modelNo": "1DJLG51010WT",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49056",
+    "goodsNm": "미즈노 프로 경식 경량형 기성 싱글 암가드 50009 블랙",
+    "modelNo": "1DJPG50009BK",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49055",
+    "goodsNm": "미즈노 프로 경식 경량형 기성 싱글 암가드 50001 화이트",
+    "modelNo": "1DJPG50001WT",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49054",
+    "goodsNm": "미즈노 프로 경식 경량형 기성 암가드 51010 화이트/그레이",
+    "modelNo": "1DJPG51010WT",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49053",
+    "goodsNm": "미즈노 프로 경식 경량형 기성 암가드 51090 블랙/화이트",
+    "modelNo": "1DJPG51090BK",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49052",
+    "goodsNm": "미즈노 심판 프로텍터 24009 블랙",
+    "modelNo": "1DJPU24009",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "044015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49044",
+    "goodsNm": "비바 자이언트 라켓 세트 어린이 가족 놀이 야외 스포츠 장난감 선물",
+    "modelNo": "VV25NSRK001",
+    "maker": "비바(VIVA)",
+    "cateCd": "048010006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49042",
+    "goodsNm": "모리모토 아쿠아-X 야구 런닝 등산 스포츠 팔토시 암슬리브 쿨토시",
+    "modelNo": "암슬리브",
+    "maker": "모리모토(MORIMOTO)",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49041",
+    "goodsNm": "모리모토 플로우 퀵 드라이 피칭 스포츠 타올 수건 타월",
+    "modelNo": "스포츠 타올",
+    "maker": "모리모토(MORIMOTO)",
+    "cateCd": "020038",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49040",
+    "goodsNm": "모리모토 프리미엄 밍크 글러브 오일 가죽 왁스 글러브관리용품 무색 50g ST-111",
+    "modelNo": "ST-111",
+    "maker": "모리모토(MORIMOTO)",
+    "cateCd": "001007002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49029",
+    "goodsNm": "뮬러 스탠다드 무릎 패드 M1",
+    "modelNo": "M1",
+    "maker": "뮬러(Mueller)",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49028",
+    "goodsNm": "지폼 G-FORM 유소년 WRIST Guard 손목 보호대 블랙",
+    "modelNo": "WRIST Guard",
+    "maker": "지폼(G-FORM)",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49027",
+    "goodsNm": "지폼 G-FORM Extended Elbow Guard 팔꿈치 보호대 레드",
+    "modelNo": "Extended Elbow Guard",
+    "maker": "지폼(G-FORM)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49026",
+    "goodsNm": "지폼 G-FORM Extended Elbow Guard 팔꿈치 보호대 블랙",
+    "modelNo": "Extended Elbow Guard",
+    "maker": "지폼(G-FORM)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49025",
+    "goodsNm": "지폼 G-FORM PRO-X Elbow Guard 팔꿈치 보호대 블랙/블랙",
+    "modelNo": "PRO-X Elbow Guard",
+    "maker": "지폼(G-FORM)",
+    "cateCd": "012009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49024",
+    "goodsNm": "지폼 G-FORM 유소년 PRO-X Knee Guard 무릎 보호대 블랙/옐로우",
+    "modelNo": "PRO-X Knee Guard",
+    "maker": "지폼(G-FORM)",
+    "cateCd": "012007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49022",
+    "goodsNm": "뉴발란스 동계 기모 넥워머 2881-00 블랙",
+    "modelNo": "2881-00",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49021",
+    "goodsNm": "언더아머 암슬리브 1370982-100 화이트",
+    "modelNo": "1370982-100",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49014",
+    "goodsNm": "MASTER 마스터 양방향 멀티 글러브 쉐이퍼",
+    "modelNo": "쉐이퍼",
+    "maker": "도쿠마",
+    "cateCd": "001007009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49013",
+    "goodsNm": "도쿠마 수비 연습용 트레이닝 글러브 10인치 레드/블랙",
+    "modelNo": "트레이닝 글러브",
+    "maker": "도쿠마(TOHKOMA)",
+    "cateCd": "001009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49010",
+    "goodsNm": "미즈노 연식용 포수장비세트 12009 블랙",
+    "modelNo": "1DJPR120 1DJLR120",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "044001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49009",
+    "goodsNm": "프랭클린 합성피혁 유소년 포수미트 31.5인치 22638 블랙",
+    "modelNo": "22638",
+    "maker": "프랭클린(Franklin)",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "49008",
+    "goodsNm": "프랭클린 CFX PRO 디지텍 양가죽 배팅장갑 오렌지",
+    "modelNo": "DIGITEK",
+    "maker": "프랭클린(Franklin)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48993",
+    "goodsNm": "미즈노 커스터마이즈 토트백 가방 70209 블랙",
+    "modelNo": "1FJDC70209",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48982",
+    "goodsNm": "미즈노 글러브 가죽 카드 지갑 75500 블랙",
+    "modelNo": "1GJYG75500BK",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "004017",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48980",
+    "goodsNm": "언더아머 하프타임 커프 비니 1373155-026 그레이",
+    "modelNo": "1373155-026",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "039015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48978",
+    "goodsNm": "언더아머 하퍼 10 RM 미드 포인트화 야구화 6000707-001 블랙",
+    "modelNo": "6000707-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48977",
+    "goodsNm": "언더아머 하퍼 10 RM 미드 포인트화 야구화 6000707-100 화이트",
+    "modelNo": "6000707-100",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48974",
+    "goodsNm": "언더아머 UA 동계 기모 라이벌 플리스 팬츠 1379770-001 블랙",
+    "modelNo": "1379770-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007039004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48973",
+    "goodsNm": "언더아머 UA 동계 기모 라이벌 플리스 팬츠 1379770-025 그레이",
+    "modelNo": "1379770-025",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007039004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48972",
+    "goodsNm": "언더아머 UA 동계 기모 라이벌 플리스 집업 1386016-001 블랙",
+    "modelNo": "1386016-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48971",
+    "goodsNm": "언더아머 2025 야드 배팅장갑 6009230-001 블랙",
+    "modelNo": "6009230-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48970",
+    "goodsNm": "언더아머 2025 야드 배팅장갑 6009230-100 화이트",
+    "modelNo": "6009230-100",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48969",
+    "goodsNm": "언더아머 UA 유틸리키 긴팔 케이지 재킷 바람막이 1375656-001 블랙",
+    "modelNo": "1375656-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48968",
+    "goodsNm": "언더아머 UA 유틸리키 긴팔 케이지 재킷 바람막이 1375656-410 네이비",
+    "modelNo": "1375656-410",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48967",
+    "goodsNm": "언더아머 UA HeatGear 아머 긴팔 컴프레션 언더셔츠 1361524-001 블랙",
+    "modelNo": "1361524-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48966",
+    "goodsNm": "언더아머 UA HeatGear 아머 긴팔 컴프레션 언더셔츠 1361524-400 블루",
+    "modelNo": "1361524-400",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48958",
+    "goodsNm": "[2장 구매시 1장 증정] 도쿠마 PRO MODEL 신형 메쉬 배팅장갑 퍼플/화이트",
+    "modelNo": "배팅장갑",
+    "maker": "도쿠마",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48956",
+    "goodsNm": "[2장 구매시 1장 증정] 도쿠마 PRO MODEL 신형 메쉬 배팅장갑 민트/화이트",
+    "modelNo": "배팅장갑",
+    "maker": "도쿠마",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48950",
+    "goodsNm": "비바 길이 조절 배드민턴 라켓 세트 베이직 AT01",
+    "modelNo": "AT01",
+    "maker": "비바(VIVA)",
+    "cateCd": "048010006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48949",
+    "goodsNm": "비바 길이 조절 배드민턴 라켓 세트 어드밴스 AA01",
+    "modelNo": "AA01",
+    "maker": "비바(VIVA)",
+    "cateCd": "048010006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48947",
+    "goodsNm": "비바 윈드스피드 토네이도 배드민턴세트 화이트/블랙",
+    "modelNo": "윈드스피드 토네이도",
+    "maker": "비바(VIVA)",
+    "cateCd": "048010006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48946",
+    "goodsNm": "비바 윈드스피드 싸이클론 배드민턴세트 오렌지/화이트",
+    "modelNo": "윈드스피드 싸이클론",
+    "maker": "비바(VIVA)",
+    "cateCd": "048010006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48945",
+    "goodsNm": "[2장 구매시 1장 증정] 도쿠마 PRO MODEL 신형 메쉬 배팅장갑 옐로우/화이트",
+    "modelNo": "배팅장갑",
+    "maker": "도쿠마",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48944",
+    "goodsNm": "[2장 구매시 1장 증정] 도쿠마 PRO MODEL 신형 메쉬 배팅장갑 그린/화이트",
+    "modelNo": "배팅장갑",
+    "maker": "도쿠마",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48943",
+    "goodsNm": "[2장 구매시 1장 증정] 도쿠마 PRO MODEL 신형 메쉬 배팅장갑 레드/화이트",
+    "modelNo": "배팅장갑",
+    "maker": "도쿠마",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48942",
+    "goodsNm": "[2장 구매시 1장 증정] 도쿠마 PRO MODEL 신형 메쉬 배팅장갑 핑크/화이트",
+    "modelNo": "배팅장갑",
+    "maker": "도쿠마",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48941",
+    "goodsNm": "[2장 구매시 1장 증정] 도쿠마 PRO MODEL 신형 메쉬 배팅장갑 네이비/화이트",
+    "modelNo": "배팅장갑",
+    "maker": "도쿠마(TOHKOMA)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48938",
+    "goodsNm": "YGS 프로 라인 경식 포수미트 33.5인치 네이비/탄 912V",
+    "modelNo": "912V",
+    "maker": "YGS",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48934",
+    "goodsNm": "YGS 프로 라인 경식 외야 글러브 13인치 블랙/탄 GR51",
+    "modelNo": "GR51",
+    "maker": "YGS",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48930",
+    "goodsNm": "YGS 프로 라인 경식 포수미트 33.5인치 R오렌지/브라운 912V",
+    "modelNo": "912V",
+    "maker": "YGS",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48928",
+    "goodsNm": "YGS 프로 라인 경식 외야 글러브 13인치 자연색 CG98",
+    "modelNo": "CG98",
+    "maker": "YGS",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48927",
+    "goodsNm": "YGS 프로 라인 경식 외야 글러브 13인치 크림 CG98",
+    "modelNo": "CG98",
+    "maker": "YGS",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48922",
+    "goodsNm": "SSK 2025 유소년 야구 인조잔디화 화이트/네이비 SSF5201",
+    "modelNo": "SSF5201",
+    "maker": "사사키(SSK)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48921",
+    "goodsNm": "SSK 2025 유소년 야구 인조잔디화 화이트/레드 SSF5201",
+    "modelNo": "SSF5201",
+    "maker": "사사키(SSK)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48914",
+    "goodsNm": "비바 윈드스피드 스톰 배드민턴세트 레드/민트",
+    "modelNo": "윈드스피드 스톰",
+    "maker": "비바(VIVA)",
+    "cateCd": "048010",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48911",
+    "goodsNm": "BMC 베이직 프로 배트그립 (1.1mm)",
+    "modelNo": "베이직 프로 배트그립",
+    "maker": "BMC",
+    "cateCd": "003004008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48909",
+    "goodsNm": "BMC 베이직 프로 배트그립 (0.5mm)",
+    "modelNo": "베이직 프로 배트그립",
+    "maker": "BMC",
+    "cateCd": "003004008",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "48902",
+    "goodsNm": "제트 슬라이딩 장갑 주루장갑 BLK-49BS 오렌지/블랙",
+    "modelNo": "BLK-49BS",
+    "maker": "제트(ZETT)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48901",
+    "goodsNm": "제트 슬라이딩 장갑 주루장갑 BLK-49BS 아이보리/블랙",
+    "modelNo": "BLK-49BS",
+    "maker": "제트(ZETT)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48900",
+    "goodsNm": "제트 슬라이딩 장갑 주루장갑 BLK-49BS 네이비/화이트",
+    "modelNo": "BLK-49BS",
+    "maker": "제트(ZETT)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48899",
+    "goodsNm": "제트 슬라이딩 장갑 주루장갑 BLK-49BS 블랙/화이트",
+    "modelNo": "BLK-49BS",
+    "maker": "제트(ZETT)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48896",
+    "goodsNm": "프랭클린 CFX PRO 양가죽 배팅장갑 코랄리프 20885",
+    "modelNo": "20885",
+    "maker": "프랭클린(Franklin)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48895",
+    "goodsNm": "SSK All Nine 12인치 투수 올라운드 글러브 SL0612 라이트 탄",
+    "modelNo": "SL0612",
+    "maker": "사사키(SSK)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48893",
+    "goodsNm": "SSK All Nine 11.75인치 올라운드 글러브 SL0610 라이트 탄",
+    "modelNo": "SL0610",
+    "maker": "사사키(SSK)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48882",
+    "goodsNm": "프랭클린 파워스트랩 크롬 양가죽 배팅장갑 네이비 20492",
+    "modelNo": "20492",
+    "maker": "프랭클린(Franklin)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48881",
+    "goodsNm": "프랭클린 CFX PRO 양가죽 배팅장갑 바닐라/골드 20793",
+    "modelNo": "20793",
+    "maker": "프랭클린(Franklin)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48856",
+    "goodsNm": "제트 프로스테이터스 스퀘어 데이팩 야구 백팩 가방 BAP4021",
+    "modelNo": "BAP4021",
+    "maker": "제트(ZETT)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48853",
+    "goodsNm": "골드 슈프림 어센틱 정해영 선수모델 12인치 투수 글러브 PRO-012 블랙",
+    "modelNo": "PRO-012",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48845",
+    "goodsNm": "골드 야구 배트 미끄럼 방지 그립가드 스프레이 GG300",
+    "modelNo": "GG300",
+    "maker": "골드(GOLD)",
+    "cateCd": "003004002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48844",
+    "goodsNm": "세라믹파워기어 암 파워 서포터 암슬리브 W (하드프로 양팔세트)",
+    "modelNo": "암슬리브",
+    "maker": "세라믹파워",
+    "cateCd": "012004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48843",
+    "goodsNm": "키모니 KGT 138 하이 소프트 레전드 오버그립 10개 1세트(색상랜덤)",
+    "modelNo": "KGT 138",
+    "maker": "키모니",
+    "cateCd": "003004008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48838",
+    "goodsNm": "미즈노 프로 A에디션2 올라운드 글러브 1AGGH25000 12.5인치 레드네이비",
+    "modelNo": "1AGGH25000",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "012007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48836",
+    "goodsNm": "프랭클린 FASTPITCH PRO 캐치볼용 12인치 글러브(22437)",
+    "modelNo": "22437",
+    "maker": "프랭클린(Franklin)",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48834",
+    "goodsNm": "프랭클린 RTP 9.5인치 주니어 글러브&볼세트(4809TBS)",
+    "modelNo": "4809TBS",
+    "maker": "프랭클린(Franklin)",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48827",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 풋가드 블랙 (롱 타입)",
+    "modelNo": "포프로 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48826",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 풋가드 그린 (롱 타입)",
+    "modelNo": "포프로 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48825",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 풋가드 핑크 (롱 타입)",
+    "modelNo": "포프로 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48824",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 풋가드 레드 (롱 타입)",
+    "modelNo": "포프로 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48823",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 풋가드 오렌지 (롱 타입)",
+    "modelNo": "포프로 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48822",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 풋가드 화이트 (롱 타입)",
+    "modelNo": "포프로 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48821",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 풋가드 블랙",
+    "modelNo": "포프로 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48820",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 풋가드 그린",
+    "modelNo": "포프로 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48819",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 풋가드 핑크",
+    "modelNo": "포프로 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48818",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 풋가드 레드",
+    "modelNo": "포프로 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48817",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 풋가드 오렌지",
+    "modelNo": "포프로 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48816",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 풋가드 화이트",
+    "modelNo": "포프로 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48815",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 투피스 암가드 블랙",
+    "modelNo": "포프로 암가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48814",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 투피스 암가드 그린",
+    "modelNo": "포프로 암가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48813",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 투피스 암가드 핑크",
+    "modelNo": "포프로 암가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48812",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 투피스 암가드 레드",
+    "modelNo": "포프로 암가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48811",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 투피스 암가드 오렌지",
+    "modelNo": "포프로 암가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48810",
+    "goodsNm": "프로스펙스 포프로 선수지급용 야구 투피스 암가드 화이트",
+    "modelNo": "포프로 암가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48797",
+    "goodsNm": "프로스펙스 엘리트 야구 풋가드 블랙",
+    "modelNo": "엘리트 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48796",
+    "goodsNm": "프로스펙스 엘리트 야구 풋가드 블루",
+    "modelNo": "엘리트 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48795",
+    "goodsNm": "프로스펙스 엘리트 야구 풋가드 레드",
+    "modelNo": "엘리트 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48794",
+    "goodsNm": "프로스펙스 엘리트 야구 풋가드 화이트",
+    "modelNo": "엘리트 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48793",
+    "goodsNm": "프로스펙스 엘리트 야구 투피스 암가드 블랙",
+    "modelNo": "엘리트 암가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48792",
+    "goodsNm": "프로스펙스 엘리트 야구 투피스 암가드 블루",
+    "modelNo": "엘리트 암가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48791",
+    "goodsNm": "프로스펙스 엘리트 야구 투피스 암가드 레드",
+    "modelNo": "엘리트 암가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48790",
+    "goodsNm": "프로스펙스 엘리트 야구 투피스 암가드 화이트",
+    "modelNo": "엘리트 암가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48781",
+    "goodsNm": "프로스펙스 스마트 야구 풋가드 블랙",
+    "modelNo": "스마트 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48780",
+    "goodsNm": "프로스펙스 스마트 야구 풋가드 화이트",
+    "modelNo": "스마트 풋가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48779",
+    "goodsNm": "프로스펙스 스마트 야구 싱글 암가드 블랙",
+    "modelNo": "스마트 암가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48778",
+    "goodsNm": "프로스펙스 스마트 야구 싱글 암가드 화이트",
+    "modelNo": "스마트 암가드",
+    "maker": "프로스펙스(PRO-SPECS)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48739",
+    "goodsNm": "도쿠마 PRO 에디션 풋가드 블루/오렌지",
+    "modelNo": "풋가드",
+    "maker": "도쿠마",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48738",
+    "goodsNm": "도쿠마 PRO 에디션 암가드 블루/오렌지",
+    "modelNo": "암가드",
+    "maker": "도쿠마",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48727",
+    "goodsNm": "미즈노 경식 경량형 암가드 풋가드 화이트/골드 1DJPG520 1DJLG520",
+    "modelNo": "1DJPG520 1DJLG520",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48725",
+    "goodsNm": "미즈노 경식 경량형 암가드 풋가드 네이비/골드/레드 1DJPG520 1DJLG520",
+    "modelNo": "1DJPG520 1DJLG520",
+    "maker": "미즈노",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48709",
+    "goodsNm": "미즈노 쿠션 레보 다이아 포인트화 256045 화이트/형광",
+    "modelNo": "11GP256045WY",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48708",
+    "goodsNm": "미즈노 쿠션 레보 다이아 포인트화 256014 화이트/네이비",
+    "modelNo": "11GP256014WN",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48707",
+    "goodsNm": "미즈노 쿠션 레보 다이아 유소년 포인트화 252714 화이트/네이비",
+    "modelNo": "11GP252714WN",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48706",
+    "goodsNm": "미즈노 쿠션 레보 다이아 유소년 포인트화 252762 화이트/레드",
+    "modelNo": "11GP252762WR",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48705",
+    "goodsNm": "미즈노 쿠션 레보 다이아 유소년 포인트화 256214 화이트/네이비",
+    "modelNo": "11GP256214WN",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48704",
+    "goodsNm": "미즈노 프로 쿠션 레보 인조잔디화 250209 블랙",
+    "modelNo": "11GT250209BK",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48703",
+    "goodsNm": "미즈노 쿠션 레보 다이아 인조잔디화 252562 화이트/레드",
+    "modelNo": "11GT252562WR",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48702",
+    "goodsNm": "미즈노 쿠션 레보 다이아 유소년 인조잔디화 252742 화이트/골드/네이비",
+    "modelNo": "11GT252742WR",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48701",
+    "goodsNm": "미즈노 쿠션 레보 다이아 유소년 인조잔디화 252762 화이트/레드",
+    "modelNo": "11GT252762WR",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48700",
+    "goodsNm": "미즈노 쿠션 레보 터프 트레이닝화 인조잔디화 256009 블랙",
+    "modelNo": "11GT256009BK",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48699",
+    "goodsNm": "미즈노 쿠션 레보 터프 트레이닝화 인조잔디화 256090 화이트",
+    "modelNo": "11GT256090WT",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48698",
+    "goodsNm": "미즈노 프로 심판 프로텍터 20009 블랙",
+    "modelNo": "1DJPU20009",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "044015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48664",
+    "goodsNm": "나이키 스우시 클래식 더블 와이드 손목밴드 2개입 II5119-036",
+    "modelNo": "II5119-036",
+    "maker": "나이키(Nike)",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48663",
+    "goodsNm": "나이키 조던 엘라스틱 스포츠 와이드 헤드밴드 3팩 IF1688-117",
+    "modelNo": "IF1688-117",
+    "maker": "나이키(Nike)",
+    "cateCd": "048006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48656",
+    "goodsNm": "나이키 프로 드라이 핏 피트니스 롱 쇼츠 언더팬츠 FB7964-010 블랙",
+    "modelNo": "FB7964-010",
+    "maker": "나이키(Nike)",
+    "cateCd": "007039003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48654",
+    "goodsNm": "키모니 KGT 118 하이소프트 파워그립 10개 묶음 (색상 랜덤)",
+    "modelNo": "KGT 118",
+    "maker": "키모니",
+    "cateCd": "003004008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48652",
+    "goodsNm": "스포니 소프트핏 홀스파이럴 배트그립 N3000 10개 묶음 (색상 랜덤)",
+    "modelNo": "N3000",
+    "maker": "스포니",
+    "cateCd": "003004008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48650",
+    "goodsNm": "키모니 뉴쿠션 배트그립 KGT200 10개 묶음 (색상 랜덤)",
+    "modelNo": "KGT200",
+    "maker": "키모니",
+    "cateCd": "003004008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48649",
+    "goodsNm": "키모니 스파이럴 배트그립 KGT105 10개 묶음 (색상 랜덤)",
+    "modelNo": "KGT105",
+    "maker": "키모니",
+    "cateCd": "003004008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48648",
+    "goodsNm": "SSK 스파이크 가드 슈즈픽스 투명색",
+    "modelNo": "Spike Guard",
+    "maker": "사사키(SSK)",
+    "cateCd": "002005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48640",
+    "goodsNm": "SSK 프로엣지 NPB 심판 공인 주심용 심판화 블랙 ESF9000",
+    "modelNo": "ESF9000",
+    "maker": "사사키(SSK)",
+    "cateCd": "002009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48639",
+    "goodsNm": "SSK 프로엣지 메이플 나무 펑고배트 블랙/내츄럴 40인치",
+    "modelNo": "SBF8000",
+    "maker": "사사키(SSK)",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48627",
+    "goodsNm": "나이키 알파 허라취 엘리트 4 미드 일체형 징스파이크 블랙 DJ6520-003",
+    "modelNo": "DJ6520-003",
+    "maker": "나이키(Nike)",
+    "cateCd": "002002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48626",
+    "goodsNm": "나이키 알파 허라취 엘리트 4 미드 일체형 징스파이크 화이트/블랙 FD2744-107",
+    "modelNo": "FD2744-107",
+    "maker": "나이키(Nike)",
+    "cateCd": "002002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48625",
+    "goodsNm": "잠스트 쿨쉐이더 자외선 차단 쿨링",
+    "modelNo": "쿨쉐이더",
+    "maker": "잠스트(ZAMST)",
+    "cateCd": "007038001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48622",
+    "goodsNm": "언더아머 기모 동계용 UA 라이벌 플리스 로고 후디 1379758-025 그레이",
+    "modelNo": "1379758-025",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "039022002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48621",
+    "goodsNm": "언더아머 UA 유틸리티 프로 후드 집업 1386952-001 블랙",
+    "modelNo": "1386952-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48620",
+    "goodsNm": "언더아머 남성 UA HOVR 소닉 7 러닝화 3028002-001 (블랙/화이트)",
+    "modelNo": "3028002-001",
+    "maker": "언더아머",
+    "cateCd": "002006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48598",
+    "goodsNm": "골드 로얄 레플리카 GBG-PRO 012 (문동주 모델) 25년 투수 글러브 블랙",
+    "modelNo": "GBG-PRO 012",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48567",
+    "goodsNm": "언더아머 UA 유틸리티 베이스볼 BP 프린트 백팩 1369318-412 네이비/골드",
+    "modelNo": "1369318-412",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48566",
+    "goodsNm": "언더아머 UA 유틸리티 베이스볼 BP 프린트 백팩 1369318-005 블랙/골드",
+    "modelNo": "1369318-005",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48565",
+    "goodsNm": "골드이스트 프리미엄 올쉽 양가죽 배팅장갑 화이트",
+    "modelNo": "배팅장갑",
+    "maker": "골드이스트",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48558",
+    "goodsNm": "언더아머 UA 하퍼 배팅장갑 1385421-001 블랙",
+    "modelNo": "1385421-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48557",
+    "goodsNm": "언더아머 클린업 21 배팅장갑 1365468-001 밀리터리",
+    "modelNo": "1365468-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48545",
+    "goodsNm": "닥터체크 슬림X형 테이핑 손목보호대 1개입 (장갑형)",
+    "modelNo": "슬림X형",
+    "maker": "닥터체크",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48544",
+    "goodsNm": "닥터체크 슬림X형 테이핑 종아리보호대 1개입",
+    "modelNo": "슬림X형",
+    "maker": "닥터체크",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48543",
+    "goodsNm": "닥터체크 슬림X형 테이핑 손목보호대 2개입 (아대형)",
+    "modelNo": "슬림X형",
+    "maker": "닥터체크",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48542",
+    "goodsNm": "닥터체크 슬림X형 테이핑 무릎보호대 1개입",
+    "modelNo": "슬림X형",
+    "maker": "닥터체크",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48541",
+    "goodsNm": "닥터체크 슬림X형 테이핑 발목보호대 1개입",
+    "modelNo": "슬림X형",
+    "maker": "닥터체크",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48540",
+    "goodsNm": "닥터체크 슬림X형 테이핑 팔꿈치보호대 1개입",
+    "modelNo": "슬림X형",
+    "maker": "닥터체크",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48515",
+    "goodsNm": "러펠스 루즈핏 쿨매쉬 반팔 라운드 언더셔츠",
+    "modelNo": "루즈핏 쿨매쉬",
+    "maker": "러펠스",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48514",
+    "goodsNm": "러펠스 베이직 루즈핏 긴팔 라운드 언더셔츠 (스판 언더티,언더웨어)",
+    "modelNo": "루즈핏 긴팔",
+    "maker": "러펠스",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48513",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 블루/네이비",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48512",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 블랙/오렌지",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48511",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 핑크/블랙",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48509",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 스카이블루/옐로우/화이트",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48508",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 네이비/골드",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48507",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 레드/화이트",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48506",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 네이비/화이트/레드",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48505",
+    "goodsNm": "러펠스 이펙티스 골드메탈 야구 보호대 암가드 풋가드 손등가드 블랙/화이트/레드",
+    "modelNo": "이펙티스",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48503",
+    "goodsNm": "뉴발란스 프레쉬폼 포인트화 야구화 PL3000 H7 네이비",
+    "modelNo": "PL3000 H7",
+    "maker": "뉴발란스(New Balance)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48501",
+    "goodsNm": "브렛 프로선수용 엄지 울림방지 보호대 블랙",
+    "modelNo": "엄지 울림방지",
+    "maker": "브렛(BRETT)",
+    "cateCd": "003004005",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "48500",
+    "goodsNm": "브렛 프로선수용 엄지 울림방지 보호대 핑크",
+    "modelNo": "엄지 울림방지",
+    "maker": "브렛(BRETT)",
+    "cateCd": "003004005",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "48489",
+    "goodsNm": "크라운 파워젤 에너지젤 (낱개)",
+    "modelNo": "에너지젤",
+    "maker": "크라운(CROWN)",
+    "cateCd": "048010",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48488",
+    "goodsNm": "미즈노 헤어밴드 화이트",
+    "modelNo": "헤어밴드",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "048006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48487",
+    "goodsNm": "미즈노 6CM 손목밴드 (2개입)",
+    "modelNo": "손목밴드",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48454",
+    "goodsNm": "다비드 이노스트 34인치 포수미트 IN CM-OP M(MC/CM)25",
+    "modelNo": "IN CM-OP M(MC/CM)25",
+    "maker": "다비드",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48453",
+    "goodsNm": "다비드 프로슈트 포수미트 34인치 PS CM-TF M(CM/RD)25",
+    "modelNo": "PS CM-TF M(CM/RD)25",
+    "maker": "다비드",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48452",
+    "goodsNm": "하타케야마 포수 수비장갑 CT-RW 레드 화이트",
+    "modelNo": "수비장갑",
+    "maker": "하타케야마",
+    "cateCd": "006002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48444",
+    "goodsNm": "하이골드 웨이브 터프화 인조잔디화 HL252UBSTR001 (화이트)",
+    "modelNo": "HL252UBSTR001",
+    "maker": "하이골드(HI-GOLD)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48443",
+    "goodsNm": "하이골드 웨이브 터프화 인조잔디화 HL252UBSTR001 (블랙)",
+    "modelNo": "HL252UBSTR001",
+    "maker": "하이골드(HI-GOLD)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48434",
+    "goodsNm": "아식스 이지오더 샵오더 교체형 징스파이크 화이트/블랙/레드",
+    "modelNo": "이지오더",
+    "maker": "아식스",
+    "cateCd": "002002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48384",
+    "goodsNm": "윌비플레이 야구 손목밴드 스포츠 아대 보호대 2개입 블랙 L BH50",
+    "modelNo": "BH50",
+    "maker": "윌비플레이",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48383",
+    "goodsNm": "윌비플레이 야구 손목밴드 스포츠 아대 보호대 2개입 화이트 L BH50",
+    "modelNo": "BH50",
+    "maker": "윌비플레이",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48382",
+    "goodsNm": "윌비플레이 야구 손목밴드 스포츠 아대 보호대 2개입 블랙 S BH50",
+    "modelNo": "BH50",
+    "maker": "윌비플레이",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48381",
+    "goodsNm": "윌비플레이 야구 손목밴드 스포츠 아대 보호대 2개입 화이트 S BH50",
+    "modelNo": "BH50",
+    "maker": "윌비플레이",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48375",
+    "goodsNm": "아이피 셀렉트 12인치 투수 글러브 블랙/레드 (중고)",
+    "modelNo": "오더",
+    "maker": "아이피셀렉트",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "48369",
+    "goodsNm": "제트 노크배트 펑고배트 BKT1401K 화이트/네이비 94cm 37인치",
+    "modelNo": "BKT1401K",
+    "maker": "제트(ZETT)",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48368",
+    "goodsNm": "제트 노크배트 펑고배트 BKT1401K 화이트/네이비 98cm 38.6인치",
+    "modelNo": "BKT1401K",
+    "maker": "제트(ZETT)",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48367",
+    "goodsNm": "제트 노크배트 펑고배트 BKT1401K 화이트/네이비 102cm 40인치",
+    "modelNo": "BKT1401K",
+    "maker": "제트(ZETT)",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48366",
+    "goodsNm": "원에이티 이지핏 프로 포수 니쿠션 니세이버",
+    "modelNo": "니쿠션",
+    "maker": "원에이티",
+    "cateCd": "044006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48342",
+    "goodsNm": "나이키 에어 줌 다이아몬드 엘리트 터프 야구화 인조잔디화 DZ0503 104 화이트/블랙",
+    "modelNo": "DZ0503 104",
+    "maker": "나이키",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48340",
+    "goodsNm": "골드 플래티넘 리미티드 김재호 은퇴기념 글러브",
+    "modelNo": "플래티넘 리미티드 김재호",
+    "maker": "골드(GOLD)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48334",
+    "goodsNm": "볼플레이어스 글러브 컨디셔너 오일",
+    "modelNo": "컨디셔너",
+    "maker": "볼플레이어스",
+    "cateCd": "001007002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48331",
+    "goodsNm": "SSK New 글러브 밴드",
+    "modelNo": "글러브 밴드",
+    "maker": "SSK",
+    "cateCd": "001007007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48329",
+    "goodsNm": "44 라이즈 유소년 올라운드 글러브 11.5인치 스카이블루",
+    "modelNo": "라이즈",
+    "maker": "44 pro",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48328",
+    "goodsNm": "44 라이즈 유소년 올라운드 글러브 11.5인치 레드",
+    "modelNo": "라이즈",
+    "maker": "44",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48327",
+    "goodsNm": "44 라이즈 유소년 올라운드 글러브 11.5인치 블론드",
+    "modelNo": "라이즈",
+    "maker": "44",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48326",
+    "goodsNm": "44 라이즈 유소년 올라운드 글러브 11.5인치 블랙",
+    "modelNo": "라이즈",
+    "maker": "44",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48324",
+    "goodsNm": "브렛 메이플 압축 보아그립 고본배트 271모델 33.5인치 블랙/내추럴",
+    "modelNo": "271모델",
+    "maker": "브렛",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48323",
+    "goodsNm": "브렛 메이플 압축 보아그립 고본배트 271모델 33인치 블랙/내추럴",
+    "modelNo": "271모델",
+    "maker": "브렛",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48322",
+    "goodsNm": "브렛 메이플 압축 보아그립 고본배트 243모델 33.5인치 블랙/내추럴",
+    "modelNo": "243 모델",
+    "maker": "브렛",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48321",
+    "goodsNm": "브렛 메이플 압축 보아그립 고본배트 243모델 33인치 블랙/내추럴",
+    "modelNo": "243 모델",
+    "maker": "브렛",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48320",
+    "goodsNm": "브렛 아동용 수비용 안면 보호대",
+    "modelNo": "안면 보호대",
+    "maker": "브렛",
+    "cateCd": "005007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48319",
+    "goodsNm": "브렛 조절식 원통형 배트링 블랙",
+    "modelNo": "배트링",
+    "maker": "브렛",
+    "cateCd": "003004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48315",
+    "goodsNm": "바디핏 냉온찜질팩 멀티 아이싱 MUL-01",
+    "modelNo": "MUL-01",
+    "maker": "닥터체크",
+    "cateCd": "020039",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48314",
+    "goodsNm": "미즈노 실리콘 파워 아크 DI 레플리카 배팅장갑 55321 스카이블루/실버",
+    "modelNo": "1EJEA55321SS",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48312",
+    "goodsNm": "윌비플레이 야구 반팔 바람막이 티셔츠 블랙 FWB1WBBK",
+    "modelNo": "FWB1WBBK",
+    "maker": "윌비플레이",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48308",
+    "goodsNm": "윌비플레이 야구 암가드 타자보호대 에일리언 FWB2EQBL",
+    "modelNo": "FWB2EQBL",
+    "maker": "윌비플레이",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48307",
+    "goodsNm": "윌비플레이 타자 손등보호대 야구 손등가드 에일리언 FWB4EQYF",
+    "modelNo": "FWB4EQYF",
+    "maker": "윌비플레이",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48306",
+    "goodsNm": "윌비플레이 야구 타자 풋가드 정강이보호대 에일리언 FWB3EQGR",
+    "modelNo": "FWB3EQGR",
+    "maker": "윌비플레이",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48304",
+    "goodsNm": "윌비플레이 야구 암가드 타자보호대 태극 FWB2EQPT",
+    "modelNo": "FWB2EQPT",
+    "maker": "윌비플레이",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48303",
+    "goodsNm": "윌비플레이 타자 손등보호대 야구 손등가드 태극 FWB4EQPT",
+    "modelNo": "FWB4EQPT",
+    "maker": "윌비플레이",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48302",
+    "goodsNm": "윌비플레이 야구 타자 풋가드 정강이보호대 태극 FWB3EQPT",
+    "modelNo": "FWB3EQPT",
+    "maker": "윌비플레이",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48300",
+    "goodsNm": "윌비플레이 야구 양가죽 배팅장갑 블랙 FWB1EQBK",
+    "modelNo": "FWB1EQBK",
+    "maker": "윌비플레이",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48299",
+    "goodsNm": "윌비플레이 야구 양가죽 배팅장갑 블랙/화이트 FWB3EQWH",
+    "modelNo": "FWB3EQWH",
+    "maker": "윌비플레이",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48298",
+    "goodsNm": "윌비플레이 야구 양가죽 배팅장갑 태극 EWB2EQMX",
+    "modelNo": "EWB2EQMX",
+    "maker": "윌비플레이",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48297",
+    "goodsNm": "다비드 이노스트 1루미트 글러브 12.5인치 IN FM-TF M(MC/CM)25 모카카멜",
+    "modelNo": "IN FM-TF M(MC/CM)25",
+    "maker": "인코자바",
+    "cateCd": "001004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48296",
+    "goodsNm": "언더아머 다용도 밴드형 야구벨트 네이비 1252084-410",
+    "modelNo": "1252084-410",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48294",
+    "goodsNm": "미즈노 프로 실리콘 파워 아크 DI 배팅장갑 55021 스카이블루/실버",
+    "modelNo": "1EJEA55021SS",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48291",
+    "goodsNm": "미즈노 심판 암가드 팔보호대 11009 양팔 (2개입)",
+    "modelNo": "1DJPG11009BK",
+    "maker": "미즈노",
+    "cateCd": "044015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48290",
+    "goodsNm": "바디핏 냉온찜질팩 눈 아이싱 EYE-01",
+    "modelNo": "EYE-01",
+    "maker": "닥터체크",
+    "cateCd": "020039",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48289",
+    "goodsNm": "바디핏 냉온찜질팩 손가락 아이싱 FIN-01",
+    "modelNo": "FIN-01",
+    "maker": "닥터체크",
+    "cateCd": "020039",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48288",
+    "goodsNm": "바디핏 냉온찜질팩 발목 아이싱 ANK-01",
+    "modelNo": "ANK-01",
+    "maker": "닥터체크",
+    "cateCd": "020039",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48286",
+    "goodsNm": "바디핏 냉온찜질팩 손목 아이싱 MUL-01",
+    "modelNo": "MUL-01",
+    "maker": "닥터체크",
+    "cateCd": "020039",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48285",
+    "goodsNm": "바디핏 냉온찜질팩 허리 아이싱 WAI-01",
+    "modelNo": "WAI-01",
+    "maker": "닥터체크",
+    "cateCd": "020039",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48284",
+    "goodsNm": "바디핏 냉온찜질팩 무릎 아이싱 KNE-01",
+    "modelNo": "KNE-01",
+    "maker": "닥터체크",
+    "cateCd": "020039",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48283",
+    "goodsNm": "바디핏 냉온찜질팩 어깨 아이싱 SHO-01",
+    "modelNo": "SHO-01",
+    "maker": "닥터체크",
+    "cateCd": "020039",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48265",
+    "goodsNm": "언더아머 남성 UA HOVR 소닉 7 러닝화 3028002-100 (화이트)",
+    "modelNo": "3028002-100",
+    "maker": "언더아머",
+    "cateCd": "002006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48264",
+    "goodsNm": "언더아머 UA 인피니트 런닝화 마라톤화 3027523-001 블랙",
+    "modelNo": "3027523-001",
+    "maker": "언더아머",
+    "cateCd": "002006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48263",
+    "goodsNm": "언더아머 남성 UA 라커 V 슬라이드 3028094-001 블랙",
+    "modelNo": "3028094-001",
+    "maker": "언더아머",
+    "cateCd": "002006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48262",
+    "goodsNm": "언더아머 남성 UA 라커 V 슬라이드 3028094-100 화이트",
+    "modelNo": "3028094-100",
+    "maker": "언더아머",
+    "cateCd": "002006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48261",
+    "goodsNm": "언더아머 클린업 배팅장갑 6000253-001 블랙",
+    "modelNo": "6000253-001",
+    "maker": "언더아머",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48260",
+    "goodsNm": "언더아머 클린업 배팅장갑 6000253-100 화이트",
+    "modelNo": "6000253-100",
+    "maker": "언더아머",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48259",
+    "goodsNm": "언더아머 클린업 배팅장갑 6000253-400 블루",
+    "modelNo": "6000253-400",
+    "maker": "언더아머",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48258",
+    "goodsNm": "언더아머 UA 언디나이어블 5.0 라지 더플 백 1369224-001 블랙",
+    "modelNo": "1369224-001",
+    "maker": "언더아머",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48257",
+    "goodsNm": "언더아머 남성 HeatGear 아머 컴프레션 쇼츠 1361596-090 그레이",
+    "modelNo": "1361596-090",
+    "maker": "언더아머",
+    "cateCd": "007039003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48256",
+    "goodsNm": "언더아머 유니섹스 UA 에센셜 크루 삭스 6켤레 1387058-101 3종 색상",
+    "modelNo": "1387058-101",
+    "maker": "언더아머",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48255",
+    "goodsNm": "언더아머 유니섹스 UA 에센셜 크루 삭스 6켤레 1387058-100 화이트",
+    "modelNo": "1387058-100",
+    "maker": "언더아머",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48253",
+    "goodsNm": "언더아머 UA 팀 암슬리브 팔토시 1388085-001 블랙",
+    "modelNo": "1388085-001",
+    "maker": "언더아머",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48252",
+    "goodsNm": "언더아머 UA 팀 암슬리브 팔토시 1388085-100 화이트",
+    "modelNo": "1388085-100",
+    "maker": "언더아머",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48251",
+    "goodsNm": "언더아머 UA 윈드스트라이크 야구 바람막이 케이지 자켓 1375655-400 블루",
+    "modelNo": "1375655-400",
+    "maker": "언더아머",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48250",
+    "goodsNm": "언더아머 UA 윈드스트라이크 야구 바람막이 케이지 자켓 1375655-600 레드",
+    "modelNo": "1375655-600",
+    "maker": "언더아머",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48249",
+    "goodsNm": "언더아머 남성 HeatGear 아머 반팔 스판언더티 1361518-001 블랙",
+    "modelNo": "1361518-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48248",
+    "goodsNm": "언더아머 남성 HeatGear 아머 반팔 스판언더티 1361518-100 화이트",
+    "modelNo": "1361518-100",
+    "maker": "언더아머",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48247",
+    "goodsNm": "언더아머 보이즈 HeatGear 아머 반팔 언더셔츠 1361723-001 블랙",
+    "modelNo": "1361723-001",
+    "maker": "언더아머",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48246",
+    "goodsNm": "언더아머 보이즈 HeatGear 아머 긴팔 1361731-001 블랙",
+    "modelNo": "1361731-001",
+    "maker": "언더아머",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48245",
+    "goodsNm": "언더아머 남성 UA Tech 2.0 반팔 1326413-001 블랙",
+    "modelNo": "1326413-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48244",
+    "goodsNm": "언더아머 유소년 보이즈 HeatGear 아머 레깅스 1361738-001 블랙",
+    "modelNo": "1361738-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007039001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48243",
+    "goodsNm": "언더아머 남성 HeatGear 아머 컴프레션 쇼츠 1361596-001 블랙",
+    "modelNo": "1361596-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007039003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48242",
+    "goodsNm": "언더아머 남성 HeatGear 포켓 롱 쇼츠 1361602-001 블랙",
+    "modelNo": "1361602-001",
+    "maker": "언더아머(Under Armour)",
+    "cateCd": "007039003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48240",
+    "goodsNm": "언더아머 UA 언디나이어블 5.0 MD 더플 백 1369223-001 블랙",
+    "modelNo": "1369223 001",
+    "maker": "언더아머",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48239",
+    "goodsNm": "언더아머 남성 UA 블리칭 어저스터블 캡 1376701-001 블랙",
+    "modelNo": "1376701-001",
+    "maker": "언더아머",
+    "cateCd": "007009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48238",
+    "goodsNm": "언더아머 남성 UA 블리칭 어저스터블 캡 1376701-100 화이트",
+    "modelNo": "1376701-100",
+    "maker": "언더아머",
+    "cateCd": "007009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48237",
+    "goodsNm": "언더아머 유니섹스 UA 트레이닝 코튼 크루 삭스 3켤레 1386311-001 블랙",
+    "modelNo": "1386311-001",
+    "maker": "언더아머",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48236",
+    "goodsNm": "언더아머 유니섹스 UA 트레이닝 코튼 크루 삭스 3켤레 1386311-100 화이트",
+    "modelNo": "1386311-100",
+    "maker": "언더아머",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48235",
+    "goodsNm": "언더아머 유니섹스 코튼 쿼터 삭스 3켤레 1386372-001 블랙",
+    "modelNo": "1386372-001",
+    "maker": "언더아머",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48234",
+    "goodsNm": "언더아머 유니섹스 코튼 쿼터 삭스 3켤레 1386372-100 화이트",
+    "modelNo": "1386372-100",
+    "maker": "언더아머",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48233",
+    "goodsNm": "맥스 MAX 레볼루션 메이플 우드 나무 배트 채은성 선수 모델 블랙 S9006",
+    "modelNo": "S9006",
+    "maker": "맥스(MAX)",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48232",
+    "goodsNm": "맥스 MAX 레볼루션 메이플 우드 나무 배트 이진영 선수 모델 네츄럴 S9006",
+    "modelNo": "S9006",
+    "maker": "맥스(MAX)",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48222",
+    "goodsNm": "미즈노 쿠션 레보 포인트화 252501 화이트",
+    "modelNo": "11GP252501WT",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48220",
+    "goodsNm": "미즈노 쿠션 레보 포인트화 252562 화이트/레드",
+    "modelNo": "11GP252562WR",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48219",
+    "goodsNm": "미즈노 프로 쿠션 레보 프로 트레이너 인조잔디화 250001 화이트",
+    "modelNo": "11GT250001WT",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48218",
+    "goodsNm": "미즈노 프로 쿠션 레보 프로 트레이너 인조잔디화 250114 네이비/화이트",
+    "modelNo": "11GT250114WN",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48217",
+    "goodsNm": "미즈노 유소년 쿠션 레보 인조잔디화 252714 화이트/네이비",
+    "modelNo": "11GT252714WN",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48216",
+    "goodsNm": "미즈노 신발 글러브 건조기 232300",
+    "modelNo": "11GZ232300WT",
+    "maker": "미즈노",
+    "cateCd": "002005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48215",
+    "goodsNm": "미즈노 심장 보호대 10109 / 10009 블랙",
+    "modelNo": "1DJYB10109BK",
+    "maker": "미즈노",
+    "cateCd": "005006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48214",
+    "goodsNm": "미즈노 로진백 30100 65g",
+    "modelNo": "1GJYA30100WT",
+    "maker": "미즈노",
+    "cateCd": "048009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48212",
+    "goodsNm": "YGS 경식 내야 글러브 아이보리 (중고)",
+    "modelNo": "",
+    "maker": "",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "48209",
+    "goodsNm": "스톰 프리미엄 지투 유소년 야구백팩 블랙",
+    "modelNo": "백팩",
+    "maker": "스톰(ST)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48208",
+    "goodsNm": "스톰 프리미엄 지투 유소년 야구백팩 네이비",
+    "modelNo": "백팩",
+    "maker": "스톰(ST)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48207",
+    "goodsNm": "스톰 프리미엄 지투 야구백팩 블랙",
+    "modelNo": "백팩",
+    "maker": "스톰(ST)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48206",
+    "goodsNm": "스톰 프리미엄 지투 야구백팩 네이비",
+    "modelNo": "백팩",
+    "maker": "스톰(ST)",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48188",
+    "goodsNm": "하타케야마 암가드 AG-550 NWG 네이비",
+    "modelNo": "AG-550 NWG",
+    "maker": "하타케야마",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48187",
+    "goodsNm": "하타케야마 좌우겸용 풋가드 FG-850 NWG 네이비",
+    "modelNo": "FG-850 NWG",
+    "maker": "하타케야마",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48186",
+    "goodsNm": "하타케야마 암가드 AG-550 BSR 블랙",
+    "modelNo": "AG-550 BSR",
+    "maker": "하타케야마",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48179",
+    "goodsNm": "하타케야마 좌우겸용 풋가드 FG-850 BSR 블랙",
+    "modelNo": "FG-850 BSR",
+    "maker": "하타케야마",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48177",
+    "goodsNm": "하타케야마 암가드 AG-550 RWB 레드",
+    "modelNo": "AG-550 RWB",
+    "maker": "하타케야마",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48175",
+    "goodsNm": "하타케야마 좌우겸용 풋가드 FG-850 RWB 레드",
+    "modelNo": "FG-850 RWB",
+    "maker": "하타케야마",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48173",
+    "goodsNm": "하타케야마 암가드 AG-550 SBR 실버",
+    "modelNo": "AG-550 SBR",
+    "maker": "하타케야마",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48171",
+    "goodsNm": "하타케야마 좌우겸용 풋가드 FG-850 SBR 실버",
+    "modelNo": "풋가드",
+    "maker": "하타케야마",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48165",
+    "goodsNm": "다비드 이노스트 내야 글러브 11.75인치 IN iF-43(MC/CM)25",
+    "modelNo": "IN iF-43(MC/CM)25",
+    "maker": "다비드",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48164",
+    "goodsNm": "다비드 이노스트 내야 글러브 11.5인치 IN IF-22(PP/PK)25",
+    "modelNo": "IN IF-22(PP/PK)25",
+    "maker": "다비드",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48160",
+    "goodsNm": "다비드 이노스트 내야 글러브 11.85인치 IN IF-45(BK/WT)25",
+    "modelNo": "IN IF-45(BK/WT)25",
+    "maker": "다비드",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48157",
+    "goodsNm": "프랭클린 SHOK-SORB 시리즈 배팅장갑 화이트네이비 20925",
+    "modelNo": "20925",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48155",
+    "goodsNm": "프랭클린 SHOK-SORB 시리즈 배팅장갑 화이트레드 20926",
+    "modelNo": "20926",
+    "maker": "프랭클린(Franklin)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48154",
+    "goodsNm": "프랭클린 FASTPITCH 시리즈 10.5인치 글러브(22483)",
+    "modelNo": "22483",
+    "maker": "프랭클린",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48145",
+    "goodsNm": "나이키 드라이 핏 아카데미25 쇼츠 반바지 (FZ9776010) 블랙",
+    "modelNo": "FZ9776010",
+    "maker": "나이키",
+    "cateCd": "007039005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48144",
+    "goodsNm": "제트 벨크로형 메쉬 인조잔디화 와이드 모델 BSR-8825K 2700 블루",
+    "modelNo": "BSR-8825K 2700",
+    "maker": "제트(ZETT)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48143",
+    "goodsNm": "제트 벨크로형 메쉬 인조잔디화 와이드 모델 BSR-8825K 2900 네이비",
+    "modelNo": "BSR-8825K 6400",
+    "maker": "제트(ZETT)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48142",
+    "goodsNm": "제트 벨크로형 메쉬 인조잔디화 와이드 모델 BSR-8825K 6400 레드",
+    "modelNo": "BSR-8825K 6400",
+    "maker": "제트(ZETT)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48140",
+    "goodsNm": "44 스페셜오더 BG 04 양가죽 배팅장갑 [엔젤윙]",
+    "modelNo": "BG 04",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48139",
+    "goodsNm": "44 스페셜오더 BG 02 양가죽 배팅장갑 [클리블랜드]",
+    "modelNo": "BG 02",
+    "maker": "44 pro",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48138",
+    "goodsNm": "44 스페셜오더 BG 01 양가죽 배팅장갑 [수퍼빌런]",
+    "modelNo": "BG 01",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48137",
+    "goodsNm": "44 스페셜오더 BG 05 양가죽 배팅장갑 [파이어윙]",
+    "modelNo": "BG 05",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48136",
+    "goodsNm": "44 스페셜오더 BG 06 양가죽 배팅장갑 [블랙윙]",
+    "modelNo": "BG 06",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48135",
+    "goodsNm": "44 스페셜오더 BG 07 양가죽 배팅장갑 [NC 노스 캐롤라이나]",
+    "modelNo": "BG 07",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48134",
+    "goodsNm": "44 스페셜오더 BG 15 양가죽 배팅장갑 [블루블러드]",
+    "modelNo": "BG 15",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48133",
+    "goodsNm": "44 스페셜오더 BG 22 양가죽 배팅장갑 [국대2]",
+    "modelNo": "BG 22",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48132",
+    "goodsNm": "44 스페셜오더 BG 26 양가죽 배팅장갑 [네이비씰]",
+    "modelNo": "BG 26",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48131",
+    "goodsNm": "44 스페셜오더 BG 25 양가죽 배팅장갑 [블랙팬서]",
+    "modelNo": "BG 25",
+    "maker": "44",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48126",
+    "goodsNm": "슈퍼스킨 유소년 글래디에이터 싱글 암가드 9종 색상",
+    "modelNo": "글래디에이터",
+    "maker": "비스코랩",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48117",
+    "goodsNm": "골드이스트 플래쉬 아미 일체형 징스파이크 야구화 화이트",
+    "modelNo": "징스파이크",
+    "maker": "골드이스트",
+    "cateCd": "002002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48116",
+    "goodsNm": "스톰 프리미엄 지투 유소년 암가드 블랙/골드",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48115",
+    "goodsNm": "스톰 프리미엄 지투 유소년 암가드 블랙/레드",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48114",
+    "goodsNm": "스톰 프리미엄 지투 유소년 암가드 레드/옐로우",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48113",
+    "goodsNm": "스톰 프리미엄 지투 유소년 암가드 화이트/레드",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48112",
+    "goodsNm": "스톰 프리미엄 지투 유소년 암가드 옐로우/레드",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48111",
+    "goodsNm": "스톰 프리미엄 지투 유소년 암가드 블루/옐로우",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48110",
+    "goodsNm": "스톰 프리미엄 지투 유소년 암가드 스카이블루/핑크",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48109",
+    "goodsNm": "스톰 프리미엄 지투 유소년 암가드 화이트/블랙",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48108",
+    "goodsNm": "스톰 프리미엄 지투 유소년 암가드 핑크/블루",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48107",
+    "goodsNm": "롤링스 HOH 11.5인치 내야 글러브 (PRO200-9SLPRO) (중고)",
+    "modelNo": "PRO200-9SLPRO",
+    "maker": "롤링스",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "48088",
+    "goodsNm": "스카이라인 다이나모 배팅티 프레임 고무컵 부속품",
+    "modelNo": "배팅티",
+    "maker": "스카이라인(Skyline)",
+    "cateCd": "020038",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48087",
+    "goodsNm": "스카이라인 다이나모 배팅티 고무컵 리페어용 부속품",
+    "modelNo": "배팅티",
+    "maker": "스카이라인(Skyline)",
+    "cateCd": "020038",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48086",
+    "goodsNm": "SSK 슬리브리스 테크 셔츠 나시 티셔츠",
+    "modelNo": "나시 티셔츠",
+    "maker": "SSK",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48085",
+    "goodsNm": "뉴발란스 하프 집업 반팔 바람막이 NBD4FB1131 (그레이)",
+    "modelNo": "NBD4FB1131",
+    "maker": "뉴발란스",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48084",
+    "goodsNm": "뉴발란스 하프 집업 반팔 바람막이 NBD4FB1131 (블랙)",
+    "modelNo": "NBD4FB1131",
+    "maker": "뉴발란스",
+    "cateCd": "007038002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48083",
+    "goodsNm": "하타케야마 포수미트 웹 수리용 끈 SS6 (폭 6mm)",
+    "modelNo": "SS6",
+    "maker": "하타케야마",
+    "cateCd": "001007001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48078",
+    "goodsNm": "SSK 사사키 PROEDGE SPECIAL 오더 포수미트 (중고)",
+    "modelNo": "프로엣지",
+    "maker": "SSK",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "48077",
+    "goodsNm": "제트 BPGA 11011 프로 스테이터스 일본산 투수 글러브 (중고)",
+    "modelNo": "BPGA 11011",
+    "maker": "제트",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "48075",
+    "goodsNm": "아이피 셀렉트 12인치 투수 글러브 블랙 (중고)",
+    "modelNo": "오더",
+    "maker": "아이피셀렉트",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "48026",
+    "goodsNm": "자낙스 XANAX 목 스판 언더 셔츠 BUS-593",
+    "modelNo": "BUS-593",
+    "maker": "자낙스(XANAX)",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "48025",
+    "goodsNm": "자낙스 XANAX 2WAY 스판 언더 셔츠 BUS-721",
+    "modelNo": "BUS-721",
+    "maker": "자낙스(XANAX)",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47972",
+    "goodsNm": "배곧누리초등학교250625",
+    "modelNo": "",
+    "maker": "",
+    "cateCd": "034",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47930",
+    "goodsNm": "인코자바 라피드 포수미트 34인치 RP CM-OP M(NV/RD)SS",
+    "modelNo": "RP CM-OP M(NV/RD)SS",
+    "maker": "인코자바",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47919",
+    "goodsNm": "스톰 프리미엄 폭풍 암가드 블랙",
+    "modelNo": "폭풍 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47918",
+    "goodsNm": "스톰 프리미엄 폭풍 암가드 블랙/레드",
+    "modelNo": "폭풍 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47917",
+    "goodsNm": "스톰 프리미엄 폭풍 암가드 블랙/골드",
+    "modelNo": "폭풍 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47916",
+    "goodsNm": "스톰 프리미엄 폭풍 암가드 블랙/화이트",
+    "modelNo": "폭풍 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47915",
+    "goodsNm": "스톰 프리미엄 폭풍 암가드 레드/옐로우",
+    "modelNo": "폭풍 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47913",
+    "goodsNm": "스톰 프리미엄 폭풍 암가드 네이비/레드",
+    "modelNo": "폭풍 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47912",
+    "goodsNm": "스톰 프리미엄 폭풍 암가드 블루/핑크",
+    "modelNo": "폭풍 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47910",
+    "goodsNm": "스톰 프리미엄 유소년 암가드 블랙/레드",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47908",
+    "goodsNm": "스톰 프리미엄 유소년 암가드 화이트/블랙",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47907",
+    "goodsNm": "스톰 프리미엄 유소년 암가드 화이트/레드",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47906",
+    "goodsNm": "스톰 프리미엄 유소년 암가드 화이트/스카이블루",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47904",
+    "goodsNm": "스톰 프리미엄 유소년 암가드 화이트/핑크",
+    "modelNo": "유소년 암가드",
+    "maker": "스톰(ST)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47894",
+    "goodsNm": "윌슨 A450 외야 글러브 12인치 WBW10147612 카멜/블랙",
+    "modelNo": "WBW10147612",
+    "maker": "윌슨",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47893",
+    "goodsNm": "인코자바 코어 내야 글러브 11.75인치 CR IF-43(LG/SB)25",
+    "modelNo": "CR IF-43(LG/SB)25",
+    "maker": "인코자바",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47891",
+    "goodsNm": "인코자바 코어 내야 글러브 11.85인치 CR IF-45 S(RD/BK)25",
+    "modelNo": "CR IF-45 S(RD/BK)25",
+    "maker": "인코자바",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47889",
+    "goodsNm": "다비드 이노스트 외야 글러브 13.25인치 IN OF-X1(PP/PK)25",
+    "modelNo": "IN AP-51(YELLOW)25",
+    "maker": "인코자바",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47888",
+    "goodsNm": "다비드 이노스트 투수 글러브 12인치 IN AP-51(YELLOW)25",
+    "modelNo": "IN AP-51(YELLOW)25",
+    "maker": "인코자바",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47887",
+    "goodsNm": "다비드 유소년 외야 글러브 12.75인치 FS OF-83(BK/CM)25",
+    "modelNo": "FS OF-83(BK/CM)25",
+    "maker": "인코자바",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47886",
+    "goodsNm": "다비드 유소년 외야 글러브 12.75인치 FS OF-81(NV/WT)25",
+    "modelNo": "FS OF-81(NV/WT)25",
+    "maker": "인코자바",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47885",
+    "goodsNm": "다비드 유소년 내야 글러브 11.5인치 FS IF-24(BK/CM)25",
+    "modelNo": "FS IF-24(BK/CM)25",
+    "maker": "인코자바",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47884",
+    "goodsNm": "다비드 프로슈트 외야 글러브 13.25인치 PS OF-X3(NV/WT)25",
+    "modelNo": "PS OF-X3(NV/WT)25",
+    "maker": "다비드",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47883",
+    "goodsNm": "다비드 프로슈트 외야 글러브 13.25인치 PS OF-X3(CM/RD)25",
+    "modelNo": "PS OF-X3(CM/RD)25",
+    "maker": "다비드",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47871",
+    "goodsNm": "골드 유니크 GBG-PRO-JH 최병용 모델 11.75인치 내야 글러브 카멜/블랙",
+    "modelNo": "GBG-PRO-JH",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47869",
+    "goodsNm": "골드 유니크 GBG-PRO-085 권희동 모델 13인치 외야 글러브 그레이/블랙",
+    "modelNo": "GBG-PRO-085",
+    "maker": "골드(GOLD)",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47868",
+    "goodsNm": "골드 유니크 GBG-PRO-085 권희동 모델 13인치 외야 글러브 네이비/레드",
+    "modelNo": "GBG-PRO-085",
+    "maker": "골드(GOLD)",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47867",
+    "goodsNm": "골드 유니크 GBG-PRO-068 나성범 모델 13인치 외야 글러브 카멜/블랙",
+    "modelNo": "GBG-PRO-068",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47866",
+    "goodsNm": "골드 유니크 GBG-PRO-085 박건우 모델 13인치 외야 글러브 블랙/그레이",
+    "modelNo": "GBG-PRO-085",
+    "maker": "골드(GOLD)",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47865",
+    "goodsNm": "골드 유니크 GBG-PRO-085 이원석 모델 13인치 외야 글러브 블랙",
+    "modelNo": "GBG-PRO-085",
+    "maker": "골드(GOLD)",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47864",
+    "goodsNm": "골드 유니크 GBG-PRO-085 이재원 모델 13인치 외야 글러브 블랙/레드/옐로우",
+    "modelNo": "GBG-PRO-085",
+    "maker": "골드(GOLD)",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47863",
+    "goodsNm": "골드 유니크 GBG-PRO-083 조수행 모델 13인치 외야 글러브 네이비/화이트",
+    "modelNo": "GBG-PRO-083",
+    "maker": "골드(GOLD)",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47862",
+    "goodsNm": "골드 유니크 GBG-PRO-085 조수행 모델 13인치 외야 글러브 레드/블랙",
+    "modelNo": "GBG-PRO-085",
+    "maker": "골드(GOLD)",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47861",
+    "goodsNm": "골드 유니크 GBG-PRO-085 홍창기 모델 13인치 외야 글러브 블랙/레드",
+    "modelNo": "GBG-PRO-085",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47860",
+    "goodsNm": "골드 유니크 GBG-PRO-012 김명신 모델 12인치 투수 글러브 레드/블랙",
+    "modelNo": "GBG-PRO-012",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47859",
+    "goodsNm": "골드 유니크 GBG-PRO-012 김명신 모델 12인치 투수 글러브 블랙/탄",
+    "modelNo": "GBG-PRO-012",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47858",
+    "goodsNm": "골드 유니크 GBG-PRO-011 김진성 모델 12인치 투수 글러브 블랙/그레이",
+    "modelNo": "GBG-PRO-011",
+    "maker": "골드(GOLD)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47857",
+    "goodsNm": "골드 유니크 GBG-PRO-012 문동주 모델 12인치 투수 글러브 카멜/네이비",
+    "modelNo": "GBG-PRO-012",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47856",
+    "goodsNm": "골드 유니크 GBG-PRO-011 박명근 모델 12인치 투수 글러브 블루",
+    "modelNo": "GBG-PRO-011",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47855",
+    "goodsNm": "골드 유니크 GBG-PRO-012 원태인 모델 12인치 투수 글러브 블루/블랙",
+    "modelNo": "GBG-PRO-012",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47854",
+    "goodsNm": "골드 유니크 GBG-PRO-011 이우찬 모델 12인치 투수 글러브 블랙/레드",
+    "modelNo": "GBG-PRO-011",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47853",
+    "goodsNm": "골드 유니크 GBG-PRO-011 이우찬 모델 12인치 투수 글러브 스카이블루/레드",
+    "modelNo": "GBG-PRO-011",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47852",
+    "goodsNm": "골드 유니크 GBG-PRO-012 정해영 모델 12인치 투수 글러브 블랙",
+    "modelNo": "GBG-PRO-012",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47851",
+    "goodsNm": "골드 유니크 GBG-PRO-012 정해영 모델 12인치 투수 글러브 옐로우",
+    "modelNo": "GBG-PRO-012",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47850",
+    "goodsNm": "골드 유니크 GBG-PRO-011 정현수 모델 12인치 투수 글러브 네이비/화이트",
+    "modelNo": "GBG-PRO-011",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47849",
+    "goodsNm": "골드 유니크 GBG-PRO-011 정현우 모델 12인치 투수 글러브 버건디/카멜",
+    "modelNo": "GBG-PRO-011",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47848",
+    "goodsNm": "골드 유니크 GBG-PRO-012 황동재 모델 12인치 투수 글러브 블랙/블루",
+    "modelNo": "GBG-PRO-012",
+    "maker": "골드(GOLD)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47805",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 87300533 (유소년용)",
+    "modelNo": "87300533",
+    "maker": "프랭클린(Franklin)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47799",
+    "goodsNm": "스톰 2025 NEW 외귀 타자헬멧 골드로고 블랙",
+    "modelNo": "타자헬멧",
+    "maker": "스톰(ST)",
+    "cateCd": "005001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47798",
+    "goodsNm": "스톰 2025 주니어 히어로 배트 블랙",
+    "modelNo": "히어로 배트",
+    "maker": "스톰",
+    "cateCd": "003001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47797",
+    "goodsNm": "스톰 2025 주니어 히어로 배트 화이트",
+    "modelNo": "히어로 배트",
+    "maker": "스톰",
+    "cateCd": "003001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47796",
+    "goodsNm": "스톰 2025 주니어 히어로 배트 스카이블루",
+    "modelNo": "히어로 배트",
+    "maker": "스톰",
+    "cateCd": "003001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47795",
+    "goodsNm": "스톰 2025 NEW 골드로고 포수헬멧 블랙",
+    "modelNo": "포수헬멧",
+    "maker": "스톰(ST)",
+    "cateCd": "044008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47782",
+    "goodsNm": "하타케야마 포수마스크 교체용 밴드 4종 색상",
+    "modelNo": "포수마스크 교체용 밴드",
+    "maker": "하타케야마",
+    "cateCd": "044009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47781",
+    "goodsNm": "브렛 홈 플레이트(PH-2)",
+    "modelNo": "PH-2",
+    "maker": "브렛",
+    "cateCd": "046",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47780",
+    "goodsNm": "브렛 고정형 안전 베이스셋트 SDB-10",
+    "modelNo": "SDB-10",
+    "maker": "브렛",
+    "cateCd": "046",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47779",
+    "goodsNm": "브렛 프로 고정형 홈 플레이트(PDH-1)",
+    "modelNo": "PDH-1",
+    "maker": "브렛",
+    "cateCd": "046",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47768",
+    "goodsNm": "SSK Superpro Z0303 투수 올라운드 글러브 12인치 화이트",
+    "modelNo": "Z0303",
+    "maker": "SSK",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47765",
+    "goodsNm": "SSK Superpro Z0310 내야 글러브 11.50인치 블랙",
+    "modelNo": "Z0404",
+    "maker": "SSK",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47764",
+    "goodsNm": "SSK Superpro Z0408 투수 올라운드 글러브 12인치 블루",
+    "modelNo": "Z0408",
+    "maker": "SSK",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47763",
+    "goodsNm": "SSK Superpro Z0404 내야 글러브 11.50인치 블랙",
+    "modelNo": "Z0404",
+    "maker": "SSK",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47762",
+    "goodsNm": "SSK Superpro Z0403 외야 글러브 13인치 네이비",
+    "modelNo": "Z0403",
+    "maker": "SSK",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47761",
+    "goodsNm": "SSK Superpro Z0503 외야 글러브 13인치 카멜",
+    "modelNo": "Z0503",
+    "maker": "SSK",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47740",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 투수 글러브 12인치 홍건희 선수 모델 2",
+    "modelNo": "홍건희 모델 2",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47739",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 투수 글러브 12인치 유영찬 선수 모델",
+    "modelNo": "유영찬 모델 2",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47738",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 투수 글러브 12인치 조병현 선수 모델",
+    "modelNo": "조병현 모델",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47737",
+    "goodsNm": "다비드 프로슈트 1루미트 12.75인치 PS FM-ST L(NV/CM)25",
+    "modelNo": "PS FM-ST L(NV/CM)25",
+    "maker": "다비드",
+    "cateCd": "001004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47736",
+    "goodsNm": "다비드 프로슈트 포수미트 34.5인치 PS CM-DP M(NV/CM)25",
+    "modelNo": "PS CM-DP M(NV/CM)25",
+    "maker": "다비드",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47735",
+    "goodsNm": "다비드 프로슈트 내야 글러브 11.75인치 PS iF-43(CM/RD)25",
+    "modelNo": "PS iF-43(CM/RD)25",
+    "maker": "다비드",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47734",
+    "goodsNm": "인코자바 1루미트 GR FM-ST M(RB/WT)25",
+    "modelNo": "GR FM-ST M(RB/WT)25",
+    "maker": "인코자바",
+    "cateCd": "001004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47733",
+    "goodsNm": "제트 선수 레플리카 투수 글러브 (조병현 모델)",
+    "modelNo": "레플리카",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47732",
+    "goodsNm": "제트 선수 레플리카 투수 글러브 (이병헌3 모델)",
+    "modelNo": "레플리카",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47731",
+    "goodsNm": "제트 선수 레플리카 투수 글러브 (김서현4 모델)",
+    "modelNo": "레플리카",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47704",
+    "goodsNm": "하타케야마 프로선수사양 포수장비세트 실버/블루/레드",
+    "modelNo": "오더 포수장비세트",
+    "maker": "하타케야마",
+    "cateCd": "044001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47701",
+    "goodsNm": "미즈노 외귀 타자 헬멧 우타자용 207 네이비",
+    "modelNo": "1DJHH20714NV",
+    "maker": "미즈노",
+    "cateCd": "005001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47699",
+    "goodsNm": "미즈노 슈즈픽스 야구화 커버 831 화이트",
+    "modelNo": "2ZK831WT",
+    "maker": "미즈노",
+    "cateCd": "002005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47698",
+    "goodsNm": "미즈노 프로 쿨링 냉감 암슬리브 팔토시 12JYCX5914 네이비 (1개입)",
+    "modelNo": "12JYCX5914NV",
+    "maker": "미즈노",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47697",
+    "goodsNm": "미즈노 프로 쿨링 냉감 암슬리브 팔토시 12JYCX5909 블랙 (1개입)",
+    "modelNo": "12JYCX5909BK",
+    "maker": "미즈노",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47696",
+    "goodsNm": "미즈노 프로 손목 보호대 프로텍터 아대 밴드 5609 블랙",
+    "modelNo": "12JYCX5609BK",
+    "maker": "미즈노",
+    "cateCd": "048005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47695",
+    "goodsNm": "미즈노 실리콘 파워 아크 DI 레플리카 배팅장갑 55364 핑크/실버",
+    "modelNo": "1EJEA55364PS",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47694",
+    "goodsNm": "미즈노 실리콘 파워 아크 DI 레플리카 배팅장갑 55237 실버/라임",
+    "modelNo": "1EJEA55237SR",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47693",
+    "goodsNm": "미즈노 프로 실리콘 파워 아크 DI 한정판 배팅장갑 55064 핑크/실버",
+    "modelNo": "1EJEA55064PS",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47692",
+    "goodsNm": "미즈노 프로 실리콘 파워 아크 DI 한정판 배팅장갑 54837 실버/라임",
+    "modelNo": "1EJEA54837SR",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47691",
+    "goodsNm": "미즈노 쿠션 레보 유소년 인조잔디화 252701 화이트",
+    "modelNo": "11GT252701WT",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47690",
+    "goodsNm": "미즈노 쿠션 레보 인조잔디화 252514 화이트/네이비",
+    "modelNo": "11GT252514WN",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47689",
+    "goodsNm": "미즈노 쿠션 레보 인조잔디화 252501 화이트",
+    "modelNo": "11GT252501WT",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47688",
+    "goodsNm": "미즈노 쿠션 레보 인조잔디화 252542 화이트/레드",
+    "modelNo": "11GT252542NR",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47687",
+    "goodsNm": "미즈노 쿠션 레보 포인트화 252514 화이트/네이비",
+    "modelNo": "11GP252514WN",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47686",
+    "goodsNm": "제트 유소년 풋가드 BAGK-70J (빨강)",
+    "modelNo": "BAGK-70J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47685",
+    "goodsNm": "제트 유소년 풋가드 BAGK-70J (곤색)",
+    "modelNo": "BAGK-70J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47684",
+    "goodsNm": "제트 유소년 풋가드 BAGK-70J (검정)",
+    "modelNo": "BAGK-70J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47683",
+    "goodsNm": "제트 유소년 풋가드 BAGK-70J (흰색)",
+    "modelNo": "BAGK-70J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47682",
+    "goodsNm": "제트 유소년 암가드 BAGK-47J (빨강)",
+    "modelNo": "BAGK-47J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47681",
+    "goodsNm": "제트 유소년 암가드 BAGK-47J (곤색)",
+    "modelNo": "BAGK-47J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47680",
+    "goodsNm": "제트 유소년 암가드 BAGK-47J (검정)",
+    "modelNo": "BAGK-47J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47679",
+    "goodsNm": "제트 유소년 암가드 BAGK-47J (흰색)",
+    "modelNo": "BAGK-47J",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47670",
+    "goodsNm": "아디다스 ID0973 초경량 징일체형 스파이크 야구화 화이트/블랙/네이비",
+    "modelNo": "ID0973",
+    "maker": "아디다스(adidas)",
+    "cateCd": "002002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47655",
+    "goodsNm": "미즈노 프로 경식 한정판 사케비(SAKEBI) 1AJCH28210 포수미트 (중고)",
+    "modelNo": "포수미트",
+    "maker": "미즈노",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47653",
+    "goodsNm": "아디다스 JQ2562 Icon 8 MD 포인트화 (화이트)",
+    "modelNo": "JQ2562",
+    "maker": "아디다스",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47641",
+    "goodsNm": "제트 네오스테이터스 경식 투수 글러브  (중고)",
+    "modelNo": "제트 중고",
+    "maker": "제트",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47639",
+    "goodsNm": "아디다스 IG9589 Icon 8 MD 포인트화 (블랙)",
+    "modelNo": "IG9589",
+    "maker": "아디다스",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47638",
+    "goodsNm": "아디다스 GW1929 야구 트레이닝화 인조잔디화 화이트/네이비",
+    "modelNo": "GW1929",
+    "maker": "아디다스(adidas)",
+    "cateCd": "002004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47636",
+    "goodsNm": "리복 VT 양가죽 배팅장갑 그레이",
+    "modelNo": "RE251MBJBG001",
+    "maker": "리복",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47635",
+    "goodsNm": "리복 VT 양가죽 배팅장갑 네이비",
+    "modelNo": "RE251MBJBG002",
+    "maker": "리복",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47634",
+    "goodsNm": "리복 VT 양가죽 배팅장갑 멀티컬러",
+    "modelNo": "RE251MBJBG003",
+    "maker": "리복",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47633",
+    "goodsNm": "리복 WM 양가죽 배팅장갑 그레이",
+    "modelNo": "RE251MBJBG004",
+    "maker": "리복",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47632",
+    "goodsNm": "리복 WM 양가죽 배팅장갑 네이비",
+    "modelNo": "RE251MBJBG005",
+    "maker": "리복",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47631",
+    "goodsNm": "리복 WM 양가죽 배팅장갑 멀티컬러",
+    "modelNo": "RE251MBJBG006",
+    "maker": "리복",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47630",
+    "goodsNm": "다비드 프로슈트 내야 글러브 11.5인치 PS iF-22 S(BLACK)25",
+    "modelNo": "PS iF-22 S(BLACK)25",
+    "maker": "다비드",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47629",
+    "goodsNm": "다비드 프로슈트 외야 글러브 13.25인치 PS OF-X1 S(BLACK)25",
+    "modelNo": "PS OF-X1 S(BLACK)25",
+    "maker": "다비드",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47628",
+    "goodsNm": "인코자바 1루미트 12.75인치 CR FM-TF M(RD/BK)25",
+    "modelNo": "CR FM-TF M(RD/BK)25",
+    "maker": "인코자바",
+    "cateCd": "001004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47627",
+    "goodsNm": "미즈노 프로 HAGA JAPAN 투수 글러브 내츄럴 (중고)",
+    "modelNo": "중고",
+    "maker": "미즈노",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47626",
+    "goodsNm": "인코자바 외야 글러브 13.25인치 CR OF-X3(LG/SB)25",
+    "modelNo": "CR OF-X3(LG/SB)25",
+    "maker": "인코자바",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47625",
+    "goodsNm": "프랭클린 CFX PRO 크롬 양가죽 배팅장갑 레드 (20593)",
+    "modelNo": "20593",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47623",
+    "goodsNm": "스톰 2025년 개인 배트가방 (1자루 수납 가능)",
+    "modelNo": "배트가방",
+    "maker": "스톰(ST)",
+    "cateCd": "004002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47622",
+    "goodsNm": "스톰 2025년 개인 배트가방 (2~3자루 수납 가능)",
+    "modelNo": "배트가방",
+    "maker": "스톰(ST)",
+    "cateCd": "004002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47621",
+    "goodsNm": "스톰 2025년 배트가방 (6~7자루 수납 가능)",
+    "modelNo": "배트가방",
+    "maker": "스톰(ST)",
+    "cateCd": "004002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47620",
+    "goodsNm": "스톰 2025년 팀 배트가방 (10~12자루 수납 가능)",
+    "modelNo": "배트가방",
+    "maker": "스톰(ST)",
+    "cateCd": "004002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47619",
+    "goodsNm": "스톰 2025년 STORM 볼가방 (60개 수납 가능)",
+    "modelNo": "볼가방",
+    "maker": "스톰(ST)",
+    "cateCd": "004017",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47618",
+    "goodsNm": "미즈노 고정베이스 부자재 31500 (3개입)",
+    "modelNo": "16JAB31500",
+    "maker": "미즈노",
+    "cateCd": "046",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47617",
+    "goodsNm": "미즈노 공식 규격 베이스 27000 (부자재 미포함)",
+    "modelNo": "16JAB27000",
+    "maker": "미즈노",
+    "cateCd": "046",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47616",
+    "goodsNm": "미즈노 고정 우레탄 베이스 세트 27000",
+    "modelNo": "16JAB270001",
+    "maker": "미즈노",
+    "cateCd": "046",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47615",
+    "goodsNm": "미즈노 스트레이트 야구벨트 N0516 파스텔 네이비 (125cm)",
+    "modelNo": "12JYAV0516",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "007007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47614",
+    "goodsNm": "미즈노 스트레이트 야구벨트 N0501 화이트 (125cm)",
+    "modelNo": "12JYAV0501",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "007007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47613",
+    "goodsNm": "미즈노 스트레이트 야구벨트 N0514 네이비 (125cm)",
+    "modelNo": "12JYAV0514",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "007007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47612",
+    "goodsNm": "미즈노 스트레이트 야구벨트 N0509 블랙 (125cm)",
+    "modelNo": "12JYAV0509",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "007007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47611",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 내야 글러브 11.75인치 김주원 선수 모델",
+    "modelNo": "김주원 선수 모델",
+    "maker": "제트(ZETT)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47610",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 내야 글러브 11.75인치 김주원 선수 모델 3",
+    "modelNo": "김주원 선수 모델 3",
+    "maker": "제트(ZETT)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47609",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 내야 글러브 11.75인치 이영빈 선수 모델 5",
+    "modelNo": "이영빈 선수 모델 5",
+    "maker": "제트(ZETT)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47608",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 내야 글러브 11.75인치 송성문 선수 모델 4",
+    "modelNo": "송성문 선수 모델 4",
+    "maker": "제트(ZETT)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47607",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 내야 글러브 11.75인치 김웅빈 선수 모델 4",
+    "modelNo": "김웅빈 선수 모델 4",
+    "maker": "제트(ZETT)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47606",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 투수 글러브 12인치 김택연 선수 모델 4",
+    "modelNo": "김택연 선수 모델 4",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47605",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 투수 글러브 12인치 김서현 선수 모델 4",
+    "modelNo": "김서현 선수 모델 4",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47604",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 투수 글러브 12인치 김택연 선수 모델 5",
+    "modelNo": "김택연 선수 모델 5",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47603",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 투수 글러브 12인치 이병헌 선수 모델 3",
+    "modelNo": "이병헌 선수 모델 3",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47602",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 내야 글러브 11.75인치 서호철 선수 모델 4",
+    "modelNo": "서호철 선수 모델 4",
+    "maker": "제트(ZETT)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47601",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 투수 글러브 12인치 최지민 선수 모델 3",
+    "modelNo": "최지민 선수 모델 3",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47600",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 내야 글러브 11.75인치 박찬호 선수 모델",
+    "modelNo": "박찬호 선수 모델",
+    "maker": "제트(ZETT)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47599",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 투수 글러브 12인치 황준서 선수 모델 2",
+    "modelNo": "황준서 선수 모델 2",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47598",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 내야 글러브 11.75인치 심재훈 선수 모델",
+    "modelNo": "심재훈 선수 모델",
+    "maker": "제트(ZETT)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47597",
+    "goodsNm": "제트 프로스테이터스 경식 어센틱 투수 글러브 12인치 조병현 선수 모델 2",
+    "modelNo": "조병현 모델 2",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47594",
+    "goodsNm": "제트 프로스테이터스 경식 프리미엄 시리즈 포수미트 BPROCMP92 (3236)",
+    "modelNo": "BPROCMP92 (3236)",
+    "maker": "제트(ZETT)",
+    "cateCd": "012008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47593",
+    "goodsNm": "제트 프로스테이터스 경식 한정판 나카무라 모델 포수미트 BPCPRO25N (3719A)",
+    "modelNo": "BPCPRO25N (3719A)",
+    "maker": "제트(ZETT)",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47590",
+    "goodsNm": "제트 프로스테이터스 경식 한정판 모리 토모야 모델 포수미트 BPCPRO25M (1915)",
+    "modelNo": "BPCPRO25M (1915)",
+    "maker": "제트(ZETT)",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47589",
+    "goodsNm": "도쿠마 성인용 야구 포수 렉가드",
+    "modelNo": "렉가드",
+    "maker": "도쿠마",
+    "cateCd": "044005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47588",
+    "goodsNm": "도쿠마 성인용 야구 포수 프로텍터",
+    "modelNo": "프로텍터",
+    "maker": "도쿠마",
+    "cateCd": "044004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47586",
+    "goodsNm": "스카이라인 다이나모 배팅티 Dynamo Tee (45인치 5.5kg)",
+    "modelNo": "배팅티",
+    "maker": "스카이라인(Skyline)",
+    "cateCd": "020038",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47585",
+    "goodsNm": "BMC 무한 성형 타자 암가드 유소년 YSE-YG",
+    "modelNo": "YSE-YG",
+    "maker": "BMC",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47584",
+    "goodsNm": "BMC 무한 성형 타자 핸드가드 손등가드 PHG-LH/RH",
+    "modelNo": "PHG-LH/RH",
+    "maker": "BMC",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47583",
+    "goodsNm": "BMC 무한 성형 타자 풋가드 더블 PSG-LF/RF",
+    "modelNo": "PSG-LF/RF",
+    "maker": "BMC",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47582",
+    "goodsNm": "BMC 무한 성형 타자 풋가드 싱글 YSG-LF/RF",
+    "modelNo": "YSG-LF/RF",
+    "maker": "BMC",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47581",
+    "goodsNm": "BMC 무한 성형 타자 투피스 암가드 PTE-TG",
+    "modelNo": "PTE-TG",
+    "maker": "BMC",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47580",
+    "goodsNm": "BMC 무한 성형 타자 더블 암가드 PDE-DG",
+    "modelNo": "PDE-DG",
+    "maker": "BMC",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47579",
+    "goodsNm": "BMC 무한 성형 타자 싱글 암가드 PSE-AG",
+    "modelNo": "PSE-AG",
+    "maker": "BMC",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47577",
+    "goodsNm": "제트 11인치 합피 글러브 네이비 BPGK-1125",
+    "modelNo": "BPGK-1219",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47576",
+    "goodsNm": "제트 12인치 합피 글러브 블랙 BPGK-1219",
+    "modelNo": "BPGK-1219",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47575",
+    "goodsNm": "제트 하계 반팔 티셔츠 곤색 BOTK-6514",
+    "modelNo": "BOTK-6514",
+    "maker": "제트(ZETT)",
+    "cateCd": "007038003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47574",
+    "goodsNm": "제트 하계 반팔 티셔츠 검정 BOTK-6514",
+    "modelNo": "BOTK-6514",
+    "maker": "제트(ZETT)",
+    "cateCd": "007038003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47573",
+    "goodsNm": "스톰 2025 유소년 몬스터 알로이 배트 블랙 (대한 유소년 야구연맹 인증)",
+    "modelNo": "몬스터 배트",
+    "maker": "스톰",
+    "cateCd": "003001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47572",
+    "goodsNm": "스톰 2025 유소년 몬스터 알로이 배트 화이트 (대한 유소년 야구연맹 인증)",
+    "modelNo": "몬스터 배트",
+    "maker": "스톰",
+    "cateCd": "003001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47570",
+    "goodsNm": "맥스 MAX 레볼루션 메이플 우드 나무 배트 황영묵 선수 모델 블랙/네츄럴 S9006",
+    "modelNo": "S9006",
+    "maker": "맥스(MAX)",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47569",
+    "goodsNm": "맥스 MAX 레볼루션 메이플 우드 나무 배트 플로리얼 선수 모델 블랙 S9006",
+    "modelNo": "S9006",
+    "maker": "맥스(MAX)",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47568",
+    "goodsNm": "맥스 MAX 레볼루션 메이플 우드 나무 배트 임종찬 선수 모델 블랙/네츄럴 S9006",
+    "modelNo": "S9006",
+    "maker": "맥스(MAX)",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47567",
+    "goodsNm": "맥스 MAX 레볼루션 메이플 우드 나무 배트 문현빈 선수 모델 블랙 S9006",
+    "modelNo": "S9006",
+    "maker": "맥스(MAX)",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47566",
+    "goodsNm": "맥스 MAX 레볼루션 메이플 우드 나무 배트 노시환 선수 모델 블랙 S9006",
+    "modelNo": "S9006",
+    "maker": "맥스(MAX)",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47565",
+    "goodsNm": "롤링스 빅스틱 우드 콤포짓 배트 BHW5WC-NAT/BR",
+    "modelNo": "BHW5WC-NAT/BR",
+    "maker": "롤링스",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47564",
+    "goodsNm": "롤링스 빅스틱 우드 콤포짓 배트 BHW5WC-NAT/B",
+    "modelNo": "BHW5WC-NAT/B",
+    "maker": "롤링스",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47563",
+    "goodsNm": "롤링스 하이퍼테크 MLB팀로고 유소년 글러브 11인치 GJ5HTMN6L1-SPD",
+    "modelNo": "GJ5HTMN6L1-SPD",
+    "maker": "롤링스",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47562",
+    "goodsNm": "롤링스 하이퍼테크 MLB팀로고 유소년 글러브 11인치 GJ5HTMN6L1-NYY",
+    "modelNo": "GJ5HTMN6L1-NYY",
+    "maker": "롤링스",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47561",
+    "goodsNm": "하타케야마 프리미엄 백팩 BLACK(GB150)",
+    "modelNo": "GB150",
+    "maker": "하타케야마",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47560",
+    "goodsNm": "하타케야마 프리미엄 백팩 NAVY(GB150)",
+    "modelNo": "GB150",
+    "maker": "하타케야마",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47559",
+    "goodsNm": "롤링스 하이퍼테크 MLB팀로고 유소년 글러브 11인치 GJ5HTMN6L1-LAD",
+    "modelNo": "GJ5HTMN6L1-LAD",
+    "maker": "롤링스",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47558",
+    "goodsNm": "롤링스 하이퍼테크 MLB팀로고 유소년 글러브 11인치 GJ5HTMN6L1-CHC",
+    "modelNo": "GJ5HTMN6L1-CHC",
+    "maker": "롤링스",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47557",
+    "goodsNm": "롤링스 하이퍼테크 MLB팀로고 유소년 글러브 11인치 GJ5HTMN6L-SPD",
+    "modelNo": "GJ5HTMN6L-SPD",
+    "maker": "롤링스",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47556",
+    "goodsNm": "롤링스 하이퍼테크 MLB팀로고 유소년 글러브 11인치 GJ5HTMN6L-NYY",
+    "modelNo": "GJ5HTMN6L-NYY",
+    "maker": "롤링스",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47555",
+    "goodsNm": "롤링스 하이퍼테크 MLB팀로고 유소년 글러브 11인치 GJ5HTMN6L-LAD",
+    "modelNo": "GJ5HTMN6L-LAD",
+    "maker": "롤링스",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47554",
+    "goodsNm": "롤링스 하이퍼테크 MLB팀로고 유소년 글러브 10.5인치 GJ5HTMG9M-SPD",
+    "modelNo": "GJ5HTMG9M-SPD",
+    "maker": "롤링스",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47553",
+    "goodsNm": "롤링스 하이퍼테크 MLB팀로고 유소년 글러브 10.5인치 GJ5HTMG9M-NYY",
+    "modelNo": "GJ5HTMG9M-NYY",
+    "maker": "롤링스",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47552",
+    "goodsNm": "롤링스 하이퍼테크 MLB팀로고 유소년 글러브 10.5인치 GJ5HTMG9M-LAD",
+    "modelNo": "GJ5HTMG9M-LAD",
+    "maker": "롤링스",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47551",
+    "goodsNm": "롤링스 하이퍼테크 MLB팀로고 유소년 글러브 10.5인치 GJ5HTMG9M-CHC",
+    "modelNo": "GJ5HTMG9M-CHC",
+    "maker": "롤링스",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47548",
+    "goodsNm": "SSK 신형 심판 볼가방 UPG310 NPB 공식 심판 볼가방",
+    "modelNo": "UPG310",
+    "maker": "사사키(SSK)",
+    "cateCd": "044015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47547",
+    "goodsNm": "TIFOSI 티포시 크릿 선글라스 고글 레이스 실버 1340102121 (특가 행사)",
+    "modelNo": "1340102121",
+    "maker": "티포시",
+    "cateCd": "048",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47545",
+    "goodsNm": "언더아머 UA 루던 미디움 더플 백 1360464 001",
+    "modelNo": "1300213-042",
+    "maker": "언더아머",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47542",
+    "goodsNm": "언더아머 스포츠백 언디나이너블 3.0 스몰 더플백 1300214-040",
+    "modelNo": "1300214-040",
+    "maker": "언더아머",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47541",
+    "goodsNm": "닥터스킨 기능성 트레이닝 스포츠 반바지 10인치 네이비",
+    "modelNo": "스포츠 반바지",
+    "maker": "닥터스킨",
+    "cateCd": "007039005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47540",
+    "goodsNm": "닥터스킨 기능성 트레이닝 스포츠 반바지 10인치 블랙",
+    "modelNo": "스포츠 반바지",
+    "maker": "닥터스킨",
+    "cateCd": "007039005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47539",
+    "goodsNm": "엑스필더 초경량 포수장비세트 블랙/화이트/레드",
+    "modelNo": "엑스필더 포수장비 세트",
+    "maker": "엑스필더",
+    "cateCd": "044001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47538",
+    "goodsNm": "엑스필더 초경량 포수장비세트 블랙/화이트",
+    "modelNo": "엑스필더 포수장비 세트",
+    "maker": "엑스필더",
+    "cateCd": "044001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47535",
+    "goodsNm": "인코자바 투수 글러브 12인치 RP AP-51(RED)25",
+    "modelNo": "RP AP-51(RED)25",
+    "maker": "인코자바",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47534",
+    "goodsNm": "인코자바 외야 글러브 13.25인치 CR OF-X2(RB/LG)25",
+    "modelNo": "CR OF-X2(RB/LG)25",
+    "maker": "인코자바",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47533",
+    "goodsNm": "인코자바 내야 글러브 11.75인치 CR iF-42(RB/LG)25",
+    "modelNo": "CR iF-42(RB/LG)25",
+    "maker": "인코자바",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47532",
+    "goodsNm": "인코자바 1루미트 12.75인치 RP FM-ST M(BK/OR)25",
+    "modelNo": "RP FM-ST M(BK/OR)25",
+    "maker": "인코자바",
+    "cateCd": "001004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47531",
+    "goodsNm": "인코자바 포수미트 34.5인치 CR CM-DP M(LG/NV)SS",
+    "modelNo": "CR CM-DP M(LG/NV)SS",
+    "maker": "인코자바",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47530",
+    "goodsNm": "인코자바 포수미트 34.5인치 CR CM-DP M(RD/BK)25",
+    "modelNo": "CR CM-DP M(RD/BK)25",
+    "maker": "인코자바",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47529",
+    "goodsNm": "인코자바 투수 글러브 12인치 CR AP-51(NV/SB)25",
+    "modelNo": "CR AP-51(NV/SB)25",
+    "maker": "인코자바",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47528",
+    "goodsNm": "골드이스트 국내산 포수 장비가방 더플백 스타일(리뉴얼)",
+    "modelNo": "장비가방",
+    "maker": "골드이스트",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47527",
+    "goodsNm": "닥터스킨 프로 팔토시 암슬리브 블루(양팔 1세트)",
+    "modelNo": "암슬리브",
+    "maker": "닥터스킨",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47526",
+    "goodsNm": "닥터스킨 프로 팔토시 암슬리브 레드(양팔 1세트)",
+    "modelNo": "암슬리브",
+    "maker": "닥터스킨",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47525",
+    "goodsNm": "닥터스킨 프로 팔토시 암슬리브 블랙(양팔 1세트)",
+    "modelNo": "암슬리브",
+    "maker": "닥터스킨",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47524",
+    "goodsNm": "닥터스킨 프로 팔토시 암슬리브 화이트(양팔 1세트)",
+    "modelNo": "암슬리브",
+    "maker": "닥터스킨",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47523",
+    "goodsNm": "닥터스킨 프로 팔토시 암슬리브 다크네이비(양팔 1세트)",
+    "modelNo": "암슬리브",
+    "maker": "닥터스킨",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47522",
+    "goodsNm": "닥터스킨 프로 팔토시 암슬리브 옐로우(양팔 1세트)",
+    "modelNo": "암슬리브",
+    "maker": "닥터스킨",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47519",
+    "goodsNm": "닥터스킨 나그랑 스포츠 반팔 티셔츠 레드",
+    "modelNo": "나그랑 반팔",
+    "maker": "닥터스킨",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47518",
+    "goodsNm": "닥터스킨 나그랑 스포츠 반팔 티셔츠 블루",
+    "modelNo": "나그랑 반팔",
+    "maker": "닥터스킨",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47517",
+    "goodsNm": "닥터스킨 나그랑 스포츠 반팔 티셔츠 네이비",
+    "modelNo": "나그랑 반팔",
+    "maker": "닥터스킨",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47516",
+    "goodsNm": "닥터스킨 나그랑 스포츠 반팔 티셔츠 블랙",
+    "modelNo": "나그랑 반팔",
+    "maker": "닥터스킨",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47514",
+    "goodsNm": "미즈노 프로 경식 내야 글러브 내츄럴7 (중고)",
+    "modelNo": "미즈노 중고",
+    "maker": "미즈노",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47512",
+    "goodsNm": "롤링스 HOH 투수 글러브 블랙3 (중고)",
+    "modelNo": "롤링스 중고",
+    "maker": "롤링스",
+    "cateCd": "001001",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47511",
+    "goodsNm": "롤링스 HOH 포수미트 브라운 (중고)",
+    "modelNo": "롤링스 중고",
+    "maker": "롤링스",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47509",
+    "goodsNm": "제트 프로스테이터스 경식 투수 글러브 블랙 (중고)",
+    "modelNo": "제트 중고",
+    "maker": "제트",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47508",
+    "goodsNm": "명가 투수 글러브 블랙 좌투 (중고)",
+    "modelNo": "명가 중고",
+    "maker": "명가",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47506",
+    "goodsNm": "제트 ZOP20 친환경 로진 (75g)",
+    "modelNo": "ZOP20",
+    "maker": "제트(ZETT)",
+    "cateCd": "048009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47505",
+    "goodsNm": "뉴발란스 MT410KM5 트레일 런닝화 실버",
+    "modelNo": "MT410KM5",
+    "maker": "뉴발란스",
+    "cateCd": "002006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47504",
+    "goodsNm": "우벡스 UVEX 김도영 리미티드 에디션 스포츠 고글 선글라스 블랙/레드",
+    "modelNo": "CV D5Y",
+    "maker": "우벡스(UVEX)",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47503",
+    "goodsNm": "우벡스 UVEX 김도영 리미티드 에디션 스포츠 고글 선글라스 화이트/레드",
+    "modelNo": "CV D5Y",
+    "maker": "우벡스(UVEX)",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47502",
+    "goodsNm": "SSK 유소년 싱글밴드 배팅장갑 네이비/레드",
+    "modelNo": "BG5018WF",
+    "maker": "사사키(SSK)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47501",
+    "goodsNm": "SSK 유소년 싱글밴드 배팅장갑 화이트",
+    "modelNo": "BG5018WF",
+    "maker": "사사키(SSK)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47500",
+    "goodsNm": "SSK 유소년 싱글밴드 배팅장갑 화이트/블루",
+    "modelNo": "BG5018WF",
+    "maker": "사사키(SSK)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47499",
+    "goodsNm": "SSK 글러브 홀더",
+    "modelNo": "GRHLD01",
+    "maker": "사사키(SSK)",
+    "cateCd": "001007009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47498",
+    "goodsNm": "스카이라인 소가죽 안전 야구공 SF-020 9인치",
+    "modelNo": "SF-020",
+    "maker": "스카이라인(Skyline)",
+    "cateCd": "047003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47496",
+    "goodsNm": "SSK 트레이닝볼 (낱개)",
+    "modelNo": "DNB30100",
+    "maker": "사사키(SSK)",
+    "cateCd": "047007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47495",
+    "goodsNm": "미즈노 프로 월드윈 복각판 외야 글러브 후쿠모토 유타카 모델 53307 12.75인치 레드",
+    "modelNo": "53307",
+    "maker": "미즈노",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47493",
+    "goodsNm": "미즈노 프로 크래프트 에디션 경식 내야 글러브 11.25인치 쿠레바야시 코타로 모델 1AJGH32023",
+    "modelNo": "1AJGH32023 0949",
+    "maker": "미즈노",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47492",
+    "goodsNm": "미즈노 프로 크래프트 에디션 경식 내야 글러브 11.6인치 나가오카 히데키 모델 1AJGH32043",
+    "modelNo": "1AJGH32043 0980",
+    "maker": "미즈노",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47489",
+    "goodsNm": "미즈노 프로 크래프트 에디션 경식 외야 글러브 13.25인치 라스 눗바 모델 1AJGH32017",
+    "modelNo": "1AJGH32017 47",
+    "maker": "미즈노",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47488",
+    "goodsNm": "미즈노 프로 크래프트 에디션 투수 글러브 11.75인치 미야기 히로야 모델 1AJGH32011",
+    "modelNo": "1AJGH32011 80",
+    "maker": "미즈노",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47487",
+    "goodsNm": "미즈노 프로 크래프트 에디션 경식 내야 글러브 11.25인치 기쿠치 료스케 모델 1AJGH32013",
+    "modelNo": "1AJGH32013 0949",
+    "maker": "미즈노",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47486",
+    "goodsNm": "미즈노 프로 크래프트 에디션 경식 내야 글러브 12인치 오스틴 라일리 모델 1AJGH32053",
+    "modelNo": "1AJGH32053 0949",
+    "maker": "미즈노",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47485",
+    "goodsNm": "미즈노 프로 월드윈 복각판 내야 글러브 하라 다쓰 토쿠 모델 53303 12인치 오렌지",
+    "modelNo": "53303",
+    "maker": "미즈노",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47484",
+    "goodsNm": "미즈노 프로 월드윈 복각판 투수 글러브 야마다 쿠시 모델 53301 12인치 오렌지",
+    "modelNo": "53301",
+    "maker": "미즈노",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47474",
+    "goodsNm": "미즈노 윌 드라이브 배팅장갑 55414 네이비/그레이",
+    "modelNo": "55414",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47473",
+    "goodsNm": "미즈노 윌 드라이브 배팅장갑 55462 레드/그레이",
+    "modelNo": "55462",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47472",
+    "goodsNm": "미즈노 윌 드라이브 배팅장갑 55409 블랙/그레이",
+    "modelNo": "55409",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47471",
+    "goodsNm": "미즈노 실리콘 파워 아크 DI 레플리카 배팅장갑 55162 레드",
+    "modelNo": "55162",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47470",
+    "goodsNm": "미즈노 실리콘 파워 아크 DI 레플리카 배팅장갑 55109 블랙",
+    "modelNo": "55109",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47469",
+    "goodsNm": "미즈노 프로 실리콘 파워 아크 DI 배팅장갑 54727 블루/라임",
+    "modelNo": "54727",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47468",
+    "goodsNm": "미즈노 프로 실리콘 파워 아크 DI 배팅장갑 54762 레드",
+    "modelNo": "54762",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47467",
+    "goodsNm": "미즈노 프로 실리콘 파워 아크 DI 배팅장갑 54709 블랙/레드",
+    "modelNo": "54709",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47466",
+    "goodsNm": "미즈노 와일드키즈 아동용 글러브 10인치 32800 오렌지",
+    "modelNo": "1AJGY3280051AROR",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47465",
+    "goodsNm": "미즈노 와일드키즈 아동용 글러브 10인치 32800 블랙",
+    "modelNo": "32800",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47464",
+    "goodsNm": "미즈노 프로 쿠션레보 프로 미드 TPU 포인트화 253064 핑크",
+    "modelNo": "253064",
+    "maker": "미즈노",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47462",
+    "goodsNm": "미즈노 프로 쿠션레보 프로 미드 TPU 포인트화 253027 블루",
+    "modelNo": "253027",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47461",
+    "goodsNm": "미즈노 성인용 야구 안면 보호마스크 20009 블랙",
+    "modelNo": "20009",
+    "maker": "미즈노",
+    "cateCd": "005007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47439",
+    "goodsNm": "제트 ZETT 2025 마더스 한정판 내야 글러브 BRGB32576M 6111",
+    "modelNo": "BRGB32576M 6111",
+    "maker": "ZETT",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47433",
+    "goodsNm": "제트 네오스테이터스 티벨트웹 BRGB31537 2919 네이비",
+    "modelNo": "BRGB31537 2919",
+    "maker": "ZETT",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47431",
+    "goodsNm": "제트 네오스테이터스 아이웹 BRGB31540 3219 카멜 우투",
+    "modelNo": "BRGB31540 3219",
+    "maker": "ZETT",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47430",
+    "goodsNm": "제트 네오스테이터스 아이웹 BRGB31540 2919 네이비 우투",
+    "modelNo": "BRGB31540 2919",
+    "maker": "ZETT",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47429",
+    "goodsNm": "ZETT 제트 어센틱 손등가드 (최정 2 모델)",
+    "modelNo": "어센틱 손등가드",
+    "maker": "제트",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47428",
+    "goodsNm": "ZETT 제트 어센틱 암가드 (최정 2 모델)",
+    "modelNo": "어센틱 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47427",
+    "goodsNm": "ZETT 제트 어센틱 풋가드 (최정 2 모델)",
+    "modelNo": "어센틱 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47426",
+    "goodsNm": "ZETT 제트 어센틱 슬라이딩 주루 장갑 (최정 2 모델)",
+    "modelNo": "어센틱 슬라이딩 주루 장갑",
+    "maker": "제트",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47425",
+    "goodsNm": "슈퍼스킨 헬멧 내장재 SHF-01 커스텀 리필 헬멧내피",
+    "modelNo": "SHF-01",
+    "maker": "짱베이스볼",
+    "cateCd": "005009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47422",
+    "goodsNm": "윌슨 2025 썸머 A2K 1786SS 11.5인치 내야 글러브",
+    "modelNo": "WBW103290115",
+    "maker": "윌슨",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47421",
+    "goodsNm": "윌슨 2025 썸머 A2K 1750SS 12.5인치 외야 글러브 핑크/네이비",
+    "modelNo": "WBW103291125",
+    "maker": "윌슨(Wilson)",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47420",
+    "goodsNm": "윌슨 2025 썸머 A2K 브렌튼 도일 GM 12.75인치 외야 글러브",
+    "modelNo": "WBW1032971275",
+    "maker": "윌슨",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47418",
+    "goodsNm": "윌슨 2025 썸머 A2000 1777SS 12.75인치 외야 글러브",
+    "modelNo": "WBW1032221275",
+    "maker": "윌슨",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47414",
+    "goodsNm": "윌슨 2025 썸머 A2000 DP15 11.5인치 내야 글러브 카멜",
+    "modelNo": "WBW103224115",
+    "maker": "윌슨(Wilson)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47413",
+    "goodsNm": "윌슨 2025 썸머 A2000 호세 알투베 GM 11.5인치 내야 글러브 네이비/카멜",
+    "modelNo": "WBW103295115",
+    "maker": "윌슨(Wilson)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47410",
+    "goodsNm": "TEPPEN 테펜 경식 외야 글러브 TTY 카멜",
+    "modelNo": "TTY 카멜",
+    "maker": "테펜 TEPPEN",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47408",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 011 내야용 글러브 아이웹 (민트/화이트/핑크)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47407",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 012 내야용 글러브 아이웹 (옐로우/화이트/그린)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47406",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 015 외야용 글러브 H웹 (블루/화이트)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47405",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 001 투수 올라운드용 글러브 박종훈 레플리카 (블랙/레드)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47404",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 002 투수 올라운드용 글러브 박종훈 레플리카 (레드/블랙)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47403",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 003 투수 올라운드용 글러브 엘리아스 레플리카 (블랙/핑크)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47402",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 009 올라운드용 글러브 아오키웹 (블루/오렌지)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47401",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 010 올라운드용 글러브 아오키웹 (레드/블랙)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47400",
+    "goodsNm": "러펠스 Ruppells 프로미싱 유스 스티어 야구 글러브 올라운드 오가웹 블랙/레드",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47399",
+    "goodsNm": "러펠스 Ruppells 프로미싱 유스 스티어 야구 글러브 외야수용 쌍십자웹 블랙/블루",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47398",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 외야수용 티벨트웹 오렌지/네이비",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47397",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 포수미트 오렌지/네이비",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47396",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 내야수용 아이웹 오렌지/네이비",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47394",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 외야수용 쌍십자웹 블랙/탄",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47393",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 1루수용 미트 블랙/탄",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47392",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 내야수용 고쿠보웹 블랙/탄",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47391",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 올라운드 오가웹 블랙/탄",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47390",
+    "goodsNm": "러펠스 Ruppells 퍼펙트디펜스 수비연습용 내야펑고용 트레이닝 글러브 X웹 탄/블랙",
+    "modelNo": "러펠스 Ruppells 퍼펙트디펜스",
+    "maker": "러펠스",
+    "cateCd": "001009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47388",
+    "goodsNm": "ZETT 제트 선수지급용 암가드 (이재원) 일본산",
+    "modelNo": "오더 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47387",
+    "goodsNm": "러펠스 프로페셔널 양면 플랫 직각 배트 (타격 트레이닝 연습배트)",
+    "modelNo": "직각 배트",
+    "maker": "러펠스",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47386",
+    "goodsNm": "러펠스 프로페셔널 우드 트레이닝 배트 (33,33.5인치 / 1000g)",
+    "modelNo": "러펠스 프로페셔널 우드 트레이닝 배트",
+    "maker": "러펠스",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47385",
+    "goodsNm": "러펠스 프로페셔널 우드 메이플 펑고배트 36인치",
+    "modelNo": "러펠스 프로페셔널 우드 메이플 펑고배트 36인치",
+    "maker": "러펠스",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47384",
+    "goodsNm": "ZETT 제트 선수지급용 암가드 (고종욱) 일본산",
+    "modelNo": "오더 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47382",
+    "goodsNm": "ZETT 제트 선수지급용 좌타자용 풋가드 (고종욱선수지급용) 일본산",
+    "modelNo": "오더 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47381",
+    "goodsNm": "프랭클린 CFX 슬라이딩 주루 장갑 23555 편수 (네이비)",
+    "modelNo": "23555",
+    "maker": "프랭클린",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47380",
+    "goodsNm": "프랭클린 CFX 슬라이딩 주루 장갑 23555C9 편수 (핑크)",
+    "modelNo": "23555C9",
+    "maker": "프랭클린",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47364",
+    "goodsNm": "ZETT 제트 어센틱 풋가드 (김인태 2 모델)",
+    "modelNo": "어센틱 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47363",
+    "goodsNm": "ZETT 제트 어센틱 암가드 (김인태 2 모델)",
+    "modelNo": "어센틱 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47362",
+    "goodsNm": "ZETT 제트 어센틱 손등가드 (김인태 2 모델)",
+    "modelNo": "어센틱 손등가드",
+    "maker": "제트",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47359",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 80057087",
+    "modelNo": "80057087",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47358",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 99799186",
+    "modelNo": "99799186",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47357",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 63501080",
+    "modelNo": "p501518",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47356",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 84554931",
+    "modelNo": "84554931",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47355",
+    "goodsNm": "러펠스 RBG-241 양가죽 양피 배팅장갑",
+    "modelNo": "RBG-241",
+    "maker": "러펠스",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47354",
+    "goodsNm": "러펠스 방한 니트 장갑 (스마트폰 터치,미끄럼 방지)",
+    "modelNo": "러펠스 방한 니트 장갑",
+    "maker": "러펠스",
+    "cateCd": "039003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47353",
+    "goodsNm": "러펠스 다이나믹 야구가방 야구백팩 성인 유소년 겸용 (블랙/레드라인)",
+    "modelNo": "러펠스 다이나믹 야구가방 야구백팩 성인 유소년 겸용",
+    "maker": "러펠스",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47352",
+    "goodsNm": "러펠스 다이나믹 야구가방 야구백팩 성인 유소년 겸용 (네이비/레드라인)",
+    "modelNo": "러펠스 다이나믹 야구가방 야구백팩 성인 유소년 겸용",
+    "maker": "러펠스",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47351",
+    "goodsNm": "러펠스 다이나믹 야구가방 야구백팩 성인 유소년 겸용 (블루/골드)",
+    "modelNo": "러펠스 다이나믹 야구가방 야구백팩 성인 유소년 겸용",
+    "maker": "러펠스",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47350",
+    "goodsNm": "러펠스 더플백 스포츠 장비가방 (포수장비,팀장비)",
+    "modelNo": "러펠스 더플백 스포츠 장비가방 (포수장비,팀장비)",
+    "maker": "러펠스",
+    "cateCd": "004012",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47349",
+    "goodsNm": "러펠스 쿨메쉬 투톤 7부 라운드 언더셔츠 (스판 언더티,언더웨어)",
+    "modelNo": "러펠스 쿨메쉬 투톤 7부 라운드 언더셔츠 (스판 언더티",
+    "maker": "러펠스",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47348",
+    "goodsNm": "러펠스 베이직 쿨에어 컴프레션 암슬리브 (2개 1SET)",
+    "modelNo": "러펠스 베이직 쿨에어 컴프레션 암슬리브 (2개 1SET",
+    "maker": "러펠스",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47347",
+    "goodsNm": "러펠스 큐브 아이싱 티셔츠 오버핏 반팔티 블랙",
+    "modelNo": "아이싱",
+    "maker": "러펠스(RUPPELLS)",
+    "cateCd": "007038001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47346",
+    "goodsNm": "러펠스 솔리드 야구 양말 스타킹 성인/유소년용",
+    "modelNo": "양말",
+    "maker": "러펠스(RUPPELLS)",
+    "cateCd": "007008",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47345",
+    "goodsNm": "러펠스 베이직 긴팔 라운드 언더셔츠 (스판 언더티,언더웨어)",
+    "modelNo": "러펠스 베이직 긴팔 라운드 언더셔츠 (스판 언더티,언더",
+    "maker": "러펠스",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47344",
+    "goodsNm": "러펠스 베이직 하이터틀넥 기모 언더셔츠",
+    "modelNo": "러펠스 베이직 하이터틀넥 기모 언더셔츠",
+    "maker": "러펠스",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47343",
+    "goodsNm": "러펠스 베이직 쿨스판 타이즈 레깅스 (4계절용)",
+    "modelNo": "러펠스 베이직 쿨스판 타이즈 (4계절용)",
+    "maker": "러펠스(RUPPELLS)",
+    "cateCd": "007039001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47342",
+    "goodsNm": "러펠스 컴프레션 파워팬츠 (슬라이딩팬츠,태클팬츠,5부 타이즈)",
+    "modelNo": "파워팬츠",
+    "maker": "러펠스",
+    "cateCd": "007039003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47341",
+    "goodsNm": "러펠스 베이직 기모 언더셔츠 (겨울용,언더웨어)",
+    "modelNo": "러펠스 베이직 기모 언더셔츠 (겨울용,언더웨어)",
+    "maker": "러펠스",
+    "cateCd": "039007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47340",
+    "goodsNm": "러펠스 베이직 기모 타이즈 (겨울용,레깅스)",
+    "modelNo": "러펠스 베이직 기모 타이즈 (겨울용,레깅스)",
+    "maker": "러펠스(RUPPELLS)",
+    "cateCd": "039007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47339",
+    "goodsNm": "러펠스 쿨매쉬 반팔 언더셔츠 (블랙,네이비)",
+    "modelNo": "러펠스 쿨매쉬 반팔 언더셔츠 (블랙,네이비)",
+    "maker": "러펠스",
+    "cateCd": "007038005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47338",
+    "goodsNm": "프랭클린 PRT 시리즈 렉가드 풋가드 23568C9 (핑크에디션)",
+    "modelNo": "23568C9",
+    "maker": "프랭클린",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47337",
+    "goodsNm": "프랭클린 PRT 시리즈 엘보우가드 암가드 23567C9 (핑크에디션)",
+    "modelNo": "23567C9",
+    "maker": "프랭클린",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47336",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (포커스 블루)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (포커스 블루)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47335",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (포커스 그레이)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (포커스 그레이",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47334",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (포커스 레드)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (포커스 레드)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47332",
+    "goodsNm": "러펠스 아이스크림 유소년 어린이용 야구 배트 민트",
+    "modelNo": "아이스크림 배트",
+    "maker": "러펠스(RUPPELLS)",
+    "cateCd": "003001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47330",
+    "goodsNm": "TEPPEN 테펜 경식 오더 내야 글러브 MIE-L 블랙",
+    "modelNo": "MIE-L",
+    "maker": "TEPPEN 테펜",
+    "cateCd": "001017",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47329",
+    "goodsNm": "TEPPEN 테펜 경식 오더 셀렉트 모델 투수 글러브 SW1 블랙핑크",
+    "modelNo": "SW1",
+    "maker": "TEPPEN 테펜",
+    "cateCd": "001001",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47328",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 김헌곤 모델 14219287",
+    "modelNo": "14219287",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47327",
+    "goodsNm": "제트 선수 레플리카 투수 글러브 (김택연 5 모델)",
+    "modelNo": "레플리카",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47325",
+    "goodsNm": "B45 25시즌 프로 버치 우드 배트 YK 이용규 모델 (우드/M블랙)",
+    "modelNo": "YK",
+    "maker": "B45",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47323",
+    "goodsNm": "B45 25시즌 프로 버치 우드 배트 JJ8 전준우 모델 (무광 오렌지)",
+    "modelNo": "JJ8",
+    "maker": "B45",
+    "cateCd": "003003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47322",
+    "goodsNm": "BMC 2025 TRD-PRO K11 올라운드 글러브 오가웹 유소년 겸용 내추럴/탄",
+    "modelNo": "TRD-PRO K11",
+    "maker": "BMC",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47321",
+    "goodsNm": "BMC 2025 TRD-PRO K11 올라운드 글러브 오가웹 유소년 겸용 레드/탄",
+    "modelNo": "TRD-PRO K11",
+    "maker": "BMC",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47320",
+    "goodsNm": "BMC 2025 TRD-PRO K11 올라운드 글러브 오가웹 유소년 겸용 블루/탄",
+    "modelNo": "TRD-PRO K11",
+    "maker": "BMC",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47319",
+    "goodsNm": "BMC 2025 TRD-PRO K11 올라운드 글러브 오가웹 유소년 겸용 블랙/탄",
+    "modelNo": "TRD-PRO K11",
+    "maker": "BMC",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47317",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (옐로우)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (옐로우)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47316",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (핑크)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (핑크)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47315",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (스카이 블루)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (스카이 블루)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47314",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (화이트)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (화이트)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47313",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (레드)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (레드)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47312",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (블루)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (블루)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47311",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (블랙)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (블랙)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47310",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (민트)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (민트)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47309",
+    "goodsNm": "러펠스 대용량 프리미엄 밍크 오일 가죽 글러브 관리용품 85G",
+    "modelNo": "오일",
+    "maker": "러펠스",
+    "cateCd": "001007002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47307",
+    "goodsNm": "러펠스 쿨에어 빅로고 컴프레션 암슬리브 (2개 1SET)",
+    "modelNo": "암슬리브",
+    "maker": "러펠스",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47306",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 83883145",
+    "modelNo": "83883145",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47304",
+    "goodsNm": "방탄 초경량 스포츠 선글라스 6종",
+    "modelNo": "",
+    "maker": "",
+    "cateCd": "048",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47303",
+    "goodsNm": "하타케야마 포수 수비장갑 CT-WB 화이트 블랙",
+    "modelNo": "수비장갑",
+    "maker": "하타케야마",
+    "cateCd": "006002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47302",
+    "goodsNm": "제트 선수 레플리카 투수 글러브 (김택연 4 모델)",
+    "modelNo": "레플리카",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47301",
+    "goodsNm": "제트 암가드 BAGK-42S (오렌지/블랙)",
+    "modelNo": "BAGK-42S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47300",
+    "goodsNm": "제트 암가드 BAGK-42S (아이보리/블랙)",
+    "modelNo": "BAGK-42S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47299",
+    "goodsNm": "제트 암가드 BAGK-42S (네이비/아이보리)",
+    "modelNo": "BAGK-42S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47298",
+    "goodsNm": "제트 암가드 BAGK-42S (블랙/아이보리)",
+    "modelNo": "BAGK-42S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47297",
+    "goodsNm": "제트 풋가드 BAGK-70S (오렌지/블랙)",
+    "modelNo": "BAGK-70S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47296",
+    "goodsNm": "제트 풋가드 BAGK-70S (아이보리/블랙)",
+    "modelNo": "BAGK-70S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47295",
+    "goodsNm": "제트 풋가드 BAGK-70S (네이비/아이보리)",
+    "modelNo": "BAGK-70S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47294",
+    "goodsNm": "제트 풋가드 BAGK-70S (블랙/아이보리)",
+    "modelNo": "BAGK-70S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47293",
+    "goodsNm": "제트 암가드 BAGK-47S (오렌지/블랙)",
+    "modelNo": "BAGK-47S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47292",
+    "goodsNm": "제트 암가드 BAGK-47S (아이보리/블랙)",
+    "modelNo": "BAGK-47S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47291",
+    "goodsNm": "제트 암가드 BAGK-47S (네이비/아이보리)",
+    "modelNo": "BAGK-47S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47290",
+    "goodsNm": "제트 암가드 BAGK-47S (블랙/아이보리)",
+    "modelNo": "BAGK-47S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47289",
+    "goodsNm": "제트 풋가드 BAGK-75S (오렌지/블랙)",
+    "modelNo": "BAGK-75S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47288",
+    "goodsNm": "제트 풋가드 BAGK-75S (아이보리/블랙)",
+    "modelNo": "BAGK-75S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47287",
+    "goodsNm": "제트 풋가드 BAGK-75S (네이비/아이보리)",
+    "modelNo": "BAGK-75S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47286",
+    "goodsNm": "제트 풋가드 BAGK-75S (블랙/아이보리)",
+    "modelNo": "BAGK-75S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47285",
+    "goodsNm": "제트 손등가드 BLK-45S (오렌지/블랙)",
+    "modelNo": "BLK-45S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47284",
+    "goodsNm": "제트 손등가드 BLK-45S (아이보리/블랙)",
+    "modelNo": "BLK-45S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47283",
+    "goodsNm": "제트 손등가드 BLK-45S (네이비/화이트)",
+    "modelNo": "BLK-45S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47282",
+    "goodsNm": "제트 손등가드 BLK-45S (블랙/화이트)",
+    "modelNo": "BLK-45S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47280",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 49446334",
+    "modelNo": "56311642",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47279",
+    "goodsNm": "프랭클린 커스텀오더 파워스트랩 배팅장갑 18642285",
+    "modelNo": "18642285",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47277",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 40820586",
+    "modelNo": "40820586",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47276",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 29492156",
+    "modelNo": "29492156",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47275",
+    "goodsNm": "제트 BWT-14K (1201) 프로선수용 메이플 나무배트 KHS 모델",
+    "modelNo": "BWT-14K",
+    "maker": "제트(ZETT)",
+    "cateCd": "003003",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47274",
+    "goodsNm": "제트 BWT-14K (1219) 프로선수용 메이플 나무배트 LJH 모델",
+    "modelNo": "BWT-14K",
+    "maker": "제트(ZETT)",
+    "cateCd": "003003",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47273",
+    "goodsNm": "ZETT 제트 어센틱 암가드 (이영빈 2 모델)",
+    "modelNo": "어센틱 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47272",
+    "goodsNm": "ZETT 제트 어센틱 풋가드 (이영빈 2 모델)",
+    "modelNo": "어센틱 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47271",
+    "goodsNm": "ZETT 제트 어센틱 손등가드 (이영빈 2 모델)",
+    "modelNo": "어센틱 손등가드",
+    "maker": "제트",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47270",
+    "goodsNm": "ZETT 제트 어센틱 암가드 (심재훈 2 모델)",
+    "modelNo": "어센틱 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47268",
+    "goodsNm": "ZETT 제트 어센틱 풋가드 (심재훈 2 모델)",
+    "modelNo": "어센틱 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47267",
+    "goodsNm": "ZETT 제트 어센틱 슬라이딩 주루 장갑 (심재훈 2 모델)",
+    "modelNo": "어센틱 슬라이딩 장갑",
+    "maker": "제트(ZETT)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47266",
+    "goodsNm": "ZETT 제트 어센틱 손등가드 (심재훈 2 모델)",
+    "modelNo": "",
+    "maker": "제트",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47265",
+    "goodsNm": "ZETT 제트 어센틱 암가드 (송성문 2 모델)",
+    "modelNo": "어센틱 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47264",
+    "goodsNm": "ZETT 제트 어센틱 풋가드 (송성문 2 모델)",
+    "modelNo": "어센틱 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47263",
+    "goodsNm": "ZETT 제트 어센틱 슬라이딩 주루 장갑 (송성문 2 모델)",
+    "modelNo": "어센틱 슬라이딩 주루 장갑",
+    "maker": "제트",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47262",
+    "goodsNm": "ZETT 제트 어센틱 손등가드 (송성문 2 모델)",
+    "modelNo": "어센틱 손등가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47261",
+    "goodsNm": "ZETT 제트 어센틱 암가드 (박찬호 2 모델)",
+    "modelNo": "어센틱 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47260",
+    "goodsNm": "ZETT 제트 어센틱 풋가드 (박찬호 2 모델)",
+    "modelNo": "어센틱 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47259",
+    "goodsNm": "ZETT 제트 어센틱 슬라이딩 주루 장갑 (박찬호 2 모델)",
+    "modelNo": "어센틱 슬라이딩 주루 장갑",
+    "maker": "제트(ZETT)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47258",
+    "goodsNm": "ZETT 제트 어센틱 손등가드 (박찬호 2 모델)",
+    "modelNo": "어센틱 손등가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  }
+]

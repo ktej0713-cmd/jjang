@@ -1,0 +1,30 @@
+{
+  "status": "done",
+  "filled": [],
+  "failed": [
+    "검색키워드 (셀렉터 없음: input[name=\"goodsSearchWord\"])",
+    "SEO.title (셀렉터 없음: input[name=\"seoTag[title]\"])",
+    "SEO.description (셀렉터 없음: input[name=\"seoTag[description]\"])",
+    "SEO.keyword (셀렉터 없음: input[name=\"seoTag[keyword]\"])",
+    "SEO.author (셀렉터 없음: input[name=\"seoTag[author]\"])",
+    "제조사 (셀렉터 없음: input[name=\"makerNm\"])",
+    "모델번호 (셀렉터 없음: input[name=\"goodsModelNo\"])",
+    "네이버.속성 (셀렉터 없음: input[name=\"naverAttribute\"])",
+    "네이버.태그 (셀렉터 없음: input[name=\"naverTag\"])",
+    "네이버.카테고리 (셀렉터 없음: input[name=\"naverCategory\"])"
+  ],
+  "filled_count": 0,
+  "failed_count": 10,
+  "manual_paste": {
+    "검색키워드": "이보쉴드 Pro-SRZ Vented 포수 스컬캡 헬멧 화이트 L/XL WB5729207",
+    "SEO.title": "이보쉴드 Pro-SRZ Vented 포수 스컬캡 헬멧 화이트 L/XL WB5729207",
+    "SEO.description": "이보쉴드 Pro-SRZ Vented 포수 스컬캡 헬멧 화이트 L/XL WB5729207",
+    "SEO.keyword": "이보쉴드 Pro-SRZ Vented 포수 스컬캡 헬멧 화이트 L/XL WB5729207",
+    "SEO.author": "이보쉴드 Pro-SRZ Vented 포수 스컬캡 헬멧 화이트 L/XL WB5729207",
+    "제조사": "이보쉴드 Pro-SRZ Vented 포수 스컬캡 헬멧 화이트 L/XL WB5729207",
+    "모델번호": "이보쉴드 Pro-SRZ Vented 포수 스컬캡 헬멧 화이트 L/XL WB5729207",
+    "네이버.속성": "이보쉴드 Pro-SRZ Vented 포수 스컬캡 헬멧 화이트 L/XL WB5729207",
+    "네이버.태그": "이보쉴드 Pro-SRZ Vented 포수 스컬캡 헬멧 화이트 L/XL WB5729207",
+    "네이버.카테고리": "이보쉴드 Pro-SRZ Vented 포수 스컬캡 헬멧 화이트 L/XL WB5729207"
+  }
+}

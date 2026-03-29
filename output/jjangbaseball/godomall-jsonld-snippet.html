@@ -1,0 +1,294 @@
+<!--
+===============================================================
+  파일명: godomall-jsonld-snippet.html
+  목적:   goods_view 상품 상세페이지 구조화 데이터 + 메타태그 자동 삽입
+  버전:   3.0 (2026-03-28) — 실제 스킨 변수명으로 전면 교체
+
+  적용 위치:
+    - 스킨 파일: goods/goods_view.php
+    - 삽입 위치: { # header } 블록 안, </head> 직전
+    - FTP 또는 고도몰 관리자 > 디자인 > 스킨관리 > 스킨편집에서 적용
+
+  적용 방법:
+    1. 고도몰 관리자 접속
+    2. 디자인 > 디자인 보관함 > 현재 스킨 선택 > 스킨 편집
+    3. goods/goods_view.php 파일 열기
+    4. { # header } 블록 내부, </head> 태그 바로 앞에 아래 코드 전체를 붙여넣기
+    5. 저장
+
+  포함 항목 (순서):
+    [A] 메타 디스크립션 + Open Graph 태그
+    [B] JSON-LD Product 스키마
+    [C] JSON-LD BreadcrumbList 스키마 (goodsCategoryList 루프 활용)
+    [D] JSON-LD FAQPage 스키마 (주석 처리 — 상세 HTML 마이크로데이터로 대체)
+
+  v3.0 변경 내역 (2026-03-28):
+    - 재고 여부: goodsView['orderPossible'] → gd_isset(goodsView['stockFl']) 로 교체
+    - BreadcrumbList: cate1Nm/cate2Nm/cate3Nm 방식 →
+      <!--{ @ goodsCategoryList }--> 루프 방식으로 전면 교체
+    - og:url / canonical: 하드코딩 URL → {=snsShareUrl} 치환코드로 교체
+    - 이미지: goodsView['image']['detail']['img'][0]은 img 태그째로 출력되어
+      URL 단독 추출 불가 → listImage 유지 (주석에 대안 명시)
+    - 삽입 위치 주석: { # header } 블록 명확히 표기
+    - 상품번호: goodsView['goodsNo'] 명시적 intval() 처리 유지
+    - 판매가: gd_isset(goodsView['goodsPrice'], 0) 유지
+
+  보안:
+    - 모든 출력값 gd_htmlspecialchars() 처리 (XSS 방지)
+    - json_encode()로 JSON 특수문자 이스케이프
+    - strip_tags()로 HTML 태그 제거
+    - gd_isset(변수, 기본값)으로 null 안전 처리
+
+  주의사항:
+    - 고도몰 코어 파일(core/, framework/) 수정 없이 스킨 파일에만 적용
+    - stockFl 값: 'y' = 재고 있음(InStock), 그 외 = OutOfStock
+    - 브랜드코드(brandCd)는 JSON-LD에서 name 표시에 사용 불가 →
+      brandNm 변수가 스킨에서 제공되면 사용, 없으면 makerNm으로 폴백
+===============================================================
+-->
+
+<!--
+===============================================================
+  [A] 메타 디스크립션 + Open Graph 태그
+  삽입 위치: { # header } 블록 안, </head> 직전
+  주의: 고도몰 스킨의 기본 description 메타태그가 있다면 제거 후 아래로 교체
+===============================================================
+-->
+
+<!--
+  간략설명 변수명 확인 필요:
+    goodsView['goodsSummary'] 또는 goodsView['goodsSummaryContent'] 중
+    실제 스킨에서 값이 출력되는 변수명 사용.
+    아래 코드는 goodsSummary 우선 시도 → 없으면 goodsNmDetail 폴백.
+-->
+
+<!-- 메타 디스크립션 (120~155자 목표) -->
+<meta name="description" content="<!--{= gd_htmlspecialchars(goodsView['goodsNm']) }--><!--{? !empty(goodsView['cateName']) }--> - <!--{= gd_htmlspecialchars(goodsView['cateName']) }--><!--{/}--> | 짱베이스볼.<!--{? !empty(goodsView['goodsSummary']) }--> <!--{= gd_html_cut(strip_tags(gd_htmlspecialchars(gd_isset(goodsView['goodsSummary'], ''))), 80) }--><!--{:}--><!--{? !empty(goodsView['goodsSummaryContent']) }--> <!--{= gd_html_cut(strip_tags(gd_htmlspecialchars(gd_isset(goodsView['goodsSummaryContent'], ''))), 80) }--><!--{/}--><!--{/}-->">
+
+<!-- Open Graph 태그 -->
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="짱베이스볼">
+<meta property="og:title" content="<!--{= gd_htmlspecialchars(goodsView['goodsNm']) }--> | 짱베이스볼">
+<meta property="og:description" content="<!--{= gd_htmlspecialchars(goodsView['goodsNm']) }--><!--{? !empty(goodsView['cateName']) }--> - <!--{= gd_htmlspecialchars(goodsView['cateName']) }--><!--{/}--> | 짱베이스볼.<!--{? !empty(goodsView['goodsSummary']) }--> <!--{= gd_html_cut(strip_tags(gd_htmlspecialchars(gd_isset(goodsView['goodsSummary'], ''))), 80) }--><!--{:}--><!--{? !empty(goodsView['goodsSummaryContent']) }--> <!--{= gd_html_cut(strip_tags(gd_htmlspecialchars(gd_isset(goodsView['goodsSummaryContent'], ''))), 80) }--><!--{/}--><!--{/}-->">
+<!--
+  이미지 URL 처리 안내:
+    goodsView['image']['detail']['img'][0] → img 태그 통째로 출력 (URL 단독 추출 불가)
+    → listImage 변수가 있다면 사용. 없는 경우 아래 대안 검토:
+      대안 1: goodsView['listImage']  (리스트 썸네일 URL — 스킨 버전에 따라 존재)
+      대안 2: 고도몰 관리자 > 스킨 편집에서 {=var_dump(goodsView['image'])} 임시 삽입 후 사용 가능한 URL 키 확인
+      대안 3: 이미지 없는 경우 og:image 태그 자체를 생략 (SNS 공유 시 기본 이미지 사용)
+-->
+<meta property="og:image" content="<!--{= gd_htmlspecialchars(gd_isset(goodsView['listImage'], '')) }-->">
+<!--
+  og:url — snsShareUrl 치환코드 사용 (스킨에서 이미 사용 중인 변수)
+  snsShareUrl이 없는 스킨이라면 아래 주석 해제 후 사용:
+  <meta property="og:url" content="https://chj1013.hgodo.com/goods/goods_view.php?goodsNo=<!--{= intval(goodsView['goodsNo']) }-->">
+-->
+<meta property="og:url" content="<!--{= gd_htmlspecialchars(snsShareUrl) }-->">
+
+<!-- Twitter Card (og:image 공유 대응) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<!--{= gd_htmlspecialchars(goodsView['goodsNm']) }--> | 짱베이스볼">
+<meta name="twitter:image" content="<!--{= gd_htmlspecialchars(gd_isset(goodsView['listImage'], '')) }-->">
+
+<!--
+  Canonical URL — snsShareUrl 치환코드 사용 (og:url과 동일하게 통일)
+  snsShareUrl이 없는 스킨이라면 아래 주석 해제 후 사용:
+  <link rel="canonical" href="https://chj1013.hgodo.com/goods/goods_view.php?goodsNo=<!--{= intval(goodsView['goodsNo']) }-->">
+-->
+<link rel="canonical" href="<!--{= gd_htmlspecialchars(snsShareUrl) }-->">
+
+
+<!--
+===============================================================
+  [B] JSON-LD Product 스키마
+  실제 변수명 기준 (v3.0):
+    - goodsView['goodsNm']       : 상품명
+    - goodsView['goodsNmDetail'] : 상세용 상품명 (없으면 goodsNm 폴백)
+    - gd_isset(goodsView['goodsPrice'], 0) : 판매가
+    - gd_isset(goodsView['stockFl'])       : 재고 여부 ('y' = InStock)
+    - goodsView['goodsNo']       : 상품번호
+    - goodsView['cateCd']        : 카테고리 코드
+    - goodsView['brandCd']       : 브랜드 코드 (name 표시에는 brandNm 사용)
+===============================================================
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "<!--{? !empty(goodsView['goodsNmDetail']) }--><!--{= json_encode(gd_htmlspecialchars(goodsView['goodsNmDetail'])) }--><!--{:}--><!--{= json_encode(gd_htmlspecialchars(goodsView['goodsNm'])) }--><!--{/}-->",
+  <!--{? !empty(gd_isset(goodsView['listImage'], '')) }-->"image": ["<!--{= gd_htmlspecialchars(goodsView['listImage']) }-->"],
+  <!--{/}-->
+  "description": "<!--{? !empty(goodsView['goodsSummary']) }--><!--{= json_encode(strip_tags(gd_htmlspecialchars(gd_isset(goodsView['goodsSummary'], '')))) }--><!--{:}--><!--{? !empty(goodsView['goodsSummaryContent']) }--><!--{= json_encode(strip_tags(gd_htmlspecialchars(gd_isset(goodsView['goodsSummaryContent'], '')))) }--><!--{:}--><!--{= json_encode(gd_htmlspecialchars(goodsView['goodsNm'])) }--><!--{/}--><!--{/}-->",
+  "sku": "<!--{= gd_htmlspecialchars(goodsView['goodsNo']) }-->",
+  "brand": {
+    "@type": "Brand",
+    "name": "<!--{? !empty(goodsView['brandNm']) }--><!--{= gd_htmlspecialchars(goodsView['brandNm']) }--><!--{:}--><!--{= gd_htmlspecialchars(gd_isset(goodsView['makerNm'], '짱베이스볼')) }--><!--{/}-->"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "KRW",
+    "price": "<!--{= intval(gd_isset(goodsView['goodsPrice'], 0)) }-->",
+    "availability": "<!--{? gd_isset(goodsView['stockFl']) == 'y' }-->https://schema.org/InStock<!--{:}-->https://schema.org/OutOfStock<!--{/}-->",
+    "url": "<!--{= gd_htmlspecialchars(snsShareUrl) }-->",
+    "seller": {
+      "@type": "Organization",
+      "name": "짱베이스볼"
+    }
+  }
+}
+</script>
+
+
+<!--
+===============================================================
+  [C] JSON-LD BreadcrumbList 스키마
+  구조: 홈 > 카테고리depth1 > depth2 > depth3 > 상품명
+  치환코드: goodsCategoryList 루프 활용
+
+  goodsCategoryList 루프 구조:
+    <!--{ @ goodsCategoryList }-->
+      {.key_}    : 루프 인덱스 (0부터 시작)
+      {=.cateCd} : 카테고리 코드
+      {=.cateNm} : 카테고리명
+    <!--{ / }-->
+
+  주의:
+    - position은 1부터 시작, 홈(1) + 카테고리 depth(2~) + 상품명(마지막)
+    - goodsCategoryList의 depth 순서는 대분류→소분류 순서로 가정
+    - 루프 내에서 position을 동적으로 계산하려면
+      고도몰 치환코드 내 산술 연산이 불가하므로,
+      홈(position 1) + 루프(position 2~) + 상품명(별도) 방식으로 처리
+===============================================================
+-->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "홈",
+      "item": "https://chj1013.hgodo.com"
+    }<!--{ @ goodsCategoryList }--><!--{ ? .cateNm }-->,
+    {
+      "@type": "ListItem",
+      "position": <!--{= intval(.key_) + 2 }-->,
+      "name": "<!--{= json_encode(gd_htmlspecialchars(.cateNm)) }-->",
+      "item": "https://chj1013.hgodo.com/goods/goods_list.php?cateCd=<!--{= gd_htmlspecialchars(.cateCd) }-->"
+    }<!--{ / }--><!--{ / }-->,
+    {
+      "@type": "ListItem",
+      "position": <!--{= count(goodsCategoryList) + 2 }-->,
+      "name": "<!--{= json_encode(gd_htmlspecialchars(goodsView['goodsNm'])) }-->",
+      "item": "<!--{= gd_htmlspecialchars(snsShareUrl) }-->"
+    }
+  ]
+}
+</script>
+
+<!--
+  [C] BreadcrumbList 치환코드 안내:
+
+  goodsCategoryList 루프 내 주요 변수:
+    {.key_}    : 루프 인덱스 (0부터 시작)
+    {=.cateCd} : 카테고리 코드 (goodsView['cateCd']와 동일)
+    {=.cateNm} : 카테고리명
+
+  count(goodsCategoryList) 함수가 치환코드에서 동작하지 않는 경우 대안:
+    → 상품명 position을 고정값(예: 5)으로 하드코딩하거나
+    → goodsView['cate1Nm'] / cate2Nm / cate3Nm 방식(v2.0)으로 롤백
+
+  도메인 하드코딩 안내:
+    snsShareUrl이 전체 URL을 포함하므로 item에는 snsShareUrl 사용.
+    홈 URL은 chj1013.hgodo.com 도메인 하드코딩 (gMall.mallDomain 대체 가능).
+    gMall.mallDomain 변수가 스킨에서 동작하면 아래로 교체:
+      "https://<!--{= gd_htmlspecialchars(gMall.mallDomain) }-->"
+-->
+
+
+<!--
+===============================================================
+  [D] JSON-LD FAQPage 스키마 — 주석 처리 (상세 HTML 마이크로데이터로 대체)
+
+  비활성화 이유:
+    고도몰 상품 상세페이지에서 goodsView['goodsDescription'] 내 FAQ를
+    동적으로 파싱하는 것은 고도몰 스킨 치환코드 레벨에서는 불가능.
+    (PHP 로직이 필요하며 스킨 파일은 템플릿 출력만 담당)
+
+  대체 방법:
+    상품 상세 HTML 작성 시 아래 Schema.org 마이크로데이터를 인라인으로 삽입:
+
+    <div itemscope itemtype="https://schema.org/FAQPage">
+      <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 itemprop="name">Q. 질문 내용</h3>
+        <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <p itemprop="text">답변 내용</p>
+        </div>
+      </div>
+    </div>
+
+  또는 상품별로 JSON-LD를 상세 설명 HTML 안에 직접 삽입:
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Q. 질문 내용",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "답변 내용"
+          }
+        }
+      ]
+    }
+    </script>
+
+  PHP 모듈 개발 시 참고:
+    module/ 내 커스텀 서비스에서 goodsDescription에서
+    "Q." 패턴 정규식으로 추출하여 JSON-LD 동적 생성 가능.
+    예: preg_match_all('/Q\.\s*(.+?)\nA\.\s*(.+?)(?=\nQ\.|\z)/s', $desc, $matches)
+    → PHP개발자에게 모듈 개발 요청 필요.
+===============================================================
+-->
+
+
+<!--
+===============================================================
+  검증 방법:
+    1. 상품 상세페이지 접속 후 브라우저 소스 보기에서 확인
+       - application/ld+json 블록 2개 존재 여부 (Product, BreadcrumbList)
+       - og: 메타태그, description 메타태그 값
+       - stockFl 값에 따른 InStock/OutOfStock 출력 확인
+    2. Google Rich Results Test:
+       https://search.google.com/test/rich-results
+       → "Product", "BreadcrumbList" 스키마 인식 여부 확인
+    3. Schema.org 검증: https://validator.schema.org/
+    4. Open Graph 디버거: https://developers.facebook.com/tools/debug/
+    5. 네이버 서치어드바이저: https://searchadvisor.naver.com/
+       → 구조화 데이터 메뉴에서 BreadcrumbList 인식 확인
+
+  v3.0 실제 변수명 레퍼런스:
+    goodsView['goodsNo']              : 상품번호
+    goodsView['goodsNm']              : 상품명
+    goodsView['goodsNmDetail']        : 상세용 상품명 (없으면 goodsNm 폴백)
+    gd_isset(goodsView['goodsPrice'], 0) : 판매가
+    goodsView['cateCd']               : 카테고리 코드
+    goodsView['brandCd']              : 브랜드 코드
+    gd_isset(goodsView['stockFl'])    : 재고 여부 ('y' = InStock)
+    goodsView['image']['detail']['img'][0] : 대표이미지 (img 태그 통째 출력 — URL 단독 불가)
+    goodsView['listImage']            : 리스트 썸네일 URL (og:image, JSON-LD image에 사용)
+    goodsView['goodsSummary']         : 간략설명 (우선)
+    goodsView['goodsSummaryContent']  : 간략설명 대체 변수 (스킨 버전별 상이)
+    snsShareUrl                       : 현재 상품 URL (og:url, canonical에 사용)
+    <!--{ @ goodsCategoryList }-->    : 카테고리 목록 루프
+      {.key_}                         : 루프 인덱스 (0부터)
+      {=.cateCd}                      : 카테고리 코드
+      {=.cateNm}                      : 카테고리명
+    gMall.mallDomain                  : 쇼핑몰 도메인 (대안)
+===============================================================
+-->

@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>테펜(Teppen) 오더 글러브 시뮬레이션 이용 방법 | 짱베이스볼</title>
+<style>
+:root {
+  /* 프라이머리 */
+  --primary: #1B2A4A;
+  --primary-light: #2C3E6B;
+  --primary-dark: #0F1A30;
+  --accent: #D4A843;
+  --accent-light: #E8C876;
+  --accent-dark: #B8922E;
+
+  /* 시맨틱 */
+  --success: #2E7D32;
+  --warning: #E65100;
+  --danger: #C62828;
+  --info: #1565C0;
+  --new: #E53935;
+
+  /* 그레이 */
+  --gray-900: #222222;
+  --gray-700: #555555;
+  --gray-500: #888888;
+  --gray-300: #CCCCCC;
+  --gray-100: #F5F5F5;
+  --gray-50: #FAFAFA;
+
+  /* 배경 */
+  --bg-page: #F9F9F9;
+  --bg-section: #F5F5F5;
+  --bg-card: #FFFFFF;
+  --bg-accent-tint: #FDF8EC;
+  --white: #FFFFFF;
+
+  /* 타이포 */
+  --font-family: 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', '돋움', Dotum, sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-base: 15px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 22px;
+  --font-size-2xl: 28px;
+
+  /* 간격 */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 40px;
+  --space-3xl: 60px;
+
+  /* 최대 너비 */
+  --content-width: 860px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--gray-900);
+  background: var(--bg-page);
+  line-height: 1.7;
+}
+
+/* 전체 래퍼 */
+.page-wrap {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  background: var(--bg-card);
+}
+
+/* ===== 히어로 섹션 ===== */
+.hero {
+  background-color: var(--primary);
+  padding: 60px 40px 52px;
+  text-align: center;
+}
+
+.hero-label {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: var(--font-size-xs);
+  letter-spacing: 2px;
+  padding: 4px 14px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  color: var(--white);
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.hero-sub {
+  color: var(--accent);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.hero-desc {
+  color: rgba(255,255,255,0.65);
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.3px;
+}
+
+/* ===== 공통 섹션 ===== */
+.section {
+  padding: 40px 40px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.section-alt {
+  background: var(--bg-section);
+}
+
+.section-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--primary);
+  border-left: 4px solid var(--accent);
+  padding-left: 14px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.section-desc {
+  color: var(--gray-700);
+  font-size: var(--font-size-base);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+/* ===== 브랜드 소개 - 스탯 테이블 ===== */
+.brand-stat-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.brand-stat-table td {
+  padding: 12px 16px;
+  border: 1px solid var(--gray-100);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.brand-stat-table td:first-child {
+  width: 130px;
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+}
+
+.brand-stat-table td:last-child {
+  background: var(--bg-card);
+  color: var(--gray-900);
+}
+
+/* ===== 시뮬레이션 안내 박스 ===== */
+.sim-intro-box {
+  background: var(--bg-accent-tint);
+  border: 1px solid var(--accent-light);
+  border-left: 4px solid var(--accent);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+
+.sim-intro-box p {
+  font-size: var(--font-size-base);
+  color: var(--gray-900);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.sim-intro-box p:last-child {
+  margin-bottom: 0;
+}
+
+.sim-url-box {
+  background: var(--primary);
+  padding: 18px 24px;
+  text-align: center;
+}
+
+.sim-url-label {
+  display: block;
+  color: var(--accent);
+  font-size: var(--font-size-xs);
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.sim-url-link {
+  display: block;
+  color: var(--white);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.sim-url-note {
+  display: block;
+  color: rgba(255,255,255,0.55);
+  font-size: var(--font-size-xs);
+  margin-top: 8px;
+}
+
+/* ===== 오더 모델 표 ===== */
+.model-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  margin-top: 4px;
+}
+
+.model-table th {
+  background: var(--primary);
+  color: var(--white);
+  padding: 11px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.5px;
+}
+
+.model-table td {
+  padding: 12px 16px;
+  border: 1px solid var(--gray-100);
+  vertical-align: middle;
+  line-height: 1.6;
+}
+
+.model-table tr:nth-child(even) td {
+  background: var(--gray-50);
+}
+
+.model-table tr:nth-child(odd) td {
+  background: var(--bg-card);
+}
+
+.model-table td:first-child {
+  font-weight: 600;
+  color: var(--primary);
+  width: 65px;
+  border-right: 2px solid var(--gray-100);
+  text-align: center;
+}
+
+.model-table td:nth-child(2) {
+  font-weight: 700;
+  color: var(--primary);
+  width: 72px;
+  border-right: 1px solid var(--gray-100);
+}
+
+.model-table td:nth-child(3) {
+  width: 60px;
+  text-align: center;
+  color: var(--gray-700);
+  font-size: var(--font-size-xs);
+}
+
+.model-table td:nth-child(4) {
+  width: 100px;
+  color: var(--gray-700);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+}
+
+.model-names {
+  color: var(--gray-900);
+  letter-spacing: 0.3px;
+}
+
+.model-feature {
+  color: var(--gray-700);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+}
+
+/* ===== 커스터마이징 옵션 표 ===== */
+.price-note {
+  background: var(--bg-accent-tint);
+  border: 1px solid var(--accent-light);
+  padding: 12px 18px;
+  margin-bottom: 16px;
+  font-size: var(--font-size-sm);
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+.price-note strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.option-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.option-table th {
+  background: var(--primary);
+  color: var(--white);
+  padding: 11px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.5px;
+}
+
+.option-table td {
+  padding: 10px 16px;
+  border: 1px solid var(--gray-100);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.option-table tr:nth-child(even) td {
+  background: var(--gray-50);
+}
+
+.option-table tr:nth-child(odd) td {
+  background: var(--bg-card);
+}
+
+.option-table td:first-child {
+  width: 140px;
+  font-weight: 600;
+  color: var(--primary);
+  border-right: 1px solid var(--gray-300);
+}
+
+.option-table td:last-child {
+  color: var(--gray-700);
+}
+
+.option-note {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+  margin-top: 3px;
+}
+
+/* ===== STEP 오더 방법 ===== */
+.step-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.step-table td {
+  padding: 0;
+  vertical-align: top;
+  border: none;
+}
+
+.step-row {
+  margin-bottom: 0;
+}
+
+/* 각 스텝 행 */
+.step-item {
+  display: table;
+  width: 100%;
+  border: 1px solid var(--gray-100);
+  border-bottom: none;
+  background: var(--bg-card);
+}
+
+.step-item:last-child {
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.step-item-num {
+  display: table-cell;
+  width: 90px;
+  background: var(--primary);
+  color: var(--accent);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px 10px;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+.step-num-big {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.step-item-body {
+  display: table-cell;
+  padding: 18px 22px;
+  vertical-align: middle;
+}
+
+.step-item-title {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+.step-item-desc {
+  font-size: var(--font-size-sm);
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+.step-item-desc a {
+  color: var(--info);
+  text-decoration: underline;
+}
+
+.step-arrow {
+  text-align: center;
+  padding: 4px 0;
+  color: var(--accent);
+  font-size: 18px;
+  line-height: 1;
+  background: var(--bg-card);
+}
+
+/* ===== 주의사항 ===== */
+.caution-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.caution-table tr td {
+  padding: 11px 16px;
+  border: 1px solid var(--gray-100);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.caution-table tr:nth-child(odd) td {
+  background: var(--bg-card);
+}
+
+.caution-table tr:nth-child(even) td {
+  background: var(--gray-50);
+}
+
+.caution-table td:first-child {
+  width: 120px;
+  font-weight: 700;
+  color: var(--primary);
+  border-right: 2px solid var(--gray-100);
+}
+
+.caution-highlight {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+/* ===== 채널톡 버튼 ===== */
+.channeltalk-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--primary-dark);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  padding: 14px 40px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  margin-top: 8px;
+}
+
+.channeltalk-btn:hover {
+  background: var(--accent-light);
+}
+
+/* ===== 문의 안내 ===== */
+.contact-box {
+  background: var(--primary);
+  padding: 36px 40px;
+  text-align: center;
+}
+
+.contact-title {
+  color: var(--white);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-desc {
+  color: rgba(255,255,255,0.65);
+  font-size: var(--font-size-sm);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+  <!-- ===== 1. 히어로 섹션 ===== -->
+  <div class="hero">
+    <div class="hero-label">TEPPEN ORDER GLOVE</div>
+    <div class="hero-title">내 글러브, 직접 디자인해보세요</div>
+    <div class="hero-sub">테펜(Teppen) 오더 글러브 시뮬레이션</div>
+    <div class="hero-desc">오사카 미노시 자사 공장에서 직접 제작합니다</div>
+  </div>
+
+  <!-- ===== 2. 테펜 브랜드 소개 ===== -->
+  <div class="section">
+    <div class="section-title">테펜(Teppen)이란?</div>
+    <p class="section-desc">
+      테펜은 오사카 미노시(箕面市)에 자사 공장을 보유한 일본 글러브 브랜드입니다.
+      내야수용 글러브에 특화되어 있으며, 일반 기성품과는 달리 오더를 전제로 설계된 라인업을 운영합니다.
+    </p>
+
+    <table class="brand-stat-table">
+      <tr>
+        <td>공장 위치</td>
+        <td>일본 오사카 미노시(箕面市) 자사 공장</td>
+      </tr>
+      <tr>
+        <td>연간 생산</td>
+        <td>연간 4,000개 이상 제작 &#183; 누적 10,000개 이상</td>
+      </tr>
+      <tr>
+        <td>특화 포지션</td>
+        <td>내야수 특화 &#183; 손가락 확장 기술 적용으로 포구면 확대</td>
+      </tr>
+      <tr>
+        <td>전용 레더</td>
+        <td>탄너(Tanner)와 2년간 공동 개발한 전용 가죽 &ldquo;테펜레더&rdquo; 사용</td>
+      </tr>
+      <tr>
+        <td>오더 방식</td>
+        <td>온라인 시뮬레이션 &#10140; 오더 접수 &#10140; 자사 공장 제작</td>
+      </tr>
+    </table>
+
+    <!-- 지마타 기술 설명 -->
+    <div class="sim-intro-box" style="margin-top:20px;margin-bottom:0;">
+      <p style="font-weight:700;color:var(--primary);margin-bottom:8px;">손가락 확장 기술이란?</p>
+      <p>
+        검지와 중지 사이 가죽을 별도로 넓게 재단하여, 포구면이 자연스럽게 넓어집니다.
+        타 브랜드 대비 약간 더 넓은 캐칭 영역을 확보할 수 있어,
+        반바운드 타구나 빠른 고로에서 체감 차이가 있습니다.
+        제조 공정이 복잡해 대부분의 메이커가 생략하는 공정입니다.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== 3. 시뮬레이션 안내 ===== -->
+  <div class="section section-alt">
+    <div class="section-title">시뮬레이션이란?</div>
+
+    <div class="sim-intro-box">
+      <p>
+        온라인에서 직접 글러브 디자인을 구성해볼 수 있는 도구입니다.
+        포지션, 모델, 컬러, 웹 형태, 스티치 색상, 자수 등을 직접 선택하며
+        완성 이미지를 확인할 수 있습니다.
+      </p>
+      <p>
+        시뮬레이션 결과를 저장하면, 그대로 오더 접수가 가능합니다.
+        주문 전에 부담 없이 다양한 조합을 시도해보세요.
+      </p>
+      <p style="color:var(--gray-500);font-size:var(--font-size-xs);margin-top:4px;">
+        ※ 시뮬레이션 사이트는 일본어로 운영됩니다.
+        사용법을 모르셔도 괜찮습니다. 채널톡으로 문의 주시면 한국어로 안내해드립니다.
+      </p>
+    </div>
+
+    <div class="sim-url-box">
+      <span class="sim-url-label">시뮬레이션 바로가기</span>
+      <a class="sim-url-link" href="https://teppen-order.com" target="_blank" rel="noopener">teppen-order.com</a>
+      <span class="sim-url-note">※ 시뮬레이션 이용 후 짱베이스볼로 오더 접수해주세요</span>
+    </div>
+
+    <!-- 채널톡 상담 버튼 -->
+    <div style="text-align:center;padding:20px 0 0;">
+      <a href="https://8k27y.channel.io" target="_blank" rel="noopener" class="channeltalk-btn">
+        오더 상담은 채널톡에서 편하게 문의해주세요 &#10140;
+      </a>
+    </div>
+  </div>
+
+  <!-- ===== 4. 시리즈 선택 ===== -->
+  <div class="section">
+    <div class="section-title">시리즈 선택</div>
+    <p class="section-desc">
+      테펜 오더 글러브는 3가지 시리즈로 구성됩니다. 시뮬레이션에서 시리즈를 먼저 선택한 뒤 모델을 고르게 됩니다.
+    </p>
+
+    <table class="option-table">
+      <thead>
+        <tr>
+          <th>시리즈명</th>
+          <th>가격 (세포함)</th>
+          <th>비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:700;">STANDARD LINE</td>
+          <td>63,800엔</td>
+          <td style="color:var(--gray-700);">기본 라인업</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">PLATINUM LINE</td>
+          <td>70,400엔</td>
+          <td style="color:var(--gray-700);">프리미엄 사양</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;">2026 상반기 한정</td>
+          <td>70,400엔</td>
+          <td style="color:var(--gray-700);">2026년 상반기 한정 모델</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="price-note" style="margin-top:16px;margin-bottom:0;">
+      &#183; 모든 가격은 일본 소비세 10% 포함 (세포함) 기준입니다.<br>
+      &#183; 길들이기 가공 옵션 선택 시 +3,300엔 (세포함)<br>
+      &#183; <strong>원화 판매가는 오더 접수 시 별도 안내드립니다</strong> (환율 적용)
+    </div>
+  </div>
+
+  <!-- ===== 5. 오더 가능 모델 ===== -->
+  <div class="section section-alt">
+    <div class="section-title">오더 가능 모델</div>
+    <p class="section-desc">
+      총 13개 모델(내야수 8종 &#183; 투수 3종 &#183; 외야수 2종)이 준비되어 있습니다.
+      캐칭 스타일(쓰카미도리/하사미도리)과 사이즈를 함께 확인하세요.
+    </p>
+
+    <table class="model-table">
+      <thead>
+        <tr>
+          <th>포지션</th>
+          <th>모델명</th>
+          <th>사이즈</th>
+          <th>캐칭 스타일</th>
+          <th>특징</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 내야수 8종 -->
+        <tr>
+          <td rowspan="8">내야수</td>
+          <td class="model-names">HBK</td>
+          <td>27cm</td>
+          <td>움켜잡기</td>
+          <td class="model-feature">ATM2를 축소한 소형. 내야 최소 사이즈. 손이 작은 선수에게 추천</td>
+        </tr>
+        <tr>
+          <td class="model-names">MIE</td>
+          <td>27.5cm</td>
+          <td>끼워잡기</td>
+          <td class="model-feature">7핑거 구조.소형 만능형. 검지&#126;소지의 움직임이 부드러움</td>
+        </tr>
+        <tr>
+          <td class="model-names">ATM2</td>
+          <td>27.5cm</td>
+          <td>움켜잡기/끼워잡기<br>겸용</td>
+          <td class="model-feature">소형. BOX형 포켓으로 깊음. 강한 타구 대응에 유리</td>
+        </tr>
+        <tr>
+          <td class="model-names">DSK</td>
+          <td>28cm</td>
+          <td>끼워잡기</td>
+          <td class="model-feature">RM6를 5mm 축소. 포구면을 넓게 쓰고 싶은 분에게 추천</td>
+        </tr>
+        <tr>
+          <td class="model-names">MIE-L</td>
+          <td>28cm</td>
+          <td>움켜잡기/끼워잡기<br>겸용</td>
+          <td class="model-feature">7핑거 구조.내야 인기 No.1. 어떤 선수에게도 잘 맞는 초만능형</td>
+        </tr>
+        <tr>
+          <td class="model-names">MIE-P</td>
+          <td>28.5cm</td>
+          <td>움켜잡기/끼워잡기<br>겸용</td>
+          <td class="model-feature">7핑거 구조.MIE-L을 5mm 늘린 확대형. 소지 2본 레이스 추천</td>
+        </tr>
+        <tr>
+          <td class="model-names">RM6</td>
+          <td>28.5cm</td>
+          <td>끼워잡기</td>
+          <td class="model-feature">포구면 와이드. 사이즈 크게 쓰고 싶은 분용. 소프트볼에도 추천</td>
+        </tr>
+        <tr>
+          <td class="model-names">TP5</td>
+          <td>29cm</td>
+          <td>움켜잡기/끼워잡기<br>겸용</td>
+          <td class="model-feature">길고 약간 큰 편. 포켓 깊이 최고 수준</td>
+        </tr>
+        <!-- 외야수 2종 -->
+        <tr>
+          <td rowspan="2">외야수</td>
+          <td class="model-names">TTY-S</td>
+          <td>31cm</td>
+          <td>개폐형</td>
+          <td class="model-feature">7핑거 구조.TTY를 축소한 소형 외야. 가볍고 다루기 쉬움</td>
+        </tr>
+        <tr>
+          <td class="model-names">TTY</td>
+          <td>32cm</td>
+          <td>개폐형</td>
+          <td class="model-feature">7핑거 구조.크게. 파카파카 계열의 최고걸작</td>
+        </tr>
+        <!-- 투수 3종 -->
+        <tr>
+          <td rowspan="3">투수</td>
+          <td class="model-names">MIE-P</td>
+          <td>28.5cm</td>
+          <td>만능형</td>
+          <td class="model-feature">7핑거 구조.소형 투수 글러브. 필딩도 하기 쉬움</td>
+        </tr>
+        <tr>
+          <td class="model-names">SW1</td>
+          <td>29.5cm</td>
+          <td>웹 안 접는 스타일</td>
+          <td class="model-feature">7핑거 구조.가로형. 투수 인기 No.1. 그립 완전 은폐</td>
+        </tr>
+        <tr>
+          <td class="model-names">G20</td>
+          <td>29.5cm</td>
+          <td>만능형</td>
+          <td class="model-feature">왕관형 웹이 특징. 세로형/가로형 겸용. 투수 표준형</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="sim-intro-box" style="margin-top:16px;margin-bottom:0;">
+      <p style="font-size:var(--font-size-xs);color:var(--gray-700);margin-bottom:0;">
+        &#183; 7핑거 구조: 손가락 7개가 모두 독립적으로 움직이는 테펜 고유 설계입니다.<br>
+        &#183; 움켜잡기: 공을 감싸듯 깊게 잡는 스타일 / 끼워잡기: 손가락과 손바닥 사이에 끼워 잡는 스타일<br>
+        &#183; MIE-P는 내야수와 투수 겸용 모델입니다. 포지션 선택 시 각각의 사양이 다릅니다.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== 6. 커스터마이징 옵션 ===== -->
+  <div class="section">
+    <div class="section-title">커스터마이징 옵션</div>
+
+    <table class="option-table">
+      <thead>
+        <tr>
+          <th>항목</th>
+          <th>선택 내용</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>이용손</td>
+          <td>좌투 / 우투</td>
+        </tr>
+        <tr>
+          <td>기본 형태</td>
+          <td>포지션별 모델 선택 (위 모델표 참고)</td>
+        </tr>
+        <tr>
+          <td>사이즈</td>
+          <td>모델별 지정 사이즈 (시뮬레이션에서 확인 가능)</td>
+        </tr>
+        <tr>
+          <td>백스타일</td>
+          <td>스트레이트백 &#183; 노멀백 &#183; BS1 &#183; BS2 &#183; T벨트
+            <span class="option-note">총 5종</span>
+          </td>
+        </tr>
+        <tr>
+          <td>본체 컬러</td>
+          <td>블론드 &#183; 블랙 &#183; 딥오렌지 &#183; 와인브라운 &#183; B브라운 &#183; 블루 &#183; 그레이
+            <span class="option-note">총 7색 &#183; 포구면/웹/헤리가와 등 파츠별 개별 컬러 지정 가능</span>
+          </td>
+        </tr>
+        <tr>
+          <td>웹 형태</td>
+          <td>
+            H &#183; H2 &#183; 조인트H &#183; 크로스 &#183; 크로스2 &#183; 크로스3 &#183; 크로스4<br>
+            TT &#183; TT2 &#183; TT3 &#183; TT4 &#183; 조인트TT &#183; W크로스 &#183; W크로스2<br>
+            USH &#183; 바스켓 &#183; 조인트바스켓
+            <span class="option-note">총 17종</span>
+          </td>
+        </tr>
+        <tr>
+          <td>스티치 색상</td>
+          <td>
+            화이트 &#183; 블랙 &#183; 골드 &#183; 삭스 &#183; 핑크 &#183; 레드 &#183; 옐로우 &#183; 블루 &#183; 퍼플<br>
+            D오렌지 &#183; 브라운 &#183; 그린 &#183; L그린 &#183; 네이비 &#183; 오렌지 &#183; 그레이 &#183; 실버
+            <span class="option-note">총 17색 &#183; 시뮬레이션에서 실시간 미리보기 가능</span>
+          </td>
+        </tr>
+        <tr>
+          <td>레이스(혁끈)</td>
+          <td>
+            와인 &#183; 블랙 &#183; 블랙중백 &#183; 레드중백 &#183; 딥오렌지 &#183; 오렌지 &#183; 옐로우 &#183; 탄<br>
+            브라운 &#183; 브라운중백 &#183; 그레이 &#183; D핑크 &#183; 네이비 &#183; 블론드 &#183; 블론드중백<br>
+            퍼플 &#183; 삭스 &#183; 화이트중백 &#183; 그린 &#183; 블루 &#183; 블루중백
+            <span class="option-note">총 21색</span>
+          </td>
+        </tr>
+        <tr>
+          <td>테두리 가죽</td>
+          <td>기리하미 화이트 + 타마하미 7색 (총 8종)</td>
+        </tr>
+        <tr>
+          <td>배면끈</td>
+          <td>있음 / 없음</td>
+        </tr>
+        <tr>
+          <td>심 경도</td>
+          <td>소프트 &#183; 레귤러 &#183; 하드
+            <span class="option-note">총 3단계 &#183; 자신의 플레이 스타일에 맞게 선택</span>
+          </td>
+        </tr>
+        <tr>
+          <td>손목스타일</td>
+          <td>레귤러감기 / 역감기
+            <span class="option-note">손목 방향 취향에 따라 선택</span>
+          </td>
+        </tr>
+        <tr>
+          <td>손바닥끈</td>
+          <td>있음 / 없음</td>
+        </tr>
+        <tr>
+          <td>손가락커버/<br>손가락대기</td>
+          <td>검지커버 &#183; 검지대기 &#183; 중지커버 &#183; 중지대기 &#183; 없음
+            <span class="option-note">총 5종</span>
+          </td>
+        </tr>
+        <tr>
+          <td>걸이끈 스티치</td>
+          <td>있음 / 없음</td>
+        </tr>
+        <tr>
+          <td>무톤</td>
+          <td>화이트 / 블랙</td>
+        </tr>
+        <tr>
+          <td>라벨</td>
+          <td>NO.01 &#126; NO.22 (총 22종)</td>
+        </tr>
+        <tr>
+          <td>길들이기 가공</td>
+          <td>
+            <strong style="color:var(--primary);">즉시 사용</strong> &#8212; 바로 연습/시합에 투입 가능한 수준으로 길들여서 배송<br>
+            <strong style="color:var(--primary);">끼워잡기 맞춤</strong> &#8212; 포구면 평평하게, 빠른 송구 연결에 유리<br>
+            <strong style="color:var(--primary);">움켜잡기 맞춤</strong> &#8212; 깊은 포켓으로 공을 확실히 감싸는 느낌<br>
+            <strong style="color:var(--primary);">가볍게 길들이기</strong> &#8212; 최소한의 가공만 하여 본인이 직접 길들이고 싶은 분용
+            <span class="option-note">길들이기 가공 선택 시 +3,300엔 (세포함) &#183; 받는 즉시 사용 가능한 상태로 배송 (가볍게 길들이기 제외)</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== 9. 오더 방법 ===== -->
+  <div class="section">
+    <div class="section-title">오더 방법</div>
+    <p class="section-desc">
+      시뮬레이션에서 디자인을 완성한 뒤, 짱베이스볼로 오더를 접수해주시면 됩니다.
+    </p>
+
+    <!-- STEP 1 -->
+    <div class="step-item">
+      <div class="step-item-num">
+        <span class="step-num-big">01</span>
+        STEP
+      </div>
+      <div class="step-item-body">
+        <div class="step-item-title">시뮬레이션에서 디자인하기</div>
+        <div class="step-item-desc">
+          <a href="https://teppen-order.com" target="_blank" rel="noopener">teppen-order.com</a>에서 포지션, 모델, 컬러, 웹, 스티치, 자수 등을 선택합니다.<br>
+          완성된 디자인을 저장하거나 캡처해두세요.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">&#8595;</div>
+
+    <!-- STEP 2 -->
+    <div class="step-item">
+      <div class="step-item-num">
+        <span class="step-num-big">02</span>
+        STEP
+      </div>
+      <div class="step-item-body">
+        <div class="step-item-title">채널톡으로 오더 접수</div>
+        <div class="step-item-desc">
+          <a href="https://8k27y.channel.io" target="_blank" rel="noopener">채널톡(8k27y.channel.io)</a>으로 오더 내용을 보내주세요.<br>
+          시뮬레이션 저장 파일 또는 캡처 이미지를 함께 첨부해주시면 빠르게 처리됩니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">&#8595;</div>
+
+    <!-- STEP 3 -->
+    <div class="step-item">
+      <div class="step-item-num">
+        <span class="step-num-big">03</span>
+        STEP
+      </div>
+      <div class="step-item-body">
+        <div class="step-item-title">결제</div>
+        <div class="step-item-desc">
+          신용카드 또는 계좌이체로 결제합니다.<br>
+          결제 완료 후 오사카 공장으로 오더가 전달됩니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">&#8595;</div>
+
+    <!-- STEP 4 -->
+    <div class="step-item">
+      <div class="step-item-num">
+        <span class="step-num-big">04</span>
+        STEP
+      </div>
+      <div class="step-item-body">
+        <div class="step-item-title">오사카 공장에서 제작</div>
+        <div class="step-item-desc">
+          미노시 자사 공장에서 직접 제작합니다.<br>
+          제작 기간은 약 8~14주이며, 시기에 따라 달라질 수 있습니다.
+        </div>
+      </div>
+    </div>
+
+    <div class="step-arrow">&#8595;</div>
+
+    <!-- STEP 5 -->
+    <div class="step-item">
+      <div class="step-item-num">
+        <span class="step-num-big">05</span>
+        STEP
+      </div>
+      <div class="step-item-body">
+        <div class="step-item-title">길들이기 가공 후 배송</div>
+        <div class="step-item-desc">
+          선택하신 길들이기 가공을 마친 뒤 배송됩니다.<br>
+          받는 즉시 포구가 가능한 상태로 출고됩니다.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== 7. 자수 옵션 ===== -->
+  <div class="section section-alt">
+    <div class="section-title">자수 옵션</div>
+    <p class="section-desc">
+      오더 상품에 한해 자수 추가가 가능합니다. 문자 자수와 벚꽃 자수를 선택할 수 있습니다.
+    </p>
+
+    <table class="option-table">
+      <thead>
+        <tr>
+          <th>항목</th>
+          <th>선택 내용</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>오리지널 자수</td>
+          <td>있음 / 없음
+            <span class="option-note">로마자 / 한자 / 히라가나 / 카타카나 가능 &#183; 최대 12문자</span>
+          </td>
+        </tr>
+        <tr>
+          <td>자수 위치</td>
+          <td>엄지 &#183; 소지 &#183; 손바닥 안쪽 &#183; 손바닥 하단</td>
+        </tr>
+        <tr>
+          <td>자수 컬러</td>
+          <td>
+            화이트 &#183; 옐로우 &#183; 오렌지 &#183; 레드 &#183; 핑크 &#183; 삭스 &#183; 블루<br>
+            네이비 &#183; 그린 &#183; 라이트골드 &#183; 라이트실버 &#183; 라메실버 &#183; 라메골드 &#183; 블랙
+            <span class="option-note">총 14색</span>
+          </td>
+        </tr>
+        <tr>
+          <td>그림자 컬러</td>
+          <td>자수 컬러 14색 중 선택 가능
+            <span class="option-note">자수 문자에 그림자 효과 적용</span>
+          </td>
+        </tr>
+        <tr>
+          <td>테두리 컬러</td>
+          <td>자수 컬러 14색 중 선택 가능
+            <span class="option-note">자수 문자 외곽에 테두리 적용</span>
+          </td>
+        </tr>
+        <tr>
+          <td>벚꽃 자수</td>
+          <td>손바닥 안쪽 / 배면 / 손가락 / 없음
+            <span class="option-note">벚꽃이 흩날리는 패턴 자수</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ===== 8. 주의사항 ===== -->
+  <div class="section">
+    <div class="section-title">주의사항</div>
+
+    <table class="caution-table">
+      <tr>
+        <td>취소 불가</td>
+        <td class="caution-highlight">제작 시작 후에는 취소가 불가능합니다.</td>
+      </tr>
+      <tr>
+        <td>납기</td>
+        <td>
+          지금 주문 시 약 5~6월 수령 예정 (8~14주 소요)<br>
+          <span style="color:var(--gray-700);font-size:var(--font-size-xs);">※ 시기에 따라 변동될 수 있으며, 접수 시 정확한 일정을 안내드립니다</span>
+        </td>
+      </tr>
+      <tr>
+        <td>자수</td>
+        <td>
+          오더 상품 구매 시에만 가능합니다.<br>
+          <span style="color:var(--gray-700);font-size:var(--font-size-xs);">로마자 / 한자 / 히라가나 / 카타카나 / 최대 12문자 / 싱글 &#183; 그림자 &#183; 테두리 선택</span>
+        </td>
+      </tr>
+      <tr>
+        <td>가격 기준</td>
+        <td>
+          모든 가격은 일본 소비세 10% 포함 기준입니다.<br>
+          STANDARD LINE 63,800엔 / PLATINUM LINE 70,400엔 / 길들이기 가공 +3,300엔<br>
+          <span style="color:var(--gray-700);font-size:var(--font-size-xs);">※ 엔화 환율에 따라 원화 결제 금액이 달라질 수 있습니다</span>
+        </td>
+      </tr>
+      <tr>
+        <td>반품/교환</td>
+        <td>오더 상품 특성상 단순 변심에 의한 반품/교환은 불가능합니다</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ===== 9. 문의 안내 ===== -->
+  <div class="contact-box">
+    <div class="contact-title">오더 관련 궁금한 점은 언제든지 문의해주세요</div>
+    <div class="contact-desc">
+      모델 선택, 사이즈 상담, 가격 문의까지 담당자가 직접 안내드립니다.<br>
+      오더 상담은 채널톡에서 편하게 문의해주세요.
+    </div>
+    <a href="https://8k27y.channel.io" target="_blank" rel="noopener" class="channeltalk-btn">
+      채널톡 상담하기 &#10140;
+    </a>
+  </div>
+
+</div><!-- /page-wrap -->
+
+</body>
+</html>

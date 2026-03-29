@@ -19,7 +19,18 @@
       "mcp__plugin_playwright_playwright__browser_press_key",
       "mcp__plugin_playwright_playwright__browser_handle_dialog",
       "mcp__claude_ai_Gmail__gmail_create_draft",
-      "mcp__plugin_playwright_playwright__browser_close"
+      "mcp__plugin_playwright_playwright__browser_close",
+      "mcp__plugin_discord_discord__reply",
+      "mcp__plugin_discord_discord__edit_message",
+      "mcp__plugin_discord_discord__fetch_messages",
+      "mcp__plugin_discord_discord__react",
+      "mcp__plugin_discord_discord__download_attachment",
+      "mcp__plugin_context-mode_context-mode__ctx_execute",
+      "mcp__plugin_context-mode_context-mode__ctx_execute_file",
+      "mcp__plugin_context-mode_context-mode__ctx_batch_execute",
+      "mcp__plugin_context-mode_context-mode__ctx_index",
+      "mcp__plugin_context-mode_context-mode__ctx_search",
+      "mcp__plugin_context-mode_context-mode__ctx_fetch_and_index"
     ],
     "deny": [
       "Bash(rm -rf /)",
@@ -27,6 +38,7 @@
       "Bash(: DROP TABLE)",
       "Bash(: DROP DATABASE)"
     ],
+    "defaultMode": "bypassPermissions",
     "additionalDirectories": [
       "C:\\Users\\jj1\\.claude\\skills\\merge-worktree",
       "G:\\내 드라이브\\claude-config\\skills\\merge-worktree",
@@ -80,14 +92,14 @@
           {
             "type": "command",
             "command": "bash ~/.claude/hooks/track-session.sh",
-            "async": true,
-            "timeout": 30
+            "timeout": 30,
+            "async": true
           },
           {
             "type": "command",
             "command": "bash ~/.claude/hooks/commit-session.sh",
-            "async": true,
-            "timeout": 120
+            "timeout": 120,
+            "async": true
           }
         ]
       }
@@ -128,16 +140,12 @@
   },
   "enabledPlugins": {
     "document-skills@skills": true,
-    "example-skills@skills": true,
-    "everything-claude-code@everything-claude-code": true,
     "php-lsp@claude-plugins-official": true,
     "security-guidance@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
     "hookify@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true,
-    "document-skills@anthropic-agent-skills": true,
-    "example-skills@anthropic-agent-skills": true,
     "playwright@claude-plugins-official": true,
     "feature-dev@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true,
@@ -147,7 +155,10 @@
     "firecrawl@firecrawl": true,
     "claude-mem@thedotmack": true,
     "review-loop@hamel-review": true,
-    "cli-anything@cli-anything": true
+    "cli-anything@cli-anything": true,
+    "telegram@claude-plugins-official": true,
+    "discord@claude-plugins-official": true,
+    "context-mode@context-mode": true
   },
   "extraKnownMarketplaces": {
     "anthropic-agent-skills": {
@@ -178,6 +189,12 @@
       "source": {
         "source": "github",
         "repo": "HKUDS/CLI-Anything"
+      }
+    },
+    "context-mode": {
+      "source": {
+        "source": "github",
+        "repo": "mksglu/context-mode"
       }
     }
   },

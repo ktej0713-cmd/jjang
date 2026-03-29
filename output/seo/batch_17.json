@@ -1,0 +1,402 @@
+[
+  {
+    "goodsNo": "47548",
+    "goodsNm": "SSK 신형 심판 볼가방 UPG310 NPB 공식 심판 볼가방",
+    "modelNo": "UPG310",
+    "maker": "사사키(SSK)",
+    "cateCd": "044015",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47547",
+    "goodsNm": "TIFOSI 티포시 크릿 선글라스 고글 레이스 실버 1340102121 (특가 행사)",
+    "modelNo": "1340102121",
+    "maker": "티포시",
+    "cateCd": "048",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47545",
+    "goodsNm": "언더아머 UA 루던 미디움 더플 백 1360464 001",
+    "modelNo": "1300213-042",
+    "maker": "언더아머",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47542",
+    "goodsNm": "언더아머 스포츠백 언디나이너블 3.0 스몰 더플백 1300214-040",
+    "modelNo": "1300214-040",
+    "maker": "언더아머",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47541",
+    "goodsNm": "닥터스킨 기능성 트레이닝 스포츠 반바지 10인치 네이비",
+    "modelNo": "스포츠 반바지",
+    "maker": "닥터스킨",
+    "cateCd": "007039005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47540",
+    "goodsNm": "닥터스킨 기능성 트레이닝 스포츠 반바지 10인치 블랙",
+    "modelNo": "스포츠 반바지",
+    "maker": "닥터스킨",
+    "cateCd": "007039005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47539",
+    "goodsNm": "엑스필더 초경량 포수장비세트 블랙/화이트/레드",
+    "modelNo": "엑스필더 포수장비 세트",
+    "maker": "엑스필더",
+    "cateCd": "044001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47538",
+    "goodsNm": "엑스필더 초경량 포수장비세트 블랙/화이트",
+    "modelNo": "엑스필더 포수장비 세트",
+    "maker": "엑스필더",
+    "cateCd": "044001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47535",
+    "goodsNm": "인코자바 투수 글러브 12인치 RP AP-51(RED)25",
+    "modelNo": "RP AP-51(RED)25",
+    "maker": "인코자바",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47534",
+    "goodsNm": "인코자바 외야 글러브 13.25인치 CR OF-X2(RB/LG)25",
+    "modelNo": "CR OF-X2(RB/LG)25",
+    "maker": "인코자바",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47533",
+    "goodsNm": "인코자바 내야 글러브 11.75인치 CR iF-42(RB/LG)25",
+    "modelNo": "CR iF-42(RB/LG)25",
+    "maker": "인코자바",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47532",
+    "goodsNm": "인코자바 1루미트 12.75인치 RP FM-ST M(BK/OR)25",
+    "modelNo": "RP FM-ST M(BK/OR)25",
+    "maker": "인코자바",
+    "cateCd": "001004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47531",
+    "goodsNm": "인코자바 포수미트 34.5인치 CR CM-DP M(LG/NV)SS",
+    "modelNo": "CR CM-DP M(LG/NV)SS",
+    "maker": "인코자바",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47530",
+    "goodsNm": "인코자바 포수미트 34.5인치 CR CM-DP M(RD/BK)25",
+    "modelNo": "CR CM-DP M(RD/BK)25",
+    "maker": "인코자바",
+    "cateCd": "001005",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47529",
+    "goodsNm": "인코자바 투수 글러브 12인치 CR AP-51(NV/SB)25",
+    "modelNo": "CR AP-51(NV/SB)25",
+    "maker": "인코자바",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47528",
+    "goodsNm": "골드이스트 국내산 포수 장비가방 더플백 스타일(리뉴얼)",
+    "modelNo": "장비가방",
+    "maker": "골드이스트",
+    "cateCd": "004001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47527",
+    "goodsNm": "닥터스킨 프로 팔토시 암슬리브 블루(양팔 1세트)",
+    "modelNo": "암슬리브",
+    "maker": "닥터스킨",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47526",
+    "goodsNm": "닥터스킨 프로 팔토시 암슬리브 레드(양팔 1세트)",
+    "modelNo": "암슬리브",
+    "maker": "닥터스킨",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47525",
+    "goodsNm": "닥터스킨 프로 팔토시 암슬리브 블랙(양팔 1세트)",
+    "modelNo": "암슬리브",
+    "maker": "닥터스킨",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47524",
+    "goodsNm": "닥터스킨 프로 팔토시 암슬리브 화이트(양팔 1세트)",
+    "modelNo": "암슬리브",
+    "maker": "닥터스킨",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47523",
+    "goodsNm": "닥터스킨 프로 팔토시 암슬리브 다크네이비(양팔 1세트)",
+    "modelNo": "암슬리브",
+    "maker": "닥터스킨",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47522",
+    "goodsNm": "닥터스킨 프로 팔토시 암슬리브 옐로우(양팔 1세트)",
+    "modelNo": "암슬리브",
+    "maker": "닥터스킨",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47519",
+    "goodsNm": "닥터스킨 나그랑 스포츠 반팔 티셔츠 레드",
+    "modelNo": "나그랑 반팔",
+    "maker": "닥터스킨",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47518",
+    "goodsNm": "닥터스킨 나그랑 스포츠 반팔 티셔츠 블루",
+    "modelNo": "나그랑 반팔",
+    "maker": "닥터스킨",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47517",
+    "goodsNm": "닥터스킨 나그랑 스포츠 반팔 티셔츠 네이비",
+    "modelNo": "나그랑 반팔",
+    "maker": "닥터스킨",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47516",
+    "goodsNm": "닥터스킨 나그랑 스포츠 반팔 티셔츠 블랙",
+    "modelNo": "나그랑 반팔",
+    "maker": "닥터스킨",
+    "cateCd": "007038009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47514",
+    "goodsNm": "미즈노 프로 경식 내야 글러브 내츄럴7 (중고)",
+    "modelNo": "미즈노 중고",
+    "maker": "미즈노",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47512",
+    "goodsNm": "롤링스 HOH 투수 글러브 블랙3 (중고)",
+    "modelNo": "롤링스 중고",
+    "maker": "롤링스",
+    "cateCd": "001001",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47511",
+    "goodsNm": "롤링스 HOH 포수미트 브라운 (중고)",
+    "modelNo": "롤링스 중고",
+    "maker": "롤링스",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47509",
+    "goodsNm": "제트 프로스테이터스 경식 투수 글러브 블랙 (중고)",
+    "modelNo": "제트 중고",
+    "maker": "제트",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47508",
+    "goodsNm": "명가 투수 글러브 블랙 좌투 (중고)",
+    "modelNo": "명가 중고",
+    "maker": "명가",
+    "cateCd": "001015",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47506",
+    "goodsNm": "제트 ZOP20 친환경 로진 (75g)",
+    "modelNo": "ZOP20",
+    "maker": "제트(ZETT)",
+    "cateCd": "048009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47505",
+    "goodsNm": "뉴발란스 MT410KM5 트레일 런닝화 실버",
+    "modelNo": "MT410KM5",
+    "maker": "뉴발란스",
+    "cateCd": "002006",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47504",
+    "goodsNm": "우벡스 UVEX 김도영 리미티드 에디션 스포츠 고글 선글라스 블랙/레드",
+    "modelNo": "CV D5Y",
+    "maker": "우벡스(UVEX)",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47503",
+    "goodsNm": "우벡스 UVEX 김도영 리미티드 에디션 스포츠 고글 선글라스 화이트/레드",
+    "modelNo": "CV D5Y",
+    "maker": "우벡스(UVEX)",
+    "cateCd": "048",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47502",
+    "goodsNm": "SSK 유소년 싱글밴드 배팅장갑 네이비/레드",
+    "modelNo": "BG5018WF",
+    "maker": "사사키(SSK)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47501",
+    "goodsNm": "SSK 유소년 싱글밴드 배팅장갑 화이트",
+    "modelNo": "BG5018WF",
+    "maker": "사사키(SSK)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47500",
+    "goodsNm": "SSK 유소년 싱글밴드 배팅장갑 화이트/블루",
+    "modelNo": "BG5018WF",
+    "maker": "사사키(SSK)",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47499",
+    "goodsNm": "SSK 글러브 홀더",
+    "modelNo": "GRHLD01",
+    "maker": "사사키(SSK)",
+    "cateCd": "001007009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47498",
+    "goodsNm": "스카이라인 소가죽 안전 야구공 SF-020 9인치",
+    "modelNo": "SF-020",
+    "maker": "스카이라인(Skyline)",
+    "cateCd": "047003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47496",
+    "goodsNm": "SSK 트레이닝볼 (낱개)",
+    "modelNo": "DNB30100",
+    "maker": "사사키(SSK)",
+    "cateCd": "047007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47495",
+    "goodsNm": "미즈노 프로 월드윈 복각판 외야 글러브 후쿠모토 유타카 모델 53307 12.75인치 레드",
+    "modelNo": "53307",
+    "maker": "미즈노",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47493",
+    "goodsNm": "미즈노 프로 크래프트 에디션 경식 내야 글러브 11.25인치 쿠레바야시 코타로 모델 1AJGH32023",
+    "modelNo": "1AJGH32023 0949",
+    "maker": "미즈노",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47492",
+    "goodsNm": "미즈노 프로 크래프트 에디션 경식 내야 글러브 11.6인치 나가오카 히데키 모델 1AJGH32043",
+    "modelNo": "1AJGH32043 0980",
+    "maker": "미즈노",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47489",
+    "goodsNm": "미즈노 프로 크래프트 에디션 경식 외야 글러브 13.25인치 라스 눗바 모델 1AJGH32017",
+    "modelNo": "1AJGH32017 47",
+    "maker": "미즈노",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47488",
+    "goodsNm": "미즈노 프로 크래프트 에디션 투수 글러브 11.75인치 미야기 히로야 모델 1AJGH32011",
+    "modelNo": "1AJGH32011 80",
+    "maker": "미즈노",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47487",
+    "goodsNm": "미즈노 프로 크래프트 에디션 경식 내야 글러브 11.25인치 기쿠치 료스케 모델 1AJGH32013",
+    "modelNo": "1AJGH32013 0949",
+    "maker": "미즈노",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47486",
+    "goodsNm": "미즈노 프로 크래프트 에디션 경식 내야 글러브 12인치 오스틴 라일리 모델 1AJGH32053",
+    "modelNo": "1AJGH32053 0949",
+    "maker": "미즈노",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47485",
+    "goodsNm": "미즈노 프로 월드윈 복각판 내야 글러브 하라 다쓰 토쿠 모델 53303 12인치 오렌지",
+    "modelNo": "53303",
+    "maker": "미즈노",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47484",
+    "goodsNm": "미즈노 프로 월드윈 복각판 투수 글러브 야마다 쿠시 모델 53301 12인치 오렌지",
+    "modelNo": "53301",
+    "maker": "미즈노",
+    "cateCd": "001001",
+    "sellFl": "y"
+  }
+]

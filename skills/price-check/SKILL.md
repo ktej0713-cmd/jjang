@@ -1,6 +1,9 @@
 ---
 name: price-check
-description: 상품의 시장 가격을 조사하여 비교표를 생성합니다. 네이버 쇼핑, 쿠팡, 11번가 등 주요 오픈마켓 대상.
+description: >
+  상품의 시장 가격을 조사하여 비교표를 생성합니다. 네이버 쇼핑, 쿠팡, 11번가 등 주요 오픈마켓 대상.
+  Use when user says "가격 조사", "시장가", "경쟁가", "얼마에 팔아", "가격 체크", "가격 비교",
+  "price check", or mentions checking competitor prices for a product.
 argument-hint: "<상품명 또는 브랜드+모델명>"
 ---
 

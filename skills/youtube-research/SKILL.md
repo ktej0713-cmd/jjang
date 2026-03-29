@@ -1,6 +1,9 @@
 ---
 name: youtube-research
-description: YouTube 영상의 자막/내용을 추출하여 분석합니다. 영상 URL을 입력하면 자막 기반으로 핵심 내용을 정리합니다.
+description: >
+  YouTube 영상의 자막/내용을 추출하여 분석합니다. 영상 URL을 입력하면 자막 기반으로 핵심 내용을 정리합니다.
+  Use when user provides a YouTube URL and says "분석해줘", "정리해줘", "내용 뽑아줘", "적용해줘",
+  "요약해줘", "이 영상", or pastes any youtube.com or youtu.be link.
 argument-hint: "<YouTube URL> [분석 관점]"
 ---
 
@@ -44,8 +47,10 @@ cat /tmp/yt-VIDEO_ID.ko.vtt 2>/dev/null || cat /tmp/yt-VIDEO_ID.en.vtt 2>/dev/nu
 **방법 B: youtube-transcript-api (Python)**
 
 ```bash
-pip install youtube-transcript-api 2>/dev/null
-python3 -c "
+# Windows: python 명령어 사용, pip는 python -m pip로 설치
+python -m pip install youtube-transcript-api -q 2>/dev/null || python3 -m pip install youtube-transcript-api -q 2>/dev/null
+
+python -c "
 from youtube_transcript_api import YouTubeTranscriptApi
 try:
     transcript = YouTubeTranscriptApi.get_transcript('VIDEO_ID', languages=['ko','en'])
@@ -53,7 +58,15 @@ try:
         print(entry['text'])
 except Exception as e:
     print(f'ERROR: {e}')
-"
+" 2>/dev/null || python3 -c "
+from youtube_transcript_api import YouTubeTranscriptApi
+try:
+    transcript = YouTubeTranscriptApi.get_transcript('VIDEO_ID', languages=['ko','en'])
+    for entry in transcript:
+        print(entry['text'])
+except Exception as e:
+    print(f'ERROR: {e}')
+" 2>/dev/null
 ```
 
 **방법 C: 웹 검색 폴백**

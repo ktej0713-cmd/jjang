@@ -1,0 +1,402 @@
+[
+  {
+    "goodsNo": "47474",
+    "goodsNm": "미즈노 윌 드라이브 배팅장갑 55414 네이비/그레이",
+    "modelNo": "55414",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47473",
+    "goodsNm": "미즈노 윌 드라이브 배팅장갑 55462 레드/그레이",
+    "modelNo": "55462",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47472",
+    "goodsNm": "미즈노 윌 드라이브 배팅장갑 55409 블랙/그레이",
+    "modelNo": "55409",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47471",
+    "goodsNm": "미즈노 실리콘 파워 아크 DI 레플리카 배팅장갑 55162 레드",
+    "modelNo": "55162",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47470",
+    "goodsNm": "미즈노 실리콘 파워 아크 DI 레플리카 배팅장갑 55109 블랙",
+    "modelNo": "55109",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47469",
+    "goodsNm": "미즈노 프로 실리콘 파워 아크 DI 배팅장갑 54727 블루/라임",
+    "modelNo": "54727",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47468",
+    "goodsNm": "미즈노 프로 실리콘 파워 아크 DI 배팅장갑 54762 레드",
+    "modelNo": "54762",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47467",
+    "goodsNm": "미즈노 프로 실리콘 파워 아크 DI 배팅장갑 54709 블랙/레드",
+    "modelNo": "54709",
+    "maker": "미즈노",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47466",
+    "goodsNm": "미즈노 와일드키즈 아동용 글러브 10인치 32800 오렌지",
+    "modelNo": "1AJGY3280051AROR",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47465",
+    "goodsNm": "미즈노 와일드키즈 아동용 글러브 10인치 32800 블랙",
+    "modelNo": "32800",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47464",
+    "goodsNm": "미즈노 프로 쿠션레보 프로 미드 TPU 포인트화 253064 핑크",
+    "modelNo": "253064",
+    "maker": "미즈노",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47462",
+    "goodsNm": "미즈노 프로 쿠션레보 프로 미드 TPU 포인트화 253027 블루",
+    "modelNo": "253027",
+    "maker": "미즈노(MIZUNO)",
+    "cateCd": "002003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47461",
+    "goodsNm": "미즈노 성인용 야구 안면 보호마스크 20009 블랙",
+    "modelNo": "20009",
+    "maker": "미즈노",
+    "cateCd": "005007",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47439",
+    "goodsNm": "제트 ZETT 2025 마더스 한정판 내야 글러브 BRGB32576M 6111",
+    "modelNo": "BRGB32576M 6111",
+    "maker": "ZETT",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47433",
+    "goodsNm": "제트 네오스테이터스 티벨트웹 BRGB31537 2919 네이비",
+    "modelNo": "BRGB31537 2919",
+    "maker": "ZETT",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47431",
+    "goodsNm": "제트 네오스테이터스 아이웹 BRGB31540 3219 카멜 우투",
+    "modelNo": "BRGB31540 3219",
+    "maker": "ZETT",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47430",
+    "goodsNm": "제트 네오스테이터스 아이웹 BRGB31540 2919 네이비 우투",
+    "modelNo": "BRGB31540 2919",
+    "maker": "ZETT",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47429",
+    "goodsNm": "ZETT 제트 어센틱 손등가드 (최정 2 모델)",
+    "modelNo": "어센틱 손등가드",
+    "maker": "제트",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47428",
+    "goodsNm": "ZETT 제트 어센틱 암가드 (최정 2 모델)",
+    "modelNo": "어센틱 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47427",
+    "goodsNm": "ZETT 제트 어센틱 풋가드 (최정 2 모델)",
+    "modelNo": "어센틱 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47426",
+    "goodsNm": "ZETT 제트 어센틱 슬라이딩 주루 장갑 (최정 2 모델)",
+    "modelNo": "어센틱 슬라이딩 주루 장갑",
+    "maker": "제트",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47425",
+    "goodsNm": "슈퍼스킨 헬멧 내장재 SHF-01 커스텀 리필 헬멧내피",
+    "modelNo": "SHF-01",
+    "maker": "짱베이스볼",
+    "cateCd": "005009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47422",
+    "goodsNm": "윌슨 2025 썸머 A2K 1786SS 11.5인치 내야 글러브",
+    "modelNo": "WBW103290115",
+    "maker": "윌슨",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47421",
+    "goodsNm": "윌슨 2025 썸머 A2K 1750SS 12.5인치 외야 글러브 핑크/네이비",
+    "modelNo": "WBW103291125",
+    "maker": "윌슨(Wilson)",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47420",
+    "goodsNm": "윌슨 2025 썸머 A2K 브렌튼 도일 GM 12.75인치 외야 글러브",
+    "modelNo": "WBW1032971275",
+    "maker": "윌슨",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47418",
+    "goodsNm": "윌슨 2025 썸머 A2000 1777SS 12.75인치 외야 글러브",
+    "modelNo": "WBW1032221275",
+    "maker": "윌슨",
+    "cateCd": "",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47414",
+    "goodsNm": "윌슨 2025 썸머 A2000 DP15 11.5인치 내야 글러브 카멜",
+    "modelNo": "WBW103224115",
+    "maker": "윌슨(Wilson)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47413",
+    "goodsNm": "윌슨 2025 썸머 A2000 호세 알투베 GM 11.5인치 내야 글러브 네이비/카멜",
+    "modelNo": "WBW103295115",
+    "maker": "윌슨(Wilson)",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47410",
+    "goodsNm": "TEPPEN 테펜 경식 외야 글러브 TTY 카멜",
+    "modelNo": "TTY 카멜",
+    "maker": "테펜 TEPPEN",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47408",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 011 내야용 글러브 아이웹 (민트/화이트/핑크)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47407",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 012 내야용 글러브 아이웹 (옐로우/화이트/그린)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47406",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 015 외야용 글러브 H웹 (블루/화이트)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47405",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 001 투수 올라운드용 글러브 박종훈 레플리카 (블랙/레드)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47404",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 002 투수 올라운드용 글러브 박종훈 레플리카 (레드/블랙)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47403",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 003 투수 올라운드용 글러브 엘리아스 레플리카 (블랙/핑크)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47402",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 009 올라운드용 글러브 아오키웹 (블루/오렌지)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47401",
+    "goodsNm": "러펠스 Ruppells 마일드 스티어 010 올라운드용 글러브 아오키웹 (레드/블랙)",
+    "modelNo": "러펠스 Ruppells 마일드 스티어",
+    "maker": "러펠스",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47400",
+    "goodsNm": "러펠스 Ruppells 프로미싱 유스 스티어 야구 글러브 올라운드 오가웹 블랙/레드",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47399",
+    "goodsNm": "러펠스 Ruppells 프로미싱 유스 스티어 야구 글러브 외야수용 쌍십자웹 블랙/블루",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47398",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 외야수용 티벨트웹 오렌지/네이비",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47397",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 포수미트 오렌지/네이비",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47396",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 내야수용 아이웹 오렌지/네이비",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47394",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 외야수용 쌍십자웹 블랙/탄",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47393",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 1루수용 미트 블랙/탄",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47392",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 내야수용 고쿠보웹 블랙/탄",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47391",
+    "goodsNm": "러펠스 프로미싱 유스 스티어 야구 글러브 올라운드 오가웹 블랙/탄",
+    "modelNo": "러펠스 프로미싱 유스",
+    "maker": "러펠스",
+    "cateCd": "021001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47390",
+    "goodsNm": "러펠스 Ruppells 퍼펙트디펜스 수비연습용 내야펑고용 트레이닝 글러브 X웹 탄/블랙",
+    "modelNo": "러펠스 Ruppells 퍼펙트디펜스",
+    "maker": "러펠스",
+    "cateCd": "001009",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47388",
+    "goodsNm": "ZETT 제트 선수지급용 암가드 (이재원) 일본산",
+    "modelNo": "오더 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47387",
+    "goodsNm": "러펠스 프로페셔널 양면 플랫 직각 배트 (타격 트레이닝 연습배트)",
+    "modelNo": "직각 배트",
+    "maker": "러펠스",
+    "cateCd": "003002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47386",
+    "goodsNm": "러펠스 프로페셔널 우드 트레이닝 배트 (33,33.5인치 / 1000g)",
+    "modelNo": "러펠스 프로페셔널 우드 트레이닝 배트",
+    "maker": "러펠스",
+    "cateCd": "003002",
+    "sellFl": "y"
+  }
+]

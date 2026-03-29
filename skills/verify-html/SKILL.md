@@ -1,6 +1,9 @@
 ---
 name: verify-html
-description: 상세페이지/기획전 HTML 결과물을 고도몰 호환성, 디자인 시스템, SEO 기준으로 검증합니다.
+description: >
+  상세페이지/기획전 HTML 결과물을 고도몰 호환성, 디자인 시스템, SEO 기준으로 검증합니다.
+  Use when user says "HTML 검증", "검증해줘", "확인해줘", "맞게 만들었어?", "이거 괜찮아?",
+  "고도몰 호환", "스마트스토어 호환", or after generating any detail page or promotion HTML.
 argument-hint: "[HTML 파일 경로]"
 ---
 

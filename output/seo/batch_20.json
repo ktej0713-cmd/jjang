@@ -1,0 +1,402 @@
+[
+  {
+    "goodsNo": "47312",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (블루)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (블루)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47311",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (블랙)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (블랙)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47310",
+    "goodsNm": "러펠스 익스텐션 암가드/풋가드/손등가드 (민트)",
+    "modelNo": "러펠스 익스텐션 암가드/풋가드/손등가드 (민트)",
+    "maker": "러펠스",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47309",
+    "goodsNm": "러펠스 대용량 프리미엄 밍크 오일 가죽 글러브 관리용품 85G",
+    "modelNo": "오일",
+    "maker": "러펠스",
+    "cateCd": "001007002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47307",
+    "goodsNm": "러펠스 쿨에어 빅로고 컴프레션 암슬리브 (2개 1SET)",
+    "modelNo": "암슬리브",
+    "maker": "러펠스",
+    "cateCd": "048004",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47306",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 83883145",
+    "modelNo": "83883145",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47304",
+    "goodsNm": "방탄 초경량 스포츠 선글라스 6종",
+    "modelNo": "",
+    "maker": "",
+    "cateCd": "048",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47303",
+    "goodsNm": "하타케야마 포수 수비장갑 CT-WB 화이트 블랙",
+    "modelNo": "수비장갑",
+    "maker": "하타케야마",
+    "cateCd": "006002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47302",
+    "goodsNm": "제트 선수 레플리카 투수 글러브 (김택연 4 모델)",
+    "modelNo": "레플리카",
+    "maker": "제트(ZETT)",
+    "cateCd": "001001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47301",
+    "goodsNm": "제트 암가드 BAGK-42S (오렌지/블랙)",
+    "modelNo": "BAGK-42S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47300",
+    "goodsNm": "제트 암가드 BAGK-42S (아이보리/블랙)",
+    "modelNo": "BAGK-42S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47299",
+    "goodsNm": "제트 암가드 BAGK-42S (네이비/아이보리)",
+    "modelNo": "BAGK-42S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47298",
+    "goodsNm": "제트 암가드 BAGK-42S (블랙/아이보리)",
+    "modelNo": "BAGK-42S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47297",
+    "goodsNm": "제트 풋가드 BAGK-70S (오렌지/블랙)",
+    "modelNo": "BAGK-70S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47296",
+    "goodsNm": "제트 풋가드 BAGK-70S (아이보리/블랙)",
+    "modelNo": "BAGK-70S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47295",
+    "goodsNm": "제트 풋가드 BAGK-70S (네이비/아이보리)",
+    "modelNo": "BAGK-70S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47294",
+    "goodsNm": "제트 풋가드 BAGK-70S (블랙/아이보리)",
+    "modelNo": "BAGK-70S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47293",
+    "goodsNm": "제트 암가드 BAGK-47S (오렌지/블랙)",
+    "modelNo": "BAGK-47S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47292",
+    "goodsNm": "제트 암가드 BAGK-47S (아이보리/블랙)",
+    "modelNo": "BAGK-47S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47291",
+    "goodsNm": "제트 암가드 BAGK-47S (네이비/아이보리)",
+    "modelNo": "BAGK-47S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47290",
+    "goodsNm": "제트 암가드 BAGK-47S (블랙/아이보리)",
+    "modelNo": "BAGK-47S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47289",
+    "goodsNm": "제트 풋가드 BAGK-75S (오렌지/블랙)",
+    "modelNo": "BAGK-75S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47288",
+    "goodsNm": "제트 풋가드 BAGK-75S (아이보리/블랙)",
+    "modelNo": "BAGK-75S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47287",
+    "goodsNm": "제트 풋가드 BAGK-75S (네이비/아이보리)",
+    "modelNo": "BAGK-75S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47286",
+    "goodsNm": "제트 풋가드 BAGK-75S (블랙/아이보리)",
+    "modelNo": "BAGK-75S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47285",
+    "goodsNm": "제트 손등가드 BLK-45S (오렌지/블랙)",
+    "modelNo": "BLK-45S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47284",
+    "goodsNm": "제트 손등가드 BLK-45S (아이보리/블랙)",
+    "modelNo": "BLK-45S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47283",
+    "goodsNm": "제트 손등가드 BLK-45S (네이비/화이트)",
+    "modelNo": "BLK-45S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47282",
+    "goodsNm": "제트 손등가드 BLK-45S (블랙/화이트)",
+    "modelNo": "BLK-45S",
+    "maker": "제트(ZETT)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47280",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 49446334",
+    "modelNo": "56311642",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47279",
+    "goodsNm": "프랭클린 커스텀오더 파워스트랩 배팅장갑 18642285",
+    "modelNo": "18642285",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47277",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 40820586",
+    "modelNo": "40820586",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47276",
+    "goodsNm": "프랭클린 커스텀오더 CFX-PRO 배팅장갑 29492156",
+    "modelNo": "29492156",
+    "maker": "프랭클린",
+    "cateCd": "006001",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47275",
+    "goodsNm": "제트 BWT-14K (1201) 프로선수용 메이플 나무배트 KHS 모델",
+    "modelNo": "BWT-14K",
+    "maker": "제트(ZETT)",
+    "cateCd": "003003",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47274",
+    "goodsNm": "제트 BWT-14K (1219) 프로선수용 메이플 나무배트 LJH 모델",
+    "modelNo": "BWT-14K",
+    "maker": "제트(ZETT)",
+    "cateCd": "003003",
+    "sellFl": "n"
+  },
+  {
+    "goodsNo": "47273",
+    "goodsNm": "ZETT 제트 어센틱 암가드 (이영빈 2 모델)",
+    "modelNo": "어센틱 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47272",
+    "goodsNm": "ZETT 제트 어센틱 풋가드 (이영빈 2 모델)",
+    "modelNo": "어센틱 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47271",
+    "goodsNm": "ZETT 제트 어센틱 손등가드 (이영빈 2 모델)",
+    "modelNo": "어센틱 손등가드",
+    "maker": "제트",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47270",
+    "goodsNm": "ZETT 제트 어센틱 암가드 (심재훈 2 모델)",
+    "modelNo": "어센틱 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47268",
+    "goodsNm": "ZETT 제트 어센틱 풋가드 (심재훈 2 모델)",
+    "modelNo": "어센틱 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47267",
+    "goodsNm": "ZETT 제트 어센틱 슬라이딩 주루 장갑 (심재훈 2 모델)",
+    "modelNo": "어센틱 슬라이딩 장갑",
+    "maker": "제트(ZETT)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47266",
+    "goodsNm": "ZETT 제트 어센틱 손등가드 (심재훈 2 모델)",
+    "modelNo": "",
+    "maker": "제트",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47265",
+    "goodsNm": "ZETT 제트 어센틱 암가드 (송성문 2 모델)",
+    "modelNo": "어센틱 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47264",
+    "goodsNm": "ZETT 제트 어센틱 풋가드 (송성문 2 모델)",
+    "modelNo": "어센틱 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47263",
+    "goodsNm": "ZETT 제트 어센틱 슬라이딩 주루 장갑 (송성문 2 모델)",
+    "modelNo": "어센틱 슬라이딩 주루 장갑",
+    "maker": "제트",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47262",
+    "goodsNm": "ZETT 제트 어센틱 손등가드 (송성문 2 모델)",
+    "modelNo": "어센틱 손등가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47261",
+    "goodsNm": "ZETT 제트 어센틱 암가드 (박찬호 2 모델)",
+    "modelNo": "어센틱 암가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005002",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47260",
+    "goodsNm": "ZETT 제트 어센틱 풋가드 (박찬호 2 모델)",
+    "modelNo": "어센틱 풋가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47259",
+    "goodsNm": "ZETT 제트 어센틱 슬라이딩 주루 장갑 (박찬호 2 모델)",
+    "modelNo": "어센틱 슬라이딩 주루 장갑",
+    "maker": "제트(ZETT)",
+    "cateCd": "006003",
+    "sellFl": "y"
+  },
+  {
+    "goodsNo": "47258",
+    "goodsNm": "ZETT 제트 어센틱 손등가드 (박찬호 2 모델)",
+    "modelNo": "어센틱 손등가드",
+    "maker": "제트(ZETT)",
+    "cateCd": "005013",
+    "sellFl": "y"
+  }
+]
