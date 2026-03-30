@@ -30,7 +30,9 @@
       "mcp__plugin_context-mode_context-mode__ctx_batch_execute",
       "mcp__plugin_context-mode_context-mode__ctx_index",
       "mcp__plugin_context-mode_context-mode__ctx_search",
-      "mcp__plugin_context-mode_context-mode__ctx_fetch_and_index"
+      "mcp__plugin_context-mode_context-mode__ctx_fetch_and_index",
+      "mcp__plugin_claude-mem_mcp-search__timeline",
+      "mcp__plugin_claude-mem_mcp-search__get_observations"
     ],
     "deny": [
       "Bash(rm -rf /)",
@@ -45,7 +47,8 @@
       "C:\\Users\\jj1\\.claude\\hooks",
       "G:\\내 드라이브\\claude-config\\hooks",
       "C:\\Users\\jj1\\.claude",
-      "G:\\내 드라이브\\claude-config"
+      "G:\\내 드라이브\\claude-config",
+      "G:\\내 드라이브\\claude-config\\.git"
     ]
   },
   "hooks": {
