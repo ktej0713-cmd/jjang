@@ -5,3 +5,4 @@
 - [project_hatakeyama_detail_pages.md](project_hatakeyama_detail_pages.md) — 하타케야마 글러브/포수미트 상세페이지 작업 이력, 10섹션 구조, 브랜드 기술 용어
 - [project_incojava_detail_pages.md](project_incojava_detail_pages.md) — 인코자바 유소년 글러브 상세페이지 작업 이력, 9섹션 구조, 학부모 타겟 콘텐츠 방향
 - [project_alpex_towel_detail_pages.md](project_alpex_towel_detail_pages.md) — 알펙스 쉐도우 피칭 타월 상세페이지 작업 이력, 훈련용품 특화 8섹션 구조
+- [project_noxx_rosinbag_detail_pages.md](project_noxx_rosinbag_detail_pages.md) — 녹스 로진백 65g 상세페이지 작업 이력, 소품 특화 7섹션 구조, 규정/비교 중심 콘텐츠
