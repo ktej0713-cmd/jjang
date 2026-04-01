@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-04-01 16:08",
+  "timestamp": "2026-04-01 16:39",
   "version": "v8",
-  "method": "godomall_api_or_scraping",
+  "method": "godomall_openhub_api",
   "summary": {
     "total_products": 24,
-    "total_stock": 1631,
-    "out_of_stock_options": 13,
-    "low_stock_options": 44,
+    "total_stock": 1630,
+    "out_of_stock_options": 14,
+    "low_stock_options": 43,
     "reorder_items": 0
   },
   "all_products": [
@@ -166,12 +166,12 @@
         "28": 1,
         "30": 2,
         "32": 0,
-        "34": 1,
+        "34": 0,
         "36": 10,
         "38": 1,
         "40": 6
       },
-      "total": 21
+      "total": 20
     },
     {
       "goodsNo": "20428",

@@ -15,6 +15,7 @@ import sys
 import logging
 import smtplib
 import base64
+import xml.etree.ElementTree as ET
 from datetime import datetime
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -25,6 +26,9 @@ try:
 except ImportError:
     print("[ERROR] requests 패키지 필요: pip install requests")
     sys.exit(1)
+
+# 고도몰5 Open API 엔드포인트
+GODOMALL_API_URL = "https://openhub.godo.co.kr/godomall5/goods/Goods_Search.php"
 
 # === 경로 설정 ===
 SCRIPT_DIR = Path(__file__).parent
@@ -68,179 +72,114 @@ def load_config():
 
 
 def fetch_stock_api(config):
-    """고도몰 Open API v8로 상품별 옵션/재고 조회"""
-    api_url = config["godomall"]["api_url"]
+    """고도몰5 Open API (openhub.godo.co.kr)로 상품별 옵션/재고 조회
+
+    API: POST https://openhub.godo.co.kr/godomall5/goods/Goods_Search.php
+    인증: partner_key + key (사용자키)
+    응답: XML (goods_data > optionData > stockCnt)
+    """
     partner_key = config["godomall"]["partner_key"]
-    secret_key = config["godomall"].get("secret_key", "")
+    secret_key = config["godomall"]["secret_key"]
     products = config["monitor_products"]
+
+    # 고유 goodsNo만 추출 (중복 제거 - 같은 goodsNo에 다른 옵션인 경우)
+    unique_goods = {}
+    for prod in products:
+        gno = prod["goodsNo"]
+        if gno not in unique_goods:
+            unique_goods[gno] = prod
 
     results = []
     session = requests.Session()
-    session.headers.update({
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-    })
 
-    for prod in products:
-        goods_no = prod["goodsNo"]
-        prod_name = prod["name"]
-        log.info(f"조회중: {prod_name} (goodsNo: {goods_no})")
+    for gno, prod in unique_goods.items():
+        log.info(f"조회중: {prod['name']} (goodsNo: {gno})")
 
-        # 고도몰 Open API v8 호출 시도
         try:
-            # 방법 1: Partner API (v8)
-            url = f"{api_url}/goods/{goods_no}"
-            headers = {
-                "Authorization": f"Bearer {partner_key}",
-                "X-Api-Key": secret_key
-            }
-            resp = session.get(url, headers=headers, timeout=15)
+            resp = session.post(
+                GODOMALL_API_URL,
+                data={"partner_key": partner_key, "key": secret_key, "goodsNo": gno},
+                timeout=15
+            )
 
-            if resp.status_code == 200:
-                data = resp.json()
-                stock_info = parse_api_response(data, prod)
-                results.append(stock_info)
-                log.info(f"  -> API 성공, 총 재고: {stock_info['total']}")
+            if resp.status_code != 200:
+                log.error(f"  -> API HTTP {resp.status_code}")
                 continue
 
-            # 방법 2: 대안 엔드포인트
-            url2 = f"{api_url}/goods/goods_view.php"
-            params = {"goodsNo": goods_no, "partnerKey": partner_key}
-            resp2 = session.get(url2, params=params, timeout=15)
-
-            if resp2.status_code == 200:
-                data2 = resp2.json()
-                stock_info = parse_api_response(data2, prod)
-                results.append(stock_info)
-                log.info(f"  -> 대안API 성공, 총 재고: {stock_info['total']}")
-                continue
-
-            # 방법 3: POST 방식
-            url3 = f"{api_url}/partner/goods.php"
-            body = {"partnerKey": partner_key, "mode": "get", "goodsNo": goods_no}
-            resp3 = session.post(url3, json=body, timeout=15)
-
-            if resp3.status_code == 200:
-                data3 = resp3.json()
-                stock_info = parse_api_response(data3, prod)
-                results.append(stock_info)
-                log.info(f"  -> POST API 성공, 총 재고: {stock_info['total']}")
-                continue
-
-            log.warning(f"  -> API 실패 (HTTP {resp.status_code}), 스크래핑으로 전환")
-            stock_info = fetch_stock_scraping(session, config, prod)
+            stock_info = parse_api_xml(resp.text, prod)
             if stock_info:
                 results.append(stock_info)
+                log.info(f"  -> API 성공: {len(stock_info['sizes'])}개 옵션, 총 재고 {stock_info['total']}")
+            else:
+                log.error(f"  -> XML 파싱 실패")
 
         except requests.RequestException as e:
-            log.warning(f"  -> API 요청 실패: {e}, 스크래핑으로 전환")
-            stock_info = fetch_stock_scraping(session, config, prod)
-            if stock_info:
-                results.append(stock_info)
+            log.error(f"  -> API 요청 실패: {e}")
 
     return results
 
 
-def parse_api_response(data, prod):
-    """API 응답에서 옵션별 재고 추출"""
+def parse_api_xml(xml_text, prod):
+    """고도몰5 Open API XML 응답에서 옵션별 재고 추출
+
+    XML 구조:
+    <data>
+      <header><code>000</code><msg>성공</msg></header>
+      <return>
+        <goods_data>
+          <goodsNo>15304</goodsNo>
+          <totalStock>58</totalStock>
+          <optionData>
+            <sno>1896</sno>
+            <optionValue1>28</optionValue1>
+            <stockCnt>18</stockCnt>
+          </optionData>
+          ...
+        </goods_data>
+      </return>
+    </data>
+    """
+    try:
+        root = ET.fromstring(xml_text)
+    except ET.ParseError as e:
+        log.error(f"  -> XML 파싱 에러: {e}")
+        return None
+
+    # 응답 코드 확인
+    code = root.findtext(".//header/code", "")
+    if code != "000":
+        msg = root.findtext(".//header/msg", "")
+        log.error(f"  -> API 에러: code={code}, msg={msg}")
+        return None
+
+    # 상품 데이터
+    goods = root.find(".//goods_data")
+    if goods is None:
+        return None
+
+    goods_no = goods.findtext("goodsNo", prod["goodsNo"])
+    goods_name = goods.findtext("goodsNm", prod["name"])
+    total_stock_api = goods.findtext("totalStock", "0")
+
+    # 옵션별 재고
     sizes = {}
+    for opt in goods.findall("optionData"):
+        opt_val = opt.findtext("optionValue1", "")
+        stock_cnt = int(opt.findtext("stockCnt", "0"))
+        if opt_val:
+            sizes[opt_val] = stock_cnt
 
-    # 고도몰 API 응답 구조에 맞게 파싱
-    options = data.get("options", data.get("optionList", []))
-    if isinstance(options, list):
-        for opt in options:
-            opt_name = opt.get("optionValue", opt.get("optionName", ""))
-            stock = int(opt.get("stockCnt", opt.get("stock", 0)))
-            sizes[opt_name] = stock
-    elif isinstance(data.get("stockCnt"), int):
-        # 옵션 없는 단일 상품
-        sizes["단일"] = data["stockCnt"]
-
-    # goodsData 내부에 있는 경우
-    goods_data = data.get("goodsData", data.get("data", {}))
-    if isinstance(goods_data, dict) and "option" in goods_data:
-        for opt in goods_data["option"]:
-            opt_val = opt.get("optionValue1", opt.get("name", ""))
-            stock = int(opt.get("stockCnt", 0))
-            sizes[opt_val] = stock
+    # 옵션 없는 단일 상품
+    if not sizes and total_stock_api:
+        sizes["단일"] = int(total_stock_api)
 
     total = sum(sizes.values())
     return {
-        "goodsNo": prod["goodsNo"],
+        "goodsNo": goods_no,
         "name": prod["name"],
         "sizes": sizes,
         "total": total
     }
-
-
-def fetch_stock_scraping(session, config, prod):
-    """스크래핑 방식으로 재고 조회 (API 실패 시 폴백)
-
-    고도몰5 옵션 체크박스 형식:
-      <input name="optionSnoInput" value="58413||0||||1^|^28"/>
-      형식: optionSno||가격차액||||재고수량^|^옵션값
-
-    고도몰5 셀렉트 드롭다운 형식:
-      <option value="58413||0||||1^|^28">28</option>
-    """
-    goods_no = prod["goodsNo"]
-    import re
-
-    try:
-        url = f"https://jjangbaseball.com/goods/goods_view.php?goodsNo={goods_no}"
-        resp = session.get(url, timeout=15)
-
-        if resp.status_code != 200:
-            log.error(f"  -> 스크래핑 실패 (HTTP {resp.status_code}): {prod['name']}")
-            return None
-
-        html = resp.text
-        sizes = {}
-
-        # 고도몰5 공통 value 패턴: "SNO||가격||||재고^|^옵션값"
-        # 체크박스, 셀렉트, 라디오 모두 동일 형식
-        value_pattern = re.findall(
-            r'value="(\d+)\|\|(\d+)\|\|\|\|(\d+)\^\|\^([^"]+)"',
-            html
-        )
-
-        if value_pattern:
-            for sno, price_diff, stock_str, opt_val in value_pattern:
-                opt_val = opt_val.strip()
-                sizes[opt_val] = int(stock_str)
-            log.info(f"  -> value 패턴 매칭: {len(sizes)}개 옵션")
-        else:
-            # 폴백: span.ea 텍스트에서 재고 추출
-            # " : 10개" 또는 "[품절]" 패턴
-            ea_pattern = re.findall(
-                r'optionSnoInput[^>]*value="[^"]*\^\|\^([^"]*)"[^>]*/?>[\s\S]*?'
-                r'(?:<span class="ea">\s*:\s*(\d+)개|<span class="zero">\[품절\])',
-                html
-            )
-            for opt_val, qty in ea_pattern:
-                sizes[opt_val.strip()] = int(qty) if qty else 0
-
-        # setStockCnt로 교차 검증
-        total_match = re.search(r"'setStockCnt'\s*:\s*'(\d+)'", html)
-        api_total = int(total_match.group(1)) if total_match else None
-
-        total = sum(sizes.values())
-
-        if api_total is not None and total != api_total:
-            log.warning(f"  -> 재고 합계 불일치: 파싱={total}, setStockCnt={api_total}")
-
-        log.info(f"  -> 스크래핑 완료: {len(sizes)}개 옵션, 총 재고 {total}")
-
-        return {
-            "goodsNo": goods_no,
-            "name": prod["name"],
-            "sizes": sizes,
-            "total": total
-        }
-
-    except Exception as e:
-        log.error(f"  -> 스크래핑 에러: {e}")
-        return None
 
 
 def analyze_stock(results, config):
@@ -441,7 +380,7 @@ def save_result(results, analysis, timestamp):
     output = {
         "timestamp": timestamp,
         "version": "v8",
-        "method": "godomall_api_or_scraping",
+        "method": "godomall_openhub_api",
         "summary": {
             "total_products": analysis["total_products"],
             "total_stock": analysis["total_stock"],
