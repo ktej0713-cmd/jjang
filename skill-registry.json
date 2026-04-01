@@ -10,16 +10,16 @@
     "name": "auto-enhance",
     "description": "세션 로그와 패턴을 분석하여 스킬/훅 개선을 자동으로 제안하고 적용합니다. 자동화 시스템의 자기 강화 엔진.",
     "keywords": [
+      "제안하고",
+      "강화",
+      "분석하여",
+      "스킬",
+      "개선을",
       "적용합니다",
       "자기",
-      "스킬",
-      "자동으로",
-      "자동화",
       "로그와",
-      "강화",
-      "개선을",
-      "시스템의",
-      "엔진"
+      "자동화",
+      "시스템의"
     ],
     "argument_hint": "[분석만|적용|전체]",
     "path": "C:\\Users\\jj1/.claude\\skills\\auto-enhance\\SKILL.md"
@@ -28,16 +28,16 @@
     "name": "brand-design",
     "description": "짱베이스볼 브랜드 디자인 시스템 기반으로 상세페이지, 기획전, 배너, 카드뉴스 HTML을 생성합니다. Use when user says \"디자인 만들어줘\", \"배너 만들어줘\", \"기획전 HTML\", \"카드뉴스\", \"브랜드 디자인\", or asks to create any visual HTML content for 짱베이스볼.",
     "keywords": [
-      "says",
       "짱베이스볼",
-      "디자인",
-      "for",
-      "visual",
+      "html",
       "브랜드",
-      "만들어줘",
-      "use",
-      "시스템",
-      "배너"
+      "user",
+      "기획전",
+      "for",
+      "기반으로",
+      "생성합니다",
+      "says",
+      "만들어줘"
     ],
     "argument_hint": "",
     "path": "C:\\Users\\jj1/.claude\\skills\\brand-design\\SKILL.md"
@@ -53,16 +53,16 @@
     "name": "merge-worktree",
     "description": "현재 워크트리 브랜치를 메인 브랜치에 squash-merge합니다. git 히스토리와 소스를 분석하여 구조화된 커밋 메시지를 작성합니다.",
     "keywords": [
-      "merge",
-      "git",
-      "브랜치에",
       "구조화된",
-      "워크트리",
-      "메인",
+      "git",
+      "메시지를",
+      "merge",
+      "현재",
       "소스를",
-      "squash",
+      "메인",
       "브랜치를",
-      "커밋"
+      "분석하여",
+      "히스토리와"
     ],
     "argument_hint": "[대상 브랜치]",
     "path": "C:\\Users\\jj1/.claude\\skills\\merge-worktree (1)\\SKILL.md"
@@ -71,16 +71,16 @@
     "name": "merge-worktree",
     "description": "현재 워크트리 브랜치를 메인 브랜치에 squash-merge합니다. git 히스토리와 소스를 분석하여 구조화된 커밋 메시지를 작성합니다.",
     "keywords": [
-      "merge",
-      "git",
-      "브랜치에",
       "구조화된",
-      "워크트리",
-      "메인",
+      "git",
+      "메시지를",
+      "merge",
+      "현재",
       "소스를",
-      "squash",
+      "메인",
       "브랜치를",
-      "커밋"
+      "분석하여",
+      "히스토리와"
     ],
     "argument_hint": "[대상 브랜치]",
     "path": "C:\\Users\\jj1/.claude\\skills\\merge-worktree\\SKILL.md"
@@ -89,16 +89,16 @@
     "name": "nano-banana",
     "description": "Generates AI images using the nano-banana CLI (Gemini 3.1 Flash default, Pro available). Handles multi-resolution (512-4K), aspect ratios, reference images for style transfer, green screen workflow for transparent assets, cost tracking, and exact dimension control. Use when asked to \"generate an image\", \"create a sprite\", \"make an asset\", \"generate artwork\", or any image generation task for UI mockups, game assets, videos, or marketing materials.",
     "keywords": [
-      "image",
-      "cost",
-      "generate",
-      "workflow",
-      "multi",
-      "make",
-      "and",
-      "asset",
+      "banana",
+      "mockups",
+      "style",
+      "using",
+      "exact",
       "for",
-      "materials"
+      "assets",
+      "images",
+      "make",
+      "nano"
     ],
     "argument_hint": "",
     "path": "C:\\Users\\jj1/.claude\\skills\\nano-banana\\SKILL.md"
