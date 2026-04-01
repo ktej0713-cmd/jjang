@@ -38,8 +38,8 @@
   "email": {
     "send_to": "self",
     "subject_prefix": "[짱베이스볼 재고알림]",
-    "gmail_address": "",
-    "gmail_app_password": ""
+    "gmail_address": "ktej0713@gmail.com",
+    "gmail_app_password": "lotv zrxi trnh ydbh"
   },
 
   "alert_threshold_default": 5
