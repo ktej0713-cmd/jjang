@@ -23,7 +23,9 @@
 
   "email": {
     "send_to": "self",
-    "subject_prefix": "[짱베이스볼 재고알림]"
+    "subject_prefix": "[짱베이스볼 재고알림]",
+    "gmail_address": "",
+    "gmail_app_password": ""
   },
 
   "alert_threshold_default": 5
