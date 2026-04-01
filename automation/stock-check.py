@@ -174,11 +174,19 @@ def parse_api_response(data, prod):
 
 
 def fetch_stock_scraping(session, config, prod):
-    """스크래핑 방식으로 재고 조회 (API 실패 시 폴백)"""
+    """스크래핑 방식으로 재고 조회 (API 실패 시 폴백)
+
+    고도몰5 옵션 체크박스 형식:
+      <input name="optionSnoInput" value="58413||0||||1^|^28"/>
+      형식: optionSno||가격차액||||재고수량^|^옵션값
+
+    고도몰5 셀렉트 드롭다운 형식:
+      <option value="58413||0||||1^|^28">28</option>
+    """
     goods_no = prod["goodsNo"]
+    import re
 
     try:
-        # 고도몰 상품 페이지에서 옵션 정보 추출
         url = f"https://jjangbaseball.com/goods/goods_view.php?goodsNo={goods_no}"
         resp = session.get(url, timeout=15)
 
@@ -189,51 +197,38 @@ def fetch_stock_scraping(session, config, prod):
         html = resp.text
         sizes = {}
 
-        # 고도몰 옵션 데이터는 JS 변수로 들어있음
-        # goodsView.option 또는 option_stock 패턴 탐색
-        import re
+        # 고도몰5 공통 value 패턴: "SNO||가격||||재고^|^옵션값"
+        # 체크박스, 셀렉트, 라디오 모두 동일 형식
+        value_pattern = re.findall(
+            r'value="(\d+)\|\|(\d+)\|\|\|\|(\d+)\^\|\^([^"]+)"',
+            html
+        )
 
-        # 패턴 1: optionData JSON
-        opt_match = re.search(r'optionData\s*=\s*(\[.*?\]);', html, re.DOTALL)
-        if opt_match:
-            try:
-                opt_data = json.loads(opt_match.group(1))
-                for opt in opt_data:
-                    name = opt.get("optionValue1", opt.get("name", ""))
-                    stock = int(opt.get("stockCnt", 0))
-                    sizes[name] = stock
-            except json.JSONDecodeError:
-                pass
-
-        # 패턴 2: option_stock 변수
-        if not sizes:
-            stock_matches = re.findall(
-                r'option[_]?stock\[.*?\]\s*=\s*["\']?(\d+)["\']?', html
-            )
-            name_matches = re.findall(
-                r'option[_]?name\[.*?\]\s*=\s*["\']([^"\']+)["\']', html
-            )
-            if stock_matches and name_matches:
-                for name, stock in zip(name_matches, stock_matches):
-                    sizes[name] = int(stock)
-
-        # 패턴 3: select option에서 추출
-        if not sizes:
-            opt_pattern = re.findall(
-                r'<option[^>]*value=["\']([^"\']+)["\'][^>]*>([^<]*)</option>',
+        if value_pattern:
+            for sno, price_diff, stock_str, opt_val in value_pattern:
+                opt_val = opt_val.strip()
+                sizes[opt_val] = int(stock_str)
+            log.info(f"  -> value 패턴 매칭: {len(sizes)}개 옵션")
+        else:
+            # 폴백: span.ea 텍스트에서 재고 추출
+            # " : 10개" 또는 "[품절]" 패턴
+            ea_pattern = re.findall(
+                r'optionSnoInput[^>]*value="[^"]*\^\|\^([^"]*)"[^>]*/?>[\s\S]*?'
+                r'(?:<span class="ea">\s*:\s*(\d+)개|<span class="zero">\[품절\])',
                 html
             )
-            for val, text in opt_pattern:
-                # 사이즈 옵션인지 확인 (28~40 범위)
-                size_match = re.search(r'(\d{2})', text)
-                if size_match:
-                    size = size_match.group(1)
-                    if 26 <= int(size) <= 44:
-                        # 품절 여부 확인
-                        is_soldout = "품절" in text or "soldout" in text.lower()
-                        sizes[size] = 0 if is_soldout else -1  # -1은 수량 불명
+            for opt_val, qty in ea_pattern:
+                sizes[opt_val.strip()] = int(qty) if qty else 0
 
-        total = sum(s for s in sizes.values() if s > 0)
+        # setStockCnt로 교차 검증
+        total_match = re.search(r"'setStockCnt'\s*:\s*'(\d+)'", html)
+        api_total = int(total_match.group(1)) if total_match else None
+
+        total = sum(sizes.values())
+
+        if api_total is not None and total != api_total:
+            log.warning(f"  -> 재고 합계 불일치: 파싱={total}, setStockCnt={api_total}")
+
         log.info(f"  -> 스크래핑 완료: {len(sizes)}개 옵션, 총 재고 {total}")
 
         return {

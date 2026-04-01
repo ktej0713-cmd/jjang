@@ -1,20 +1,28 @@
 {
-  "timestamp": "2026-04-01 15:42",
+  "timestamp": "2026-04-01 16:07",
   "version": "v8",
   "method": "godomall_api_or_scraping",
   "summary": {
     "total_products": 1,
-    "total_stock": 0,
+    "total_stock": 58,
     "out_of_stock_options": 0,
-    "low_stock_options": 0,
+    "low_stock_options": 3,
     "reorder_items": 0
   },
   "all_products": [
     {
-      "goodsNo": "44023",
-      "name": "짱베이스볼 야구바지 슬림핏 유니폼바지 농군 (진한 그레이)",
-      "sizes": {},
-      "total": 0
+      "goodsNo": "15304",
+      "name": "그레이",
+      "sizes": {
+        "28": 18,
+        "30": 16,
+        "32": 3,
+        "34": 5,
+        "36": 7,
+        "38": 6,
+        "40": 3
+      },
+      "total": 58
     }
   ],
   "reorder": []
