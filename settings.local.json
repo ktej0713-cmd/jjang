@@ -25,10 +25,14 @@
       "Skill(update-config)",
       "Skill(update-config:*)",
       "mcp__plugin_context-mode_context-mode__ctx_upgrade",
-      "mcp__plugin_claude-mem_mcp-search__search"
+      "mcp__plugin_claude-mem_mcp-search__search",
+      "Bash(cp /c/Users/NO/OneDrive/.claude/.gitignore .gitignore)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "additionalDirectories": [
-      "C:\\Users\\NO\\OneDrive\\.claude\\.git"
+      "C:\\Users\\NO\\OneDrive\\.claude\\.git",
+      "C:\\Users\\NO\\.claude\\skills\\auto-enhance (1)"
     ]
   }
 }

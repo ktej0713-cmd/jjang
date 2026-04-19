@@ -1,0 +1,8 @@
+[
+  {
+    "from": "team-lead",
+    "text": "{\"type\":\"shutdown_request\",\"requestId\":\"shutdown-1774889642666@고객검증MD\",\"from\":\"team-lead\",\"reason\":\"검증 완료. 수고했습니다.\",\"timestamp\":\"2026-03-30T16:54:02.666Z\"}",
+    "timestamp": "2026-03-30T16:54:02.666Z",
+    "read": true
+  }
+]

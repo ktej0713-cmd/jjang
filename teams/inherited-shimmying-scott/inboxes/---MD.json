@@ -1,0 +1,15 @@
+[
+  {
+    "from": "team-lead",
+    "text": "파일 저장 승인합니다. 진행하세요.",
+    "summary": "파일 저장 승인",
+    "timestamp": "2026-03-30T16:44:24.312Z",
+    "read": false
+  },
+  {
+    "from": "team-lead",
+    "text": "{\"type\":\"shutdown_request\",\"requestId\":\"shutdown-1774889547129@콘텐츠MD\",\"from\":\"team-lead\",\"reason\":\"파일은 리드MD가 직접 저장 완료. 수고했습니다.\",\"timestamp\":\"2026-03-30T16:52:27.129Z\"}",
+    "timestamp": "2026-03-30T16:52:27.129Z",
+    "read": false
+  }
+]

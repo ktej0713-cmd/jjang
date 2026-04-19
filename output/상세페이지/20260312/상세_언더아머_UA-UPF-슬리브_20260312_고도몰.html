@@ -1,0 +1,955 @@
+<!-- ※ 고도몰 상품 상세설명 > HTML 소스 모드에 전체 붙여넣기 -->
+
+<!-- 폰트 로드 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- GEO/AEO: JSON-LD 구조화 데이터 (Product 스키마, 검증일: 2026-03-12) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "언더아머 UA UPF 유니섹스 슬리브",
+  "alternateName": "Under Armour UA UPF Unisex Sleeve",
+  "description": "UPF 50+ 자외선 차단 기능을 갖춘 야구용 컴프레션 슬리브. 나일론 88%·엘라스틴 12% 속건 소재, 4방향 신축, 엄지 구멍 고정, 체취 억제 기능 포함. 사이즈: S/M·M/L·L/XL. 1쌍(pair) 판매.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Under Armour",
+    "alternateName": "언더아머"
+  },
+  "sku": "1387745",
+  "mpn": "1387745",
+  "material": "나일론 88%, 엘라스틴 12%",
+  "color": "Black/Castlerock, White",
+  "size": "S/M, M/L, L/XL",
+  "category": "야구 > 기타 용품 > 슬리브",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://jjangbaseball.com",
+    "priceCurrency": "KRW",
+    "price": "35000",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "짱베이스볼"
+    }
+  },
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "UPF 등급", "value": "UPF 50+" },
+    { "@type": "PropertyValue", "name": "핏", "value": "컴프레션 핏" },
+    { "@type": "PropertyValue", "name": "신축성", "value": "4방향 신축" },
+    { "@type": "PropertyValue", "name": "엄지 구멍", "value": "있음" },
+    { "@type": "PropertyValue", "name": "판매 단위", "value": "1쌍(pair)" }
+  ],
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 7
+  }
+}
+</script>
+
+<!-- GEO/AEO: FAQ 구조화 데이터 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "언더아머 UA UPF 슬리브는 왼팔/오른팔 전용인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "왼팔/오른팔 구분이 없는 제품입니다. 1쌍(pair) 구성으로, 두 팔 모두 착용 가능합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "UA UPF 슬리브 사이즈는 어떻게 선택하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "S/M(47.24cm), M/L(49.78cm), L/XL(55.12cm) 세 가지 사이즈가 있습니다. 컴프레션 소재 특성상 평소 의류 사이즈와 동일하거나 한 단계 크게 선택하는 것을 권장합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "UA UPF 슬리브는 야구 경기에서 착용 가능한가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "사회인야구 리그에서는 일반적으로 별도 제한이 없습니다. 공식 경기의 경우 팀 유니폼 색상 규정을 먼저 확인하시기 바랍니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "언더아머 UA UPF 슬리브 소재는 무엇인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "나일론 88%, 엘라스틴 12% 소재로 제작되었습니다. UPF 50+ 자외선 차단, 4방향 신축, 속건성, 체취 억제 기능이 적용되어 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "UA UPF 슬리브는 어떻게 세탁하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "찬물 단독 세탁을 권장합니다. 건조기 사용은 소재 변형 및 컴프레션 기능 저하 원인이 되므로 자연 건조를 권장합니다. 섬유 유연제 사용 시 속건 기능이 일부 저하될 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  /* ===== 짱베이스볼 디자인 시스템 ===== */
+  #jjang-detail {
+    --primary: #1B2A4A;
+    --primary-light: #2C3E6B;
+    --accent: #D4A843;
+    --success: #2E7D32;
+    --info: #1565C0;
+    --gray-900: #222222;
+    --gray-700: #555555;
+    --gray-500: #888888;
+    --gray-300: #CCCCCC;
+    --gray-100: #F5F5F5;
+    --gray-50: #FAFAFA;
+    --border: #E0E0E0;
+    --font: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--font);
+    color: var(--gray-900);
+    background: #fff;
+    line-height: 1.7;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  #jjang-detail * { box-sizing: border-box; }
+
+  /* ===== 섹션 공통 ===== */
+  #jjang-detail .jd-section {
+    padding: 48px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  #jjang-detail .jd-section:last-child { border-bottom: none; }
+
+  #jjang-detail .jd-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+    margin-bottom: 10px;
+  }
+
+  #jjang-detail .jd-section-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 6px;
+    padding-left: 14px;
+    border-left: 4px solid var(--accent);
+  }
+
+  #jjang-detail .jd-section-desc {
+    font-size: 14px;
+    color: var(--gray-700);
+    margin-bottom: 28px;
+    padding-left: 18px;
+  }
+
+  /* ===== 히어로 ===== */
+  #jjang-detail .jd-hero {
+    background: var(--primary);
+    color: #fff;
+    padding: 56px 24px 48px;
+    text-align: center;
+  }
+
+  #jjang-detail .jd-hero-category {
+    display: inline-block;
+    border: 1px solid rgba(212,168,67,0.6);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    margin-bottom: 22px;
+  }
+
+  #jjang-detail .jd-hero h1 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    word-break: keep-all;
+    color: #fff;
+  }
+
+  #jjang-detail .jd-hero h1 span {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.65);
+    margin-top: 10px;
+  }
+
+  #jjang-detail .jd-hero-copy {
+    font-size: 16px;
+    color: rgba(255,255,255,0.85);
+    max-width: 520px;
+    margin: 0 auto 28px;
+    line-height: 1.7;
+    word-break: keep-all;
+  }
+
+  #jjang-detail .jd-hero-price {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--accent);
+  }
+
+  #jjang-detail .jd-hero-price small {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+    margin-left: 6px;
+  }
+
+  /* ===== 상품 이미지 ===== */
+  #jjang-detail .jd-img-wrap {
+    padding: 40px 24px;
+    background: var(--gray-50);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+  }
+
+  #jjang-detail .jd-img-wrap img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    cursor: zoom-in;
+  }
+
+  #jjang-detail .jd-img-caption {
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-top: 12px;
+  }
+
+  /* ===== 필요 상황 ===== */
+  #jjang-detail .jd-situation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #jjang-detail .jd-situation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--gray-100);
+  }
+
+  #jjang-detail .jd-situation-item:last-child { border-bottom: none; }
+
+  #jjang-detail .jd-situation-num {
+    min-width: 36px;
+    width: 36px;
+    height: 36px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  #jjang-detail .jd-situation-text strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+  }
+
+  #jjang-detail .jd-situation-text p {
+    font-size: 14px;
+    color: var(--gray-700);
+    line-height: 1.65;
+    word-break: keep-all;
+    margin: 0;
+  }
+
+  /* ===== 핵심 스펙 ===== */
+  #jjang-detail .jd-spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  #jjang-detail .jd-spec-table th {
+    background: var(--primary);
+    color: #fff;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 13px;
+    width: 38%;
+  }
+
+  #jjang-detail .jd-spec-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-900);
+    vertical-align: top;
+  }
+
+  #jjang-detail .jd-spec-table tr:nth-child(even) td { background: var(--gray-50); }
+  #jjang-detail .jd-spec-table tr:last-child td { border-bottom: none; }
+
+  #jjang-detail .jd-spec-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 2px 10px;
+    margin-right: 4px;
+  }
+
+  /* ===== 체감 설명 ===== */
+  #jjang-detail .jd-feature-list { display: flex; flex-direction: column; gap: 0; }
+
+  #jjang-detail .jd-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--gray-100);
+  }
+
+  #jjang-detail .jd-feature-item:last-child { border-bottom: none; }
+
+  #jjang-detail .jd-feature-icon {
+    min-width: 44px;
+    width: 44px;
+    height: 44px;
+    background: var(--gray-100);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  #jjang-detail .jd-feature-body strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
+  }
+
+  #jjang-detail .jd-feature-body p {
+    font-size: 14px;
+    color: var(--gray-700);
+    line-height: 1.7;
+    word-break: keep-all;
+    margin: 0;
+  }
+
+  #jjang-detail .jd-highlight {
+    background: linear-gradient(to bottom, transparent 50%, rgba(212,168,67,0.25) 50%);
+    font-weight: 600;
+    color: var(--gray-900);
+  }
+
+  /* ===== 사이즈 가이드 ===== */
+  #jjang-detail .jd-size-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  #jjang-detail .jd-size-table th {
+    background: var(--primary);
+    color: #fff;
+    padding: 11px 14px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  #jjang-detail .jd-size-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--gray-100);
+    text-align: center;
+    color: var(--gray-900);
+  }
+
+  #jjang-detail .jd-size-table tr:nth-child(even) td { background: var(--gray-50); }
+  #jjang-detail .jd-size-table tr:last-child td { border-bottom: none; }
+
+  #jjang-detail .jd-size-recommend {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-300);
+    padding: 18px 20px;
+    font-size: 13px;
+    color: var(--gray-700);
+    line-height: 1.8;
+  }
+
+  #jjang-detail .jd-size-recommend strong { color: var(--primary); font-weight: 700; }
+
+  /* ===== 비교표 ===== */
+  #jjang-detail .jd-compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  #jjang-detail .jd-compare-table th {
+    background: var(--primary);
+    color: #fff;
+    padding: 12px 14px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  #jjang-detail .jd-compare-table th.jd-hl { background: var(--accent); color: var(--primary); }
+
+  #jjang-detail .jd-compare-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--gray-100);
+    text-align: center;
+    color: var(--gray-900);
+    vertical-align: middle;
+  }
+
+  #jjang-detail .jd-compare-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: var(--gray-700);
+    font-size: 12px;
+  }
+
+  #jjang-detail .jd-compare-table td.jd-hl {
+    background: rgba(212,168,67,0.07);
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  #jjang-detail .jd-compare-table tr:last-child td { border-bottom: none; }
+
+  #jjang-detail .jd-check { color: var(--success); font-weight: 800; }
+  #jjang-detail .jd-dash { color: var(--gray-300); }
+
+  /* ===== 추천 포인트 ===== */
+  #jjang-detail .jd-rec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  #jjang-detail .jd-rec-card {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-100);
+    padding: 20px;
+  }
+
+  #jjang-detail .jd-rec-card .jd-tag {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 3px 10px;
+    margin-bottom: 12px;
+  }
+
+  #jjang-detail .jd-rec-card strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+
+  #jjang-detail .jd-rec-card p {
+    font-size: 13px;
+    color: var(--gray-700);
+    line-height: 1.65;
+    word-break: keep-all;
+    margin: 0;
+  }
+
+  /* ===== FAQ ===== */
+  #jjang-detail .jd-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--border);
+  }
+
+  #jjang-detail .jd-faq-item { border-bottom: 1px solid var(--border); }
+  #jjang-detail .jd-faq-item:last-child { border-bottom: none; }
+
+  #jjang-detail .jd-faq-q {
+    padding: 16px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--gray-50);
+    user-select: none;
+  }
+
+  #jjang-detail .jd-faq-q::after {
+    content: '+';
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--gray-500);
+    line-height: 1;
+  }
+
+  #jjang-detail .jd-faq-q.jd-open::after { content: '-'; }
+
+  #jjang-detail .jd-faq-a {
+    display: none;
+    padding: 16px 20px;
+    font-size: 13px;
+    color: var(--gray-700);
+    line-height: 1.75;
+    background: #fff;
+    word-break: keep-all;
+  }
+
+  #jjang-detail .jd-faq-a.jd-open { display: block; }
+
+  /* ===== 배송 안내 ===== */
+  #jjang-detail .jd-delivery-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  #jjang-detail .jd-delivery-table th {
+    background: var(--gray-100);
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--primary);
+    width: 30%;
+    border-bottom: 1px solid var(--border);
+  }
+
+  #jjang-detail .jd-delivery-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gray-100);
+    color: var(--gray-700);
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  #jjang-detail .jd-delivery-table tr:last-child th,
+  #jjang-detail .jd-delivery-table tr:last-child td { border-bottom: none; }
+
+  #jjang-detail .jd-notice {
+    background: rgba(21,101,192,0.06);
+    border-left: 3px solid var(--info);
+    padding: 16px 18px;
+    font-size: 13px;
+    color: var(--gray-700);
+    line-height: 1.75;
+    margin-top: 20px;
+    word-break: keep-all;
+  }
+
+  /* ===== 이미지 오버레이 ===== */
+  #jjang-img-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.92);
+    z-index: 9999;
+    cursor: zoom-out;
+  }
+
+  #jjang-img-overlay img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 94%;
+    max-height: 94%;
+    object-fit: contain;
+  }
+
+  #jjang-overlay-close {
+    position: fixed;
+    top: 14px; right: 16px;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 10000;
+    line-height: 1;
+  }
+
+  /* ===== 반응형 ===== */
+  @media (max-width: 600px) {
+    #jjang-detail .jd-hero h1 { font-size: 24px; }
+    #jjang-detail .jd-rec-grid { grid-template-columns: 1fr; }
+    #jjang-detail .jd-compare-table { font-size: 12px; }
+    #jjang-detail .jd-compare-table td,
+    #jjang-detail .jd-compare-table th { padding: 9px 10px; }
+  }
+</style>
+
+<div id="jjang-detail">
+
+<!-- ===== 1. 히어로 ===== -->
+<div class="jd-hero">
+  <div class="jd-hero-category">Under Armour &#183; UPF Sleeve</div>
+  <h1>
+    UA UPF 유니섹스 슬리브
+    <span>UPF 50+ 자외선 차단 &#183; 컴프레션 핏 &#183; 엄지 구멍 고정</span>
+  </h1>
+  <p class="jd-hero-copy">
+    한여름 야외 경기, 이닝이 쌓일수록 팔이 타들어가는 느낌을 아는 선수라면.<br>
+    자외선 차단과 체온 유지를 동시에 잡는 여름 필수 아이템입니다.
+  </p>
+</div>
+
+<!-- GEO/AEO: 상품 정의 문장 블록 -->
+<div style="background:#F0F4FF;border-left:4px solid #1B2A4A;padding:18px 22px;font-size:14px;color:#333;line-height:1.8;font-family:'Noto Sans KR',sans-serif;">
+  <strong style="display:block;font-size:13px;color:#1B2A4A;margin-bottom:6px;letter-spacing:0.04em;">PRODUCT DEFINITION</strong>
+  <strong>언더아머 UA UPF 유니섹스 슬리브(1387745)</strong>는 UPF 50+ 자외선 차단 기능을 갖춘 야구용 컴프레션 슬리브입니다.
+  나일론 88%·엘라스틴 12% 속건 소재에 4방향 신축 구조를 적용했으며, 내장 엄지 구멍으로 경기 중 흘러내림을 방지합니다.
+  사이즈는 S/M·M/L·L/XL 세 가지이며, 1쌍(pair) 단위로 판매합니다.
+</div>
+
+<!-- ===== 상품 이미지 ===== -->
+<div class="jd-img-wrap">
+  <img
+    id="jjangProdImg"
+    src="https://underarmour.scene7.com/is/image/Underarmour/1387745-001_SLF_SL"
+    alt="언더아머 UA UPF 유니섹스 슬리브 — 블랙/캐슬록"
+    onclick="jjangOpenImg(this.src, this.alt)"
+  >
+  <p class="jd-img-caption">UA UPF 유니섹스 슬리브 — Black/Castlerock (001) &#183; 이미지를 클릭하면 확대됩니다</p>
+</div>
+
+<!-- 이미지 오버레이 -->
+<div id="jjang-img-overlay" onclick="jjangCloseImg()">
+  <div id="jjang-overlay-close" onclick="jjangCloseImg()">&#10005;</div>
+  <img id="jjangOverlayImg" src="" alt="">
+</div>
+
+<!-- ===== 2. 필요 상황 ===== -->
+<div class="jd-section">
+  <div class="jd-section-label">When You Need It</div>
+  <h2 class="jd-section-title">이런 상황에 필요합니다</h2>
+  <p class="jd-section-desc">야외 경기에서 팔 노출이 많은 포지션일수록 체감이 큽니다.</p>
+
+  <ul class="jd-situation-list">
+    <li class="jd-situation-item">
+      <div class="jd-situation-num">01</div>
+      <div class="jd-situation-text">
+        <strong>한낮 야외 경기, 직사광선 아래 수비 이닝이 길 때</strong>
+        <p>3~4이닝 이상 수비를 서면 팔 피부에 직접적인 자외선 노출이 누적됩니다. UPF 50+ 등급은 유해 자외선의 98% 이상을 차단해, 피부 손상 없이 집중력을 유지할 수 있습니다.</p>
+      </div>
+    </li>
+    <li class="jd-situation-item">
+      <div class="jd-situation-num">02</div>
+      <div class="jd-situation-text">
+        <strong>투수가 공을 던질 때 팔 보온과 혈액 순환이 필요할 때</strong>
+        <p>컴프레션 핏은 팔 근육을 감싸 미세한 진동을 줄여줍니다. 투구 전후 팔을 빠르게 워밍업하고, 등판 사이 체온 유지에도 실용적입니다.</p>
+      </div>
+    </li>
+    <li class="jd-situation-item">
+      <div class="jd-situation-num">03</div>
+      <div class="jd-situation-text">
+        <strong>땀이 많이 나도 슬리브가 흘러내리는 게 불편했던 선수</strong>
+        <p>내장된 엄지 구멍(thumb hole)이 슬리브를 고정합니다. 타석에서 배트를 잡거나 수비 중 팔을 뻗어도 슬리브가 위로 말리지 않습니다.</p>
+      </div>
+    </li>
+    <li class="jd-situation-item">
+      <div class="jd-situation-num">04</div>
+      <div class="jd-situation-text">
+        <strong>긴 경기나 더블헤더에서 체취 관리가 신경 쓰일 때</strong>
+        <p>체취 억제 기술이 적용되어 땀이 많이 나는 여름 경기에서도 불쾌감을 줄여줍니다. 속건 소재로 경기 중 습기가 빠르게 배출됩니다.</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- ===== 3. 핵심 스펙 ===== -->
+<div class="jd-section">
+  <div class="jd-section-label">Specifications</div>
+  <h2 class="jd-section-title">핵심 스펙</h2>
+  <p class="jd-section-desc">판매 단위: 1쌍(pair) — 왼팔/오른팔 구분 없음</p>
+
+  <table class="jd-spec-table">
+    <tbody>
+      <tr>
+        <th>상품명</th>
+        <td>UA UPF 유니섹스 슬리브</td>
+      </tr>
+      <tr>
+        <th>스타일 번호</th>
+        <td>1387745</td>
+      </tr>
+      <tr>
+        <th>소재</th>
+        <td>나일론 88% / 엘라스틴 12%</td>
+      </tr>
+      <tr>
+        <th>자외선 차단</th>
+        <td><span class="jd-spec-badge">UPF 50+</span> 유해 자외선 98% 이상 차단</td>
+      </tr>
+      <tr>
+        <th>핏</th>
+        <td>컴프레션 핏 (Compression Fit)</td>
+      </tr>
+      <tr>
+        <th>신축성</th>
+        <td>4방향 신축 구조 (4-Way Stretch)</td>
+      </tr>
+      <tr>
+        <th>기타 기능</th>
+        <td>속건성 &#183; 체취 억제 &#183; 열 배출 &#183; 엄지 구멍(Thumb Hole)</td>
+      </tr>
+      <tr>
+        <th>색상</th>
+        <td>Black/Castlerock (001) &#183; White (100)</td>
+      </tr>
+      <tr>
+        <th>원산지</th>
+        <td>수입산</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===== 4. 체감 설명 ===== -->
+<div class="jd-section">
+  <div class="jd-section-label">Real Feel</div>
+  <h2 class="jd-section-title">실제로 어떤 느낌인가요</h2>
+  <p class="jd-section-desc">스펙 수치 너머, 실제 착용 시 체감되는 부분입니다.</p>
+
+  <div class="jd-feature-list">
+    <div class="jd-feature-item">
+      <div class="jd-feature-icon">UPF<br>50+</div>
+      <div class="jd-feature-body">
+        <strong>피부에 닿는 자외선이 확실히 줄어듭니다</strong>
+        <p>UPF 50+는 단순한 마케팅 수치가 아닙니다. 일반 면 티셔츠의 UPF가 약 5 수준인 것과 비교하면, <span class="jd-highlight">자외선 노출량이 실질적으로 다른 소재입니다.</span> 한여름 외야 수비처럼 장시간 햇빛 아래 서있는 포지션에서 차이가 체감됩니다.</p>
+      </div>
+    </div>
+    <div class="jd-feature-item">
+      <div class="jd-feature-icon">컴프<br>레션</div>
+      <div class="jd-feature-body">
+        <strong>팔을 꽉 잡아주는 느낌, 근육 피로에도 영향을 줍니다</strong>
+        <p>컴프레션 핏은 피부 바로 위에 밀착하는 착용감입니다. <span class="jd-highlight">투구 시 팔 진동을 줄이고, 장시간 경기 후 팔 피로감을 완화하는 데 도움을 줍니다.</span> 처음 착용 시 타이트하게 느껴지는 것이 정상이며, 착용 후 1~2이닝이면 익숙해집니다.</p>
+      </div>
+    </div>
+    <div class="jd-feature-item">
+      <div class="jd-feature-icon">엄지<br>구멍</div>
+      <div class="jd-feature-body">
+        <strong>슬리브가 흘러내리지 않습니다 — 가장 실용적인 기능</strong>
+        <p>야구 경기 중 슬리브 착용의 가장 큰 불편함은 활동 중 흘러내리는 것입니다. <span class="jd-highlight">엄지 구멍에 걸어두면 손목까지 고정되어, 타석에서 배트를 쥐거나 다이빙 캐치 이후에도 위치가 변하지 않습니다.</span></p>
+      </div>
+    </div>
+    <div class="jd-feature-item">
+      <div class="jd-feature-icon">속건<br>소재</div>
+      <div class="jd-feature-body">
+        <strong>땀이 차지 않고 빠르게 마릅니다</strong>
+        <p>나일론 88% + 엘라스틴 12% 조합은 속건성이 우수합니다. <span class="jd-highlight">이닝 사이 덕아웃에서도 빠르게 건조돼 답답함이 적습니다.</span> 면 소재 슬리브 대비 습기 잔류 시간이 짧아 여름 경기 전반에 걸쳐 쾌적함을 유지합니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 5. 사이즈 가이드 ===== -->
+<div class="jd-section">
+  <div class="jd-section-label">Size Guide</div>
+  <h2 class="jd-section-title">사이즈 가이드</h2>
+  <p class="jd-section-desc">슬리브 길이는 손목부터 겨드랑이 직전까지 기준입니다.</p>
+
+  <table class="jd-size-table">
+    <thead>
+      <tr>
+        <th>사이즈</th>
+        <th>슬리브 길이</th>
+        <th>적합 신체</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>S/M</strong></td>
+        <td>47.24 cm</td>
+        <td>소형 ~ 중간 체형 / 초중등 선수</td>
+      </tr>
+      <tr>
+        <td><strong>M/L</strong></td>
+        <td>49.78 cm</td>
+        <td>중간 ~ 대형 체형 / 성인 표준</td>
+      </tr>
+      <tr>
+        <td><strong>L/XL</strong></td>
+        <td>55.12 cm</td>
+        <td>대형 체형 / 팔이 긴 성인</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="jd-size-recommend">
+    <strong>사이즈 선택 팁</strong><br>
+    &#8226; 컴프레션 핏 특성상 평소 입는 의류 사이즈보다 한 단계 크게 선택해도 밀착감은 충분합니다.<br>
+    &#8226; 팔 길이가 길거나 손목이 굵은 편이라면 L/XL을 권장합니다.<br>
+    &#8226; 중학생 이하 유소년 선수는 S/M 기준으로 먼저 착용해보세요.<br>
+    &#8226; 유니섹스 제품으로, 남녀 구분 없이 동일 사이즈 기준 적용입니다.
+  </div>
+</div>
+
+<!-- ===== 6. 비교표 ===== -->
+<div class="jd-section">
+  <div class="jd-section-label">Comparison</div>
+  <h2 class="jd-section-title">같은 카테고리 제품과 비교</h2>
+  <p class="jd-section-desc">야구용 슬리브 주요 제품 비교 — 기준: 2026 시즌 판매 제품</p>
+
+  <table class="jd-compare-table">
+    <thead>
+      <tr>
+        <th>항목</th>
+        <th class="jd-hl">UA UPF 슬리브</th>
+        <th>일반 컴프레션 슬리브</th>
+        <th>면 소재 슬리브</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>UPF 50+ 자외선 차단</td>
+        <td class="jd-hl"><span class="jd-check">&#10003;</span></td>
+        <td><span class="jd-dash">&#8212;</span></td>
+        <td><span class="jd-dash">&#8212;</span></td>
+      </tr>
+      <tr>
+        <td>컴프레션 핏</td>
+        <td class="jd-hl"><span class="jd-check">&#10003;</span></td>
+        <td><span class="jd-check">&#10003;</span></td>
+        <td><span class="jd-dash">&#8212;</span></td>
+      </tr>
+      <tr>
+        <td>엄지 구멍 (고정)</td>
+        <td class="jd-hl"><span class="jd-check">&#10003;</span></td>
+        <td>제품마다 다름</td>
+        <td><span class="jd-dash">&#8212;</span></td>
+      </tr>
+      <tr>
+        <td>속건성</td>
+        <td class="jd-hl">우수</td>
+        <td>보통~우수</td>
+        <td>낮음</td>
+      </tr>
+      <tr>
+        <td>체취 억제</td>
+        <td class="jd-hl"><span class="jd-check">&#10003;</span></td>
+        <td>일부 제품만</td>
+        <td><span class="jd-dash">&#8212;</span></td>
+      </tr>
+      <tr>
+        <td>4방향 신축</td>
+        <td class="jd-hl"><span class="jd-check">&#10003;</span></td>
+        <td>제품마다 다름</td>
+        <td><span class="jd-dash">&#8212;</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ===== 7. 추천 포인트 ===== -->
+<div class="jd-section">
+  <div class="jd-section-label">Who It's For</div>
+  <h2 class="jd-section-title">이런 분에게 추천합니다</h2>
+  <p class="jd-section-desc">포지션과 상황별로 추천 대상을 정리했습니다.</p>
+
+  <div class="jd-rec-grid">
+    <div class="jd-rec-card">
+      <div class="jd-tag">투수</div>
+      <strong>등판 전후 팔 관리가 필요한 투수</strong>
+      <p>컴프레션 핏으로 투구 전 워밍업과 등판 사이 체온 유지에 실용적입니다. 장거리 원정 경기나 더블헤더에서 차이가 납니다.</p>
+    </div>
+    <div class="jd-rec-card">
+      <div class="jd-tag">외야수 / 내야수</div>
+      <strong>한낮 야외 경기에 자주 나가는 수비 선수</strong>
+      <p>햇빛이 가장 강한 오전~오후 경기에서 팔 피부를 직접 보호합니다. 장시간 수비 이닝이 많을수록 UPF 효과가 실감납니다.</p>
+    </div>
+    <div class="jd-rec-card">
+      <div class="jd-tag">사회인야구</div>
+      <strong>주말 리그 및 동호회 경기 참여자</strong>
+      <p>일상 복귀 후에도 팔 피부 손상이 걱정되는 사회인 선수에게 적합합니다. 폼 롤러 없이도 팔 순환에 도움을 줍니다.</p>
+    </div>
+    <div class="jd-rec-card">
+      <div class="jd-tag">유소년</div>
+      <strong>장시간 야외 훈련을 받는 초중등 선수</strong>
+      <p>성장기 피부는 자외선에 더 민감합니다. S/M 사이즈로 중학생까지 착용 가능하며, 훈련량이 많은 여름 캠프 시즌에 권장합니다.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 8. FAQ ===== -->
+<div class="jd-section">
+  <div class="jd-section-label">FAQ</div>
+  <h2 class="jd-section-title">자주 묻는 질문</h2>
+  <p class="jd-section-desc">구매 전 확인이 필요한 내용입니다.</p>
+
+  <div class="jd-faq-list">
+    <details class="jd-faq-item">
+      <summary>왼팔/오른팔 전용 제품인가요?</summary>
+      <div class="jd-faq-a">왼팔/오른팔 구분이 없는 제품입니다. 1쌍(pair) 구성으로, 두 팔 모두 착용 가능합니다. 한 팔에만 착용하는 경우도 있으나, 기본 판매 단위는 2개 세트입니다.</div>
+</details>
+
+<details class="jd-faq-item">
+      <summary>세탁은 어떻게 하나요?</summary>
+      <div class="jd-faq-a">찬물 단독 세탁을 권장합니다. 건조기 사용은 소재 변형 및 컴프레션 기능 저하 원인이 될 수 있어 자연 건조를 권장합니다. 섬유 유연제 사용 시 속건 기능이 일부 저하될 수 있습니다.</div>
+</details>
+
+<details class="jd-faq-item">
+      <summary>여름에 덥지 않나요?</summary>
+      <div class="jd-faq-a">나일론 88% 속건 소재로 땀 발산이 빠릅니다. 일반 면 슬리브 대비 체열 배출이 개선되어 있으나, 기온이 35도 이상인 환경에서는 개인 체감 차가 있을 수 있습니다.</div>
+</details>
+
+<details class="jd-faq-item">
+      <summary>컴프레션이 너무 조이지 않나요?</summary>
+      <div class="jd-faq-a">처음 착용 시 타이트한 느낌이 정상입니다. 컴프레션 핏은 피부 밀착을 통해 기능을 발휘하는 구조입니다. 손 순환이 막히거나 통증이 느껴지면 한 단계 큰 사이즈로 교체를 권장합니다. 사이즈 교환 문의는 구매 후 7일 이내 미착용 상태에서 가능합니다.</div>
+</details>
+
+<details class="jd-faq-item">
+      <summary>야구 경기 공식 규정에 허용되는 아이템인가요?</summary>
+      <div class="jd-faq-a">KBO 규정 기준 색상 제한이 있습니다. 공식 경기에서는 구단/팀 유니폼 색상 규정에 따라 허용 여부가 다를 수 있습니다. 사회인야구 리그의 경우 일반적으로 별도 제한이 없으나, 주관 단체 규정을 먼저 확인하시기 바랍니다.</div>
+    </div>
+  </div>
+</div>
+
+
+</div><!-- /#jjang-detail -->
+

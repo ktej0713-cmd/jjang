@@ -1,0 +1,23 @@
+{
+  "goods_no": "51396",
+  "timestamp": "2026-03-30T02:40:46.978992",
+  "검색키워드": false,
+  "SEO태그": {
+    "title": false,
+    "description": false,
+    "keywords": false,
+    "og_title": false,
+    "og_description": false,
+    "canonical": false,
+    "author": false
+  },
+  "네이버EP": {
+    "ep_name": false,
+    "category": false,
+    "maker": false,
+    "brand": false,
+    "model": false,
+    "tags": false,
+    "attribute": false
+  }
+}
