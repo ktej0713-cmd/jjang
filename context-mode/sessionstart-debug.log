@@ -14630,3 +14630,37 @@ Error: Could not locate the bindings file. Tried:
     at new _ (file:///C:/Users/NO/OneDrive/.claude/plugins/cache/context-mode/context-mode/1.0.49/hooks/session-db.bundle.mjs:1:2800)
     at file:///C:/Users/NO/OneDrive/.claude/plugins/cache/context-mode/context-mode/1.0.49/hooks/sessionstart.mjs:79:16
     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[2026-04-19T06:02:38.759Z] Could not locate the bindings file. Tried:
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\build\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\build\Debug\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\build\Release\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\out\Debug\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\Debug\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\out\Release\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\Release\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\build\default\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\compiled\24.13.0\win32\x64\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\addon-build\release\install-root\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\addon-build\debug\install-root\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\addon-build\default\install-root\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\lib\binding\node-v137-win32-x64\better_sqlite3.node
+Error: Could not locate the bindings file. Tried:
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\build\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\build\Debug\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\build\Release\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\out\Debug\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\Debug\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\out\Release\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\Release\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\build\default\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\compiled\24.13.0\win32\x64\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\addon-build\release\install-root\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\addon-build\debug\install-root\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\addon-build\default\install-root\better_sqlite3.node
+ → C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\lib\binding\node-v137-win32-x64\better_sqlite3.node
+    at bindings (C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\bindings\bindings.js:126:9)
+    at new Database (C:\Users\NO\.claude\plugins\marketplaces\context-mode\node_modules\better-sqlite3\lib\database.js:48:64)
+    at new u (file:///C:/Users/NO/.claude/plugins/marketplaces/context-mode/hooks/session-db.bundle.mjs:1:1440)
+    at new _ (file:///C:/Users/NO/.claude/plugins/marketplaces/context-mode/hooks/session-db.bundle.mjs:1:2800)
+    at file:///C:/Users/NO/.claude/plugins/marketplaces/context-mode/hooks/sessionstart.mjs:44:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
